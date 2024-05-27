@@ -6,6 +6,8 @@ Your typical computer architecture course starting with transistors and ending w
 
 The course can be found [here](http://modsurski.com/csci263).
 
+This course makes use of [Digital](https://github.com/hneemann/Digital) to create circuits. 
+
 
 
 # Setup
