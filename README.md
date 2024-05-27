@@ -19,6 +19,13 @@ venv\Scripts\activate.bat
 pip install .
 ```
 
+## Bash
+
+```sh
+python3.11 -m venv --clear --prompt cs263 venv
+. venv/bin/activate
+pip install .
+```
 
 # Build
 
