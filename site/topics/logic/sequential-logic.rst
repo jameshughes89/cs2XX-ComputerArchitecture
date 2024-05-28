@@ -7,6 +7,6 @@ Sequential Logic
 For Next Time
 =============
 
-* Read Chapter 2 Sections 2 & 3 of your text
+* Read Chapter 2 Section 2 of your text
 
-    * 4 pages
+    * 2 pages
