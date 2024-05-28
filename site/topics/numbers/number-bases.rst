@@ -3,6 +3,30 @@ Number Bases
 ************
 
 
+Decimal (Base Ten)
+==================
+
+
+
+Binary (Base Two)
+=================
+
+
+
+Hexadecimal (Base 16)
+=====================
+
+
+
+Converting Numbers Between Bases
+================================
+
+
+
+*Meaning*
+=========
+
+
 
 For Next Time
 =============
