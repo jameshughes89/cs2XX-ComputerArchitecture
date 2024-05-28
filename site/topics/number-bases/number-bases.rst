@@ -1,8 +1,6 @@
 ************
-Introduction
+Number Bases
 ************
-
-:doc:`Read the outline </outline/outline>`
 
 
 
@@ -10,6 +8,11 @@ For Next Time
 =============
 
 * Get your computer at home :doc:`set up for the course </getting-set/getting-set>`
-* Read Chapter X of your text
+* Read Chapter 1 of your text
 
-    * X pages
+    * 19 pages
+
+
+* Read Chapter 2 of your text
+
+    * 23 pages

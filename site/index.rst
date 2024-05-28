@@ -62,7 +62,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
-    topics/intro/introduction
+    topics/number-bases/number-bases
 
 
 
