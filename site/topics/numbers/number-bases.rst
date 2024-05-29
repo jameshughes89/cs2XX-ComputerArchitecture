@@ -2,6 +2,8 @@
 Number Bases
 ************
 
+* Start with integers and learning how to count
+
 
 
 Decimal (Base Ten)
