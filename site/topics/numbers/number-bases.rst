@@ -216,7 +216,7 @@ Names
 
 
 * It may feel strange to think about the number :math:`123` like this
-* But this is what the number means is conveying
+* But this is what the decimal encoding of the number is conveying
 
 .. figure:: 123_with_cash.png
     :width: 500 px
