@@ -2,15 +2,13 @@
 Number Bases
 ************
 
-* Have you ever *really* thought about counting?
-
 
 
 Decimal (Base Ten)
 ==================
 
 * The decimal number system is used in everyday life
-* The decimal number system is based ten; it consists of ten different symbols/numerals
+* The decimal number system is base ten; it consists of ten different symbols/numerals
 
     * :math:`0, 1, 2, 3, 4, 5, 6, 7, 8, 9`
 
@@ -120,12 +118,6 @@ Position
     .. list-table:: Counting with eight digits
         :widths: 50 50
 
-        * - :math:`00000000`
-          - Zero
-        * - :math:`00000001`
-          - One
-        * - :math:`00000002`
-          - Two
         * - ...
           - ...
         * - :math:`00000008`
@@ -203,7 +195,7 @@ Names
           - :math:`10000000`
 
 
-* As a consequence of the counting patter, each position corresponds to a value that is the base raised to some power
+* As a consequence of the counting pattern, each position corresponds to a value that is the base raised to some power
 * Consider the number :math:`123`
 * The symbol :math:`1` in the hundreds position is :math:`1 \times 10^{2}`
 
