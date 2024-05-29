@@ -2,7 +2,7 @@
 Number Bases
 ************
 
-* Start with integers and learning how to count
+* Have you ever *really* thought about counting?
 
 
 
@@ -32,16 +32,179 @@ Decimal (Base Ten)
 
 
 
-Counting in Base Ten
---------------------
+Counting in Base Ten and Position
+---------------------------------
+
+* Counting in base ten consists of moving to the next symbol
+
+    .. list-table:: Counting With Nine Symbols
+        :widths: 50 50
+
+        * - :math:`0`
+          - Zero
+        * - :math:`1`
+          - One
+        * - :math:`2`
+          - Two
+        * - :math:`3`
+          - Three
+        * - :math:`4`
+          - Four
+        * - :math:`5`
+          - Five
+        * - :math:`6`
+          - Six
+        * - :math:`7`
+          - Seven
+        * - :math:`8`
+          - Eight
+        * - :math:`9`
+          - Nine
+        * - :math:`????`
+          - Ten?
+
+
+* However, there are only ten unique symbols
+* This means it's not possible to count past nine with the symbols alone
+* This is where symbol position comes in
+
+* First, consider that each number has an infinite number of zeros in front of it
+
+    * Why this is will be discussed shortly
+
+
+* Consider the below table where only seven of the leading zeros are included
+
+    * Thus, these numbers will each have a total of eight symbols
+    * Each of these symbols/numerals, in this context, is called a *digit*
+
+        * Digit comes from latin (*digitus*), meaning finger or toe, of which, humans typically have ten of each
+
+
+    .. list-table:: Values expressed with eight digits
+        :widths: 50 50
+
+        * - :math:`00000000`
+          - Zero
+        * - :math:`00000001`
+          - One
+        * - :math:`00000002`
+          - Two
+        * - :math:`00000003`
+          - Three
+        * - :math:`00000004`
+          - Four
+        * - :math:`00000005`
+          - Five
+        * - :math:`00000006`
+          - Six
+        * - :math:`00000007`
+          - Seven
+        * - :math:`00000008`
+          - Eight
+        * - :math:`00000009`
+          - Nine
+
+
+* To count past the value nine, a new rule is introduced
+* If the no more symbols are left
+
+    * Reset the symbol to zero in the current position
+    * Change to the subsequent symbol in the next position
+
+
+    .. list-table:: Counting with eight digits
+        :widths: 50 50
+
+        * - :math:`00000000`
+          - Zero
+        * - :math:`00000001`
+          - One
+        * - :math:`00000002`
+          - Two
+        * - ...
+          - ...
+        * - :math:`00000008`
+          - Eight
+        * - :math:`00000009`
+          - Nine
+        * - :math:`00000010`
+          - Ten
+        * - :math:`00000011`
+          - Eleven
+        * - ...
+          - ...
+        * - :math:`00000018`
+          - Eighteen
+        * - :math:`00000019`
+          - Nineteen
+        * - :math:`00000020`
+          - Twenty
+        * - ...
+          - ...
+        * - :math:`00000099`
+          - Ninety Nine
+        * - :math:`00000100`
+          - One Hundred
+        * - :math:`00000101`
+          - One Hundred and One
+        * - ...
+          - ...
+
+
+* Each of these positions has a name
+* From left to right, they are
+
+    .. list-table:: Position Names
+        :widths: 50 50 50 50
+
+        * - First Digit
+          - Ones
+          - :math:`10^{0}`
+          - :math:`1`
+        * - Second Digit
+          - Tens
+          - :math:`10^{1}`
+          - :math:`10`
+        * - Third Digit
+          - Hundreds
+          - :math:`10^{2}`
+          - :math:`100`
+        * - Fourth Digit
+          - Thousands
+          - :math:`10^{3}`
+          - :math:`1000`
+        * - Fifth Digit
+          - Ten Thousands
+          - :math:`10^{4}`
+          - :math:`10000`
+        * - Sixth Digit
+          - Hundred Thousands
+          - :math:`10^{5}`
+          - :math:`100000`
+        * - Seventh Digit
+          - Millions
+          - :math:`10^{6}`
+          - :math:`1000000`
+        * - Eighth Digit
+          - Ten Millions
+          - :math:`10^{7}`
+          - :math:`10000000`
 
 
 
 
 
-position
 
-addition
+* Although with integers, there are an infinite number of leading zeros and positions
+* Only eight digits were used to encode the numbers in the above examples
+* Ths means there is a limit to the number of unique positive integer values that can be expressed
+* The largest number is :math:`99999999`
+
+    * Ninety nine million, nine hundred and ninety nine thousand, nine hundred and ninety nine
+
+
+* Obviously there are values larger than this, but they are not representable with only 8 digits
 
 
 
