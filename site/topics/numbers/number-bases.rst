@@ -35,7 +35,7 @@ Counting in Base Ten
 
 * Counting in base ten consists of moving to the next symbol
 
-    .. list-table:: Counting With Nine Symbols
+    .. list-table:: Counting with Nine Symbols
         :widths: 50 50
 
         * - :math:`0`
@@ -83,7 +83,7 @@ Position
         * Digit comes from latin (*digitus*), meaning finger or toe, of which, humans typically have ten of each
 
 
-    .. list-table:: Values expressed with eight digits
+    .. list-table:: Values Expressed with Eight Digits
         :widths: 50 50
 
         * - :math:`00000000`
@@ -115,7 +115,7 @@ Position
     * Change to the subsequent symbol in the next position
 
 
-    .. list-table:: Counting with eight digits
+    .. list-table:: Counting with Digits
         :widths: 50 50
 
         * - ...
@@ -158,7 +158,7 @@ Names
 * Each of these positions has a name
 * From left to right, they are
 
-    .. list-table:: Position Names
+    .. list-table:: Digit Position Names
         :widths: 50 50 50 50
 
         * - First Digit
@@ -293,7 +293,7 @@ Binary (Base Two)
         * Increment the symbol in the next position
 
 
-    .. list-table:: Counting in binary
+    .. list-table:: Counting in Binary
         :widths: 50 50
 
         * - :math:`00000000`
@@ -315,6 +315,73 @@ Binary (Base Two)
         * - :math:`00001000`
           - Eight
         * - ...
+          - ...
+
+
+* With eight bits, the largest positive integer that could be represented is :math:`256`
+
+    * Can represent the numbers 0 through to 255
+
+
+* A grouping of eight bits is called a *byte*
+* The reason for eight bits per byte in computing is historical, but to put it simply
+
+    * It provides enough unique values to encode characters/numbers/symbols
+    * Has enough left over room to grow
+
+
+.. figure:: ascii_table_0-127.png
+    :width: 500 px
+    :align: center
+    :target: https://www.asciitable.com/
+
+    ASCII table --- example of how 128 unique values can represent characters/numbers/symbols. There exists an extended
+    ASCII table that has an additional 128 values for the numbers 128 to 255.
+
+
+
+* Like base ten, the specific bit position carries different values
+* These values are always some power of the base number
+* Although these bit positions don't really go by specific names, they can be named like the digits
+
+    .. list-table:: Bit Position Names
+        :widths: 50 50 50 50
+
+        * - First Digit
+          - Ones
+          - :math:`2^{0}`
+          - :math:`1`
+        * - Second Digit
+          - Twos
+          - :math:`2^{1}`
+          - :math:`2`
+        * - Third Digit
+          - Fours
+          - :math:`2^{2}`
+          - :math:`4`
+        * - Fourth Digit
+          - Eights
+          - :math:`2^{3}`
+          - :math:`8`
+        * - Fifth Digit
+          - Sixteens
+          - :math:`2^{4}`
+          - :math:`16`
+        * - Sixth Digit
+          - Thirty-twos
+          - :math:`2^{5}`
+          - :math:`32`
+        * - Seventh Digit
+          - Sixty-fours
+          - :math:`2^{6}`
+          - :math:`62`
+        * - Eighth Digit
+          - One hundred and twenty eights
+          - :math:`2^{7}`
+          - :math:`128`
+        * - ...
+          - ...
+          - ...
           - ...
 
 
