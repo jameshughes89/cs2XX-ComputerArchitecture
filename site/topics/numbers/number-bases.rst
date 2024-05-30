@@ -341,7 +341,7 @@ Binary (Base Two)
 
 
 * Like base ten, the specific bit position carries different values
-* These values are always some power of the base number
+* These values are always the base to some power
 * Although these bit positions don't really go by specific names, they can be named like the digits
 
     .. list-table:: Bit Position Names
@@ -408,10 +408,23 @@ Binary (Base Two)
     :math:`123`
 
 
+.. note::
 
+    Position really matters --- have you ever counted to :math:`32` on one hand?
 
+    Typically, when counting with fingers, the position of the finger is ignored. This means that the biggest number
+    one could count to on one hand is five.
 
-Note on counting on fingers with binary
+    However, it is possible to make use of the position of each finger to get more out of your hand. Try it yourself.
+
+    .. figure:: finger_counting_binary_19.png
+        :width: 500 px
+        :align: center
+        :target: https://en.wikipedia.org/wiki/Finger_binary
+
+        The number 19 in binary represented with fingers. The thumb is the least significant bit (ones) and the pinky
+        finger is the most significant bit (sixteens).
+
 
 
 Hexadecimal (Base 16)
