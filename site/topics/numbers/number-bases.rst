@@ -318,7 +318,7 @@ Binary (Base Two)
           - ...
 
 
-* With eight bits, the largest positive integer that could be represented is :math:`256`
+* With eight bits, the largest positive integer that could be represented is :math:`255`
 
     * Can represent the numbers 0 through to 255
 
@@ -331,7 +331,7 @@ Binary (Base Two)
 
 
 .. figure:: ascii_table_0-127.png
-    :width: 500 px
+    :width: 666 px
     :align: center
     :target: https://www.asciitable.com/
 
@@ -418,7 +418,7 @@ Binary (Base Two)
     However, it is possible to make use of the position of each finger to get more out of your hand. Try it yourself.
 
     .. figure:: finger_counting_binary_19.png
-        :width: 500 px
+        :width: 150 px
         :align: center
         :target: https://en.wikipedia.org/wiki/Finger_binary
 
