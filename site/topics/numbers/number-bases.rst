@@ -244,6 +244,17 @@ Consequence of Finite Digits
 Binary (Base Two)
 =================
 
+Same idea
+Order
+Position matters
+Leading zeros
+Counting rules are the same
+Only two symbols
+bit vs byte
+Groupings (like with the money), neat because can only have zero or one of each though
+
+
+Note on counting on fingers with binary
 
 
 Hexadecimal (Base 16)
