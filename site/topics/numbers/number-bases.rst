@@ -35,7 +35,7 @@ Counting in Base Ten
 
 * Counting in base ten consists of moving to the next symbol
 
-    .. list-table:: Counting with Nine Symbols
+    .. list-table:: Counting with Ten Symbols
         :widths: 50 50
 
         * - :math:`0`
