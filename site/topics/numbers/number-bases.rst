@@ -385,11 +385,30 @@ Binary (Base Two)
           - ...
 
 
+* Like base ten, the binary number can be broken down to the sum of its positional values
+* Consider the number :math:`1111011`
+
+    * One *thirty-two*
+    * One *thirty-four*
+    * One *sixteen*
+    * One *eight*
+    * Zero *fours*
+    * One *two*
+    * One *one*
+
+
+* Thus, the number is
+
+    :math:`1 \times 2^{6} + 1 \times 2^{5} + 1 \times 2^{4} + 1 \times 2^{3} + 0 \times 2^{2} + 1 \times 2^{1} + 1 \times 2^{0}`
+
+    :math:`1 \times 64 + 1 \times 32 + 1 \times 16 + 1 \times 8 + 0 \times 4 + 1 \times 2 + 1 \times 1`
+
+    :math:`64 + 32 + 16 + 8 + 2 + 1`
+
+    :math:`123`
 
 
 
-bit vs byte
-Groupings (like with the money), neat because can only have zero or one of each though
 
 
 Note on counting on fingers with binary
