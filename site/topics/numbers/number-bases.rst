@@ -244,12 +244,76 @@ Consequence of Finite Digits
 Binary (Base Two)
 =================
 
-Same idea
-Order
-Position matters
-Leading zeros
-Counting rules are the same
-Only two symbols
+* Decimal is the typical way numbers are encoded in every day life
+* However, base ten (decimal) is only an encoding
+
+    * It's not a *number*, it's a way to represent a number
+
+
+* Other bases could just as easily be used
+* For example, binary (base two)
+* Instead of ten symbols, only two are used --- :math:`0, 1`
+
+    * :math:`0` means zero, like base ten
+    * :math:`1` means one, like base ten
+
+
+* The symbols have an ordering to the magnitude of values, like base ten
+
+    * :math:`0 \rightarrow 1`
+    * :math:`0 < 1`
+
+
+* Position matters, like base ten
+
+    * The value of a :math:`1` depends on *where* it is
+
+
+* There are an infinite number of leading zeros
+
+    * :math:`1 == 00000001 == 0000000000000001`
+
+
+* In decimal, the symbols are called digits
+* In binary, they are called *bits*
+
+    * Binary information digit --- bit
+
+
+* The counting rules are the same
+
+    * Increment to the next symbol
+    * If there are no more symbols
+
+        * Reset to :math:`0`
+        * Increment the symbol in the next position
+
+
+    .. list-table:: Counting in binary
+        :widths: 50 50
+
+        * - :math:`00000000`
+          - Zero
+        * - :math:`00000001`
+          - One
+        * - :math:`00000010`
+          - Two
+        * - :math:`00000011`
+          - Three
+        * - :math:`00000100`
+          - Four
+        * - :math:`00000101`
+          - Five
+        * - :math:`00000110`
+          - Six
+        * - :math:`00000111`
+          - Seven
+        * - :math:`00001000`
+          - Eight
+        * - ...
+          - ...
+
+
 bit vs byte
 Groupings (like with the money), neat because can only have zero or one of each though
 
