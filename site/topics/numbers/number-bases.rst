@@ -193,6 +193,10 @@ Names
           - Ten Millions
           - :math:`10^{7}`
           - :math:`10000000`
+        * - ...
+          - ...
+          - ...
+          - ...
 
 
 * As a consequence of the counting pattern, each position corresponds to a value that is the base raised to some power
@@ -312,6 +316,9 @@ Binary (Base Two)
           - Eight
         * - ...
           - ...
+
+
+
 
 
 bit vs byte
