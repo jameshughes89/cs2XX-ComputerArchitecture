@@ -323,23 +323,6 @@ Binary (Base Two)
     * Can represent the numbers 0 through to 255
 
 
-* A grouping of eight bits is called a *byte*
-* The reason for eight bits per byte in computing is historical, but to put it simply
-
-    * It provides enough unique values to encode characters/numbers/symbols
-    * Has enough left over room to grow
-
-
-.. figure:: ascii_table_0-127.png
-    :width: 666 px
-    :align: center
-    :target: https://www.asciitable.com/
-
-    ASCII table --- example of how 128 unique values can represent characters/numbers/symbols. There exists an extended
-    ASCII table that has an additional 128 values for the numbers 128 to 255.
-
-
-
 * Like base ten, the specific bit position carries different values
 * These values are always the base to some power
 * Although these bit positions don't really go by specific names, they can be named like the digits
@@ -388,8 +371,8 @@ Binary (Base Two)
 * Like base ten, the binary number can be broken down to the sum of its positional values
 * Consider the number :math:`1111011`
 
+    * One *Sixty-four*
     * One *thirty-two*
-    * One *thirty-four*
     * One *sixteen*
     * One *eight*
     * Zero *fours*
@@ -410,7 +393,7 @@ Binary (Base Two)
 
 .. note::
 
-    Position really matters --- have you ever counted to :math:`32` on one hand?
+    Position really matters --- have you ever counted to :math:`31` on one hand?
 
     Typically, when counting with fingers, the position of the finger is ignored. This means that the biggest number
     one could count to on one hand is five.
