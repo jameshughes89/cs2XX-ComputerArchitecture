@@ -482,7 +482,6 @@ Converting to Decimal
 
 * For example, given some number of :math:`n` digits :math:`d` in base :math:`b`
 
-
     :math:`(d_{n-1}d_{n-2}...d_{2}d_{1}d_{0})_{b}`
 
 
@@ -504,16 +503,216 @@ Converting to Decimal
 
 
 
+Converting from Decimal
+-----------------------
+
+* To convert a number from decimal to some arbitrary base :math:`b`
+
+    * Divide the number by :math:`b` and keep the quotient :math:`q_{0}` and remainder :math:`r_{0}`
+    * The value of :math:`r_{0}` is the digit for the least significant position
+    * Divide :math:`q_{0}` by the base :math:`b` to get a new quotient :math:`q_{1}` and remainder :math:`r_{1}`
+    * The value of :math:`r_{1}` is the digit for the next position
+    * Repeat until the quotient is zero
 
 
-Converting from decimal to other
-    explain it
+* Consider converting the number :math:`123_{10}` to binary
+
+    .. list-table:: Converting :math:`123_{10}` to Binary
+        :widths: 50 50 50 50
+        :header-rows: 1
+
+        * - Digit/Bit Position
+          - Division
+          - :math:`q`
+          - :math:`r`
+        * - :math:`0`
+          - :math:`123/2`
+          - :math:`61`
+          - :math:`1`
+        * - :math:`1`
+          - :math:`61/2`
+          - :math:`30`
+          - :math:`1`
+        * - :math:`2`
+          - :math:`30/2`
+          - :math:`15`
+          - :math:`0`
+        * - :math:`3`
+          - :math:`15/2`
+          - :math:`7`
+          - :math:`1`
+        * - :math:`4`
+          - :math:`7/2`
+          - :math:`3`
+          - :math:`1`
+        * - :math:`5`
+          - :math:`3/2`
+          - :math:`1`
+          - :math:`1`
+        * - :math:`6`
+          - :math:`1/2`
+          - :math:`0`
+          - :math:`1`
 
 
-Between arbitrary bases
+* Therefore, the number :math:`123_{10}` is :math:`1111011_{2}`
+
+* Consider converting the number :math:`123_{10}` to hexadecimal
+
+    .. list-table:: Converting :math:`123_{10}` to Hexadecimal
+        :widths: 50 50 50 50
+        :header-rows: 1
+
+        * - Hex Digit Position
+          - Division
+          - :math:`q`
+          - :math:`r`
+        * - :math:`0`
+          - :math:`123/16`
+          - :math:`7`
+          - :math:`11` or :math:`B`
+        * - :math:`1`
+          - :math:`7/16`
+          - :math:`0`
+          - :math:`7`
 
 
-Trick when bases are powers of one another
+* Therefore, the number :math:`123_{10}` is :math:`7B_{2}`
+
+    * Remember, :math:`B_{16} == 11_{10}`
+
+
+Converting Between Arbitrary Bases
+----------------------------------
+
+* Converting between arbitrary bases will not be covered in detail
+
+    * If one really wants to convert between base, they can do it in two steps with decimal
+    * For example, converting from base 5 to base 7
+
+        * Convert from base five to decimal
+        * Convert from decimal to base 7
+
+
+* However, there is an interesting trick when converting between bases when one is an even power of the other
+* Consider binary and hexadecimal
+
+    * :math:`2^{4} == 16`
+
+
+* Each group of four bits corresponds to a single hexadecimal digit
+* This is perhaps best illustrated with an example
+
+    :math:`1111011_{2}`
+
+
+* Take the least significant batch of four bits and convert to hexadecimal
+
+    :math:`1011_{2} == 11_{10} == B_{16}`
+
+
+* Take the next batch of four bits, add leading zeros if necessary, and convert to hexadecimal
+
+    :math:`0111_{2} == 7_{10} == 7_{16}`
+
+
+* One can then combine the hexadecimal digits to create the hexadecimal number
+
+    :math:`1111011_{2} == 7B_{16}`
+
+
+* This works because, with any grouping of four bits, sixteen unique values can be represented
+
+    * :math:`0` through :math:`15`
+
+
+* With hexadecimal, sixteen unique values can be represented with a single hexadecimal digit
+
+    * :math:`0` through :math:`F`
+
+
+* This works in general when one base is an even power of another
+* In the below table, observe that
+
+    * Base four can be obtained by combining two bits from base two
+    * Base eight can be obtained by combining three bits from base two
+    * Base sixteen can be obtained by combining four bits from base two
+    * Base sixteen can also be obtained by combing two base four digits
+
+
+    .. list-table:: Numbers in Base two, Four, Eight, and Sixteen
+        :widths: 50 50 50 50
+        :header-rows: 1
+
+        * - Base Two
+          - Base Four
+          - Base Eight
+          - Base Sixteen
+        * - :math:`0000`
+          - :math:`00`
+          - :math:`00`
+          - :math:`0`
+        * - :math:`0001`
+          - :math:`01`
+          - :math:`01`
+          - :math:`1`
+        * - :math:`0010`
+          - :math:`02`
+          - :math:`02`
+          - :math:`2`
+        * - :math:`0011`
+          - :math:`03`
+          - :math:`03`
+          - :math:`3`
+        * - :math:`0100`
+          - :math:`10`
+          - :math:`04`
+          - :math:`4`
+        * - :math:`0101`
+          - :math:`11`
+          - :math:`05`
+          - :math:`5`
+        * - :math:`0110`
+          - :math:`12`
+          - :math:`06`
+          - :math:`6`
+        * - :math:`0111`
+          - :math:`13`
+          - :math:`07`
+          - :math:`7`
+        * - :math:`1000`
+          - :math:`20`
+          - :math:`10`
+          - :math:`8`
+        * - :math:`1001`
+          - :math:`21`
+          - :math:`11`
+          - :math:`9`
+        * - :math:`1010`
+          - :math:`22`
+          - :math:`12`
+          - :math:`A`
+        * - :math:`1011`
+          - :math:`23`
+          - :math:`13`
+          - :math:`B`
+        * - :math:`1100`
+          - :math:`30`
+          - :math:`14`
+          - :math:`C`
+        * - :math:`1101`
+          - :math:`31`
+          - :math:`15`
+          - :math:`D`
+        * - :math:`1110`
+          - :math:`32`
+          - :math:`16`
+          - :math:`E`
+        * - :math:`1111`
+          - :math:`33`
+          - :math:`17`
+          - :math:`F`
+
 
 
 *Meaning*
