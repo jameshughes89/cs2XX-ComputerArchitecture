@@ -491,15 +491,16 @@ Converting to Decimal
     :math:`(d_{n-1} \times b^{n-1} + d_{n-2} \times b^{n-2} + ... + d_{2} \times b^{2} + d_{1} \times b^{1} + d_{0} \times b^{0})_{10}`
 
 
-* Consider the number :math:`14204_{5}`
+* Consider the number :math:`J204_{20}` --- note that :math:`J_{20} == 19_{10}` in this example
 
-    :math:`(1 \times 5^{4} + 4 \times 5^{3} + 2 \times 5^{2} + 0 \times 5^{1} + 4 \times 5^{0})_{10}`
 
-    :math:`(1 \times 625 + 4 \times 125 + 2 \times 25 + 0 \times 5 + 4 \times 1)_{10}`
+    :math:`(19 \times 20^{3} + 2 \times 20^{2} + 0 \times 20^{1} + 4 \times 20^{0})_{10}`
 
-    :math:`(625 + 500 + 50 + 0 + 4 )_{10}`
+    :math:`(19 \times 8000 + 2 \times 400 + 0 \times 20 + 4 \times 1)_{10}`
 
-    :math:`1179_{10}`
+    :math:`(152000 + 800 + 0 + 4)_{10}`
+
+    :math:`152804_{10}`
 
 
 
