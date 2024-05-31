@@ -396,7 +396,7 @@ Binary (Base Two)
     Position really matters --- have you ever counted to :math:`31` on one hand?
 
     Typically, when counting with fingers, the position of the finger is ignored. This means that the biggest number
-    one could count to on one hand is five.
+    one could count to on one hand is five. This is effectively base 1.
 
     However, it is possible to make use of the position of each finger to get more out of your hand. Try it yourself.
 
@@ -418,8 +418,29 @@ Hexadecimal (Base 16)
 Converting Numbers Between Bases
 ================================
 
-subscript
-10 is actually the base, which is cool
+* Although only three bases were discussed so far, but there is nothing stopping one from using base 5, or 123, or ...
+
+* A subscript is added to the number to specify the base when there is a potential for ambiguity
+* For example, consider the number :math:`10`
+
+    * What number is that?
+    * Is it a base ten number?
+    * Base two?
+    * Hexadecimal?
+
+* :math:`10_{10}` means ten
+* :math:`10_{2}` means two
+* :math:`10_{16}` means sixteen
+
+
+* Notice that, with any base greater than 1, the value of :math:`10` will always be the base
+
+    * Given a base :math:`b`
+    * The second digit is always :math:`b^{1}`
+    * And if the value in the second digit is a :math:`1`, then the number is :math:`1 \times b^{1} == 1 \times b == b`
+
+
+
 
 Converting to decimal we already did
     explain it
