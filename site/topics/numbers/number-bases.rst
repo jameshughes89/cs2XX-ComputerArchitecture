@@ -413,9 +413,62 @@ Binary (Base Two)
 Hexadecimal (Base 16)
 =====================
 
-* 16 symbols now
-* Same patterns
-* Counting
+* Using a base larger than ten is fine, however, there are only ten conventional numerals
+* Because of this, additional symbols are needed to represent values greater than 9
+
+* Consider hexadecimal --- base 16
+* Although any symbol could be used to represent the values 10 through 15, the letters :math:`A` through :math:`F` are used
+
+* Like decimal and binary, the same rules apply to hexadecimal
+* The symbols have an ordering to their magnitudes
+
+    * :math:`0 < 1 <  2 <  3 <  4 <  5 <  6 <  7 <  8 <  9 < A < B < C < D < E < F`
+
+
+* Counting works the same way
+
+    * Leading zeros also exist, but are excluded below for brevity
+
+
+    .. list-table:: Counting in Hexadecimal
+        :widths: 50 50
+
+        * - :math:`0`
+          - Zero
+        * - :math:`1`
+          - One
+        * - ...
+          - ...
+        * - :math:`9`
+          - Nine
+        * - :math:`A`
+          - Ten
+        * - :math:`B`
+          - Eleven
+        * - :math:`C`
+          - Twelve
+        * - :math:`D`
+          - Thirteen
+        * - :math:`E`
+          - Fourteen
+        * - :math:`F`
+          - Fifteen
+        * - :math:`10`
+          - Sixteen
+        * - :math:`11`
+          - Seventeen
+        * - ...
+          - ...
+        * - :math:`FF`
+          - Two Hundred and Fifty Five
+        * - :math:`100`
+          - Two Hundred and Fifty Six
+        * - :math:`101`
+          - Two Hundred and Fifty Seven
+        * - ...
+          - ...
+
+
 * Hex digit names
 * Example
 
