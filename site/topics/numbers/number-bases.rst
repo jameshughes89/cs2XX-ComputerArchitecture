@@ -438,12 +438,6 @@ Converting Numbers Between Bases
 
 * In a computing context, binary and hexadecimal are often written as ``0b10`` and ``0x10`` respectively
 
-* Notice that, with any base greater than 1, the value of :math:`10` will always be the base
-
-    * Given a base :math:`b`
-    * The second digit is always associated with the value :math:`b^{1}`
-    * And if the value in the second digit is :math:`1`, then the number is :math:`1 \times b^{1} == 1 \times b == b`
-
 
 Converting to Decimal
 ---------------------
