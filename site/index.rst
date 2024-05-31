@@ -62,6 +62,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
+    topics/introduction/introduction
     topics/numbers/number-bases
     topics/logic/truth-tables
     topics/transistors-gates/transistors-gates
