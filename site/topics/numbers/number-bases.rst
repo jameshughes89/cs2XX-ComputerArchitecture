@@ -564,7 +564,7 @@ Converting from Decimal
         * - :math:`0`
           - :math:`123/16`
           - :math:`7`
-          - :math:`11` or :math:`B`
+          - :math:`11_{10}` or :math:`B_{16}`
         * - :math:`1`
           - :math:`7/16`
           - :math:`0`
