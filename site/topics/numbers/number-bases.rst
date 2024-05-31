@@ -428,16 +428,21 @@ Converting Numbers Between Bases
     * Base two?
     * Hexadecimal?
 
-* :math:`10_{10}` means ten
-* :math:`10_{2}` means two
-* :math:`10_{16}` means sixteen
+
+* Ambiguity is eliminated by including the subscript
+
+    * :math:`10_{10}` means ten
+    * :math:`10_{2}` means two
+    * :math:`10_{16}` means sixteen
+
+
 
 
 * Notice that, with any base greater than 1, the value of :math:`10` will always be the base
 
     * Given a base :math:`b`
-    * The second digit is always :math:`b^{1}`
-    * And if the value in the second digit is a :math:`1`, then the number is :math:`1 \times b^{1} == 1 \times b == b`
+    * The second digit is always associated with the value :math:`b^{1}`
+    * And if the value in the second digit is :math:`1`, then the number is :math:`1 \times b^{1} == 1 \times b == b`
 
 
 
