@@ -413,6 +413,11 @@ Binary (Base Two)
 Hexadecimal (Base 16)
 =====================
 
+* 16 symbols now
+* Same patterns
+* Counting
+* Hex digit names
+* Example
 
 
 Converting Numbers Between Bases
