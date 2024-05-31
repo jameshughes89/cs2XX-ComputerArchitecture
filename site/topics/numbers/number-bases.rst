@@ -386,7 +386,7 @@ Binary (Base Two)
 
     :math:`1 \times 64 + 1 \times 32 + 1 \times 16 + 1 \times 8 + 0 \times 4 + 1 \times 2 + 1 \times 1`
 
-    :math:`64 + 32 + 16 + 8 + 2 + 1`
+    :math:`64 + 32 + 16 + 8 + 0 + 2 + 1`
 
     :math:`123`
 
@@ -436,7 +436,7 @@ Converting Numbers Between Bases
     * :math:`10_{16}` means sixteen
 
 
-
+* In a computing context, binary and hexadecimal are often written as ``0b10`` and ``0x10`` respectively
 
 * Notice that, with any base greater than 1, the value of :math:`10` will always be the base
 
@@ -445,13 +445,71 @@ Converting Numbers Between Bases
     * And if the value in the second digit is :math:`1`, then the number is :math:`1 \times b^{1} == 1 \times b == b`
 
 
+Converting to Decimal
+---------------------
+
+* It is often useful to convert numbers from other bases to decimal since that is what is used in everyday life
+
+    * Saying :math:`123` is a lot easier for us to understand than saying :math:`1111011_{2}` or :math:`7B_{16}`
+    * However, an encoding is only an encoding --- these all *mean* the same thing
 
 
-Converting to decimal we already did
-    explain it
+* For both the binary and hexadecimal bases discussed, numbers were already converted to decimal
+
+    * :math:`1111011_{2}`
+
+        :math:`(1 \times 2^{6} + 1 \times 2^{5} + 1 \times 2^{4} + 1 \times 2^{3} + 0 \times 2^{2} + 1 \times 2^{1} + 1 \times 2^{0})_{10}`
+
+        :math:`(1 \times 64 + 1 \times 32 + 1 \times 16 + 1 \times 8 + 0 \times 4 + 1 \times 2 + 1 \times 1)_{10}`
+
+        :math:`(64 + 32 + 16 + 8 + 0 + 2 + 1)_{10}`
+
+        :math:`123_{10}`
+
+
+    * :math:`7B_{16}`
+
+        :math:`(7 \times 16^{1} + 11 \times 16^{0})_{10}`
+
+        :math:`(7 \times 16 + 11 \times 1)_{10}`
+
+        :math:`(112 + 11)_{10}`
+
+        :math:`123_{10}`
+
+
+* In general, multiply the value of the digit in base ten by the value of the base in base ten to the power of its corresponding position
+
+* For example, given some number of :math:`n` digits :math:`d` in base :math:`b`
+
+
+    :math:`(d_{n-1}d_{n-2}...d_{2}d_{1}d_{0})_{b}`
+
+
+* The value in base ten would be calculated as follows
+
+    :math:`(d_{n-1} \times b^{n-1} + d_{n-2} \times b^{n-2} + ... + d_{2} \times b^{2} + d_{1} \times b^{1} + d_{0} \times b^{0})_{10}`
+
+
+* Consider the number :math:`14204_{5}`
+
+    :math:`(1 \times 5^{4} + 4 \times 5^{3} + 2 \times 5^{2} + 0 \times 5^{1} + 4 \times 5^{0})_{10}`
+
+    :math:`(1 \times 625 + 4 \times 125 + 2 \times 25 + 0 \times 5 + 4 \times 1)_{10}`
+
+    :math:`(625 + 500 + 50 + 0 + 4 )_{10}`
+
+    :math:`1179_{10}`
+
+
+
+
 
 Converting from decimal to other
     explain it
+
+
+Between arbitrary bases
 
 
 Trick when bases are powers of one another
