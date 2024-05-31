@@ -418,6 +418,17 @@ Hexadecimal (Base 16)
 Converting Numbers Between Bases
 ================================
 
+subscript
+10 is actually the base, which is cool
+
+Converting to decimal we already did
+    explain it
+
+Converting from decimal to other
+    explain it
+
+
+Trick when bases are powers of one another
 
 
 *Meaning*
