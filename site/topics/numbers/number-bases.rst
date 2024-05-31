@@ -413,13 +413,18 @@ Binary (Base Two)
 Hexadecimal (Base 16)
 =====================
 
-* Using a base larger than ten is fine, however, there are only ten conventional numerals
+* Using a base larger than ten is fine
+* However, there are only ten conventional numerals
 * Because of this, additional symbols are needed to represent values greater than 9
 
 * Consider hexadecimal --- base 16
+
+    * Often called *hex*
+
+
 * Although any symbol could be used to represent the values 10 through 15, the letters :math:`A` through :math:`F` are used
 
-* Like decimal and binary, the same rules apply to hexadecimal
+* Like counting in decimal and binary, the same rules apply to hexadecimal
 * The symbols have an ordering to their magnitudes
 
     * :math:`0 < 1 <  2 <  3 <  4 <  5 <  6 <  7 <  8 <  9 < A < B < C < D < E < F`
@@ -469,8 +474,51 @@ Hexadecimal (Base 16)
           - ...
 
 
-* Hex digit names
-* Example
+* Like binary, the hexadecimal digits don't really names, but they can be named to get a sense of their meaning
+
+    .. list-table:: Hexadecimal Digit Position Names
+        :widths: 50 50 50 50
+
+        * - First Digit
+          - Ones
+          - :math:`16^{0}`
+          - :math:`1`
+        * - Second Digit
+          - Sixteens
+          - :math:`16^{1}`
+          - :math:`16`
+        * - Third Digit
+          - Two Hundred and Fifty Fives
+          - :math:`16^{2}`
+          - :math:`255`
+        * - Fourth Digit
+          - Four thousand and Ninty Sixes
+          - :math:`16^{3}`
+          - :math:`4096`
+        * - ...
+          - ...
+          - ...
+          - ...
+
+
+
+* Like decimal and binary, a hexadecimal number can be broken down into the sum of its positional values
+* Consider the number :math:`7B`
+
+    * Seven *Sixteens*
+    * Eleven *Ones*
+
+
+* Thus, the number can be calculated as follows
+
+    :math:`7 \times 16^{1} + 11 \times 16^{0}`
+
+    :math:`7 \times 16 + 11 \times 1`
+
+    :math:`112 + 11`
+
+    :math:`123`
+
 
 
 Converting Numbers Between Bases
