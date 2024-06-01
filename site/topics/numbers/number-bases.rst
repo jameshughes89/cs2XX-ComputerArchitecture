@@ -573,7 +573,6 @@ Converting from Decimal
 
 * Therefore, the number :math:`123_{10}` is :math:`7B_{2}`
 
-    * Remember, :math:`B_{16} == 11_{10}`
 
 
 Converting Between Arbitrary Bases
