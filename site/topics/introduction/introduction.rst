@@ -62,11 +62,11 @@ What Will I Learn?
 Resources
 =========
 
-* The course content is available on `GitHub <https://github.com/jameshughes89/cs2XX-ComputerArchitecture>`_
-* This course makes use of *Digital*
+* This course only has one required special resource --- *Digital*
 
     * Free software for simulating digital circuits
     * Available on `GitHub <https://github.com/hneemann/Digital>`_
+
 
 .. figure:: digital_screenshot.png
     :width: 500 px
@@ -75,6 +75,28 @@ Resources
     Screenshot of a small portion of a modified version of the 8-bit computer designed by Ben Eater. The larger circuit
     is a simulated fully functional and programmable turing complete computer.
 
+
+
+Supplementary Resources
+-----------------------
+
+* This course has several recommended supplementary resources
+
+    * Not required, but provide additional practice, context, details, etc.
+
+
+* At tne end of each topic, content from various resources will be suggested
+
+
+* The course content is available on `GitHub <https://github.com/jameshughes89/cs2XX-ComputerArchitecture>`_
+
+    * There is no requirement to access this content
+    * However, students are encouraged to make contributions to the course content
+
+
+* The textbook *Introduction to Computing Systems: From Bits & Gates to C/C++ & Beyond*
+
+    * Not *required*, but for those that like textbooks, it is great
 
 
 * `Ben Eater has an amazing YouTube playlist where they build a turing complete computer on breadboards <https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU>`_
