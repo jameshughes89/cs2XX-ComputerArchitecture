@@ -52,7 +52,7 @@ What Will I Learn?
 .. figure:: harvard_architecture.png
     :width: 500 px
     :align: center
-    :target: https://en.wikipedia.org/wiki/Von_Neumann_architecture
+    :target: https://en.wikipedia.org/wiki/Harvard_architecture
 
     High-level idea of the Harvard architecture. This architecture has separate memory for data and instructions.
 
