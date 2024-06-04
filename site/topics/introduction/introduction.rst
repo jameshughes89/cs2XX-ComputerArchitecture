@@ -13,14 +13,15 @@ What Will I Learn?
 ------------------
 
 * The purpose of this course is to learn how a conventional computer works
-* The topic starts with transistors, and ends with programming a computer
+* The topic starts with transistors and ends with programming a computer
 
 .. figure:: transistors.png
     :width: 333 px
     :align: center
     :target: https://en.wikipedia.org/wiki/Transistor
 
-    A collection of four transistors.
+    A collection of four transistors. Although these transistors are all physically different, their function is the
+    same.
 
 
 * There are several layers of abstraction between transistors and programming that will be covered
@@ -35,7 +36,7 @@ What Will I Learn?
     * Combinatorial and Sequential Logic
     * Control Logic
     * CPUs
-    * Von Neumann and Harvard Architectures
+    * Architectures
     * Machine Language/Assembly Language
     * Compilers
 
@@ -71,8 +72,8 @@ Additional Resources
     :width: 500 px
     :align: center
 
-    Screenshot of a portion of a modified version of the 8-bit computer designed by Ben Eater. The larger circuit is a
-    simulated fully functional and programmable turing complete computer.
+    Screenshot of a small portion of a modified version of the 8-bit computer designed by Ben Eater. The larger circuit
+    is a simulated fully functional and programmable turing complete computer.
 
 
 
@@ -81,9 +82,23 @@ Additional Resources
     * These videos are fantastic and provide more details on components than will be covered in this course
 
 
+.. figure:: breadboard_computer.png
+    :width: 500 px
+    :align: center
+
+    Part of the 8-bit breadboard computer, as designed by Ben Eater.
+
+
 * The game `Turing Complete <https://store.steampowered.com/app/1444480/Turing_Complete/>`_
 
     * Players incrementally construct and program a turing complete computer
+
+
+.. figure:: turing_complete_screenshot.png
+    :width: 500 px
+    :align: center
+
+    Screenshot of an ALU from a larger computer made within the game "Turing Complete".
 
 
 
@@ -91,7 +106,8 @@ For Next Time
 =============
 
 * Get your computer at home :doc:`set up for the course </getting-set/getting-set>`
-* `Watch Ben Eater's 8-bit computer overview video <https://www.youtube.com/watch?v=HyznrdDSSGM&list=PLowKtXNTBypGqImE405J2565dvjafglHU&index=1>`_  
+* `Watch Ben Eater's 8-bit computer overview video <https://www.youtube.com/watch?v=HyznrdDSSGM&list=PLowKtXNTBypGqImE405J2565dvjafglHU&index=1>`_
+* Play the level "Crude Awakening" from the *Turing Complete* game
 * Read Chapter 1 of your text
 
     * 19 pages
