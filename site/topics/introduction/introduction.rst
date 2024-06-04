@@ -10,7 +10,7 @@ Introduction
 
 
 What Will I Learn?
-------------------
+==================
 
 * The purpose of this course is to learn how a conventional computer works
 * The topic starts with transistors and ends with programming a computer
@@ -59,8 +59,8 @@ What Will I Learn?
 
 
 
-Additional Resources
---------------------
+Resources
+=========
 
 * The course content is available on `GitHub <https://github.com/jameshughes89/cs2XX-ComputerArchitecture>`_
 * This course makes use of *Digital*
