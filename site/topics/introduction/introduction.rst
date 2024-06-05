@@ -85,7 +85,7 @@ Supplementary Resources
     * Not required, but provide additional practice, context, details, etc.
 
 
-* At tne end of each topic, content from various resources will be suggested
+* At the end of each topic, content from various resources will be suggested
 
 
 * The course content is available on `GitHub <https://github.com/jameshughes89/cs2XX-ComputerArchitecture>`_
