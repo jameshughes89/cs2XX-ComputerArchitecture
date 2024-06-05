@@ -4,6 +4,29 @@ Truth Tables
 
 
 
+Boolean Logic
+=============
+
+
+Boolean Algebra
+---------------
+
+
+
+Truth Tables
+============
+
+
+
+Properties of Logical Operators
+===============================
+
+
+De Morgan's Law
+---------------
+
+
+
 For Next Time
 =============
 
