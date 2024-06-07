@@ -10,9 +10,22 @@ Truth Tables
 Boolean Logic
 =============
 
+* Two states
+    * True/False
+    * 1/0
+    * Low voltage/high voltage
 
-Boolean Algebra
----------------
+* Not
+* And
+* Or
+
+* NOR
+* NAND
+* EXOR
+* XNOR
+
+
+* Show the syntax too
 
 
 
