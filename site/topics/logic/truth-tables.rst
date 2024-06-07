@@ -2,6 +2,9 @@
 Truth Tables
 ************
 
+* Much of the following will likely be a review of already well understood concepts
+* This content is covered for completeness, but will be kept at a relatively high level
+
 
 
 Boolean Logic
