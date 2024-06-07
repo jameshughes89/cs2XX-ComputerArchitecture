@@ -817,7 +817,7 @@ Converting Between Arbitrary Bases
 For Next Time
 =============
 
-* `Watch Ben Eater's video on how semiconductors work <https://www.youtube.com/watch?v=33vbFFFn04k>_`
+* `Watch Ben Eater's video on how semiconductors work <https://www.youtube.com/watch?v=33vbFFFn04k>`_
 * Read Chapter 2 of your text
 
     * 23 pages
