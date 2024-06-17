@@ -59,15 +59,34 @@ Boolean Logic
         * Denoted as :math:`a \lor b`
 
 
+* There are additional boolean operators that can be made up from the three basic operators
+* Three of these are commonly used within the context of computer architecture, thus they will be presented here
+
+    * **Exclusive Or** (**XOR**)
+
+        * Binary operator --- operates on two operands to produce a single value
+        * Given boolean values :math:`a` and :math:`b`, return *True* if and only if either are *True*, *False* otherwise
+
+            * Similar to or, but if both are *True*, it returns *False*
+
+        * Denoted as :math:`a \oplus b`
+        * Equivalent to :math:`(a \lor b) \land \lnot (a \land b)`
 
 
-* NOR
-* NAND
-* EXOR
-* XNOR
+    * **Not Or** (**NOR**)
+
+        * Literally *not or*
+        * Sometimes denoted as :math:`\overline \lor`
+        * Equivalent to :math:`\lnot (a \lor b)`
+        * Functionally complete --- can be used to generate all other boolean operators
 
 
-* Show the syntax too
+    * **Not And** (**NAND**)
+
+        * Literally *not and*
+        * Sometimes denoted as :math:`\overline \land`
+        * Equivalent to :math:`\lnot (a \land b)`
+        * Functionally complete --- can be used to generate all other boolean operators
 
 
 
