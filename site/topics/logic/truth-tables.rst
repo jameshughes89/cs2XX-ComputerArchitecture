@@ -19,22 +19,47 @@ Boolean Logic
 * Within the algebra, the *operands* are values that take on one of these two states
 * The *operators* act on these operands to produce a new boolean value
 
+
 .. note::
 
     If this terminology is throwing you off, remember that this is like the integer operators/operands you are familiar
-    with. Consider the expression :math:`1 + 2` --- the operands here are integers :math:`1` and :math:`2` and the
-    operator is :math:`+`, which means addition. Here, addition is an operator that takes two integer values and
-    produces a new integer value.
+    with. Consider the expression :math:`1 + 2`. The operands here are integers :math:`1` and :math:`2` and the operator
+    is :math:`+`, which means addition. Here, addition is an operator that takes two integer values and produces a new
+    integer value.
 
     With boolean logic, the operands can have one of two boolean values as opposed to an infinite number, like with
     integers, and the operators will take two boolean values to produce a new boolean value.
 
 
 
+* There are three basic boolean operators
 
-* Not
-* And
-* Or
+    * **Not**
+
+        * Unary operator --- only operates on a single operand to produce a single value
+        * Given some boolean value :math:`a`, invert it
+
+            * In other words, if :math:`a` is *True*, not :math:`a` is *False*, and *vice versa*
+
+
+        * Typically denoted as :math:`\lnot a` or sometimes :math:`\overline a`
+
+
+    * **And**
+
+        * Binary operator --- operates on two operands to produce a single value
+        * Given boolean values :math:`a` and :math:`b`, return *True* if both values are *True*, *False* otherwise
+        * Denoted as :math:`a \land b`
+
+
+    * **Or**
+
+        * Binary operator --- operates on two operands to produce a single value
+        * Given boolean values :math:`a` and :math:`b`, return *True* if both or either are *True*, *False* otherwise
+        * Denoted as :math:`a \lor b`
+
+
+
 
 * NOR
 * NAND
