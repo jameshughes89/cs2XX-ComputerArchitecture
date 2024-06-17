@@ -11,7 +11,7 @@ Boolean Logic
 =============
 
 * Boolean logic is a form of algebra that operates on boolean values that can take on only two states
-* These states are typically called *True* and *False*
+* These states are typically called *true* and *false*
 
     * Depending on context, these are sometimes referred to as *On*/*Off*, ``1``/``0``, or *high voltage*/*low voltage*
 
@@ -36,7 +36,7 @@ Boolean Logic
         * Unary operator --- only operates on a single operand to produce a single value
         * Given some boolean value :math:`a`, invert it
 
-            * In other words, if :math:`a` is *True*, not :math:`a` is *False*, and *vice versa*
+            * In other words, if :math:`a` is *true*, not :math:`a` is *false*, and *vice versa*
 
 
         * Typically denoted as :math:`\lnot a` or sometimes :math:`\overline a`
@@ -45,14 +45,14 @@ Boolean Logic
     * **And**
 
         * Binary operator --- operates on two operands to produce a single value
-        * Given boolean values :math:`a` and :math:`b`, return *True* if both values are *True*, *False* otherwise
+        * Given boolean values :math:`a` and :math:`b`, return *true* if both values are *true*, *false* otherwise
         * Denoted as :math:`a \land b`
 
 
     * **Or**
 
         * Binary operator --- operates on two operands to produce a single value
-        * Given boolean values :math:`a` and :math:`b`, return *True* if both or either are *True*, *False* otherwise
+        * Given boolean values :math:`a` and :math:`b`, return *true* if both or either are *true*, *false* otherwise
         * Denoted as :math:`a \lor b`
 
 
@@ -62,9 +62,9 @@ Boolean Logic
     * **Exclusive Or** (**XOR**)
 
         * Binary operator --- operates on two operands to produce a single value
-        * Given boolean values :math:`a` and :math:`b`, return *True* if and only if either are *True*, *False* otherwise
+        * Given boolean values :math:`a` and :math:`b`, return *true* if and only if either are *true*, *false* otherwise
 
-            * Similar to or, but if both are *True*, it returns *False*
+            * Similar to or, but if both are *true*, it returns *false*
 
         * Denoted as :math:`a \oplus b`
         * Equivalent to :math:`(a \lor b) \land \lnot (a \land b)`
