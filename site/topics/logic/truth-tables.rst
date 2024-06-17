@@ -27,9 +27,6 @@ Boolean Logic
     is :math:`+`, which means addition. Here, addition is an operator that takes two integer values and produces a new
     integer value.
 
-    With boolean logic, the operands can have one of two boolean values as opposed to an infinite number, like with
-    integers, and the operators will take two boolean values to produce a new boolean value.
-
 
 
 * There are three basic boolean operators
