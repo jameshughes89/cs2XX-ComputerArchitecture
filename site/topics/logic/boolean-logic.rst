@@ -1,14 +1,14 @@
-************
-Truth Tables
-************
+*************
+Boolean Logic
+*************
 
 * Much of the following will likely be a review of already well understood concepts
 * This content is covered for completeness, but will be kept at a relatively high level
 
 
 
-Boolean Logic
-=============
+Boolean Operators and Operands
+==============================
 
 * Boolean logic is a form of algebra that operates on boolean values that can take on only two states
 * These states are typically called *true* and *false*

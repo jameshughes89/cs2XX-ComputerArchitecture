@@ -64,7 +64,7 @@ Office Hours
 
     topics/introduction/introduction
     topics/numbers/number-bases
-    topics/logic/truth-tables
+    topics/logic/boolean-logic
     topics/transistors-gates/transistors-gates
     topics/logic/combinatorial-logic
     topics/memory/d-latch
