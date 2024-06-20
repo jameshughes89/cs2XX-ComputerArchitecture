@@ -90,6 +90,148 @@ Boolean Operators and Operands
 Truth Tables
 ============
 
+* Truth tables provide a structured visualization of all possible truth values for logical expressions
+* These are probably best understood with examples
+* Below is a truth table for the above boolean operators for all possible combinations of values for two operands
+
+
+.. list-table:: Truth Table for Basic and Common Logical Operators
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`a`
+      - :math:`b`
+      -
+      - :math:`\lnot a`
+      - :math:`a \land b`
+      - :math:`a \lor b`
+      -
+      - :math:`a \oplus b`
+      - :math:`\lnot (a \land b)`
+      - :math:`\lnot (a \lor b)`
+    * - :math:`false`
+      - :math:`false`
+      -
+      - :math:`true`
+      - :math:`false`
+      - :math:`false`
+      -
+      - :math:`false`
+      - :math:`true`
+      - :math:`true`
+    * - :math:`false`
+      - :math:`true`
+      -
+      - :math:`true`
+      - :math:`false`
+      - :math:`true`
+      -
+      - :math:`true`
+      - :math:`true`
+      - :math:`false`
+    * - :math:`true`
+      - :math:`false`
+      -
+      - :math:`false`
+      - :math:`false`
+      - :math:`true`
+      -
+      - :math:`true`
+      - :math:`true`
+      - :math:`false`
+    * - :math:`true`
+      - :math:`true`
+      -
+      - :math:`false`
+      - :math:`true`
+      - :math:`true`
+      -
+      - :math:`false`
+      - :math:`false`
+      - :math:`false`
+
+
+
+* In the context of digital circuits, it is common to use ``0`` and ``1`` in place of :math:`true`` and :math:`false``
+
+.. list-table:: Truth Table for Basic and Common Logical Operators using ``0`` and ``1``
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`a`
+      - :math:`b`
+      -
+      - :math:`\lnot a`
+      - :math:`a \land b`
+      - :math:`a \lor b`
+      -
+      - :math:`a \oplus b`
+      - :math:`\lnot (a \land b)`
+      - :math:`\lnot (a \lor b)`
+    * - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      - ``1``
+    * - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+      - ``0``
+
+
+
+Building Out the Truth Table
+----------------------------
+
+* Notice the :math:`\lnot (a \land b)` and :math:`\lnot (a \lor b)` columns in the truth tables are compound operations
+
+    * They are made up of two operations --- **not** and **and/or**
+
+
+* These columns are the inverse of the basic and/or columns in the table
+
+    * Literally **not** the result of those columns
+
+
+* Consider a more complex compound expression --- :math:`SOMETHING
+* It is often helpful to break the operation down into parts that are easier to calculate
+* Then, build out a truth table to solve each part individually
+
+TABLE HERE
+
 
 
 Properties of Logical Operators
