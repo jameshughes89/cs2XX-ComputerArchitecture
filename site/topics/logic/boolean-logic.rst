@@ -213,6 +213,12 @@ Truth Tables
 
 
 
+.. note::
+
+    The empty columns do not have any formal meaning. They are included here for visual clarity.
+
+
+
 Building Out the Truth Table
 ----------------------------
 
@@ -226,11 +232,105 @@ Building Out the Truth Table
     * Literally **not** the result of those columns
 
 
-* Consider a more complex compound expression --- :math:`SOMETHING
+* Consider a more complex compound expression --- :math:`(a \land \lnot b) \lor \lnot c`
 * It is often helpful to break the operation down into parts that are easier to calculate
 * Then, build out a truth table to solve each part individually
 
-TABLE HERE
+.. list-table:: Truth Table for :math:`(a \land \lnot b) \lor \lnot c`
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`a`
+      - :math:`b`
+      - :math:`c`
+      -
+      - :math:`\lnot b`
+      - :math:`\lnot c`
+      -
+      - :math:`a \land \lnot b`
+      -
+      - :math:`(a \land \lnot b) \lor \lnot c`
+    * - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``1``
+      -
+      - ``0``
+      -
+      - ``1``
+    * - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      -
+      - ``0``
+    * - ``0``
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      -
+      - ``1``
+    * - ``0``
+      - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      -
+      - ``0``
+    * - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      -
+      - ``1``
+    * - ``1``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      -
+      - ``1``
+      -
+      - ``1``
+    * - ``1``
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      -
+      - ``1``
+    * - ``1``
+      - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      -
+      - ``0``
 
 
 
