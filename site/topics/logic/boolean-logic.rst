@@ -188,12 +188,14 @@ De Morgan's Law
       - ``0``
 
 
-* De Morgan's laws may not immediately be obvious, but think about what they *mean*
+* De Morgan's laws may not be immediately obvious, but think about what they *mean*
 
     * Visualizations may help with grasping the intuition
 
 
-* Consider the first law --- :math:`\lnot a \lor \lnot b = \lnot(a \land b)`
+* Consider the first law
+
+    :math:`\lnot a \lor \lnot b = \lnot(a \land b)`
 
 .. figure:: de_morgans_law_1.png
     :width: 500 px
@@ -222,7 +224,9 @@ De Morgan's Law
     * Union being, keep all points from both images
 
 
-* Now consider the second law --- :math:`\lnot a \lor \lnot b = \lnot(a \land b)`
+* Now consider the second law
+
+    :math:`\lnot a \lor \lnot b = \lnot(a \land b)`
 
 .. figure:: de_morgans_law_2.png
     :width: 500 px
