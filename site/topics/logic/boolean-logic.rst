@@ -207,7 +207,7 @@ De Morgan's Law
     is equivalent to **and** (:math:`\land`).
 
 
-* It is simpler to see how the above figure represents :math:`\lnot(a \land b)`
+* It is easier to see how the above figure represents :math:`\lnot(a \land b)`
 
     * Think of the Venn diagram of **and**, then invert it
 
@@ -238,7 +238,7 @@ De Morgan's Law
     is equivalent to **and** (:math:`\land`).
 
 
-* Similar to the first law, it is simpler to see how the above figure represents :math:`\lnot(a \lor b)`
+* Similar to the first law, it is easier to see how the above figure represents :math:`\lnot(a \lor b)`
 * Imagine what :math:`\lnot a` and :math:`\lnot b` would be
 
     * It's easier to think of two versions of the image, one for each :math:`\lnot a` and :math:`\lnot b`
