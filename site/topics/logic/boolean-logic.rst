@@ -101,7 +101,7 @@ De Morgan's Law
 
 * De Morgan's laws are of particular interest in the context of computer architecture
 
-    * Because of the popularity of **nor** and **nand**
+    * Given the popularity of **nor** and **nand** in circuit design 
 
 
 * De Morgan's laws are as follows
@@ -113,6 +113,18 @@ De Morgan's Law
 
 
 * Consider that the right hand side of both equations are **nand** and **nor** respectively
+* This means that, not only can **nand** be made with **not** and **and**, but also with **not** and **or**
+
+    * One does not even need the **and** operator to create **nand**
+    * In fact, given only **not** and **or**, one can create **and**
+
+        * :math:`\lnot(\lnot a \lor \lnot b) = \lnot(\lnot(a \land b)) = a \land b`
+
+
+    * This would work the same for **nor** being made with **not** and **and**
+
+
+
 
 
 
