@@ -153,64 +153,8 @@ Truth Tables
 
 
 
-* In the context of digital circuits, it is common to use ``0`` and ``1`` in place of :math:`true`` and :math:`false``
-
-.. list-table:: Truth Table for Basic and Common Logical Operators using ``0`` and ``1``
-    :widths: auto
-    :align: center
-    :header-rows: 1
-
-    * - :math:`a`
-      - :math:`b`
-      -
-      - :math:`\lnot a`
-      - :math:`a \land b`
-      - :math:`a \lor b`
-      -
-      - :math:`a \oplus b`
-      - :math:`\lnot (a \land b)`
-      - :math:`\lnot (a \lor b)`
-    * - ``0``
-      - ``0``
-      -
-      - ``1``
-      - ``0``
-      - ``0``
-      -
-      - ``0``
-      - ``1``
-      - ``1``
-    * - ``0``
-      - ``1``
-      -
-      - ``1``
-      - ``0``
-      - ``1``
-      -
-      - ``1``
-      - ``1``
-      - ``0``
-    * - ``1``
-      - ``0``
-      -
-      - ``0``
-      - ``0``
-      - ``1``
-      -
-      - ``1``
-      - ``1``
-      - ``0``
-    * - ``1``
-      - ``1``
-      -
-      - ``0``
-      - ``1``
-      - ``1``
-      -
-      - ``0``
-      - ``0``
-      - ``0``
-
+* In the context of digital circuits, it is common to use ``0`` and ``1`` in place of :math:`false` and :math:`true`
+* Going forward, ``0`` and ``1`` will be used for thouse course
 
 
 .. note::
