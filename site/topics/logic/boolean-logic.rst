@@ -277,6 +277,66 @@ Building Out the Truth Table
       - ``0``
 
 
+.. admonition:: Activity
+
+    Create and complete a truth table for the boolean expression :math:`\lnot(a \land b) \lor (a \land \lnot b)`.
+
+    .. list-table::
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - :math:`a`
+          - :math:`b`
+          -
+          - :math:`\lnot b`
+          - :math:`a \land b`
+          -
+          - :math:`a \land \lnot b`
+          - :math:`\lnot(a \land b)`
+          -
+          - :math:`\lnot(a \land b) \lor (a \land \lnot b)`
+        * -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+        * -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+        * -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+        * -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+
 
 Properties of Logical Operators
 ===============================
