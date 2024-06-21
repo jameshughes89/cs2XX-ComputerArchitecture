@@ -101,7 +101,7 @@ De Morgan's Law
 
 * De Morgan's laws are of particular interest in the context of computer architecture
 
-    * Given the popularity of **nor** and **nand** in circuit design 
+    * Given the popularity of **nor** and **nand** in circuit design
 
 
 * De Morgan's laws are as follows
@@ -124,6 +124,62 @@ De Morgan's Law
     * This would work the same for **nor** being made with **not** and **and**
 
 
+* The below truth table provides an exhaustive proof of De Morgan's laws
+
+.. list-table:: De Morgan's Laws
+    :widths: auto
+    :header-rows: 1
+
+    * - :math:`a`
+      - :math:`b`
+      - :math:`\lnot a`
+      - :math:`\lnot b`
+      - :math:`a \lor b`
+      - :math:`a \land b`
+      - :math:`\lnot a \lor \lnot b`
+      - :math:`\lnot a \land \lnot b`
+      - :math:`\lnot (a \lor b)`
+      - :math:`\lnot (a \land b)`
+    * - ``0``
+      - ``0``
+      - ``1``
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``1``
+      - ``1``
+      - ``1``
+    * - ``0``
+      - ``1``
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0``
 
 
 
