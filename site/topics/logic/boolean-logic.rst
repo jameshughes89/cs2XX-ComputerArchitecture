@@ -57,11 +57,12 @@ Boolean Operators and Operands
 
 
 .. figure:: basic_boolean_operators.png
-    :width: 500 px
+    :width: 666 px
     :align: center
     :target: https://en.wikipedia.org/wiki/Boolean_algebra#Boolean_operations
 
-    Visual representations of the basic boolean operators with Venn diagrams.
+    Visual representations of the basic boolean operators with Venn diagrams. The images represent **and**, **or**, and
+    **not** respectively. 
 
 
 * There are additional boolean operators that can be made up from the three basic operators
