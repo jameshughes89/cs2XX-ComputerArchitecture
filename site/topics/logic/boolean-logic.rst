@@ -198,6 +198,8 @@ Properties of Logical Operators
           - ``1``
 
 
+    The proof follows similar for the second annihilation law.
+
 
 
 
