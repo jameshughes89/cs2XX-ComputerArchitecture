@@ -99,6 +99,22 @@ Properties of Logical Operators
 De Morgan's Law
 ---------------
 
+* De Morgan's laws are of particular interest in the context of computer architecture
+
+    * Because of the popularity of **nor** and **nand**
+
+
+* De Morgan's laws are as follows
+
+
+        :math:`\lnot a \lor \lnot b = \lnot(a \land b)`
+
+        :math:`\lnot a \land \lnot b = \lnot(a \lor b)`
+
+
+* Consider that the right hand side of both equations are **nand** and **nor** respectively
+
+
 
 
 For Next Time
