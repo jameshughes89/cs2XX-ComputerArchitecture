@@ -203,8 +203,8 @@ De Morgan's Law
     :target: https://en.wikipedia.org/wiki/De_Morgan%27s_laws
 
     Visualization of De Morgan's first law. In this figure, blue is what is included in the result, yellow is what is
-    excluded. Here, the union symbol (:math:`\cup`) is equivalent to **or** (:math:`\lor`) and the intersect symbol
-    (:math:`\cap`) is equivalent to **and** (:math:`\land`).
+    excluded. Here, :math:`\cup` (set union) is equivalent to **or** (:math:`\lor`) and the :math:`\cap` (set intersect)
+    is equivalent to **and** (:math:`\land`).
 
 
 * It is simpler to see how the above figure represents :math:`\lnot(a \land b)`
@@ -234,8 +234,8 @@ De Morgan's Law
     :target: https://en.wikipedia.org/wiki/De_Morgan%27s_laws
 
     Visualization of De Morgan's second law. In this figure, blue is what is included in the result, yellow is what is
-    excluded. Here, the union symbol (:math:`\cup`) is equivalent to **or** (:math:`\lor`) and the intersect symbol
-    (:math:`\cap`) is equivalent to **and** (:math:`\land`).
+    excluded. Here, :math:`\cup` (set union) is equivalent to **or** (:math:`\lor`) and the :math:`\cap` (set intersect)
+    is equivalent to **and** (:math:`\land`).
 
 
 * Similar to the first law, it is simpler to see how the above figure represents :math:`\lnot(a \lor b)`
