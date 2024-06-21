@@ -56,6 +56,14 @@ Boolean Operators and Operands
         * Denoted as :math:`a \lor b`
 
 
+.. figure:: basic_boolean_operators.png
+    :width: 500 px
+    :align: center
+    :target: https://en.wikipedia.org/wiki/Boolean_algebra#Boolean_operations
+
+    Visual representations of the basic boolean operators with Venn diagrams.
+
+
 * There are additional boolean operators that can be made up from the three basic operators
 * Three of these are commonly used within the context of computer architecture, thus they will be presented here
 
