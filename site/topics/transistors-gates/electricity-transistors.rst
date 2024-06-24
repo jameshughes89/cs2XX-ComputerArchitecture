@@ -123,6 +123,58 @@ Electricity
 Voltage, Current, and Resistance
 --------------------------------
 
+* The amount that electricity *wants* to go from point a to point b is called *voltage*
+
+    * A *potential difference*
+
+
+* One can think of voltage as pressure
+* Consider a water pipe --- the voltage is the amount of water pressure in the pipe
+
+    * How much does the water *want* to get from point a to point b
+
+
+* The higher the water pressure, the more the water wants to move to an area of low pressure
+
+* *Current*, on the other hand, is a measure of how much electricity actually flows through the conductor
+* Using the water pipe example, current is the amount of water flowing through the pipes
+
+* However, the size of the pipe itself will limit the amount of water flowing
+* The limiting of current is called *resistance*
+
+
+.. figure:: water_pressure_example.png
+    :width: 333 px
+    :align: center
+
+    Example of water flowing through a pipe. Imagine a press pushing water through the pipes. There may be an area of
+    very high-pressure (high voltage), but the pipe's physical characteristics, like diameter, limits (resistance) the
+    amount of water that can flow through it (current).
+
+
+* With the water pipe example, it is clear that the amount of water flowing depends on both the pressure and pipe size
+* Similarly with electricity, the amount of current depends on the voltage and resistance
+
+* Intuitively, more pressure should mean more current and higher resistance should mean less current
+* This relationship is called *Ohm's Law*
+
+
+    :math:`Current = \frac{Voltage}{Resistance}`
+
+
+* Also written as :math:`I = \frac{V}{R}`, where
+
+    * :math:`I` is current, which is measured in units of *ampere*, or *amp* ---:math:`A`
+    * :math:`V` is voltage, measured in volts --- :math:`V`
+    * :math:`R` is resistance, measured in ohms --- :math:`\Omega`
+
+
+
+
+- series/parallel
+- examples
+
+- basic components
 
 
 
