@@ -18,11 +18,6 @@ Transistors
 
 
 
-Logic Gates
-===========
-
-
-
 For Next Time
 =============
 
