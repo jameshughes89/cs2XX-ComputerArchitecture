@@ -1,5 +1,5 @@
 ***************************
-Transistors and Logic Gates
+Electricity and Transistors
 ***************************
 
 
