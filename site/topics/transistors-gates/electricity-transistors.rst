@@ -11,7 +11,7 @@ Electricity and Transistors
 Electricity
 ===========
 
-* Electricity is a form of energy that results as a consequence of charged particles moving around
+* Electricity is a form of energy that results as a consequence of charged particles moving
 
 * Electrons are negatively charged particles that can move around
 * Protons are positively charged particles that don't move around
@@ -21,7 +21,7 @@ Electricity
     * For example, electrons repel other electrons
 
 
-* However, particles with different charges attract one another
+* Particles with different charges attract one another
 
     * Electrons are attracted to protons
 
@@ -31,7 +31,7 @@ Electricity
     * Substances that are not effective at transmitting electric charge are called *insulators*
 
 
-* Copper, along with several other metals, are good conductors due to how the particles chemically bond to one another
+* Copper, along with several other metals, are good conductors due to how their atoms chemically bond to one another
 * As a result of these bonds, the substance has an abundance of *free electrons*
 * These electrons can move relatively easily when a charge is applied to it
 
@@ -41,11 +41,11 @@ Electricity
     :align: center
     :target: https://en.wikipedia.org/wiki/Electric_battery
 
-    Electronic symbol for a single cell battery. One terminal of the battery has a positive charge (cathode) and the
-    other terminal has a negative charge (anode).
+    Electronic symbol for a single cell battery, a common source of electric charge. One terminal of the battery has a
+    positive charge (cathode) and the other terminal has a negative charge (anode).
 
 
-* Batteries are an example of something that can apply charge to a conductor
+* Batteries are an example of something that can apply a charge to a conductor
 * If a battery is attached to a conductor, its charge will affect the free electrons within the conductor
 
     * The electrons will be repelled from the negative charge and attracted to the positive charge
@@ -69,7 +69,7 @@ Electricity
     * And a *ground* symbol to designate *neutral*
 
 
-.. figure:: charge_from_battery_through_conductor.png
+.. figure:: common_ground_symbols.png
     :width: 333 px
     :align: center
     :target: https://en.wikipedia.org/wiki/Ground_(electricity)
@@ -81,14 +81,14 @@ Electricity
 * Above are three commonly used ground symbols
 * But within the context of the circuits being used in this course, a single line is typically used to designate ground
 
-* Below is an example of some positive charge directly connected to ground
+* Below is an example of some positive charge connected directly to ground
 
     * Here, ground is neutral, but because of the positive charge, ground is relatively negative
     * Thus, electrons will move from ground towards the positive charge
 
 
 .. figure:: vcc_to_ground.png
-    :width: 333 px
+    :width: 50 px
     :align: center
 
     Example of a positive charge connected directly to ground with some conductor. Here, electrons will move from
@@ -111,20 +111,18 @@ Electricity
     the remainder of this topic, for the purpose of describing how things work, correct electricity flow will be used.
     After this topic however, conventional flow will be used.
 
+    .. figure:: real_vs_conventional_current_flow.png
+        :width: 200 px
+        :align: center
+
+        Comparison of actual versus conventional flow. The left image depicts how the electrons would move from ground
+        towards the positive charge. The right image shows conventional flow, where electricity flows from the positive
+        charge towards the negative.
 
 
 Voltage, Current, and Resistance
 --------------------------------
 
-
-
-- triangle
-- watch out for resistance
-- series/parallel
-- examples
-
-- basic components
-- Warn about electric diagrams being backwards
 
 
 
