@@ -60,6 +60,44 @@ Electricity
     while also being attracted to the positive terminal.
 
 
+* Batteries are one source of charge; anything with a charge could be used
+* Further, charge is always *relative*
+
+* In the context of electronics, it is common to not use a battery symbol, but some arbitrary source of charge
+
+    * Typically, an *up arrow* is used to designate a positive
+    * And a *ground* symbol to designate *neutral*
+
+
+.. figure:: charge_from_battery_through_conductor.png
+    :width: 333 px
+    :align: center
+    :target: https://en.wikipedia.org/wiki/Ground_(electricity)
+
+    Examples of three commonly used ground symbols. These have slightly different meanings, but all ultimately signify
+    something connected to a conductor with a neutral charge.
+
+
+* Above are three commonly used ground symbols
+* But within the context of the circuits being used in this course, a single line is typically used to designate ground
+
+* Below is an example of some positive charge directly connected to ground
+
+    * Here, ground is neutral, but because of the positive charge, ground is relatively negative
+    * Thus, electrons will move from ground towards the positive charge
+
+
+.. figure:: vcc_to_ground.png
+    :width: 333 px
+    :align: center
+
+    Example of a positive charge connected directly to ground with some conductor. Here, electrons will move from
+    ground, which, although neutral, has a negative charge relative to the positive charge. If a negative charge was
+    connected to ground instead, electrons would move towards ground as ground would have a positive charge relative to
+    the negative.
+
+
+
 .. warning::
 
     In reality, it is the electrons that physically move; however, for historical reasons, it is common to *pretend*
