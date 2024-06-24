@@ -36,8 +36,49 @@ Electricity
 * These electrons can move relatively easily when a charge is applied to it
 
 
+.. figure:: battery_cell_symbol.png
+    :width: 333 px
+    :align: center
+    :target: https://en.wikipedia.org/wiki/Electric_battery
 
-- Charge (battery, or ground too)
+    Electronic symbol for a single cell battery. One terminal of the battery has a positive charge (cathode) and the
+    other terminal has a negative charge (anode).
+
+
+* Batteries are an example of something that can apply charge to a conductor
+* If a battery is attached to a conductor, its charge will affect the free electrons within the conductor
+
+    * The electrons will be repelled from the negative charge and attracted to the positive charge
+
+
+.. figure:: charge_from_battery_through_conductor.png
+    :width: 333 px
+    :align: center
+    :target: https://en.wikipedia.org/wiki/Electric_battery
+
+    Battery attached to some conductor. Free electrons within the conductor will be repelled by the negative terminal
+    while also being attracted to the positive terminal.
+
+
+.. warning::
+
+    In reality, it is the electrons that physically move; however, for historical reasons, it is common to *pretend*
+    that the electricity flows from the positive terminal. This incorrect designation is called *conventional* current.
+
+    When electricity was first discovered, humans had a poor understanding of the underlying mechanics. Benjamine
+    Franklin was the original person to assign positive and negative labels and arbitrary decided to say that
+    electricity flowed from positive to negative. This convention has, for better or worse, stuck throughout the years.
+
+    This can lead to confusion and frustration, but in the context of this course, this should not be a problem. For
+    the remainder of this topic, for the purpose of describing how things work, correct electricity flow will be used.
+    After this topic however, conventional flow will be used.
+
+
+
+Voltage, Current, and Resistance
+--------------------------------
+
+
 
 - triangle
 - watch out for resistance
