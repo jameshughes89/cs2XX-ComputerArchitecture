@@ -164,17 +164,62 @@ Voltage, Current, and Resistance
 
 * Also written as :math:`I = \frac{V}{R}`, where
 
-    * :math:`I` is current, which is measured in units of *ampere*, or *amp* ---:math:`A`
-    * :math:`V` is voltage, measured in volts --- :math:`V`
-    * :math:`R` is resistance, measured in ohms --- :math:`\Omega`
+    * :math:`I` is current, which is measured in units of *amperes*, or *amps* ---:math:`A`
+    * :math:`V` is voltage, measured in *volts* --- :math:`V`
+    * :math:`R` is resistance, measured in *ohms* --- :math:`\Omega`
 
 
 
+.. warning::
 
-- series/parallel
-- examples
+    In the above circuit examples, voltage sources were connected to conductors with no resistance. In practice, this is
+    a bad idea since an ideal conductor has minimal resistance, and, as resistance approaches zero, according to Ohm's
+    law, current approaches infinity. In normal circumstances, this can cause damage and injury.
 
-- basic components
+
+    .. figure:: burned_breadboard.png
+        :width: 333 px
+        :align: center
+
+        A breadboard that melted due to high current caused by no resistor or other load being added to the circuit. The
+        conductor (wire) got so hot so fast that, not only did the breadboard melt in a matter of seconds, fingers were
+        burned pretty badly too.
+
+
+* Consider the following simple circuit consisting of a voltage source and resistor --- what is the current?
+
+    .. figure:: simple_resistor_circuit.png
+        :width: 250 px
+        :align: center
+
+        A simple circuit containing some voltage source of 5V and a 100 :math:`\Omega` resistor.
+
+
+* Following Ohm's law, this circuit would have a current of :math:`0.05A`
+
+    * :math:`I = \frac{V}{R} = \frac{5V}{100\Omega} = 0.05A`
+
+
+.. note::
+
+    Some of you may already be familiar with circuit schematic diagrams and symbols. Be warned that, not only can these
+    symbols differ in different contexts, but symbols can differ depending on where one is in the world.
+
+    For example, in North America, resistors are often represented with a sawtooth line, but in other parts of the
+    world, it is represented as a box. The software used in this course for simulating circuits was not made in North
+    America, thus, symbols common outside North America will be used.
+
+    .. figure:: resistor_symbols.png
+        :width: 333 px
+        :align: center
+
+        Left --- commonly used symbol for a resistor in North America. Right --- commonly used symbol for a resistor
+        outside North America.
+
+
+Series versus Parallel Circuits
+-------------------------------
+
 
 
 
