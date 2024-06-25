@@ -33,16 +33,18 @@ Symbols
     Screenshot from Digital of a positive charge (up arrow) connected directly to ground (horizontal line).
 
 
-* There are other common symbols for ground depending on the context of how it is used
-*
+* A single horizontal line is common within computer architecture and is the symbol found in Digital
 
-.. figure:: ground_symbols.png
-    :width: 250 px
+    * However, there are other common symbols for ground depending on the context of how it is used
+
+
+.. figure:: common_ground_symbols.png
+    :width: 333 px
     :align: center
+    :target: https://en.wikipedia.org/wiki/Ground_(electricity)
 
-    Commonly seen ground symbols. These symbols have different meaning, but all ultimately mean something that has a
-    neutral charge.
-
+    Examples of three commonly used ground symbols. These have slightly different meanings, but all ultimately signify
+    something with a neutral charge.
 
 
 
