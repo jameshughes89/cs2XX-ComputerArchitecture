@@ -10,6 +10,20 @@ on:
     - main
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: adopt
+      - name: Run Digital Unit Tests
+        run: |
+          cd schematics
+          java -cp Digital.jar CLI test *.dig
+
   sphinx:
     runs-on: ubuntu-latest
     steps:
@@ -32,6 +46,7 @@ jobs:
 
   deploy:
     needs:
+    - test
     - sphinx
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.repository == 'jameshughes89/cs2XX-ComputerArchitecture'
