@@ -27,7 +27,7 @@ Symbols
 
 
 .. figure:: vcc_ground.png
-    :width: 100 px
+    :width: 50 px
     :align: center
 
     Screenshot from Digital of a positive charge (up arrow) connected directly to ground (horizontal line).
@@ -38,7 +38,7 @@ Symbols
     * There are other common symbols for ground depending on the context of how it is used
 
 
-.. figure:: common_ground_symbols.png
+.. figure:: ground_symbols.png
     :width: 333 px
     :align: center
     :target: https://en.wikipedia.org/wiki/Ground_(electricity)
@@ -57,7 +57,7 @@ Symbols
 * Below is an example of the simple circuit containing a resistor
 
 .. figure:: vcc_resistor_ground.png
-    :width: 100 px
+    :width: 50 px
     :align: center
 
     Screenshot from Digital of a positive charge (up arrow) connected to ground (horizontal line) through a resistor
@@ -75,8 +75,8 @@ Symbols
     :width: 333 px
     :align: center
 
-    Left --- Commonly used symbol for a resistor in North America. Right --- Commonly used symbol for a resistor outside
-    North America.
+    Left --- Typical symbol for a resistor in North America. Right --- Typical symbol for a resistor outside North
+    America.
 
 
 * One of the commonly seen symbols for transistors are actually only for a specific, but common type of transistor
