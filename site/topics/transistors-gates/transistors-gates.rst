@@ -35,7 +35,7 @@ Symbols
 
 * A single horizontal line is common within computer architecture and is the symbol found in Digital
 
-    * However, there are other common symbols for ground depending on the context of how it is used
+    * There are other common symbols for ground depending on the context of how it is used
 
 
 .. figure:: common_ground_symbols.png
@@ -45,6 +45,39 @@ Symbols
 
     Examples of three commonly used ground symbols. These have slightly different meanings, but all ultimately signify
     something with a neutral charge.
+
+
+* In the above example, a voltage source was connected directly to ground
+* In practice, this is a bad idea as that could cause damage and injury
+
+    * Current would be too high
+
+
+* A resistor, for example, could be added to the circuit to limit its current
+* Below is an example of the simple circuit containing a resistor
+
+.. figure:: vcc_resistor_ground.png
+    :width: 100 px
+    :align: center
+
+    Screenshot from Digital of a positive charge (up arrow) connected to ground (horizontal line) through a resistor
+    (box).
+
+
+* In North America, a sawtooth symbol is used to represent a resistor, but elsewhere in the world it is typically a box
+
+    * Like in the above figure
+
+
+* Digital was not made in North America, thus, it makes use of the box symbol
+
+.. figure:: resistor_symbols.png
+    :width: 333 px
+    :align: center
+
+    Left --- commonly used symbol for a resistor in North America. Right --- commonly used symbol for a resistor outside
+    North America.
+
 
 
 
