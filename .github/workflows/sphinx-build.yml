@@ -21,7 +21,7 @@ jobs:
           distribution: adopt
       - name: Run Digital Unit Tests
         run: |
-          java -cp bin/Digital.jar CLI test -verbose site/topics/**/*.dig
+          find site/topics/ -name '*.dig' -exec java -cp bin/Digital.jar CLI test -verbose {} \;
 
   sphinx:
     runs-on: ubuntu-latest
