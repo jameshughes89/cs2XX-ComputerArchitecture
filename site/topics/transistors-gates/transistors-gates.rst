@@ -92,7 +92,7 @@ Symbols
 * The symbol used in this course for transistors will be of MOSFET transistors
 
 
-.. figure:: resistor_symbols.png
+.. figure:: transistor_symbols.png
     :width: 333 px
     :align: center
 
