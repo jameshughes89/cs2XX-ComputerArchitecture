@@ -21,7 +21,7 @@ jobs:
           distribution: adopt
       - name: Run Digital Unit Tests
         run: |
-          java -cp lib/Digital.jar CLI test **/*.dig
+          java -cp ~/bin/Digital.jar CLI test ~/**/*.dig
 
   sphinx:
     runs-on: ubuntu-latest
