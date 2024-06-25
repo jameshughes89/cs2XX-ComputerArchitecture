@@ -75,10 +75,29 @@ Symbols
     :width: 333 px
     :align: center
 
-    Left --- commonly used symbol for a resistor in North America. Right --- commonly used symbol for a resistor outside
+    Left --- Commonly used symbol for a resistor in North America. Right --- Commonly used symbol for a resistor outside
     North America.
 
 
+* One of the commonly seen symbols for transistors are actually only for a specific, but common type of transistor
+
+    * Bipolar Junction Transistors (BJT)
+
+
+* The transistors available within the simulator Digital are Metal-Oxide-Semiconductor Field-Effect Transistors (MOSFET)
+
+    * These transistors are common within computers
+
+
+* The symbol used in this course for transistors will be of MOSFET transistors
+
+
+.. figure:: resistor_symbols.png
+    :width: 333 px
+    :align: center
+
+    Left --- Symbol for a Bipolar Junction Transistor (BJT). Right --- Symbol for a Metal-Oxide-Semiconductor
+    Field-Effect Transistor (MOSFET).
 
 
 
