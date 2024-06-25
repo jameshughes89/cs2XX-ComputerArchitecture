@@ -16,6 +16,17 @@ Symbols
 Transistors
 ===========
 
+* How they work is outside the scope of this course
+* Amplifying or switches
+* For our purposes, we think of them as switches
+* Different kid of transistors, but the ones we will use are MOSFET
+
+* Negative or Positive transistors, but we will typically use positive
+
+* Simple example
+
+* interesting when put them together
+
 
 
 Logic Gates
