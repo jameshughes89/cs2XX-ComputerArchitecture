@@ -246,10 +246,107 @@ Transistors
 Logic Gates
 ===========
 
-- and
-- show unit tests
-- SHow and gate
-- EMPH that this is the first big layer of abstraction (gates over transistors)
+* With clever configurations of transistors, boolean logic operators can be implemented
+* This allows for the ability to perform logical operators on electrical signals 
+
+
+And Gate
+--------
+
+* Consider the **and** operator --- output ``1`` when both operands are ``1``, otherwise output ``0``
+
+.. list-table:: Truth Table for **and**
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`a`
+      - :math:`b`
+      -
+      - :math:`a \land b`
+    * - ``0``
+      - ``0``
+      -
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+    * - ``1``
+      - ``0``
+      -
+      - ``0``
+    * - ``1``
+      - ``1``
+      -
+      - ``1``
+
+
+* Knowing how transistors work as switches, how can two switches be configured to output ``1`` when they are both "on"?
+
+    * When two input signals are ``1``, output ``1``, otherwise output ``0``
+
+
+.. figure:: and_gate_with_transistors.png
+    :width: 500 px
+    :align: center
+
+    Two transistors in series. Both transistors would need to be "on" in order for the signal at the top transistor's
+    source (``1``) to reach the output at the bottom transistor's drain.
+
+
+* With two transistors in *series*, both would need to be "on" for the signal to travel through to the output
+
+    * *Series* meaning, one after the other along the same conductor
+
+
+* If either switch (or both) is "off", the signal could not travel to the output
+* This perfectly corresponds to the **and** boolean operator
+* This circuit is called an *and gate*
+
+.. note::
+
+    Each circuit seen so far has had a "Test" component. This allows one to create unit tests for circuits to help
+    ensure correctness. Although the unit tests can get more complex and expressive, a simple form of unit tests for
+    Digital is truth tables. Below is a unit test for the **and** circuit, which is the truth table defining how the
+    circuit should behave.
+
+    .. figure:: and_gate_unit_test.png
+        :width: 666 px
+        :align: center
+
+        Unit test for the **and** circuit. Each column corresponds to a labelled input/output and each row specifies
+        expected states.
+
+
+* Boolean operators are used extensively within computer architecture
+* Thus, special symbols are used to designate specific operators' gates
+* Below is two images with the symbol for an and gate
+
+    * The first image is of the symbol for the and gate
+    * The second shows how the inputs and output would correspond to the full and gate built with transistors
+
+
+.. figure:: and_gate.png
+    :width: 500 px
+    :align: center
+
+    Symbol for an and gate.
+
+.. figure:: and_gate_with_labels.png
+    :width: 500 px
+    :align: center
+
+    Symbol for an and gate with labelled inputs and output corresponding to the *and gate* built with transistors.
+
+
+.. note::
+
+    This is the first major layer of abstraction that will be seen throughout this course. Instead of thinking of
+    logic gates in terms of the whole schematic with transistors, they are represented as a single symbol.
+
+
+
 - or
 - not
 - not activity about changing transistor type
