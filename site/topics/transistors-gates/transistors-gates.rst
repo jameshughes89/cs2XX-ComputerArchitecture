@@ -340,13 +340,13 @@ And Gate
     * The second shows how the inputs and output would correspond to the full and gate built with transistors
 
 
-.. figure:: and_gate.png
+.. figure:: and_gate_symbol.png
     :width: 500 px
     :align: center
 
     Symbol for an and gate.
 
-.. figure:: and_gate_with_labels.png
+.. figure:: and_gate_symbol_with_labels.png
     :width: 500 px
     :align: center
 
@@ -407,7 +407,7 @@ Or Gate
 
 * Below is an image of the symbol for an or gate
 
-.. figure:: or_gate.png
+.. figure:: or_gate_symbol.png
     :width: 500 px
     :align: center
 
@@ -417,14 +417,72 @@ Or Gate
 Not Gate
 --------
 
+* Now consider the **not** operator
+
+.. list-table:: Truth Table for **not**
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`a`
+      -
+      - :math:`\lnot a`
+    * - ``0``
+      -
+      - ``1``
+    * - ``1``
+      -
+      - ``0``
+
+
+
+* The not gate is a little different from the and/or gates
+
+
+.. figure:: not_gate_with_transistors.png
+    :width: 500 px
+    :align: center
+
+    Not gate with a transistor. When the transistor is turned "on", the circuit's voltage will drop to neutral as ground
+    would be directly connected to the output.
+
+
+* Notice how the output is on the source end of the transistor
+* This is because the output should be ``1`` when the gate is "off",
+* But as soon as the gate is "on", the output should become ``0``
+
+* If it is unclear how this works, consider that
+
+    * When the transistor is "off", the signal from the voltage source, through the resistor, is connected to the output
+    * When the transistor is "on", the output would be directly connected to ground, sinking the signal
+
+
+* If still unclear, consider a plugged sink with a faucet running that is overflowing with water
+* If someone removes the plug from the drain, the water can then flow through the drain and stop overflowing
+
+    * This would be like what happens when the transistor is turned "on"
+
 
 .. admonition:: Activity
 
     How would one configure the schematic for **not** if using a P-channel MOSFET instead of a N-channel like above?
 
 
-- not
-- Not really is the dot, triangle is a "buffer", but it would look silly
+
+
+* Below is an image of the symbol for a not gate
+
+.. figure:: not_gate_symbol.png
+    :width: 500 px
+    :align: center
+
+    Symbol for a not gate.
+
+
+* However, not is often represented as only the circle
+
+    * In fact, the triangle in the gate means a *buffer* component
+
 
 
 Other Gate Symbols
