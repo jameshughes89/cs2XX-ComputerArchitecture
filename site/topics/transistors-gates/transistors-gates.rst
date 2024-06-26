@@ -310,6 +310,7 @@ And Gate
 * With two transistors in *series*, both would need to be "on" for the signal to travel through to the output
 
     * *Series* meaning, one after the other along the same conductor
+    * In a series circuit, the signal can only travel along the single conductor
 
 
 * If either switch (or both) is "off", the signal could not travel to the output
@@ -362,7 +363,48 @@ And Gate
 Or Gate
 -------
 
-- or
+* For **or**, a signal of ``1`` should reach the output if either switch is "on"
+
+.. list-table:: Truth Table for **or**
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`a`
+      - :math:`b`
+      -
+      - :math:`a \lor b`
+    * - ``0``
+      - ``0``
+      -
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``1``
+    * - ``1``
+      - ``0``
+      -
+      - ``1``
+    * - ``1``
+      - ``1``
+      -
+      - ``1``
+
+
+.. figure:: or_gate_with_transistors.png
+    :width: 500 px
+    :align: center
+
+    Two transistors in parallel. Either transistors would need to be "on" in order for the signal to reach the output.
+
+
+* With two transistors in *parallel*, either would need to be "on" for the signal to travel through to the output
+
+    * *Parallel* meaning, transistors on separate conductors that split from the same conductor and re-join
+    * The parallel circuits, the signal can travel through each separate conductor
+
+
 
 Not Gate
 --------
