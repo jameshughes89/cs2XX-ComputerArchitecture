@@ -405,6 +405,14 @@ Or Gate
     * The parallel circuits, the signal can travel through each separate conductor
 
 
+* Below is an image of the symbol for an or gate
+
+.. figure:: or_gate.png
+    :width: 500 px
+    :align: center
+
+    Symbol for an or gate.
+
 
 Not Gate
 --------
