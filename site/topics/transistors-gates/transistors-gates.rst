@@ -247,11 +247,17 @@ Logic Gates
 ===========
 
 - and
+- show unit tests
+- SHow and gate
+- EMPH that this is the first big layer of abstraction (gates over transistors)
 - or
 - not
 - not activity about changing transistor type
+- Not really is the dot, triangle is a "buffer", but it would look silly
+- See other gates (nor, nand, and with not-ed input)
 
-- in book, they do extra steps to make gates
+
+- warning in book, they do extra steps to make gates
 
 
 
