@@ -479,19 +479,51 @@ Not Gate
     Symbol for a not gate.
 
 
-* However, not is often represented as only the circle
+* However, not is sometimes represented as only the circle
 
     * In fact, the triangle in the gate means a *buffer* component
+
+
+* It is also common to simplify a not input to another gate by adding a circle to the symbol's respective input
+* Below is an example of an and gate with one input inverted
+
+    * The top image shows one input explicitly inverted with a not gate
+    * The bottom image is simplified to show that the input is inverted
+
+
+.. figure:: not_added_to_and_gate.png
+    :width: 500 px
+    :align: center
+
+    Two representations of an and gate with the top input being inverted.
 
 
 
 Other Gate Symbols
 ------------------
 
-- See other gates (nor, nand, and with not-ed input)
+* Adding a circle to the output would signify an inverted output, like the below nor and nand gate symbols
+
+.. figure:: nor_gate_symbol.png
+    :width: 500 px
+    :align: center
+
+    Symbol for a nor gate.
+
+.. figure:: nand_gate_symbol.png
+    :width: 500 px
+    :align: center
+
+    Symbol for a nand gate.
 
 
+* Another common symbol is for exclusive or (xor)
 
+.. figure:: xor_gate_symbol.png
+    :width: 500 px
+    :align: center
+
+    Symbol for a xor gate.
 
 
 For Next Time
