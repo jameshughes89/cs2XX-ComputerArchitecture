@@ -246,11 +246,20 @@ Transistors
 Logic Gates
 ===========
 
+- and
+- or
+- not
+- not activity about changing transistor type
+
+- in book, they do extra steps to make gates
+
 
 
 For Next Time
 =============
 
+* Check out the :download:`transistors as a switch <transistor_as_switch.dig>` schematic for Digital
+* Check out the :download:`boolean operators built with transistors <boolean_operators_with_transistors.dig>` schematic for Digital
 * Read Chapter 3 Section 3 of your text
 
     * 5 pages
