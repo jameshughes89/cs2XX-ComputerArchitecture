@@ -247,7 +247,19 @@ Logic Gates
 ===========
 
 * With clever configurations of transistors, boolean logic operators can be implemented
-* This allows for the ability to perform logical operators on electrical signals 
+* This allows for the ability to perform logical operators on electrical signals
+
+.. warning::
+
+    More complex transistor configurations for each of the below logic gates are contained within the textbook. The
+    reason for their added complexity is a consequence of the physical limitations of how transistors work. These
+    more complex configurations would be more inline with how logic gates are actually physically built.
+
+    Fortunately, the simulator being used for this course is idealized and several physical limitations are ignored,
+    which allows for the simpler configurations to be used. Nothing will be lost by using the simpler configurations
+    since (a) the abstract ideas are the same between the simple and complex configurations, (b) the more complex
+    configurations are only necessary because of the physical properties of semiconductors, and (c) for the most part,
+    transistors will not be directly interacted with going forward in this course.
 
 
 And Gate
@@ -347,14 +359,30 @@ And Gate
 
 
 
+Or Gate
+-------
+
 - or
+
+Not Gate
+--------
+
+
+.. admonition:: Activity
+
+    How would one configure the schematic for **not** if using a P-channel MOSFET instead of a N-channel like above?
+
+
 - not
-- not activity about changing transistor type
 - Not really is the dot, triangle is a "buffer", but it would look silly
+
+
+Other Gate Symbols
+------------------
+
 - See other gates (nor, nand, and with not-ed input)
 
 
-- warning in book, they do extra steps to make gates
 
 
 
