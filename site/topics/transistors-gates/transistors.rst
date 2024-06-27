@@ -247,6 +247,6 @@ For Next Time
 =============
 
 * Check out the :download:`transistors as a switch <transistor_as_switch.dig>` schematic for Digital
-* Read Chapter 3 Section 3 of your text
+* Read Chapter 3 Section 2 of your text
 
-    * 5 pages
+    * 6 pages
