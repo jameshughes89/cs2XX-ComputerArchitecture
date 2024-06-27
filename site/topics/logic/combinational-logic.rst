@@ -1,5 +1,5 @@
 *******************
-Combinatorial Logic
+Combinational Logic
 *******************
 
 * With an understanding of logic gates, more complex logic structures can be constructed
