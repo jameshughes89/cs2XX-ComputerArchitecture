@@ -33,6 +33,9 @@ Addressability
 For Next Time
 =============
 
+* `Watch Ben Eater's video on S-R Latches <https://www.youtube.com/watch?v=KM0DdEaY5sY>`_
+* `Watch Ben Eater's video on D Latches <https://www.youtube.com/watch?v=peCh_859q7Q>`_
+* `Watch Ben Eater's video on D Flip-Flops <https://www.youtube.com/watch?v=YW-_GkUguMM>`_
 * Read Chapter 3 Sections 4 of your text
 
     * 3 pages
