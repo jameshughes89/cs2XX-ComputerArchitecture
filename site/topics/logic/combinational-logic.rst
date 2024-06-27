@@ -30,6 +30,6 @@ Functional Completeness
 For Next Time
 =============
 
-* Read Chapter 3 Sections 4 & 5 of your text
+* Read Chapter 3 Sections 5 of your text
 
-    * 4 pages
+    * 3 pages

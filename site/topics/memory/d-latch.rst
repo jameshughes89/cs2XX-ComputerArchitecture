@@ -2,7 +2,7 @@
 Latches and Flip-Flops
 **********************
 
-* The previous topic covered circuits that did not store or require any stored data to operate
+* The combinational logic topic covered circuits that did not store or require any stored data to operate
 * Here, circuits capable of storing data for later use will be covered
 * These can later be used to construct more complex circuits that make decisions based on a series of possible states
 
