@@ -330,6 +330,25 @@ Additional Inputs
         Single and gate with sixteen inputs.
 
 
+* This works similarly with or gates
+* Below is an example of combining or gates to or together four inputs
+
+.. figure:: or_4_input_stacked.png
+    :width: 500 px
+    :align: center
+
+    Three or gates configured such that they perform an or operation on four inputs.
+
+
+* Like the and gate, this could be simplified as a single symbol
+
+.. figure:: or_4_input_single_gate.png
+    :width: 333 px
+    :align: center
+
+    Single or gate with four inputs.
+
+
 
 For Next Time
 =============
