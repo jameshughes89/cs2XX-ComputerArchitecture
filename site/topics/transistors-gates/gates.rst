@@ -309,7 +309,7 @@ Additional Inputs
     Four and gates configured such that they perform an and operation on five inputs.
 
 
-* It is common to simplify this schematic by drawing a single and gate with the desired number of inputs
+* It is common to simplify this by drawing a single and gate with the desired number of inputs
 
 .. figure:: and_5_input_single_gate.png
     :width: 333 px
@@ -321,7 +321,16 @@ Additional Inputs
 .. note::
 
     Within Digital, one can edit individual gates to add additional inputs, but the drop down box only allows selecting
-    up to five inputs. Fortunately, one can ignore the values within the drop down and enter larger numbers.
+    up to five inputs. Fortunately, one can ignore the values within the drop down and enter larger numbers into the
+    field.
+
+    .. figure:: and_edit_16_inputs.png
+        :width: 250 px
+        :align: center
+
+        Edit window for an and gate. Although a drop down menu exists, it is possible to enter numbers directly into
+        the field.
+
 
     .. figure:: and_16_input_single_gate.png
         :width: 333 px
@@ -362,7 +371,7 @@ Additional Inputs
 * It is important to remember these operators *mean*
 * A four input nand gate would mean a four input and with an inverted output
 
-    * :math:`\lnot(a \land b \land c \land d)
+    * :math:`\lnot(a \land b \land c \land d)`
 
 
 .. figure:: nand_4_input_stacked.png
@@ -375,7 +384,7 @@ Additional Inputs
 
 * Stacking three nand gates would mean
 
-    * :math:`\lnot(\lnot(a \land b) \land \lnot(c \land d))
+    * :math:`\lnot(\lnot(a \land b) \land \lnot(c \land d))`
 
 
 .. figure:: nand_4_input_stacked_wrong.png
@@ -383,14 +392,14 @@ Additional Inputs
     :align: center
 
     Three stacked nand gates will result in functionality that is not equivalent to a proper four input nand gate. This
-    configuration will ultimately function as :math:`((a \land b \lor (a \land b).
+    configuration will ultimately function as :math:`(a \land b) \lor (a \land b)`.
 
 
 * Following De Morgan's and the double negation laws, this simplifies to
 
-    * :math:`\lnot(\lnot(a \land b) \land \lnot(c \land d))
-    * :math:`\lnot(\lnot((a \land b) \lor (c \land d))
-    * :math:`((a \land b \lor (a \land b)
+    * :math:`\lnot(\lnot(a \land b) \land \lnot(c \land d))`
+    * :math:`\lnot(\lnot((a \land b) \lor (c \land d))`
+    * :math:`(a \land b) \lor (a \land b)`
 
 
 * In other words, a four input nand gate is not functionally equivalent to stacking nand gates
