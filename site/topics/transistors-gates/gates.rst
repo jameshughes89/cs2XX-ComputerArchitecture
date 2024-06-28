@@ -349,6 +349,55 @@ Additional Inputs
     Single or gate with four inputs.
 
 
+* Although possible to have nand/nor gates with more inputs, stacking does not work the same way
+* For example, more inputs can be added to nand gates, but stacking them the same way and gates were will not work
+
+.. figure:: nand_4_input_single_gate.png
+    :width: 333 px
+    :align: center
+
+    Single nand gate with four inputs.
+
+
+* It is important to remember these operators *mean*
+* A four input nand gate would mean a four input and with an inverted output
+
+    * :math:`\lnot(a \land b \land c \land d)
+
+
+.. figure:: nand_4_input_stacked.png
+    :width: 500 px
+    :align: center
+
+    Stacked and gates with an inverted final output results in correct functionality for a nand gate with more than two
+    inputs.
+
+
+* Stacking three nand gates would mean
+
+    * :math:`\lnot(\lnot(a \land b) \land \lnot(c \land d))
+
+
+.. figure:: nand_4_input_stacked_wrong.png
+    :width: 500 px
+    :align: center
+
+    Three stacked nand gates will result in functionality that is not equivalent to a proper four input nand gate. This
+    configuration will ultimately function as :math:`((a \land b \lor (a \land b).
+
+
+* Following De Morgan's and the double negation laws, this simplifies to
+
+    * :math:`\lnot(\lnot(a \land b) \land \lnot(c \land d))
+    * :math:`\lnot(\lnot((a \land b) \lor (c \land d))
+    * :math:`((a \land b \lor (a \land b)
+
+
+* In other words, a four input nand gate is not functionally equivalent to stacking nand gates
+* Similar problems would exist for nor
+
+
+
 
 For Next Time
 =============
