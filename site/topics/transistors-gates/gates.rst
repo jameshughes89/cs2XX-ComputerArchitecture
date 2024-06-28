@@ -288,7 +288,7 @@ Additional Inputs
 =================
 
 * Typically, these logic gates have two inputs
-* But what if one wants, for example, a five input and gate?
+* However, it is reasonable to want, for example, a five input and gate
 
 * First, consider what that would mean
 
@@ -396,6 +396,11 @@ Additional Inputs
 * In other words, a four input nand gate is not functionally equivalent to stacking nand gates
 * Similar problems would exist for nor
 
+* Exclusive or (xor) gates can be stacked to have the same functionality as a single xor gate with many inputs
+* However, when xor gates have more than two inputs, they effectively become an even/odd check
+
+    * Output ``0`` when an even number of inputs are ``1``
+    * Output ``1`` when an odd number of inputs are ``1``
 
 
 
