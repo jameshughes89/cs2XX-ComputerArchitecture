@@ -318,27 +318,6 @@ Additional Inputs
     Single and gate with five inputs.
 
 
-.. note::
-
-    Within Digital, one can edit individual gates to add additional inputs, but the drop down box only allows selecting
-    up to five inputs. Fortunately, one can ignore the values within the drop down and enter larger numbers into the
-    field.
-
-    .. figure:: and_edit_16_inputs.png
-        :width: 250 px
-        :align: center
-
-        Edit window for an and gate. Although a drop down menu exists, it is possible to enter numbers directly into
-        the field.
-
-
-    .. figure:: and_16_input_single_gate.png
-        :width: 333 px
-        :align: center
-
-        Single and gate with sixteen inputs.
-
-
 * This works similarly with or gates
 * Below is an example of combining or gates to or together four inputs
 
