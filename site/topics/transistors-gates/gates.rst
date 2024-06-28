@@ -283,6 +283,54 @@ Other Gate Symbols
     Symbol for a xor gate.
 
 
+
+Additional Inputs
+=================
+
+* Typically, these logic gates have two inputs
+* But what if one wants, for example, a five input and gate?
+
+* First, consider what that would mean
+
+    * Output ``1`` only when everything is ``1``, otherwise output ``0``
+
+
+* Following the law of associativity for and, the order that and is applied to the inputs is not important
+
+    * :math:`a \land (b \land c) = (a \land b) \land c`
+
+
+* In other words, it is possible to stack multiple and gates to create a five input and
+
+.. figure:: and_5_input_stacked.png
+    :width: 500 px
+    :align: center
+
+    Four and gates configured such that they perform an and operation on five inputs.
+
+
+* It is common to simplify this schematic by drawing a single and gate with the desired number of inputs
+
+.. figure:: and_5_input_single_gate.png
+    :width: 333 px
+    :align: center
+
+    Single and gate with five inputs.
+
+
+.. note::
+
+    Within Digital, one can edit individual gates to add additional inputs, but the drop down box only allows selecting
+    up to five inputs. Fortunately, one can ignore the values within the drop down and enter larger numbers.
+
+    .. figure:: and_16_input_single_gate.png
+        :width: 333 px
+        :align: center
+
+        Single and gate with sixteen inputs.
+
+
+
 For Next Time
 =============
 
