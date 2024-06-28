@@ -68,6 +68,7 @@ Office Hours
     topics/transistors-gates/transistors
     topics/transistors-gates/gates
     topics/logic/combinational-logic
+    topics/memory/memory
     topics/memory/latches-flipflops
     topics/logic/sequential-logic
     topics/arithmetic/adder
