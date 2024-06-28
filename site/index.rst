@@ -65,10 +65,11 @@ Office Hours
     topics/introduction/introduction
     topics/numbers/number-bases
     topics/logic/boolean-logic
-    topics/transistors-gates/transistors-gates
+    topics/transistors-gates/transistors
+    topics/transistors-gates/gates
     topics/logic/combinational-logic
     topics/memory/memory
-    topics/memory/d-latch
+    topics/memory/latches-flipflops
     topics/logic/sequential-logic
     topics/arithmetic/adder
     topics/numbers/2s-complement
