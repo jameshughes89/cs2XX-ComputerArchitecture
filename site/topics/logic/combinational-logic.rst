@@ -67,7 +67,7 @@ Decoders
 More than One Input Bit
 -----------------------
 
-* Now consider a situation where four output need to be controlled
+* Now consider a situation where four outputs need to be controlled
 * A single input can only have one of two states, low/high
 
     * Thus,  more than two input signals would be needed to decode to four outputs
@@ -120,7 +120,11 @@ More than One Input Bit
       - ``1``
 
 
-* Given the desired functionality, as described by the truth table, how could this be achieved with boolean operators?
+* The trick to creating a decoder with more than one bit is to use and gates with specific inputs inverted
+
+    * Create an and gate for all patterns of inverted inputs
+    * This idea works well for any case where a specific input patten should result in an output signal being high
+
 
 .. figure:: two_bit_decoder.png
     :width: 500 px
@@ -128,12 +132,6 @@ More than One Input Bit
 
     A two bit decoder. Two input signals are decoded to control a the four putput signals. At any time, only one of the
     four output signals is high.
-
-
-* The trick to creating a decoder with more than one bit is to use and gates with specific inputs inverted
-
-    * Create an and gate for all patterns of inverted inputs
-    * This idea works well for any case where a specific input patten should result in an output signal being high
 
 
 * This particular design scales such that one can create decoders of any size
