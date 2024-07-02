@@ -61,11 +61,96 @@ Decoders
 * This is an example of a single bit decoder
 
     * The one input signal can be thought of as a single bit
-    * The output signal is controlled/decoded by the input pattern 
+    * The input signal is "decoded" to control the output signals
 
 
-* Multi
-* Generalize easy
+More than One Input Bit
+-----------------------
+
+* Now consider a situation where four output need to be controlled
+* A single input can only have one of two states, low/high
+
+    * Thus,  more than two input signals would be needed to decode to four outputs
+
+
+* Two input signals can have a total of four unique states
+
+    * Two inputs are sufficient to decode to four output signals
+
+
+.. list-table:: Two Bit Decoder
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - Input a
+      - Input b
+      -
+      - Output 0
+      - Output 1
+      - Output 2
+      - Output 3
+    * - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+    * - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``1``
+
+
+* Given the desired functionality, as described by the truth table, how could this be achieved with boolean operators?
+
+.. figure:: two_bit_decoder.png
+    :width: 500 px
+    :align: center
+
+    A two bit decoder. Two input signals are decoded to control a the four putput signals. At any time, only one of the
+    four output signals is high.
+
+
+* The trick to creating a decoder with more than one bit is to use and gates with specific inputs inverted
+
+    * Create an and gate for all patterns of inverted inputs
+    * This idea works well for any case where a specific input patten should result in an output signal being high
+
+
+* This particular design scales such that one can create decoders of any size
+
+    * The only constraint, for lack of a better term, is the relationship between inputs and outputs
+    * Given :math:`n` inputs, a total of :math:`2^{n}` outputs can be controlled
+
+
+* One may have noticed the pattern in the two bit decoder truth table
+* Interestingly, if thinking of the two inputs as a binary number, the binary number corresponds to which output high
+
+    * Consider "output x" to be the Xth output, in the decimal number system
+
+        * :math:`00_{2} = 0_{10}` --- when the pattern is ``00``, output 0 is high
+        * :math:`01_{2} = 1_{10}` --- when then pattern is ``01``, output 1 is high
+        * :math:`10_{2} = 2_{10}` --- when then pattern is ``10``, output 2 is high
+        * :math:`11_{2} = 3_{10}` --- when then pattern is ``11``, output 3 is high
 
 
 
