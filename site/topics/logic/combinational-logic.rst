@@ -72,7 +72,7 @@ More than One Input Bit
 * Now consider a situation where four outputs need to be controlled
 * A single input can only have one of two states, low/high
 
-    * Thus,  more than two input signals would be needed to decode to four outputs
+    * Thus, more than one input signals would be needed to decode to four outputs
 
 
 * Two input signals can have a total of four unique states
