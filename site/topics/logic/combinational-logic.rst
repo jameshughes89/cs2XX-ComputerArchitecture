@@ -69,16 +69,31 @@ Decoders
 More than One Input Bit
 -----------------------
 
-* Now consider a situation where four outputs need to be controlled
-* A single input can only have one of two states, low/high
+* Now consider a situation where four separate circuits need to be controlled by a decoder
 
-    * Thus, more than one input signals would be needed to decode to four outputs
+    * These circuits will be labeled 0 to 3 for ease
 
 
-* Two input signals can have a total of four unique states
+* There needs to be a way to nicely specify which of the four circuits should be running at any given time
+* Unfortunately, a single bit of information can only be decoded to two states --- ``0``/``1``
+* However, two input signals can have a total of four unique states
 
-    * Two inputs are sufficient to decode to four output signals
+* Continuing the idea that a signal can be thought of as a single bit, two signals can represent two bits
+* Therefore, the signal pattern can represent a binary number
+* Each of these binary numbers could then correspond to each of the 0 -- 3 circuits
 
+
+.. figure:: signals_as_bits.png
+    :width: 500 px
+    :align: center
+
+    All four states two signals can represent. If treating the signals as bits, these correspond to the numbers, from
+    left to right, :math:`00_{2}`, :math:`01_{2}`, :math:`10_{2}`, and :math:`11_{2}`, which correspond to the numbers
+    :math:`0_{10}`, :math:`1_{10}`, :math:`2_{10}`, and :math:`3_{10}` respectively.
+
+
+* The below truth table describes the desired functionality
+* Notice the relationship between the binary number the input signals represent and which output signal is high
 
 .. list-table:: Two Bit Decoder
     :widths: auto
@@ -122,11 +137,41 @@ More than One Input Bit
       - ``1``
 
 
-* The trick to creating a decoder with more than one bit is to use and gates with specific inputs inverted
+* To design a circuit for such functionality, think about each row and corresponding output at a time
+* Consider the first row and output 0
 
-    * Create an and gate for all patterns of inverted inputs
-    * This idea works well for any case where a specific input patten should result in an output signal being high
+    * When input a is *not* high *and* input b is *not* high, output high for only output 0
 
+
+* This functionality can be achieved with a single two input and gate with both inputs inverted
+
+    * This gate will only output ``1`` when both inputs are ``0``
+    * Output 0 is :math:`\lnot a \land \lnot b`
+
+
+.. figure:: and_gate_for_00.png
+    :width: 250 px
+    :align: center
+
+    And gate with two inverted inputs. This gate will only output ``1`` when both inputs are ``0``.
+
+
+* Now consider the second row and input 1
+
+    * When input a is *not* high *and* input b is high, output high for only output 1
+    * Output 1 is :math:`\lnot a \land b`
+
+
+.. figure:: and_gate_for_01.png
+    :width: 250 px
+    :align: center
+
+    And gate that will only output ``1`` when the input signal is ``01``, where the top signal is the most significant
+    bit.
+
+
+
+* Following this pattern, a two bit decoder can be a series of four and gates with every combination of inverted inputs
 
 .. figure:: two_bit_decoder.png
     :width: 500 px
@@ -138,19 +183,18 @@ More than One Input Bit
 
 * This particular design scales such that one can create decoders of any size
 
-    * The only constraint, for lack of a better term, is the relationship between inputs and outputs
+    * The only constraint, for lack of a better term, is the relationship between the number of inputs and outputs
     * Given :math:`n` inputs, a total of :math:`2^{n}` outputs can be controlled
 
 
-* One may have noticed the pattern in the two bit decoder truth table
-* Interestingly, if thinking of the two inputs as a binary number, the binary number corresponds to which output high
+* In general, and gates with various inverted inputs are ideal for situations where a specific input pattern is required
 
-    * Consider "output x" to be the Xth output, in the decimal number system
+.. figure:: and_gate_for_01010010.png
+    :width: 200 px
+    :align: center
 
-        * :math:`00_{2} = 0_{10}` --- when the pattern is ``00``, output 0 is high
-        * :math:`01_{2} = 1_{10}` --- when then pattern is ``01``, output 1 is high
-        * :math:`10_{2} = 2_{10}` --- when then pattern is ``10``, output 2 is high
-        * :math:`11_{2} = 3_{10}` --- when then pattern is ``11``, output 3 is high
+    Example of an and gate that only outputs ``1`` when an input pattern of ``01010010``, where the top input is the
+    most significant bit, is observed.
 
 
 
