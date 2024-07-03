@@ -175,8 +175,8 @@ More than One Input Bit
     :width: 500 px
     :align: center
 
-    A two bit decoder. Two input signals are decoded to control a the four putput signals. At any time, only one of the
-    four output signals is high.
+    A two bit decoder, often called a 2-4 decoder. Two input signals are decoded to control a the four putput signals.
+    At any time, only one of the four output signals is high.
 
 
 * This particular design scales such that one can create decoders of any size
@@ -193,6 +193,33 @@ More than One Input Bit
 
     Example of an and gate that only outputs ``1`` when an input pattern of ``01010010``, where the top input is the
     most significant bit, is observed.
+
+
+
+Decoder Symbol
+--------------
+
+* Decoders are a common tool used in digital circuits, and as such, they are often represented with a single symbol
+* There is no universally set symbol for decoders, so the symbol used for decoders could differ
+* For this course, the symbol from Digital for decoders will be used
+
+.. figure:: decoder_symbol.png
+    :width: 333 px
+    :align: center
+
+    The trapezoid component represents a 2-4 decoder.
+
+
+* The above image shows a 2-4 decoder
+
+    * Two inputs
+    * Four outputs
+
+
+* Within this image, the input/output symbols are minimized for easier representation
+* Further, the two input signals are merged into a single line
+
+    * One can think of the single line entering the decoder as two separate signals
 
 
 
