@@ -175,7 +175,7 @@ More than One Input Bit
     :width: 500 px
     :align: center
 
-    A two bit decoder, often called a 2-4 decoder. Two input signals are decoded to control a the four putput signals.
+    A two bit decoder, often called a 2-4 decoder. Two input signals are decoded to control a the four output signals.
     At any time, only one of the four output signals is high.
 
 
