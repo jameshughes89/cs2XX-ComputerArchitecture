@@ -222,6 +222,16 @@ Decoder Symbol
     * One can think of the single line entering the decoder as two separate signals
 
 
+* The splitter/merger is used to simplify circuit designs to condense the number of signal lines
+
+.. figure:: merge-4-split-4.png
+    :width: 333 px
+    :align: center
+
+    Example of four signals being merged into a single line and then being split into the four signal lines. This has no
+    purpose other than to demonstrate how the splitter/merger may be used.
+
+
 
 Multiplexers
 ============
