@@ -229,7 +229,7 @@ Decoder Symbol
     :align: center
 
     Example of four signals being merged into a single line and then being split into the four signal lines. This has no
-    purpose other than to demonstrate how the splitter/merger may be used.
+    purpose other than to demonstrate how the splitter/merger works.
 
 
 
