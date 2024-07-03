@@ -217,7 +217,7 @@ Decoder Symbol
 
 
 * Within this image, the input/output symbols are minimized for easier representation
-* Further, the two input signals are merged into a single line
+* Further, the two input signals are merged into a single signal line with a splitter/merger
 
     * One can think of the single line entering the decoder as two separate signals
 
