@@ -37,11 +37,13 @@ Decoders
 
 .. note::
 
-    Until now, all truth tables shown included boolean operators and the tables were completed to describe how the
-    operators act.
+    Until now, all truth tables were shown to demonstrate how the boolean operators worked, each taking some number of
+    inputs and producing a single output. These truth tables were used to describe how each operator worked.
 
-    The above truth table does not include any specific boolean operators. Here, the truth table is describing the
-    desired functionally without specifying any operators.
+    Here, the truth table is not describing any specific operator, but some desired functionality. The goal would then
+    be to construct some circuit with logic gates to produce the desired functionality.  Further, it's showing how the
+    desired functionality has more than one output. More specifically, when the input is ``0``, output a should be ``0``
+    and output b should be ``1``, and when the input is ``1``, output a should be ``1`` and output b should be ``0``.
 
 
 * Based on the truth table, how could this functionality be achieved with boolean operators?
