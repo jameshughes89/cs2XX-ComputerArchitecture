@@ -74,14 +74,12 @@ More than One Input Bit
     * These circuits will be labeled 0 to 3 for ease
 
 
-* There needs to be a way to nicely specify which of the four circuits should be running at any given time
+* There needs to be a way to specify which of the four circuits should be running at any given time
 * Unfortunately, a single bit of information can only be decoded to two states --- ``0``/``1``
 * However, two input signals can have a total of four unique states
 
-* Continuing the idea that a signal can be thought of as a single bit, two signals can represent two bits
-* Therefore, the signal pattern can represent a binary number
+* Continuing the idea that a signal can be thought of as a single bit, two signals can represent a two bit binary number
 * Each of these binary numbers could then correspond to each of the 0 -- 3 circuits
-
 
 .. figure:: signals_as_bits.png
     :width: 500 px
@@ -190,7 +188,7 @@ More than One Input Bit
 * In general, and gates with various inverted inputs are ideal for situations where a specific input pattern is required
 
 .. figure:: and_gate_for_01010010.png
-    :width: 200 px
+    :width: 250 px
     :align: center
 
     Example of an and gate that only outputs ``1`` when an input pattern of ``01010010``, where the top input is the
