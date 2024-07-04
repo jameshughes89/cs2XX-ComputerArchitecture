@@ -251,6 +251,7 @@ Functional Completeness
 For Next Time
 =============
 
+* Check out the :download:`Decoder <1-2_and_2-4_decoders.dig>` schematic for Digital
 * Read Chapter 3 Sections 4 & 5 of your text
 
     * 4 pages
