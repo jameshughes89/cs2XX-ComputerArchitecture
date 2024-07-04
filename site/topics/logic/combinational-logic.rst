@@ -375,24 +375,49 @@ Multiplexers (Mux)
     the course and depends on the configuration of the transistors and other components within the logic gates. But
     briefly, often, when a gate outputs ``0``, its output is actually tied to ground. This means, if any other signal
     connected to the line is ``1``, it will ultimately be pulled to ground through the gates outputting ``0``, thereby
-    making the whole line ``0``, even though it should be ``1``. 
+    making the whole line ``0``, even though it should be ``1``.
 
     To avoid the problem, an or gate is often used to combine signals.
 
 
+* Below is a four bit multiplexer
+
+.. figure:: four_bit_mux.png
+    :width: 500 px
+    :align: center
+
+    A Four bit multiplexer. This design will scale to any input size as long as there are sufficient selector lines.
 
 
 
-* Small then bigger
-* Generalizes 2**n input to n output
-* Why the OR gate?
+* Notice that the design is a scaled up version of the two bit multiplexer
+* This design scales such that one can create multiplexers of any size
 
-    * Not really necessary in digital, but bad not to do in reality (details beyond the scope of the course)
-    * We will use them as it's common, even in simulators
+    * Here, the constraint is that for :math:`2^{n}` inputs, :math:`n` selector bits are needed
 
 
-* Show symbol
+Decoder Symbol
+--------------
 
+* Like decoders, multiplexers are a common tool that are often represented with a single symbol
+* Unlike decoders, multiplexers have a common symbol, which is similar to the decoder's symbol in Digital
+
+.. figure:: mux_symbol.png
+    :width: 333 px
+    :align: center
+
+    The trapezoid component represents a four bit decoder.
+
+
+* The above image shows a four bit multiplexer
+
+    * Four inputs
+    * Two selectors
+    * One output
+
+
+* Within this image, the input/output symbols are minimized for easier representation
+* Further, the two input signals are merged into a single signal line with a splitter/merger
 
 
 Demultiplexer (Demux)
