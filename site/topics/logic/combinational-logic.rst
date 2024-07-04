@@ -12,8 +12,8 @@ Decoders
 
 
 
-Multiplexers
-============
+Multiplexers (Mux)
+==================
 
 
 
