@@ -283,6 +283,56 @@ Other Gate Symbols
     Symbol for a xor gate.
 
 
+
+Additional Inputs
+=================
+
+* Typically, these logic gates have two inputs
+* However, having more than two inputs is normal
+
+* An and gate with more than two inputs outputs ``1`` only when all inputs are ``1``
+
+.. figure:: and_5_input_single_gate.png
+    :width: 500 px
+    :align: center
+
+    Single and gate with five inputs.
+
+
+* An or gate with more than two inputs outputs ``1`` if any of the inputs are ``1``
+
+.. figure:: or_4_input_single_gate.png
+    :width: 500 px
+    :align: center
+
+    Single or gate with four inputs.
+
+
+* A nand gate with more than two inputs is an and gate with the same number of inputs, but with an inverted output
+
+    * In other words, outputs ``1`` as long as not all inputs are ``1`` (at least one input is ``0``)
+
+.. figure:: nand_4_input_single_gate.png
+    :width: 500 px
+    :align: center
+
+    Single nand gate with four inputs.
+
+
+
+* A nor gate with more than two inputs is the same as an or gate with the same number of inputs, with an inverted output
+
+    * Outputs ``1`` only when all inputs are ``0``
+
+
+* An exclusive or (xor) with more than two inputs effectively works as a parity check
+
+    * Checks if the number of ``1`` inputs is even or odd
+    * Output ``0`` when an even number of inputs are ``1``
+    * Output ``1`` when an odd number of inputs are ``1``
+
+
+
 For Next Time
 =============
 
