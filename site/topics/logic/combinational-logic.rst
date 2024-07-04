@@ -377,7 +377,7 @@ Multiplexers (Mux)
     connected to the line is ``1``, it will ultimately be pulled to ground through the gates outputting ``0``, thereby
     making the whole line ``0``, even though it should be ``1``.
 
-    To avoid the problem, an or gate is often used to combine signals.
+    To avoid the problem, an or gate is typically used to combine signals.
 
 
 * Below is a four bit multiplexer
@@ -396,8 +396,8 @@ Multiplexers (Mux)
     * Here, the constraint is that for :math:`2^{n}` inputs, :math:`n` selector bits are needed
 
 
-Decoder Symbol
---------------
+Multiplexer Symbol
+------------------
 
 * Like decoders, multiplexers are a common tool that are often represented with a single symbol
 * Unlike decoders, multiplexers have a common symbol, which is similar to the decoder's symbol in Digital
@@ -417,13 +417,84 @@ Decoder Symbol
 
 
 * Within this image, the input/output symbols are minimized for easier representation
-* Further, the two input signals are merged into a single signal line with a splitter/merger
+* Further, the two select signals are merged into a single signal line with a splitter/merger
 
 
 Demultiplexer (Demux)
 ---------------------
 
+* A demultiplexer (demux) is another common tool
+* It is the inverse of a multiplexer
 
+    * Take one input and output it to some selected output signal line
+
+
+.. figure:: mux_demux_symbols.png
+    :width: 500 px
+    :align: center
+
+    Multiplexer with an output directly connected to a demultiplexer.
+
+
+* Below is a simplified truth table with the functionality of a demultiplexer
+
+.. list-table:: Four Bit Demux Simplified
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - Input
+      -
+      - Select b
+      - Select a
+      -
+      - Output 0
+      - Output 1
+      - Output 2
+      - Output 3
+    * - ``X``
+      -
+      - ``0``
+      - ``0``
+      -
+      - ``X``
+      - ``0``
+      - ``0``
+      - ``0``
+    * - ``X``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``X``
+      - ``0``
+      - ``0``
+    * - ``X``
+      -
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``X``
+      - ``0``
+    * - ``X``
+      -
+      - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``X``
+
+
+* One may notice that this is very similar to a decoder
+* The difference is that
+
+    * Instead of outputting ``1`` on the selected signal like a decoder
+    * A demultiplexer maps the arbitrary value of the input to the output
 
 
 
