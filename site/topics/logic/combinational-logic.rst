@@ -512,6 +512,7 @@ For Next Time
 =============
 
 * Check out the :download:`Decoder <1-2_and_2-4_decoders.dig>` schematic for Digital
+* Check out the :download:`Multiplexer <2_and_4_multiplexer.dig>` schematic for Digital
 * Read Chapter 3 Sections 5 of your text
 
     * 3 pages
