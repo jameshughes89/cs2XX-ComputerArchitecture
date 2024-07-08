@@ -652,7 +652,11 @@ Programmable Logic Arrays (PLA)
     high.
 
 
+* This basic design of an array of and gates followed by an array of or gates scales to arbitrary size
 
+SHOW TABLE
+
+SHOW IMAGE
 
 
 Programmable Logic Array/Look Up Table Symbol
