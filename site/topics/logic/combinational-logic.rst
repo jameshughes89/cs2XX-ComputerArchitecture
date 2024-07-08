@@ -535,10 +535,19 @@ It starts like a decoder, just select a line
     You can think either row or col from the truth table
 
 
-Really is a lookup table
-    Like a dictionary/map
+Programmable Logic Array Symbol
+-------------------------------
 
-Within Digital, they are called look up tables (show pic)
+* One may have realised that this functionality is effectively a dictionary/map/look up table
+* In fact, within Digital, PLAs are called look up tables
+* Below is a figure of a look up table from Digital
+
+.. figure:: pla_symbol.png
+    :width: 333 px
+    :align: center
+
+    Example of a look up table from Digital. This specific look up table maps three inputs to four outputs.
+
 
 
 Functional Completeness
@@ -551,6 +560,7 @@ For Next Time
 
 * Check out the :download:`Decoder <1-2_and_2-4_decoders.dig>` schematic for Digital
 * Check out the :download:`Multiplexer <2_and_4_multiplexer.dig>` schematic for Digital
+* Check out the :download:`Programmable Logic Array <programmable_logic_array.dig>` schematic for Digital
 * Read Chapter 3 Sections 5 of your text
 
     * 3 pages
