@@ -659,6 +659,11 @@ SHOW TABLE
 SHOW IMAGE
 
 
+REMEMBERERERERERERERERER --- WHY NOT CONNECT DIRECTLY TO OUT? NOT ALLOWED! SO OR GATES!
+
+
+
+
 Programmable Logic Array/Look Up Table Symbol
 ---------------------------------------------
 
