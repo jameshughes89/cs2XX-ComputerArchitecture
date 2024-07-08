@@ -523,20 +523,140 @@ Programmable Logic Arrays (PLA)
 
 * The number of inputs to each or gate depends on the number of decoded signals that could activate the or gate's output
 * The idea of a PLA is best described with an example
+* Below is a truth table describing some mapping of two input signals to three output signals
+
+    * The outputs are arbitrary and have no meaning other than to provide some example
+
+
+.. list-table:: Two Input PLA with Some Output
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - Input 1
+      - Input 0
+      -
+      - Output 0
+      - Output 1
+      - Output 2
+    * - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
 
 
 
-Truth table example
-    it's arbitrary
+* To make the connection of input to output more clear, the truth table can be rewritten to include decoded inputs
+
+.. list-table:: Two Input PLA with Some Output including Decoded (D) Signals
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - In 1
+      - In 0
+      -
+      - D 0
+      - D 1
+      - D 2
+      - D 3
+      -
+      - Out 0
+      - Out 1
+      - Out 2
+    * - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
 
 
-It starts like a decoder, just select a line
-    but then you or the decoder's output when you want that specific output high
-    You can think either row or col from the truth table
+* From the above table, when should each of the outputs be high?
+
+    * Output 0 is high when the zeroth, second, or third decoded signals are high
+    * Output 1 is high when the first or second decoded signals are high
+    * Output 2 is high when the first, second, or third decoded signals are high
 
 
-Programmable Logic Array Symbol
--------------------------------
+* The goal is then to
+
+    * Create a decoder
+    * Map the decoded signals to or gates when the signal should cause the output to go high
+
+
+.. figure:: pla_example_1.png
+    :width: 500 px
+    :align: center
+
+    Programmable logic array (PLA) mapping two inputs to three outputs. The PLA is made up of an array of and gates
+    serving as a decoder and an array of or gates that will output a high signal when any of the decoded inputs are
+    high.
+
+
+
+
+
+Programmable Logic Array/Look Up Table Symbol
+---------------------------------------------
 
 * One may have realised that this functionality is effectively a dictionary/map/look up table
 * In fact, within Digital, PLAs are called look up tables
