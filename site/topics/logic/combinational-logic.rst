@@ -498,9 +498,47 @@ Demultiplexer (Demux)
 
 
 
-Programmable Logic Arrays
-=========================
+Programmable Logic Arrays (PLA)
+===============================
 
+* Programmable logic arrays (PLA) are a general purpose design for implementing any boolean logic functionality
+
+    * Can map any input to any desired output
+
+
+* PLAs consist of two main parts
+
+    * A collection of and gates, called an and array, which acts as a decoder
+    * A collection of or gates, called an or array, which activates an output when specific decoded signals are high
+
+
+* The number of and gates depends on the number of inputs
+
+    * Given :math:`n` inputs, there will be a total of :math:`2^{n}` and gates
+
+* The number of or gates depends on the number of desired output signals
+
+    * One or gate for each output
+
+
+* The number of inputs to each or gate depends on the number of decoded signals that could activate the or gate's output
+* The idea of a PLA is best described with an example
+
+
+
+Truth table example
+    it's arbitrary
+
+
+It starts like a decoder, just select a line
+    but then you or the decoder's output when you want that specific output high
+    You can think either row or col from the truth table
+
+
+Really is a lookup table
+    Like a dictionary/map
+
+Within Digital, they are called look up tables (show pic)
 
 
 Functional Completeness
