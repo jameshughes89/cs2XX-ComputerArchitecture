@@ -515,6 +515,7 @@ Programmable Logic Arrays (PLA)
 * The number of and gates depends on the number of inputs
 
     * Given :math:`n` inputs, there will be a total of :math:`2^{n}` and gates
+    * Like decoders
 
 
 * The number of or gates depends on the number of desired output signals
@@ -523,6 +524,10 @@ Programmable Logic Arrays (PLA)
 
 
 * The number of inputs to each or gate depends on the number of decoded signals that could activate the or gate's output
+
+    * The or gates serve as a way to connect multiple gate outputs to a single output
+
+
 * The idea of a PLA is best described with an example
 * Below is a truth table describing some mapping of two input signals to three output signals
 
@@ -660,11 +665,95 @@ Programmable Logic Arrays (PLA)
 
 
 * This basic design of an array of and gates followed by an array of or gates scales to arbitrary size
+* Below is some truth table describing some functionality for a three input, four output PLA
 
-SHOW TABLE
+.. list-table:: Three Input PLA with Some Output
+    :widths: auto
+    :align: center
+    :header-rows: 1
 
-SHOW IMAGE
+    * - Input c
+      - Input b
+      - Input a
+      -
+      - Output a
+      - Output b
+      - Output c
+      - Output d
+    * - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+    * - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+    * - ``0``
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``0``
+    * - ``0``
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+    * - ``1``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
 
+
+* The PLA matching the functionality described in the above truth table is shown in the following image
+
+.. figure:: pla_example_2.png
+    :width: 666 px
+    :align: center
+
+    Programmable logic array (PLA) mapping three inputs to four outputs. This figure shows how the general design of an
+    array of and gates followed by an array of or gates can be scaled up.
 
 
 
