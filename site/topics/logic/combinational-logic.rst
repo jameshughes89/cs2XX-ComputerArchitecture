@@ -516,6 +516,7 @@ Programmable Logic Arrays (PLA)
 
     * Given :math:`n` inputs, there will be a total of :math:`2^{n}` and gates
 
+
 * The number of or gates depends on the number of desired output signals
 
     * One or gate for each output
@@ -637,10 +638,16 @@ Programmable Logic Arrays (PLA)
     * Output 2 is high when the first, second, or third decoded signals are high
 
 
+* One may be tempted to map each decoded signal directly to the desired outputs, however, there are problems with this
+
+    * As discussed above with the multiplexers
+    * Instead, the decoded signals are mapped to or gates that correspond to each output
+
+
 * The goal is then to
 
     * Create a decoder
-    * Map the decoded signals to or gates when the signal should cause the output to go high
+    * Map the decoded signals to or gates when the signal should cause the specific output to go high
 
 
 .. figure:: pla_example_1.png
@@ -658,8 +665,6 @@ SHOW TABLE
 
 SHOW IMAGE
 
-
-REMEMBERERERERERERERERER --- WHY NOT CONNECT DIRECTLY TO OUT? NOT ALLOWED! SO OR GATES!
 
 
 
