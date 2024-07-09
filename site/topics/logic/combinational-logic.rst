@@ -772,6 +772,14 @@ Programmable Logic Array/Look Up Table Symbol
     Example of a look up table from Digital. This specific look up table maps three inputs to four outputs.
 
 
+.. note::
+
+    Look up tables are an abstract idea, and as such, the physical implementation is often not important. In practice,
+    these look up tables could be PLAs, constructed with arrays of and gates and or gates, or they could be implemented
+    with a form of memory mapping the input to some memory addresses, which in turn contains the desired output within
+    that memory location.
+
+
 
 Functional Completeness
 =======================
