@@ -511,7 +511,7 @@ Functional Completeness
     * In other words, any function can be physically created with configurations of and, or, and not gates
 
 
-* This means that the set of {and, or, not} gates is *logically complete*
+* This means that the set of {and, or, not} gates is *Functionally complete*
 * Although other gates exist, they are not necessary for implementing any function
 
     * Nevertheless, they may make configuring a circuit for some functionality simpler
@@ -546,13 +546,13 @@ Functional Completeness
     Implementation of and gate functionality with only or gate and not gates.
 
 
-* This shows that the set of {and, not} and {or, not} are also logically complete
+* This shows that the set of {and, not} and {or, not} are also functionally complete
 
 
 Minimal Set
 -----------
 
-* One may wonder if a single gate type is sufficient to have a logically complete set
+* One may wonder if a single gate type is sufficient to have a functionally complete set
 * To prove this is the case, all one needs to do is show that the single gate type can
 
     * Implement not
@@ -560,11 +560,11 @@ Minimal Set
     * Implement or
 
 
-* Seeing the reduced sets made up of {and, not}/{or, not}, one may wonder if nand and nor are logically complete
+* Seeing the reduced sets made up of {and, not}/{or, not}, one may wonder if nand and nor are functionally complete
 
 .. admonition:: Activity
 
-    Show that nand and nor are logically complete.
+    Show that nand and nor are functionally complete.
 
 
 
@@ -575,7 +575,7 @@ For Next Time
 
 * Check out the :download:`Decoder <1-2_and_2-4_decoders.dig>` schematic for Digital
 * Check out the :download:`Multiplexer <2_and_4_multiplexer.dig>` schematic for Digital
-* Check out the :download:`Logical Completeness <logical_completeness.dig>` schematic for Digital
+* Check out the :download:`Functional Completeness <functional_completeness.dig>` schematic for Digital
 * Read Chapter 3 Sections 5 of your text
 
     * 3 pages
