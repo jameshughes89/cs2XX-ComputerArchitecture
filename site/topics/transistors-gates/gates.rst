@@ -19,7 +19,7 @@ Logic Gates
 
 
 
-And Gate
+AND Gate
 ========
 
 * Consider the AND operator --- output ``1`` when both operands are ``1``, otherwise output ``0``
@@ -118,7 +118,7 @@ And Gate
 
 
 
-Or Gate
+OR Gate
 =======
 
 * For OR, a signal of ``1`` should reach the output if either switch is "on"
@@ -173,7 +173,7 @@ Or Gate
     Symbol for an OR gate.
 
 
-Not Gate
+NOT Gate
 ========
 
 * Now consider the NOT operator
