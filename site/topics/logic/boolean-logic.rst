@@ -31,7 +31,7 @@ Boolean Operators and Operands
 
 * There are three basic boolean operators
 
-    * **Not**
+    * **NOT**
 
         * Unary operator --- only operates on a single operand to produce a single value
         * Given some boolean value :math:`a`, invert it
@@ -42,14 +42,14 @@ Boolean Operators and Operands
         * Typically denoted as :math:`\lnot a` or sometimes :math:`\overline a`
 
 
-    * **And**
+    * **AND**
 
         * Binary operator --- operates on two operands to produce a single value
         * Given boolean values :math:`a` and :math:`b`, return *true* if both values are *true*, *false* otherwise
         * Denoted as :math:`a \land b`
 
 
-    * **Or**
+    * **OR**
 
         * Binary operator --- operates on two operands to produce a single value
         * Given boolean values :math:`a` and :math:`b`, return *true* if both or either are *true*, *false* otherwise
@@ -61,8 +61,8 @@ Boolean Operators and Operands
     :align: center
     :target: https://en.wikipedia.org/wiki/Boolean_algebra#Boolean_operations
 
-    Visual representations of the basic boolean operators with Venn diagrams. The images represent **and**, **or**, and
-    **not** respectively. 
+    Visual representations of the basic boolean operators with Venn diagrams. The images represent AND, OR, and NOT
+    respectively.
 
 
 * There are additional boolean operators that can be made up from the three basic operators
@@ -71,9 +71,9 @@ Boolean Operators and Operands
     * **Exclusive Or** (**XOR**)
 
         * Binary operator --- operates on two operands to produce a single value
-        * Given boolean values :math:`a` and :math:`b`, return *true* if and only if either are *true*, *false* otherwise
+        * Given boolean values :math:`a` and :math:`b`, return *true* if either are *true*, *false* otherwise
 
-            * Similar to or, but if both are *true*, it returns *false*
+            * Similar to OR, but if both are *true*, it returns *false*
 
         * Denoted as :math:`a \oplus b`
         * Equivalent to :math:`(a \lor b) \land \lnot (a \land b)`
@@ -81,7 +81,7 @@ Boolean Operators and Operands
 
     * **Not Or** (**NOR**)
 
-        * Literally *not or*
+        * Literally *NOT OR*
         * Sometimes denoted as :math:`\overline \lor`
         * Equivalent to :math:`\lnot (a \lor b)`
         * Functionally complete --- can be used to generate all other boolean operators
@@ -89,7 +89,7 @@ Boolean Operators and Operands
 
     * **Not And** (**NAND**)
 
-        * Literally *not and*
+        * Literally *NOT AND*
         * Sometimes denoted as :math:`\overline \land`
         * Equivalent to :math:`\lnot (a \land b)`
         * Functionally complete --- can be used to generate all other boolean operators
@@ -100,8 +100,8 @@ Boolean Operators and Operands
     :align: center
     :target: https://en.wikipedia.org/wiki/Boolean_algebra#Boolean_operations
 
-    Visual representations of the additional boolean operators with Venn diagrams. The images represent **nand**,
-    **nor**, and **xor** respectively.
+    Visual representations of the additional boolean operators with Venn diagrams. The images represent NAND, NOR, and
+    XOR respectively.
 
 
 
@@ -172,7 +172,7 @@ Truth Tables
 
 
 * In the context of digital circuits, it is common to use ``0`` and ``1`` in place of :math:`false` and :math:`true`
-* Going forward, ``0`` and ``1`` will be used for thouse course
+* Going forward, ``0`` and ``1`` will be used for this course
 
 
 .. note::
@@ -186,12 +186,12 @@ Building Out the Truth Table
 
 * Notice the :math:`\lnot (a \land b)` and :math:`\lnot (a \lor b)` columns in the truth tables are compound operations
 
-    * They are made up of two operations --- **not** and **and/or**
+    * They are made up of two operations --- NOT and AND/OR
 
 
 * These columns are the inverse of the basic and/or columns in the table
 
-    * Literally **not** the result of those columns
+    * Literally NOT the result of those columns
 
 
 * Consider a more complex compound expression --- :math:`(a \land \lnot b) \lor \lnot c`
@@ -354,6 +354,7 @@ Building Out the Truth Table
           -
           -
           -
+
 
 
 Properties of Logical Operators
