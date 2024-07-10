@@ -237,7 +237,7 @@ Not Gate
     Symbol for a NOT gate.
 
 
-* However, not is sometimes represented as only the circle
+* However, NOT is sometimes represented as only the circle
 
     * In fact, the triangle in the gate means a *buffer* component
 
@@ -313,6 +313,7 @@ Additional Inputs
 * A NAND gate with more than two inputs is an AND gate with the same number of inputs, but with an inverted output
 
     * In other words, outputs ``1`` as long as not all inputs are ``1`` (at least one input is ``0``)
+
 
 .. figure:: nand_4_input_single_gate.png
     :width: 500 px
