@@ -31,7 +31,7 @@ Boolean Operators and Operands
 
 * There are three basic boolean operators
 
-    * **NOT**
+    * :math:`not`
 
         * Unary operator --- only operates on a single operand to produce a single value
         * Given some boolean value :math:`a`, invert it
@@ -42,14 +42,14 @@ Boolean Operators and Operands
         * Typically denoted as :math:`\lnot a` or sometimes :math:`\overline a`
 
 
-    * **AND**
+    * :math:`and`
 
         * Binary operator --- operates on two operands to produce a single value
         * Given boolean values :math:`a` and :math:`b`, return *true* if both values are *true*, *false* otherwise
         * Denoted as :math:`a \land b`
 
 
-    * **OR**
+    * :math:`or`
 
         * Binary operator --- operates on two operands to produce a single value
         * Given boolean values :math:`a` and :math:`b`, return *true* if both or either are *true*, *false* otherwise
@@ -61,35 +61,35 @@ Boolean Operators and Operands
     :align: center
     :target: https://en.wikipedia.org/wiki/Boolean_algebra#Boolean_operations
 
-    Visual representations of the basic boolean operators with Venn diagrams. The images represent AND, OR, and NOT
-    respectively.
+    Visual representations of the basic boolean operators with Venn diagrams. The images represent :math:`and`,
+    :math:`or`, and :math:`not` respectively.
 
 
 * There are additional boolean operators that can be made up from the three basic operators
 * Three of these are commonly used within the context of computer architecture, thus they will be presented here
 
-    * **Exclusive OR** (**XOR**)
+    * :math:`Exclusive` :math:`or` (:math:`xor`)
 
         * Binary operator --- operates on two operands to produce a single value
         * Given boolean values :math:`a` and :math:`b`, return *true* if either are *true*, *false* otherwise
 
-            * Similar to OR, but if both are *true*, it returns *false*
+            * Similar to :math:`or`, but if both are *true*, it returns *false*
 
         * Denoted as :math:`a \oplus b`
         * Equivalent to :math:`(a \lor b) \land \lnot (a \land b)`
 
 
-    * **NOT OR** (**NOR**)
+    * :math:`not` :math:`or` (:math:`nor`)
 
-        * Literally *NOT OR*
+        * Literally :math:`not` :math:`or`
         * Sometimes denoted as :math:`\overline \lor`
         * Equivalent to :math:`\lnot (a \lor b)`
         * Functionally complete --- can be used to generate all other boolean operators
 
 
-    * **NOT AND** (**NAND**)
+    * :math:`not` :math:`and` (:math:`nand`)
 
-        * Literally *NOT AND*
+        * Literally :math:`not` :math:`and`
         * Sometimes denoted as :math:`\overline \land`
         * Equivalent to :math:`\lnot (a \land b)`
         * Functionally complete --- can be used to generate all other boolean operators
@@ -100,8 +100,8 @@ Boolean Operators and Operands
     :align: center
     :target: https://en.wikipedia.org/wiki/Boolean_algebra#Boolean_operations
 
-    Visual representations of the additional boolean operators with Venn diagrams. The images represent NAND, NOR, and
-    XOR respectively.
+    Visual representations of the additional boolean operators with Venn diagrams. The images represent :math:`nand`,
+    :math:`nor`, and :math:`xor` respectively.
 
 
 
@@ -186,12 +186,12 @@ Building Out the Truth Table
 
 * Notice the :math:`\lnot (a \land b)` and :math:`\lnot (a \lor b)` columns in the truth tables are compound operations
 
-    * They are made up of two operations --- NOT and AND/OR
+    * They are made up of two operations --- :math:`not` and :math:`and`/:math:`or`
 
 
 * These columns are the inverse of the basic and/or columns in the table
 
-    * Literally NOT the result of those columns
+    * Literally :math:`not` the result of those columns
 
 
 * Consider a more complex compound expression --- :math:`(a \land \lnot b) \lor \lnot c`
@@ -480,7 +480,7 @@ De Morgan's Law
 
 * De Morgan's laws are of particular interest in the context of computer architecture
 
-    * Given the popularity of NOR and NAND in circuit design
+    * Given the popularity of :math:`nor` and :math:`nand` in circuit design
 
 
 * De Morgan's laws are as follows
@@ -491,16 +491,16 @@ De Morgan's Law
         :math:`\lnot a \land \lnot b = \lnot(a \lor b)`
 
 
-* Consider that the right hand side of both equations are NAND and NOR respectively
-* This means that, not only can NAND be made with NOT and AND, but also with NOT and OR
+* Consider that the right hand side of both equations are :math:`nand` and :math:`nor` respectively
+* This means that, not only can :math:`nand` be made with :math:`not` and :math:`and`, but also with :math:`not` and :math:`or`
 
-    * One does not even need the AND operator to create NAND
-    * In fact, given only NOT and OR, one can create AND
+    * One does not even need the :math:`and` operator to create :math:`nand`
+    * In fact, given only :math:`not` and :math:`or`, one can create :math:`and`
 
         * :math:`\lnot(\lnot a \lor \lnot b) = \lnot(\lnot(a \land b)) = a \land b`
 
 
-    * This would work the same for NOR being made with NOT and AND
+    * This would work the same for :math:`nor` being made with :math:`not` and :math:`and`
 
 
 * The below truth table provides an exhaustive proof of De Morgan's laws
@@ -582,7 +582,7 @@ De Morgan's Law
 
 * It is easier to see how the above figure represents :math:`\lnot(a \land b)`
 
-    * Think of the Venn diagram of AND, then invert it
+    * Think of the Venn diagram of :math:`and`, then invert it
 
 
 * But also imagine what :math:`\lnot a` and :math:`\lnot b` would be
@@ -592,7 +592,7 @@ De Morgan's Law
 
 
 * It may be helpful to think of two versions of the figure, one which is :math:`\lnot a` and the other :math:`\lnot b`
-* Then, OR would be the *union* of these two images, which is the same as the above figure
+* Then, :math:`or` would be the *union* of these two images, which is the same as the above figure
 
     * Union being, keep all points from both images
 
@@ -617,7 +617,7 @@ De Morgan's Law
     * It's easier to think of two versions of the image, one for each :math:`\lnot a` and :math:`\lnot b`
 
 
-* Then, AND would be the *intersect* of these two images, which is the same as the above figure
+* Then, :math:`and` would be the *intersect* of these two images, which is the same as the above figure
 
     * Intersect being, only keep the points that exist in both images
 
