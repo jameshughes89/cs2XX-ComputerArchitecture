@@ -22,9 +22,9 @@ Logic Gates
 And Gate
 ========
 
-* Consider the **and** operator --- output ``1`` when both operands are ``1``, otherwise output ``0``
+* Consider the AND operator --- output ``1`` when both operands are ``1``, otherwise output ``0``
 
-.. list-table:: Truth Table for **and**
+.. list-table:: Truth Table for AND
     :widths: auto
     :align: center
     :header-rows: 1
@@ -71,43 +71,44 @@ And Gate
 
 
 * If either switch (or both) is "off", the signal could not travel to the output
-* This perfectly corresponds to the **and** boolean operator
-* This circuit is called an *and gate*
+* This perfectly corresponds to the AND boolean operator
+* This circuit is called an *AND gate*
 
 .. note::
 
     Each circuit seen so far has had a "Test" component. This allows one to create unit tests for circuits to help
     ensure correctness. Although the unit tests can get more complex and expressive, a simple form of unit tests for
-    Digital is truth tables. Below is a unit test for the **and** circuit, which is the truth table defining how the
-    circuit should behave.
+    Digital is truth tables. Below is a unit test for the AND circuit, which is the truth table defining how the circuit
+    should behave.
 
     .. figure:: and_gate_unit_test.png
         :width: 666 px
         :align: center
 
-        Unit test for the **and** circuit. Each column corresponds to a labelled input/output and each row specifies
+        Unit test for the AND circuit. Each column corresponds to a labelled input/output and each row specifies
         expected states.
 
 
 * Boolean operators are used extensively within computer architecture
 * Thus, special symbols are used to designate specific operators' gates
-* Below is two images with the symbol for an and gate
+* Below is two images with the symbol for an AND gate
 
-    * The first image is of the symbol for the and gate
-    * The second shows how the inputs and output would correspond to the full and gate built with transistors
+    * The first image is of the symbol for the AND gate
+    * The second shows how the inputs and output would correspond to the full AND gate built with transistors
 
 
 .. figure:: and_gate_symbol.png
     :width: 500 px
     :align: center
 
-    Symbol for an and gate.
+    Symbol for an AND gate.
+
 
 .. figure:: and_gate_symbol_with_labels.png
     :width: 500 px
     :align: center
 
-    Symbol for an and gate with labelled inputs and output corresponding to the *and gate* built with transistors.
+    Symbol for an AND gate with labelled inputs and output corresponding to the AND gate built with transistors.
 
 
 .. note::
