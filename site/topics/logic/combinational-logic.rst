@@ -506,7 +506,8 @@ Programmable Logic Arrays (PLA)
     * Can map any input to any desired output
 
 
-* PLAs consist of two main parts
+* PLAs are effectively decoders where the single decoded output signal may activate multiple final outputs
+* They consist of two main parts
 
     * A collection of and gates, called an and array, which acts as a decoder
     * A collection of or gates, called an or array, which activates an output when specific decoded signals are high
