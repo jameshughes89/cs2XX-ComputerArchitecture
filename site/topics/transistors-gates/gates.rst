@@ -187,9 +187,9 @@ OR Gate
 NOT Gate
 ========
 
-* Now consider the NOT operator
+* Now consider the :math:`not` operator
 
-.. list-table:: Truth Table for NOT
+.. list-table:: Truth Table for :math:`not`
     :widths: auto
     :align: center
     :header-rows: 1
@@ -235,7 +235,7 @@ NOT Gate
 
 .. admonition:: Activity
 
-    How would one configure the schematic for NOT if using a P-channel MOSFET instead of a N-channel like above?
+    How would one configure the schematic for :math:`not` if using a P-channel MOSFET instead of a N-channel like above?
 
 
 
@@ -339,7 +339,7 @@ Additional Inputs
     * Outputs ``1`` only when all inputs are ``0``
 
 
-* An exclusive OR (XOR) with more than two inputs effectively works as a parity check
+* An XOR with more than two inputs effectively works as a parity check
 
     * Checks if the number of ``1`` inputs is even or odd
     * Output ``0`` when an even number of inputs are ``1``
