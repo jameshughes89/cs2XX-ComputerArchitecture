@@ -68,7 +68,7 @@ Boolean Operators and Operands
 * There are additional boolean operators that can be made up from the three basic operators
 * Three of these are commonly used within the context of computer architecture, thus they will be presented here
 
-    * **Exclusive Or** (**XOR**)
+    * **Exclusive OR** (**XOR**)
 
         * Binary operator --- operates on two operands to produce a single value
         * Given boolean values :math:`a` and :math:`b`, return *true* if either are *true*, *false* otherwise
@@ -79,7 +79,7 @@ Boolean Operators and Operands
         * Equivalent to :math:`(a \lor b) \land \lnot (a \land b)`
 
 
-    * **Not Or** (**NOR**)
+    * **NOT OR** (**NOR**)
 
         * Literally *NOT OR*
         * Sometimes denoted as :math:`\overline \lor`
@@ -87,7 +87,7 @@ Boolean Operators and Operands
         * Functionally complete --- can be used to generate all other boolean operators
 
 
-    * **Not And** (**NAND**)
+    * **NOT AND** (**NAND**)
 
         * Literally *NOT AND*
         * Sometimes denoted as :math:`\overline \land`
