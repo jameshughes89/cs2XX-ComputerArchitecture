@@ -361,7 +361,7 @@ Properties of Logical Operators
 ===============================
 
 * There are several algebraic properties that hold for boolean logic
-* Most of these are intuitive, but will be presented here for completness
+* Most of these are intuitive, but will be presented here for completeness
 
 
 .. list-table:: Boolean Algebra Laws
@@ -480,7 +480,7 @@ De Morgan's Law
 
 * De Morgan's laws are of particular interest in the context of computer architecture
 
-    * Given the popularity of **nor** and **nand** in circuit design
+    * Given the popularity of NOR and NAND in circuit design
 
 
 * De Morgan's laws are as follows
@@ -491,16 +491,16 @@ De Morgan's Law
         :math:`\lnot a \land \lnot b = \lnot(a \lor b)`
 
 
-* Consider that the right hand side of both equations are **nand** and **nor** respectively
-* This means that, not only can **nand** be made with **not** and **and**, but also with **not** and **or**
+* Consider that the right hand side of both equations are NAND and NOR respectively
+* This means that, not only can NAND be made with NOT and AND, but also with NOT and OR
 
-    * One does not even need the **and** operator to create **nand**
-    * In fact, given only **not** and **or**, one can create **and**
+    * One does not even need the AND operator to create NAND
+    * In fact, given only NOT and OR, one can create AND
 
         * :math:`\lnot(\lnot a \lor \lnot b) = \lnot(\lnot(a \land b)) = a \land b`
 
 
-    * This would work the same for **nor** being made with **not** and **and**
+    * This would work the same for NOR being made with NOT and AND
 
 
 * The below truth table provides an exhaustive proof of De Morgan's laws
@@ -582,7 +582,7 @@ De Morgan's Law
 
 * It is easier to see how the above figure represents :math:`\lnot(a \land b)`
 
-    * Think of the Venn diagram of **and**, then invert it
+    * Think of the Venn diagram of AND, then invert it
 
 
 * But also imagine what :math:`\lnot a` and :math:`\lnot b` would be
@@ -592,7 +592,7 @@ De Morgan's Law
 
 
 * It may be helpful to think of two versions of the figure, one which is :math:`\lnot a` and the other :math:`\lnot b`
-* Then, **or** would be the *union* of these two images, which is the same as the above figure
+* Then, OR would be the *union* of these two images, which is the same as the above figure
 
     * Union being, keep all points from both images
 
@@ -617,7 +617,7 @@ De Morgan's Law
     * It's easier to think of two versions of the image, one for each :math:`\lnot a` and :math:`\lnot b`
 
 
-* Then, **and** would be the *intersect* of these two images, which is the same as the above figure
+* Then, AND would be the *intersect* of these two images, which is the same as the above figure
 
     * Intersect being, only keep the points that exist in both images
 
