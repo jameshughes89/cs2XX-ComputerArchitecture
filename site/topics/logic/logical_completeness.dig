@@ -81,7 +81,7 @@
           <string>out_b</string>
         </entry>
       </elementAttributes>
-      <pos x="620" y="380"/>
+      <pos x="620" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>Not</elementName>
@@ -91,7 +91,7 @@
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="280" y="340"/>
+      <pos x="280" y="360"/>
     </visualElement>
     <visualElement>
       <elementName>Not</elementName>
@@ -101,7 +101,7 @@
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="280" y="420"/>
+      <pos x="280" y="440"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -111,7 +111,7 @@
           <string>in_c</string>
         </entry>
       </elementAttributes>
-      <pos x="220" y="340"/>
+      <pos x="220" y="360"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -121,7 +121,7 @@
           <string>in_d</string>
         </entry>
       </elementAttributes>
-      <pos x="220" y="420"/>
+      <pos x="220" y="440"/>
     </visualElement>
     <visualElement>
       <elementName>Not</elementName>
@@ -131,7 +131,7 @@
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="520" y="380"/>
+      <pos x="520" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -141,14 +141,14 @@
           <boolean>true</boolean>
         </entry>
       </elementAttributes>
-      <pos x="400" y="360"/>
+      <pos x="400" y="380"/>
     </visualElement>
     <visualElement>
       <elementName>Testcase</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>and with or_test</string>
+          <string>AND with OR_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -168,7 +168,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or with and_test</string>
+          <string>OR with AND_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -181,14 +181,14 @@
           </testData>
         </entry>
       </elementAttributes>
-      <pos x="180" y="240"/>
+      <pos x="180" y="260"/>
     </visualElement>
     <visualElement>
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>And with Or and Not Gates</string>
+          <string>AND with OR and NOT Gates</string>
         </entry>
         <entry>
           <string>RectHeight</string>
@@ -210,7 +210,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Or with And and Not Gates</string>
+          <string>OR with ANDand NOT Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -258,7 +258,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Not with Nand Gates</string>
+          <string>NOT with NAND Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -272,7 +272,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>not with nand_test</string>
+          <string>NOT with NAND_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -314,7 +314,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Not with Nor Gates</string>
+          <string>NOT with NOR Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -328,7 +328,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>not with nor_test</string>
+          <string>NOT with NOR_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -406,7 +406,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or with nor_test</string>
+          <string>OR with NOR_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -430,7 +430,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Or with Nor Gates</string>
+          <string>OR with NOR Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -474,7 +474,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or with nor_test</string>
+          <string>AND with NAND_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -498,7 +498,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>And with Nand Gates</string>
+          <string>AND with NAND Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -596,7 +596,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>And with Nor Gates</string>
+          <string>AND with NOR Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -610,7 +610,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>and with nor_test</string>
+          <string>AND with NOR_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -694,7 +694,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Or with Nand Gates</string>
+          <string>OR with NAND Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -708,7 +708,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or with nand_test</string>
+          <string>OR with NAND_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -758,14 +758,6 @@
       <p2 x="1820" y="800"/>
     </wire>
     <wire>
-      <p1 x="340" y="420"/>
-      <p2 x="360" y="420"/>
-    </wire>
-    <wire>
-      <p1 x="220" y="420"/>
-      <p2 x="280" y="420"/>
-    </wire>
-    <wire>
       <p1 x="1120" y="740"/>
       <p2 x="1160" y="740"/>
     </wire>
@@ -782,6 +774,10 @@
       <p2 x="2040" y="740"/>
     </wire>
     <wire>
+      <p1 x="360" y="420"/>
+      <p2 x="400" y="420"/>
+    </wire>
+    <wire>
       <p1 x="1080" y="360"/>
       <p2 x="1140" y="360"/>
     </wire>
@@ -790,16 +786,20 @@
       <p2 x="1320" y="360"/>
     </wire>
     <wire>
-      <p1 x="360" y="360"/>
-      <p2 x="400" y="360"/>
-    </wire>
-    <wire>
       <p1 x="1780" y="360"/>
       <p2 x="1840" y="360"/>
     </wire>
     <wire>
       <p1 x="1980" y="360"/>
       <p2 x="2020" y="360"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="360"/>
+      <p2 x="360" y="360"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="360"/>
+      <p2 x="280" y="360"/>
     </wire>
     <wire>
       <p1 x="480" y="40"/>
@@ -858,16 +858,20 @@
       <p2 x="1320" y="400"/>
     </wire>
     <wire>
-      <p1 x="360" y="400"/>
-      <p2 x="400" y="400"/>
-    </wire>
-    <wire>
       <p1 x="1780" y="400"/>
       <p2 x="1840" y="400"/>
     </wire>
     <wire>
       <p1 x="1980" y="400"/>
       <p2 x="2020" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="400"/>
+      <p2 x="520" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="400"/>
+      <p2 x="620" y="400"/>
     </wire>
     <wire>
       <p1 x="340" y="80"/>
@@ -906,12 +910,12 @@
       <p2 x="1220" y="20"/>
     </wire>
     <wire>
-      <p1 x="340" y="340"/>
-      <p2 x="360" y="340"/>
+      <p1 x="340" y="440"/>
+      <p2 x="360" y="440"/>
     </wire>
     <wire>
-      <p1 x="220" y="340"/>
-      <p2 x="280" y="340"/>
+      <p1 x="220" y="440"/>
+      <p2 x="280" y="440"/>
     </wire>
     <wire>
       <p1 x="2140" y="760"/>
@@ -922,12 +926,8 @@
       <p2 x="1480" y="760"/>
     </wire>
     <wire>
-      <p1 x="1820" y="700"/>
-      <p2 x="1860" y="700"/>
-    </wire>
-    <wire>
-      <p1 x="1120" y="700"/>
-      <p2 x="1160" y="700"/>
+      <p1 x="360" y="380"/>
+      <p2 x="400" y="380"/>
     </wire>
     <wire>
       <p1 x="1420" y="380"/>
@@ -938,20 +938,20 @@
       <p2 x="1280" y="380"/>
     </wire>
     <wire>
-      <p1 x="480" y="380"/>
-      <p2 x="520" y="380"/>
-    </wire>
-    <wire>
-      <p1 x="580" y="380"/>
-      <p2 x="620" y="380"/>
-    </wire>
-    <wire>
       <p1 x="2120" y="380"/>
       <p2 x="2180" y="380"/>
     </wire>
     <wire>
       <p1 x="1940" y="380"/>
       <p2 x="1980" y="380"/>
+    </wire>
+    <wire>
+      <p1 x="1820" y="700"/>
+      <p2 x="1860" y="700"/>
+    </wire>
+    <wire>
+      <p1 x="1120" y="700"/>
+      <p2 x="1160" y="700"/>
     </wire>
     <wire>
       <p1 x="360" y="60"/>
@@ -1014,12 +1014,12 @@
       <p2 x="1300" y="740"/>
     </wire>
     <wire>
-      <p1 x="360" y="400"/>
-      <p2 x="360" y="420"/>
+      <p1 x="360" y="420"/>
+      <p2 x="360" y="440"/>
     </wire>
     <wire>
-      <p1 x="360" y="340"/>
-      <p2 x="360" y="360"/>
+      <p1 x="360" y="360"/>
+      <p2 x="360" y="380"/>
     </wire>
     <wire>
       <p1 x="360" y="60"/>
