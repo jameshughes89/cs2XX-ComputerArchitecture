@@ -528,12 +528,45 @@ Functional Completeness
       * :math:`\lnot(\lnot a \lor \lnot b) = \lnot(\lnot (a \land b)) = a \land b`
 
 
+.. figure:: and_with_or_and_not_gates.png
+    :width: 500 px
+    :align: center
+
+    Implementation of and gate functionality with only or gate and not gates.
+
+
 * Similarly, with and and not gates, the functionality of an or gate can be created
 
     * :math:`\lnot(\lnot a \land \lnot b) = \lnot(\lnot (a \lor b)) = a \lor b`
 
+.. figure:: or_with_and_and_not_gates.png
+    :width: 500 px
+    :align: center
 
-* This means that the set of {and, not} and {or, not} are also logically complete
+    Implementation of and gate functionality with only or gate and not gates.
+
+
+* This shows that the set of {and, not} and {or, not} are also logically complete
+
+
+Minimal Set
+-----------
+
+* One may wonder if a single gate type is sufficient to have a logically complete set
+* To prove this is the case, all one needs to do is show that the single gate type can
+
+    * Implement not
+    * Implement and
+    * Implement or
+
+
+* Seeing the reduced sets made up of {and, not}/{or, not}, one may wonder if nand and nor are logically complete
+
+.. admonition:: Activity
+
+    Show that nand and nor are logically complete.
+
+
 
 
 
@@ -542,6 +575,7 @@ For Next Time
 
 * Check out the :download:`Decoder <1-2_and_2-4_decoders.dig>` schematic for Digital
 * Check out the :download:`Multiplexer <2_and_4_multiplexer.dig>` schematic for Digital
+* Check out the :download:`Logical Completeness <logical_completeness.dig>` schematic for Digital
 * Read Chapter 3 Sections 5 of your text
 
     * 3 pages
