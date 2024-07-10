@@ -506,6 +506,35 @@ Programmable Logic Arrays
 Functional Completeness
 =======================
 
+* As seen with PLAs, any boolean logic function can be implemented systematically
+
+    * In other words, any function can be physically created with configurations of and, or, and not gates
+
+
+* This means that the set of {and, or, not} gates is *logically complete*
+* Although other gates exist, they are not necessary for implementing any function
+
+    * Nevertheless, they may make configuring a circuit for some functionality simpler
+
+
+* However, review De Morgan's Laws
+
+      * :math:`\lnot a \lor \lnot b = \lnot (a \land b)`
+      * :math:`\lnot a \land \lnot b = \lnot (a \lor b)`
+
+
+* This shows that, with or and not gates, one can create the functionality of an and gate
+
+      * :math:`\lnot(\lnot a \lor \lnot b) = \lnot(\lnot (a \land b)) = a \land b`
+
+
+* Similarly, with and and not gates, the functionality of an or gate can be created
+
+    * :math:`\lnot(\lnot a \land \lnot b) = \lnot(\lnot (a \lor b)) = a \lor b`
+
+
+* This means that the set of {and, not} and {or, not} are also logically complete
+
 
 
 For Next Time
