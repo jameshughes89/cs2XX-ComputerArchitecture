@@ -33,9 +33,9 @@ Logic Gates
 AND Gate
 ========
 
-* Consider the AND operator --- output ``1`` when both operands are ``1``, otherwise output ``0``
+* Consider the :math:`and` operator --- output ``1`` when both operands are ``1``, otherwise output ``0``
 
-.. list-table:: Truth Table for AND
+.. list-table:: Truth Table for :math:`and`
     :widths: auto
     :align: center
     :header-rows: 1
@@ -71,8 +71,8 @@ AND Gate
     :width: 500 px
     :align: center
 
-    Two transistors in series configured to operate as an AND gate. Both transistors would need to be "on" in order for
-    the signal at the top transistor's source (``1``) to reach the output at the bottom transistor's drain.
+    Two transistors in series configured to perform the :math:`and` operation. Both transistors would need to be "on" in
+    order for the signal at the top transistor's source (``1``) to reach the output at the bottom transistor's drain.
 
 
 * With two transistors in *series*, both would need to be "on" for the signal to travel through to the output
@@ -82,7 +82,7 @@ AND Gate
 
 
 * If either switch (or both) is "off", the signal could not travel to the output
-* This perfectly corresponds to the AND boolean operator
+* This perfectly corresponds to the :math:`and` boolean operator
 * This circuit is called an *AND gate*
 
 .. note::
@@ -132,9 +132,9 @@ AND Gate
 OR Gate
 =======
 
-* For OR, a signal of ``1`` should reach the output if either switch is "on"
+* For :math:`or`, a signal of ``1`` should reach the output if either switch is "on"
 
-.. list-table:: Truth Table for OR
+.. list-table:: Truth Table for :math:`or`
     :widths: auto
     :align: center
     :header-rows: 1
@@ -165,8 +165,8 @@ OR Gate
     :width: 500 px
     :align: center
 
-    Two transistors in parallel configured to operate as an OR gate. Either transistors would need to be "on" in order
-    for the signal to reach the output.
+    Two transistors in parallel configured to perform the :math:`or` operation. Either transistors would need to be "on"
+    in order for the signal to reach the output.
 
 
 * With two transistors in *parallel*, either would need to be "on" for the signal to travel through to the output
