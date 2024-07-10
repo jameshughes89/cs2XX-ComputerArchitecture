@@ -60,8 +60,8 @@ And Gate
     :width: 500 px
     :align: center
 
-    Two transistors in series. Both transistors would need to be "on" in order for the signal at the top transistor's
-    source (``1``) to reach the output at the bottom transistor's drain.
+    Two transistors in series configured to operate as an AND gate. Both transistors would need to be "on" in order for
+    the signal at the top transistor's source (``1``) to reach the output at the bottom transistor's drain.
 
 
 * With two transistors in *series*, both would need to be "on" for the signal to travel through to the output
@@ -121,9 +121,9 @@ And Gate
 Or Gate
 =======
 
-* For **or**, a signal of ``1`` should reach the output if either switch is "on"
+* For OR, a signal of ``1`` should reach the output if either switch is "on"
 
-.. list-table:: Truth Table for **or**
+.. list-table:: Truth Table for OR
     :widths: auto
     :align: center
     :header-rows: 1
@@ -154,7 +154,8 @@ Or Gate
     :width: 500 px
     :align: center
 
-    Two transistors in parallel. Either transistors would need to be "on" in order for the signal to reach the output.
+    Two transistors in parallel configured to operate as an OR gate. Either transistors would need to be "on" in order
+    for the signal to reach the output.
 
 
 * With two transistors in *parallel*, either would need to be "on" for the signal to travel through to the output
@@ -163,21 +164,21 @@ Or Gate
     * The parallel circuits, the signal can travel through each separate conductor
 
 
-* Below is an image of the symbol for an or gate
+* Below is an image of the symbol for an OR gate
 
 .. figure:: or_gate_symbol.png
     :width: 500 px
     :align: center
 
-    Symbol for an or gate.
+    Symbol for an OR gate.
 
 
 Not Gate
 ========
 
-* Now consider the **not** operator
+* Now consider the NOT operator
 
-.. list-table:: Truth Table for **not**
+.. list-table:: Truth Table for NOT
     :widths: auto
     :align: center
     :header-rows: 1
@@ -194,14 +195,14 @@ Not Gate
 
 
 
-* The not gate is a little different from the and/or gates
+* The NOT gate is a little different from the AND/OR gates
 
 
 .. figure:: not_gate_with_transistors.png
     :width: 500 px
     :align: center
 
-    Not gate with a transistor. When the transistor is turned "on", the circuit's voltage will drop to neutral as ground
+    NOT gate with a transistor. When the transistor is turned "on", the circuit's voltage will drop to neutral as ground
     would be directly connected to the output.
 
 
@@ -223,18 +224,17 @@ Not Gate
 
 .. admonition:: Activity
 
-    How would one configure the schematic for **not** if using a P-channel MOSFET instead of a N-channel like above?
+    How would one configure the schematic for NOT if using a P-channel MOSFET instead of a N-channel like above?
 
 
 
-
-* Below is an image of the symbol for a not gate
+* Below is an image of the symbol for a NOT gate
 
 .. figure:: not_gate_symbol.png
     :width: 500 px
     :align: center
 
-    Symbol for a not gate.
+    Symbol for a NOT gate.
 
 
 * However, not is sometimes represented as only the circle
@@ -242,10 +242,10 @@ Not Gate
     * In fact, the triangle in the gate means a *buffer* component
 
 
-* It is also common to simplify a not input to another gate by adding a circle to the symbol's respective input
-* Below is an example of an and gate with one input inverted
+* It is also common to simplify a NOT input to another gate by adding a circle to the symbol's respective input
+* Below is an example of an AND gate with one input inverted
 
-    * The top image shows one input explicitly inverted with a not gate
+    * The top image shows one input explicitly inverted with a NOT gate
     * The bottom image is simplified to show that the input is inverted
 
 
@@ -253,35 +253,36 @@ Not Gate
     :width: 500 px
     :align: center
 
-    Two representations of an and gate with the top input being inverted.
+    Two representations of an AND gate with the top input being inverted.
 
 
 
 Other Gate Symbols
 ==================
 
-* Adding a circle to the output would signify an inverted output, like the below nor and nand gate symbols
+* Adding a circle to the output would signify an inverted output, like the below NOR and NAND gate symbols
 
 .. figure:: nor_gate_symbol.png
     :width: 500 px
     :align: center
 
-    Symbol for a nor gate.
+    Symbol for a NOR gate.
+
 
 .. figure:: nand_gate_symbol.png
     :width: 500 px
     :align: center
 
-    Symbol for a nand gate.
+    Symbol for a NAND gate.
 
 
-* Another common symbol is for exclusive or (xor)
+* Another common symbol is for exclusive OR (XOR)
 
 .. figure:: xor_gate_symbol.png
     :width: 500 px
     :align: center
 
-    Symbol for a xor gate.
+    Symbol for a XOR gate.
 
 
 
@@ -291,25 +292,25 @@ Additional Inputs
 * Typically, these logic gates have two inputs
 * However, having more than two inputs is normal
 
-* An and gate with more than two inputs outputs ``1`` only when all inputs are ``1``
+* An AND gate with more than two inputs outputs ``1`` only when all inputs are ``1``
 
 .. figure:: and_5_input_single_gate.png
     :width: 500 px
     :align: center
 
-    Single and gate with five inputs.
+    Single AND gate with five inputs.
 
 
-* An or gate with more than two inputs outputs ``1`` if any of the inputs are ``1``
+* An OR gate with more than two inputs outputs ``1`` if any of the inputs are ``1``
 
 .. figure:: or_4_input_single_gate.png
     :width: 500 px
     :align: center
 
-    Single or gate with four inputs.
+    Single OR gate with four inputs.
 
 
-* A nand gate with more than two inputs is an and gate with the same number of inputs, but with an inverted output
+* A NAND gate with more than two inputs is an AND gate with the same number of inputs, but with an inverted output
 
     * In other words, outputs ``1`` as long as not all inputs are ``1`` (at least one input is ``0``)
 
@@ -317,16 +318,16 @@ Additional Inputs
     :width: 500 px
     :align: center
 
-    Single nand gate with four inputs.
+    Single NAND gate with four inputs.
 
 
 
-* A nor gate with more than two inputs is the same as an or gate with the same number of inputs, with an inverted output
+* A NOR gate with more than two inputs is the same as an OR gate with the same number of inputs, with an inverted output
 
     * Outputs ``1`` only when all inputs are ``0``
 
 
-* An exclusive or (xor) with more than two inputs effectively works as a parity check
+* An exclusive OR (XOR) with more than two inputs effectively works as a parity check
 
     * Checks if the number of ``1`` inputs is even or odd
     * Output ``0`` when an even number of inputs are ``1``
