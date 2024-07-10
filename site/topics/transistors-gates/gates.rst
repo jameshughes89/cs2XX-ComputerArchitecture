@@ -18,6 +18,17 @@ Logic Gates
     transistors will not be directly interacted with going forward in this course.
 
 
+.. note::
+
+    Going forward, words for boolean operators and logic gates will be stylized to help designate what is being
+    referred to.
+
+    For example, the typesetting for words when referring to mathematical boolean operators will be stylized like so
+    --- :math:`and`. However, when referring to a logic gate, the words will be stylized like this --- AND.
+
+    They both mean the same thing on an abstract level, but efforts are made to eliminate ambiguity.
+
+
 
 AND Gate
 ========
