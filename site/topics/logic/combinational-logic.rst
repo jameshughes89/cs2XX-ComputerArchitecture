@@ -508,24 +508,24 @@ Programmable Logic Arrays (PLA)
 * PLAs are effectively decoders where the single decoded output signal may activate multiple final outputs
 * They consist of two main parts
 
-    * A collection of and gates, called an and array, which acts as a decoder
-    * A collection of or gates, called an or array, which activates an output when specific decoded signals are high
+    * A collection of AND gates, called an AND array, which acts as a decoder
+    * A collection of OR gates, called an OR array, which activates an output when specific decoded signals are high
 
 
-* The number of and gates depends on the number of inputs
+* The number of AND gates depends on the number of inputs
 
-    * Given :math:`n` inputs, there will be a total of :math:`2^{n}` and gates
+    * Given :math:`n` inputs, there will be a total of :math:`2^{n}` AND gates
     * Like decoders
 
 
-* The number of or gates depends on the number of desired output signals
+* The number of OR gates depends on the number of desired output signals
 
-    * One or gate for each output
+    * One OR gate for each output
 
 
-* The number of inputs to each or gate depends on the number of decoded signals that could activate the or gate's output
+* The number of inputs to each OR gate depends on the number of decoded signals that could activate the OR gate's output
 
-    * The or gates serve as a way to connect multiple gate outputs to a single output
+    * The OR gates serve as a way to connect multiple gate outputs to a single output
 
 
 * The idea of a PLA is best described with an example
@@ -646,25 +646,26 @@ Programmable Logic Arrays (PLA)
 * One may be tempted to map each decoded signal directly to the desired outputs, however, there are problems with this
 
     * As discussed above with the multiplexers
-    * Instead, the decoded signals are mapped to or gates that correspond to each output
 
+
+* Instead, the decoded signals are mapped to OR gates that correspond to each output
 
 * The goal is then to
 
     * Create a decoder
-    * Map the decoded signals to or gates when the signal should cause the specific output to go high
+    * Map the decoded signals to OR gates when the signal should cause the specific output to go high
 
 
 .. figure:: pla_example_1.png
     :width: 500 px
     :align: center
 
-    Programmable logic array (PLA) mapping two inputs to three outputs. The PLA is made up of an array of and gates
-    serving as a decoder and an array of or gates that will output a high signal when any of the decoded inputs are
+    Programmable logic array (PLA) mapping two inputs to three outputs. The PLA is made up of an array of AND gates
+    serving as a decoder and an array of OR gates that will output a high signal when any of the decoded inputs are
     high.
 
 
-* This basic design of an array of and gates followed by an array of or gates scales to arbitrary size
+* This basic design of an array of AND gates followed by an array of OR gates scales to arbitrary size
 * Below is some truth table describing some functionality for a three input, four output PLA
 
 .. list-table:: Three Input PLA with Some Output
@@ -753,7 +754,7 @@ Programmable Logic Arrays (PLA)
     :align: center
 
     Programmable logic array (PLA) mapping three inputs to four outputs. This figure shows how the general design of an
-    array of and gates followed by an array of or gates can be scaled up.
+    array of AND gates followed by an array of OR gates can be scaled up.
 
 
 
