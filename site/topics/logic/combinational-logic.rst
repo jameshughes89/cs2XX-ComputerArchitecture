@@ -339,7 +339,7 @@ Multiplexers (Mux)
 * This simplified view is not only smaller, but arguably makes the desired functionality more clear
 
 * Below is an image of a two bit multiplexer
-* The implementation idea is similar to that of a decoder in that it uses and gates with inverted inputs
+* The implementation idea is similar to that of a decoder in that it uses AND gates with inverted inputs
 
 .. figure:: two_bit_mux.png
     :width: 500 px
@@ -352,15 +352,15 @@ Multiplexers (Mux)
 * One may notice that the input signals are never inverted on any gate, only the selector signal
 * This is because, if the gate for a given input is selected, the input should be directly mapped to the output
 
-    * If the gate is selected and the input is ``1``, the and gate outputs ``1``
-    * If the gate is selected and the input is ``0``, the and gate outputs ``0``
-    * If the gate is not selected with the selector, the and gate always outputs ``0``
+    * If the gate is selected and the input is ``1``, the AND gate outputs ``1``
+    * If the gate is selected and the input is ``0``, the AND gate outputs ``0``
+    * If the gate is not selected with the selector, the AND gate always outputs ``0``
 
 
 .. note::
 
-    Notice that there is an or gate before the final output signal. This or gate's only purpose is to combine all the
-    outputs to a single line. However, one may wonder why it's necessary to use an or gate instead of simply combining
+    Notice that there is an OR gate before the final output signal. This OR gate's only purpose is to combine all the
+    outputs to a single line. However, one may wonder why it's necessary to use an OR gate instead of simply combining
     the signals like in the below image.
 
     .. figure:: combining_output_signals_bad.png
@@ -368,7 +368,7 @@ Multiplexers (Mux)
         :align: center
 
         Combining output signals on a single line directly creates problems and should not be done. This is true even if
-        only one output line would be active at any given time. Instead, to combine output lines, use or gates.
+        only one output line would be active at any given time. Instead, to combine output lines, use OR gates.
 
 
     Connecting output signals like this will not work in practice. The nuanced reasoning for this is beyond the scope of
@@ -377,7 +377,7 @@ Multiplexers (Mux)
     connected to the line is ``1``, it will ultimately be pulled to ground through the gates outputting ``0``, thereby
     making the whole line ``0``, even though it should be ``1``.
 
-    To avoid the problem, an or gate is typically used to combine signals.
+    To avoid the problem, an OR gate is typically used to combine signals.
 
 
 * Below is a four bit multiplexer
@@ -491,10 +491,9 @@ Demultiplexer (Demux)
 
 
 * One may notice that this is very similar to a decoder
-* The difference is that
+* THe difference is that a demux maps an arbitrary value of the input to the output
 
-    * Instead of outputting ``1`` on the selected signal like a decoder
-    * A demultiplexer maps the arbitrary value of the input to the output
+    * A decoder always outputs ``1``
 
 
 
