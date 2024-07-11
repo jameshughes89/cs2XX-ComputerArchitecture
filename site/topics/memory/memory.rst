@@ -16,7 +16,7 @@ Bits, Bytes, and Data
 
 * Before getting into the details of memory, it's important to be clear on what data and information is
 
-    * Data is some collection of raw values/symbols that have no intrinsic meaning on their own
+    * Data is some collection of raw values/symbols that have no intrinsic meaning
 
         * For example, the number :math:`3` is data
 
@@ -30,7 +30,7 @@ Bits, Bytes, and Data
 * As already discussed, a bit is a single digit in base two
 * However, a bit is represented within computers as a single signal
 * These bits/signals can take on two possible states ``0`` or ``1``
-* This means that, with one bit, a total of two unique values can be represented
+* This means that, with one bit/signal, a total of two unique values can be represented
 
 .. figure:: one_bit_signals.png
     :width: 333 px
@@ -50,7 +50,7 @@ Bits, Bytes, and Data
         * ``11``
 
 
-.. figure:: two_bits_signals.png
+.. figure:: two_bit_signals.png
     :width: 500 px
     :align: center
 
@@ -66,8 +66,8 @@ Bits, Bytes, and Data
 * With a byte, a total of :math:`2^{8} = 256` unique values can be represented
 
 
-.. figure:: eight_bits_signals.png
-    :width: 500 px
+.. figure:: eight_bit_signals.png
+    :width: 250 px
     :align: center
 
     A byte encoding the pattern ``01100001``, assuming the top signal corresponds to the least significant bit.
@@ -81,7 +81,7 @@ Bits, Bytes, and Data
     * It's a raw encoding
 
 
-* This pattern could mean the number :math:`97_{10}` or the letter ``a``, depending on how it's interpreted
+* The pattern could mean :math:`97_{10}` or the letter ``a``, depending on how it's interpreted/decoded
 
 
 
