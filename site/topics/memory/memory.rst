@@ -16,18 +16,30 @@ Bits, Bytes, and Data
 
 * Before getting into the details of memory, it's important to be clear on what data and information is
 
-    * Data is some collection of values/symbols that have no intrinsic meaning
+    * Data is some collection of raw values/symbols that have no intrinsic meaning on their own
 
         * For example, the number :math:`3` is data
+
 
     * Information is data that has meaning within some context
 
         * :math:`3` is information on a quantity in the context of the question of how many dogs are in a car
 
 
+* A *bit* is the most basic unit of data in typical computing
+* As already discussed, a bit is a single digit in base two
+* However, a bit is represented within computers as a single signal
+* These bits/signals can take on two possible states ``0`` or ``1``
+* This means that, with one bit, a total of two unique values can be represented
+
+.. figure:: bit_off_on.png
+    :width: 333 px
+    :align: center
+
+    Single bit shown twice with the two possible states it can take --- off and on.
 
 
-A bit as a single unit of data
+
 
 - A byte
 - how many unique values
