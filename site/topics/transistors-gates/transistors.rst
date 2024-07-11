@@ -23,7 +23,6 @@ Symbols
 
     * An up arrow is used to signify a positive charge
     * A single horizontal line represents ground --- something with no charge; neutral
-    * Typically, within the context of computer architecture, the voltage between this positive charge and ground is 5V
 
 
 .. figure:: vcc_ground.png

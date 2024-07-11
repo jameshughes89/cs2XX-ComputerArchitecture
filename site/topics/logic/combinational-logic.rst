@@ -498,8 +498,287 @@ Demultiplexer (Demux)
 
 
 
-Programmable Logic Arrays
-=========================
+Programmable Logic Arrays (PLA)
+===============================
+
+* Programmable logic arrays (PLA) are a general purpose design for implementing any boolean logic functionality
+
+    * Can map any input to any desired output
+
+
+* PLAs are effectively decoders where the single decoded output signal may activate multiple final outputs
+* They consist of two main parts
+
+    * A collection of and gates, called an and array, which acts as a decoder
+    * A collection of or gates, called an or array, which activates an output when specific decoded signals are high
+
+
+* The number of and gates depends on the number of inputs
+
+    * Given :math:`n` inputs, there will be a total of :math:`2^{n}` and gates
+    * Like decoders
+
+
+* The number of or gates depends on the number of desired output signals
+
+    * One or gate for each output
+
+
+* The number of inputs to each or gate depends on the number of decoded signals that could activate the or gate's output
+
+    * The or gates serve as a way to connect multiple gate outputs to a single output
+
+
+* The idea of a PLA is best described with an example
+* Below is a truth table describing some mapping of two input signals to three output signals
+
+    * The outputs are arbitrary and have no meaning other than to provide some example
+
+
+.. list-table:: Two Input PLA with Some Output
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - Input 1
+      - Input 0
+      -
+      - Output 0
+      - Output 1
+      - Output 2
+    * - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+
+
+
+* To make the connection of input to output more clear, the truth table can be rewritten to include decoded inputs
+
+.. list-table:: Two Input PLA with Some Output including Decoded (D) Signals
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - In 1
+      - In 0
+      -
+      - D 0
+      - D 1
+      - D 2
+      - D 3
+      -
+      - Out 0
+      - Out 1
+      - Out 2
+    * - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``1``
+      - ``1``
+    * - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+
+
+* From the above table, when should each of the outputs be high?
+
+    * Output 0 is high when the zeroth, second, or third decoded signals are high
+    * Output 1 is high when the first or second decoded signals are high
+    * Output 2 is high when the first, second, or third decoded signals are high
+
+
+* One may be tempted to map each decoded signal directly to the desired outputs, however, there are problems with this
+
+    * As discussed above with the multiplexers
+    * Instead, the decoded signals are mapped to or gates that correspond to each output
+
+
+* The goal is then to
+
+    * Create a decoder
+    * Map the decoded signals to or gates when the signal should cause the specific output to go high
+
+
+.. figure:: pla_example_1.png
+    :width: 500 px
+    :align: center
+
+    Programmable logic array (PLA) mapping two inputs to three outputs. The PLA is made up of an array of and gates
+    serving as a decoder and an array of or gates that will output a high signal when any of the decoded inputs are
+    high.
+
+
+* This basic design of an array of and gates followed by an array of or gates scales to arbitrary size
+* Below is some truth table describing some functionality for a three input, four output PLA
+
+.. list-table:: Three Input PLA with Some Output
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - Input c
+      - Input b
+      - Input a
+      -
+      - Output a
+      - Output b
+      - Output c
+      - Output d
+    * - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+    * - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+    * - ``0``
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``0``
+    * - ``0``
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+    * - ``1``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+
+
+* The PLA matching the functionality described in the above truth table is shown in the following image
+
+.. figure:: pla_example_2.png
+    :width: 666 px
+    :align: center
+
+    Programmable logic array (PLA) mapping three inputs to four outputs. This figure shows how the general design of an
+    array of and gates followed by an array of or gates can be scaled up.
+
+
+
+
+Programmable Logic Array/Look Up Table Symbol
+---------------------------------------------
+
+* One may have realised that this functionality is effectively a dictionary/map/look up table
+* In fact, within Digital, PLAs are called look up tables
+* Below is a figure of a look up table from Digital
+
+.. figure:: pla_symbol.png
+    :width: 333 px
+    :align: center
+
+    Example of a look up table from Digital. This specific look up table maps three inputs to four outputs.
+
+
+.. note::
+
+    Look up tables are an abstract idea, and as such, the physical implementation is often not important. In practice,
+    these look up tables could be PLAs, constructed with arrays of and gates and or gates, or they could be implemented
+    with a form of memory mapping the input to some memory addresses, which in turn contains the desired output within
+    that memory location.
 
 
 
@@ -513,6 +792,7 @@ For Next Time
 
 * Check out the :download:`Decoder <1-2_and_2-4_decoders.dig>` schematic for Digital
 * Check out the :download:`Multiplexer <2_and_4_multiplexer.dig>` schematic for Digital
+* Check out the :download:`Programmable Logic Array <programmable_logic_array.dig>` schematic for Digital
 * Read Chapter 3 Sections 5 of your text
 
     * 3 pages
