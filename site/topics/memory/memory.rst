@@ -32,22 +32,56 @@ Bits, Bytes, and Data
 * These bits/signals can take on two possible states ``0`` or ``1``
 * This means that, with one bit, a total of two unique values can be represented
 
-.. figure:: bit_off_on.png
+.. figure:: one_bit_signals.png
     :width: 333 px
     :align: center
 
-    Single bit shown twice with the two possible states it can take --- off and on.
+    Single bit/signal shown twice with the two possible states it can take --- off and on.
 
 
+* As more bits/signals get added, more possible combinations of states/unique values can be created
+
+    * In base two, with :math:`n` bits, a total of :math:`2^{n}` unique values can be represented
+    * For example, with two bits, four states can be created
+
+        * ``00``
+        * ``01``
+        * ``10``
+        * ``11``
 
 
-- A byte
-- how many unique values
-- what those values mean depends on the encoding/decoding
+.. figure:: two_bits_signals.png
+    :width: 500 px
+    :align: center
 
-- 32 bits (4 bytes)
-- 64 bits 8 bytes
+    All four possible combinations of values two bits/signals can take on.
 
+
+* A *byte* is a group of eight bits
+
+    * The reason it's eight bits is for historical and practical reasons
+    * These details will not be covered here
+
+
+* With a byte, a total of :math:`2^{8} = 256` unique values can be represented
+
+
+.. figure:: eight_bits_signals.png
+    :width: 500 px
+    :align: center
+
+    A byte encoding the pattern ``01100001``, assuming the top signal corresponds to the least significant bit.
+
+
+* Above is an example of a byte encoding some data
+* Assuming the top signal is the least significant bit, the pattern is ``01100001``
+* However, this pattern has no meaning without some context
+
+    * It's data, not information
+    * It's a raw encoding
+
+
+* This pattern could mean the number :math:`97_{10}` or the letter ``a``, depending on how it's interpreted
 
 
 
