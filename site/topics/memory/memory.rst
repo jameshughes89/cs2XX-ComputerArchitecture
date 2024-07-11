@@ -11,8 +11,31 @@ Memory
 
 
 
-Bits and Bytes
-==============
+Bits, Bytes, and Data
+=====================
+
+* Before getting into the details of memory, it's important to be clear on what data and information is
+
+    * Data is some collection of values/symbols that have no intrinsic meaning
+
+        * For example, the number :math:`3` is data
+
+    * Information is data that has meaning within some context
+
+        * :math:`3` is information on a quantity in the context of the question of how many dogs are in a car
+
+
+
+
+A bit as a single unit of data
+
+- A byte
+- how many unique values
+- what those values mean depends on the encoding/decoding
+
+- 32 bits (4 bytes)
+- 64 bits 8 bytes
+
 
 
 
