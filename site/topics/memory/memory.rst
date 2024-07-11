@@ -2,7 +2,8 @@
 Memory
 ******
 
-* Storing data for later use is an important function of a typical digital computer
+* Until now, all circuits discussed made no use of stored information
+* However, storing data for later use is an important function of a typical digital computer
 * Memory can be used to store
 
     * Data, such as the value of a variable
