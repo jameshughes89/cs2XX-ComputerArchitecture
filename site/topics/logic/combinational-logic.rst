@@ -141,7 +141,7 @@ More than One Input Bit
     * When input a is *not* high *and* input b is *not* high, output high for only output 0
 
 
-* This functionality can be achieved with a single two input and gate with both inputs inverted
+* This functionality can be achieved with a single two input AND gate with both inputs inverted
 
     * This gate will only output ``1`` when both inputs are ``0``
     * Output 0 is :math:`\lnot a \land \lnot b`
@@ -151,7 +151,7 @@ More than One Input Bit
     :width: 250 px
     :align: center
 
-    And gate with two inverted inputs. This gate will only output ``1`` when both inputs are ``0``.
+    And gate with two inverted inputs. This AND gate will only output ``1`` when both inputs are ``0``.
 
 
 * Now consider the second row and input 1
@@ -164,12 +164,12 @@ More than One Input Bit
     :width: 250 px
     :align: center
 
-    And gate that will only output ``1`` when the input signal is ``01``, where the top signal is the most significant
+    AND gate that will only output ``1`` when the input signal is ``01``, where the top signal is the most significant
     bit.
 
 
 
-* Following this pattern, a two bit decoder can be a series of four and gates with every combination of inverted inputs
+* Following this pattern, a two bit decoder can be a series of four AND gates with every combination of inverted inputs
 
 .. figure:: two_bit_decoder.png
     :width: 500 px
@@ -185,13 +185,13 @@ More than One Input Bit
     * Given :math:`n` inputs, a total of :math:`2^{n}` outputs can be controlled
 
 
-* In general, and gates with various inverted inputs are ideal for situations where a specific input pattern is required
+* In general, AND gates with various inverted inputs are ideal for situations where a specific input pattern is required
 
 .. figure:: and_gate_for_01010010.png
     :width: 250 px
     :align: center
 
-    Example of an and gate that only outputs ``1`` when an input pattern of ``01010010``, where the top input is the
+    Example of an AND gate that only outputs ``1`` when an input pattern of ``01010010``, where the top input is the
     most significant bit, is observed.
 
 
