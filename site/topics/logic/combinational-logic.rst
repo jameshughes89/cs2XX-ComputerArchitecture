@@ -508,10 +508,10 @@ Functional Completeness
 
 * As seen with PLAs, any boolean logic function can be implemented systematically
 
-    * In other words, any function can be physically created with configurations of and, or, and not gates
+    * In other words, any function can be physically created with configurations of AND, OR, and NOT gates
 
 
-* This means that the set of {and, or, not} gates is *Functionally complete*
+* This means that the set of {AND, OR, NOT} gates is *Functionally complete*
 * Although other gates exist, they are not necessary for implementing any function
 
     * Nevertheless, they may make configuring a circuit for some functionality simpler
@@ -523,7 +523,7 @@ Functional Completeness
       * :math:`\lnot a \land \lnot b = \lnot (a \lor b)`
 
 
-* This shows that, with or and not gates, one can create the functionality of an and gate
+* This shows that, with OR and NOT gates, one can create the functionality of an AND gate
 
       * :math:`\lnot(\lnot a \lor \lnot b) = \lnot(\lnot (a \land b)) = a \land b`
 
@@ -535,7 +535,7 @@ Functional Completeness
     Implementation of and gate functionality with only or gate and not gates.
 
 
-* Similarly, with and and not gates, the functionality of an or gate can be created
+* Similarly, with AND and NOT gates, the functionality of an OR gate can be created
 
     * :math:`\lnot(\lnot a \land \lnot b) = \lnot(\lnot (a \lor b)) = a \lor b`
 
@@ -546,7 +546,7 @@ Functional Completeness
     Implementation of and gate functionality with only or gate and not gates.
 
 
-* This shows that the set of {and, not} and {or, not} are also functionally complete
+* Therefore, the set of {AND, NOT} and {OR, NOT} are also functionally complete
 
 
 Minimal Set
@@ -555,16 +555,16 @@ Minimal Set
 * One may wonder if a single gate type is sufficient to have a functionally complete set
 * To prove this is the case, all one needs to do is show that the single gate type can
 
-    * Implement not
-    * Implement and
-    * Implement or
+    * Implement the :math:`not` operation
+    * Implement the :math:`and` operation
+    * Implement the :math:`or` operation
 
 
-* Seeing the reduced sets made up of {and, not}/{or, not}, one may wonder if nand and nor are functionally complete
+* Seeing the reduced sets made up of {AND, NOT}/{OR, NOT}, one may wonder if {NAND} and {NOR} are functionally complete
 
 .. admonition:: Activity
 
-    Show that nand and nor are functionally complete.
+    Show that {NAND} and {NOR} are functionally complete.
 
 
 
