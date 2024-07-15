@@ -15,17 +15,30 @@ Bits and Bytes
 
 
 
+Random Access Memory (RAN)
+==========================
+
+* Memory provides a way to store data for later use
+* There are several different broad types of memory within a computer, but they all serve the same general purpose
+* In this course, the types of memory that will be covered is
+
+    * Random Access Memory (RAM) --- Stores data and instructions the computer is using
+    * Registers --- Stores data and instructions the CPU is actively using
+
+
+* For this topic, RAM will be the focus
+
+
 Address Space and Addressability
-================================
+--------------------------------
 
-Ability to store data
+* In a typical computer, RAM stores data the computer is using along with the instructions of the programs being run
+* RAM is commonly made up of a large number of memory *locations*
+* Each of these memory locations stores some data/instruction
+* Each memory location can be uniquely identified with a *memory address*
+*
 
-    * differnet types of memory, like registers, RAM, and longer term, like HDD or external memory
 
-
-speaking of ram, Made up of, usually today, large numbers of locations
-
-In the computers used today, RAM stores data and instructions
 
 
 Address is the specific identifier of a location where data is stored
@@ -42,14 +55,15 @@ Addressability is the amount of information at each location
     is arbitrary and not meaningful.
 
 
-In the above example, ...
+* The above figure provides a high-level visualization of RAM
+* In this figure, there are a total of 16 unique memory locations
+
+
+
+* Each memory location contains some data, which is represented here as some character
 
 
 warning though, can be confusing as both are bits
-
-
-
-
 
 1GB meaning
     ability to address 1,000,000,000 unique bytes
@@ -57,10 +71,6 @@ warning though, can be confusing as both are bits
     Metric prefixes are used for ease
     Sometimes MiB/GiB
     Explain why (think of address space)
-
-
-
-
 
 
 
