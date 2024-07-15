@@ -32,6 +32,22 @@ Address is the specific identifier of a location where data is stored
 Addressability is the amount of information at each location
 
 
+.. figure:: memory_abstract_idea.png
+    :width: 500 px
+    :align: center
+
+    High-level visualization of RAM as a table. The left column contains each memory location's unique memory address,
+    while the right column represents the data stored at the specific memory address. Here, the memory addresses are
+    binary numbers and the data are represented as characters. The use of characters ``a`` through ``p`` in this figures
+    is arbitrary and not meaningful.
+
+
+In the above example, ...
+
+
+warning though, can be confusing as both are bits
+
+
 
 
 
