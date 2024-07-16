@@ -14,16 +14,28 @@ Memory
 Bits, Bytes, and Data
 =====================
 
-* Before getting into the details of memory, it's important to be clear on what data and information is
+* Before getting into the details on memory, it's important to be clear on encoded and decoded information
+* All values within a typical computer are encoded as binary patterns
 
-    * Data is some collection of raw values/symbols that have no intrinsic meaning
+* For example, consider the binary sequence ``01100001``
+* This binary pattern is an encoding that can have different meaning depending on how and what it's encoding
 
-        * For example, the number :math:`3` is data
+    * The pattern could mean :math:`97_{10}` if it's an encoding for an integer
+    * Or it could be an encoding for the letter ``a``
+    * It may encode the colour blue
+    * It could even be a pattern to control circuitry within a CPU to perform addition
 
 
-    * Information is data that has meaning within some context
+.. note::
 
-        * :math:`3` is information on a quantity in the context of the question of how many dogs are in a car
+    The word "data" is used to refer to raw values/symbols that have no intrinsic meaning, while the word "information"
+    is used to refer to data that has some meaning within some context.
+
+    For example, the number :math:`3` alone is data, but the number :math:`3` can be information if it's referring to,
+    for instance, the quantity of ducks swimming in a pond.
+
+    To put this in the context of encoded/decoded information, the pattern ``01100001`` is data, but what it
+    encodes/means would be information.
 
 
 * A *bit* is the most basic unit of data in typical computing
@@ -75,13 +87,9 @@ Bits, Bytes, and Data
 
 * Above is an example of a byte encoding some data
 * Assuming the top signal is the least significant bit, the pattern is ``01100001``
-* However, this pattern has no meaning without some context
+* However, as discussed, this pattern has no meaning without some context
 
-    * It's data, not information
     * It's a raw encoding
-
-
-* The pattern could mean :math:`97_{10}` or the letter ``a``, depending on how it's interpreted/decoded
 
 
 
