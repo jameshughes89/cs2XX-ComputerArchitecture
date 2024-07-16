@@ -20,7 +20,7 @@ Random Access Memory (RAN)
 
 * Memory provides a way to store data for later use
 * There are several different broad types of memory within a computer, but they all serve the same general purpose
-* In this course, the types of memory that will be covered is
+* In this course, the types of memory that will be covered are
 
     * Random Access Memory (RAM) --- Stores data and instructions the computer is using
     * Registers --- Stores data and instructions the CPU is actively using
@@ -33,17 +33,13 @@ Address Space and Addressability
 --------------------------------
 
 * In a typical computer, RAM stores data the computer is using along with the instructions of the programs being run
-* RAM is commonly made up of a large number of memory *locations*
-* Each of these memory locations stores some data/instruction
-* Each memory location can be uniquely identified with a *memory address*
-*
+* RAM is commonly made up of some number of memory *locations*
+* Each of these locations can be uniquely identified with a *memory address*
+* The total number of uniquely identifiable locations is referred to as the *address space*
 
-
-
-
-Address is the specific identifier of a location where data is stored
-Addressability is the amount of information at each location
-
+* Each of these memory locations stores some data or instruction
+* The amount of data stored in each location is the memory's *addressability*
+* Usually, RAM is *byte addressable*, meaning each memory location can store 1 byte/8 bits of data
 
 .. figure:: memory_abstract_idea.png
     :width: 500 px
@@ -51,28 +47,16 @@ Addressability is the amount of information at each location
 
     High-level visualization of RAM as a table. The left column contains each memory location's unique memory address,
     while the right column represents the data stored at the specific memory address. Here, the memory addresses are
-    binary numbers and the data are represented as characters. The use of characters ``a`` through ``p`` in this figures
-    is arbitrary and not meaningful.
+    four bit binary numbers and the data are represented as characters. The use of characters ``a`` through ``p`` in
+    this figures is arbitrary and not meaningful.
 
 
 * The above figure provides a high-level visualization of RAM
-* In this figure, there are a total of 16 unique memory locations
+* In this figure, there are 16 unique memory locations, each identifiable with a four bit binary number
+* Each memory address contains some data, represented here as some character
 
-
-
-* Each memory location contains some data, which is represented here as some character
-
-
-warning though, can be confusing as both are bits
-
-1GB meaning
-    ability to address 1,000,000,000 unique bytes
-    really, it's 1,073,741,824 though, as it's multiples of 2
-    Metric prefixes are used for ease
-    Sometimes MiB/GiB
-    Explain why (think of address space)
-
-
+* If one, for example, asked what is stored at memory address 3 (``0011``), the answer would be ``d``
+* However, like the memory address, the data being stored is some pattern of ``0``\s and ``1``\s
 
 
 
