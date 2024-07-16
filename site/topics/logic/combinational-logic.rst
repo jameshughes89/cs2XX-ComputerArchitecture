@@ -141,7 +141,7 @@ More than One Input Bit
     * When input a is *not* high *and* input b is *not* high, output high for only output 0
 
 
-* This functionality can be achieved with a single two input AND gate with both inputs inverted
+* This functionality can be achieved with a single two input AND with both inputs inverted
 
     * This gate will only output ``1`` when both inputs are ``0``
     * Output 0 is :math:`\lnot a \land \lnot b`
@@ -151,7 +151,7 @@ More than One Input Bit
     :width: 250 px
     :align: center
 
-    And gate with two inverted inputs. This AND gate will only output ``1`` when both inputs are ``0``.
+    AND gate with two inverted inputs. This AND will only output ``1`` when both inputs are ``0``.
 
 
 * Now consider the second row and input 1
@@ -359,9 +359,9 @@ Multiplexers (Mux)
 
 .. note::
 
-    Notice that there is an OR gate before the final output signal. This OR gate's only purpose is to combine all the
-    outputs to a single line. However, one may wonder why it's necessary to use an OR gate instead of simply combining
-    the signals like in the below image.
+    Notice that there is an OR gate before the final output signal. This OR's only purpose is to combine all the outputs
+    to a single line. However, one may wonder why it's necessary to use an OR gate instead of simply combining the
+    signals like in the below image.
 
     .. figure:: combining_output_signals_bad.png
         :width: 333 px
@@ -520,10 +520,10 @@ Programmable Logic Arrays (PLA)
 
 * The number of OR gates depends on the number of desired output signals
 
-    * One OR gate for each output
+    * One OR for each output
 
 
-* The number of inputs to each OR gate depends on the number of decoded signals that could activate the OR gate's output
+* The number of inputs to each OR depends on the number of decoded signals that could activate the OR's output
 
     * The OR gates serve as a way to connect multiple gate outputs to a single output
 
