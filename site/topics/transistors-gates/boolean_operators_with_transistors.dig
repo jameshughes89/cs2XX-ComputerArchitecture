@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
-  <version>2</version>
+  <version>1</version>
   <attributes/>
   <visualElements>
     <visualElement>
@@ -13,7 +13,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>not_o</string>
+          <string>NOT_o</string>
         </entry>
       </elementAttributes>
       <pos x="20" y="320"/>
@@ -23,7 +23,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>not_a</string>
+          <string>NOT_a</string>
         </entry>
       </elementAttributes>
       <pos x="-120" y="400"/>
@@ -47,7 +47,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Not</string>
+          <string>NOT</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -61,12 +61,12 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>not_test</string>
+          <string>NOT_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>not_a 	not_o
+            <dataString>NOT_a 	NOT_o
 0	1
 1	0</dataString>
           </testData>
@@ -89,7 +89,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or_a</string>
+          <string>OR_a</string>
         </entry>
       </elementAttributes>
       <pos x="400" y="360"/>
@@ -99,7 +99,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or_b</string>
+          <string>OR_b</string>
         </entry>
       </elementAttributes>
       <pos x="400" y="420"/>
@@ -109,7 +109,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or_o</string>
+          <string>OR_o</string>
         </entry>
       </elementAttributes>
       <pos x="660" y="480"/>
@@ -129,12 +129,12 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>or_test</string>
+          <string>OR_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>or_a	or_b	or_o
+            <dataString>OR_a	OR_b	OR_o
 0	0	0
 0	1	1
 1	0	1
@@ -153,7 +153,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>Or</string>
+          <string>OR</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -182,7 +182,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>and_o</string>
+          <string>AND_o</string>
         </entry>
       </elementAttributes>
       <pos x="1240" y="480"/>
@@ -197,7 +197,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>and_a</string>
+          <string>AND_a</string>
         </entry>
       </elementAttributes>
       <pos x="1040" y="360"/>
@@ -207,7 +207,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>and_b</string>
+          <string>AND_b</string>
         </entry>
       </elementAttributes>
       <pos x="1040" y="420"/>
@@ -217,12 +217,12 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>and_test</string>
+          <string>AND_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>and_a	and_b	and_o
+            <dataString>AND_a	AND_b	AND_o
 0	0	0
 0	1	0
 1	0	0
@@ -241,7 +241,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>And</string>
+          <string>AND</string>
         </entry>
         <entry>
           <string>RectWidth</string>
