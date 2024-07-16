@@ -491,7 +491,7 @@ Demultiplexer (Demux)
 
 
 * One may notice that this is very similar to a decoder
-* THe difference is that a demux maps an arbitrary value of the input to the output
+* The difference is that a demux maps an arbitrary value of the input to the output
 
     * A decoder always outputs ``1``
 
