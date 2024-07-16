@@ -33,6 +33,10 @@ Address Space and Addressability
 --------------------------------
 
 * In a typical computer, RAM stores data the computer is using along with the instructions of the programs being run
+
+    * Technically, instructions are data
+
+
 * RAM is commonly made up of some number of memory *locations*
 * Each of these locations can be uniquely identified with a *memory address*
 * The total number of uniquely identifiable locations is referred to as the *address space*
