@@ -98,7 +98,7 @@ Addressability
     the value stored at the specified memory address to the data output lines.
 
 
-* The question still remains --- how does one actually store data?
+* The question remains --- how does one actually store data?
 
 
 For Next Time
