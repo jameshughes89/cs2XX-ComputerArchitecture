@@ -141,7 +141,7 @@ More than One Input Bit
     * When input a is *not* high *and* input b is *not* high, output high for only output 0
 
 
-* This functionality can be achieved with a single two input and gate with both inputs inverted
+* This functionality can be achieved with a single two input AND with both inputs inverted
 
     * This gate will only output ``1`` when both inputs are ``0``
     * Output 0 is :math:`\lnot a \land \lnot b`
@@ -151,7 +151,7 @@ More than One Input Bit
     :width: 250 px
     :align: center
 
-    And gate with two inverted inputs. This gate will only output ``1`` when both inputs are ``0``.
+    AND gate with two inverted inputs. This AND will only output ``1`` when both inputs are ``0``.
 
 
 * Now consider the second row and input 1
@@ -164,12 +164,12 @@ More than One Input Bit
     :width: 250 px
     :align: center
 
-    And gate that will only output ``1`` when the input signal is ``01``, where the top signal is the most significant
+    AND gate that will only output ``1`` when the input signal is ``01``, where the top signal is the most significant
     bit.
 
 
 
-* Following this pattern, a two bit decoder can be a series of four and gates with every combination of inverted inputs
+* Following this pattern, a two bit decoder can be a series of four AND gates with every combination of inverted inputs
 
 .. figure:: two_bit_decoder.png
     :width: 500 px
@@ -185,13 +185,13 @@ More than One Input Bit
     * Given :math:`n` inputs, a total of :math:`2^{n}` outputs can be controlled
 
 
-* In general, and gates with various inverted inputs are ideal for situations where a specific input pattern is required
+* In general, AND gates with various inverted inputs are ideal for situations where a specific input pattern is required
 
 .. figure:: and_gate_for_01010010.png
     :width: 250 px
     :align: center
 
-    Example of an and gate that only outputs ``1`` when an input pattern of ``01010010``, where the top input is the
+    Example of an AND gate that only outputs ``1`` when an input pattern of ``01010010``, where the top input is the
     most significant bit, is observed.
 
 
@@ -339,7 +339,7 @@ Multiplexers (Mux)
 * This simplified view is not only smaller, but arguably makes the desired functionality more clear
 
 * Below is an image of a two bit multiplexer
-* The implementation idea is similar to that of a decoder in that it uses and gates with inverted inputs
+* The implementation idea is similar to that of a decoder in that it uses AND gates with inverted inputs
 
 .. figure:: two_bit_mux.png
     :width: 500 px
@@ -352,23 +352,23 @@ Multiplexers (Mux)
 * One may notice that the input signals are never inverted on any gate, only the selector signal
 * This is because, if the gate for a given input is selected, the input should be directly mapped to the output
 
-    * If the gate is selected and the input is ``1``, the and gate outputs ``1``
-    * If the gate is selected and the input is ``0``, the and gate outputs ``0``
-    * If the gate is not selected with the selector, the and gate always outputs ``0``
+    * If the gate is selected and the input is ``1``, the AND gate outputs ``1``
+    * If the gate is selected and the input is ``0``, the AND gate outputs ``0``
+    * If the gate is not selected with the selector, the AND gate always outputs ``0``
 
 
 .. note::
 
-    Notice that there is an or gate before the final output signal. This or gate's only purpose is to combine all the
-    outputs to a single line. However, one may wonder why it's necessary to use an or gate instead of simply combining
-    the signals like in the below image.
+    Notice that there is an OR gate before the final output signal. This OR's only purpose is to combine all the outputs
+    to a single line. However, one may wonder why it's necessary to use an OR gate instead of simply combining the
+    signals like in the below image.
 
     .. figure:: combining_output_signals_bad.png
         :width: 333 px
         :align: center
 
         Combining output signals on a single line directly creates problems and should not be done. This is true even if
-        only one output line would be active at any given time. Instead, to combine output lines, use or gates.
+        only one output line would be active at any given time. Instead, to combine output lines, use OR gates.
 
 
     Connecting output signals like this will not work in practice. The nuanced reasoning for this is beyond the scope of
@@ -377,7 +377,7 @@ Multiplexers (Mux)
     connected to the line is ``1``, it will ultimately be pulled to ground through the gates outputting ``0``, thereby
     making the whole line ``0``, even though it should be ``1``.
 
-    To avoid the problem, an or gate is typically used to combine signals.
+    To avoid the problem, an OR gate is typically used to combine signals.
 
 
 * Below is a four bit multiplexer
@@ -491,10 +491,9 @@ Demultiplexer (Demux)
 
 
 * One may notice that this is very similar to a decoder
-* The difference is that
+* The difference is that a demux maps an arbitrary value of the input to the output
 
-    * Instead of outputting ``1`` on the selected signal like a decoder
-    * A demultiplexer maps the arbitrary value of the input to the output
+    * A decoder always outputs ``1``
 
 
 
@@ -509,24 +508,24 @@ Programmable Logic Arrays (PLA)
 * PLAs are effectively decoders where the single decoded output signal may activate multiple final outputs
 * They consist of two main parts
 
-    * A collection of and gates, called an and array, which acts as a decoder
-    * A collection of or gates, called an or array, which activates an output when specific decoded signals are high
+    * A collection of AND gates, called an AND array, which acts as a decoder
+    * A collection of OR gates, called an OR array, which activates an output when specific decoded signals are high
 
 
-* The number of and gates depends on the number of inputs
+* The number of AND gates depends on the number of inputs
 
-    * Given :math:`n` inputs, there will be a total of :math:`2^{n}` and gates
+    * Given :math:`n` inputs, there will be a total of :math:`2^{n}` AND gates
     * Like decoders
 
 
-* The number of or gates depends on the number of desired output signals
+* The number of OR gates depends on the number of desired output signals
 
-    * One or gate for each output
+    * One OR for each output
 
 
-* The number of inputs to each or gate depends on the number of decoded signals that could activate the or gate's output
+* The number of inputs to each OR depends on the number of decoded signals that could activate the OR's output
 
-    * The or gates serve as a way to connect multiple gate outputs to a single output
+    * The OR gates serve as a way to connect multiple gate outputs to a single output
 
 
 * The idea of a PLA is best described with an example
@@ -647,25 +646,26 @@ Programmable Logic Arrays (PLA)
 * One may be tempted to map each decoded signal directly to the desired outputs, however, there are problems with this
 
     * As discussed above with the multiplexers
-    * Instead, the decoded signals are mapped to or gates that correspond to each output
 
+
+* Instead, the decoded signals are mapped to OR gates that correspond to each output
 
 * The goal is then to
 
     * Create a decoder
-    * Map the decoded signals to or gates when the signal should cause the specific output to go high
+    * Map the decoded signals to OR gates when the signal should cause the specific output to go high
 
 
 .. figure:: pla_example_1.png
     :width: 500 px
     :align: center
 
-    Programmable logic array (PLA) mapping two inputs to three outputs. The PLA is made up of an array of and gates
-    serving as a decoder and an array of or gates that will output a high signal when any of the decoded inputs are
+    Programmable logic array (PLA) mapping two inputs to three outputs. The PLA is made up of an array of AND gates
+    serving as a decoder and an array of OR gates that will output a high signal when any of the decoded inputs are
     high.
 
 
-* This basic design of an array of and gates followed by an array of or gates scales to arbitrary size
+* This basic design of an array of AND gates followed by an array of OR gates scales to arbitrary size
 * Below is some truth table describing some functionality for a three input, four output PLA
 
 .. list-table:: Three Input PLA with Some Output
@@ -754,7 +754,7 @@ Programmable Logic Arrays (PLA)
     :align: center
 
     Programmable logic array (PLA) mapping three inputs to four outputs. This figure shows how the general design of an
-    array of and gates followed by an array of or gates can be scaled up.
+    array of AND gates followed by an array of OR gates can be scaled up.
 
 
 
@@ -776,7 +776,7 @@ Programmable Logic Array/Look Up Table Symbol
 .. note::
 
     Look up tables are an abstract idea, and as such, the physical implementation is often not important. In practice,
-    these look up tables could be PLAs, constructed with arrays of and gates and or gates, or they could be implemented
+    these look up tables could be PLAs, constructed with arrays of AND gates and OR gates, or they could be implemented
     with a form of memory mapping the input to some memory addresses, which in turn contains the desired output within
     that memory location.
 
@@ -784,6 +784,68 @@ Programmable Logic Array/Look Up Table Symbol
 
 Functional Completeness
 =======================
+
+* As seen with PLAs, any boolean logic function can be implemented systematically
+
+    * In other words, any function can be physically created with configurations of AND, OR, and NOT gates
+
+
+* This means that the set of {AND, OR, NOT} gates is *Functionally complete*
+* Although other gates exist, they are not necessary for implementing any function
+
+    * Nevertheless, they may make configuring a circuit for some functionality simpler
+
+
+* However, review De Morgan's Laws
+
+      * :math:`\lnot a \lor \lnot b = \lnot (a \land b)`
+      * :math:`\lnot a \land \lnot b = \lnot (a \lor b)`
+
+
+* This shows that, with OR and NOT gates, one can create the functionality of an AND gate
+
+      * :math:`\lnot(\lnot a \lor \lnot b) = \lnot(\lnot (a \land b)) = a \land b`
+
+
+.. figure:: and_with_or_and_not_gates.png
+    :width: 500 px
+    :align: center
+
+    Implementation of and gate functionality with only or gate and not gates.
+
+
+* Similarly, with AND and NOT gates, the functionality of an OR gate can be created
+
+    * :math:`\lnot(\lnot a \land \lnot b) = \lnot(\lnot (a \lor b)) = a \lor b`
+
+.. figure:: or_with_and_and_not_gates.png
+    :width: 500 px
+    :align: center
+
+    Implementation of and gate functionality with only or gate and not gates.
+
+
+* Therefore, the set of {AND, NOT} and {OR, NOT} are also functionally complete
+
+
+Minimal Set
+-----------
+
+* One may wonder if a single gate type is sufficient to have a functionally complete set
+* To prove this is the case, all one needs to do is show that the single gate type can
+
+    * Implement the :math:`not` operation
+    * Implement the :math:`and` operation
+    * Implement the :math:`or` operation
+
+
+* Seeing the reduced sets made up of {AND, NOT}/{OR, NOT}, one may wonder if {NAND} and {NOR} are functionally complete
+
+.. admonition:: Activity
+
+    Show that {NAND} and {NOR} are functionally complete.
+
+
 
 
 
@@ -793,6 +855,7 @@ For Next Time
 * Check out the :download:`Decoder <1-2_and_2-4_decoders.dig>` schematic for Digital
 * Check out the :download:`Multiplexer <2_and_4_multiplexer.dig>` schematic for Digital
 * Check out the :download:`Programmable Logic Array <programmable_logic_array.dig>` schematic for Digital
+* Check out the :download:`Functional Completeness <functional_completeness.dig>` schematic for Digital
 * Read Chapter 3 Sections 5 of your text
 
     * 3 pages
