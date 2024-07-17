@@ -76,16 +76,18 @@
             <dataString>EN	R	S	Q	~Q
 1	0	0	X	X
 1	0	1	1	0
+1	0	0	1	0
 0	0	0	1	0
 0	0	1	1	0
 0	1	0	1	0
 0	1	1	1	0
 1	1	0	0	1
+1	0	0	0	1
 0	0	0	0	1
 0	0	1	0	1
 0	1	0	0	1
 0	1	1	0	1
-0	1	0	1	0
+0	1	0	0	1
 1	1	1	0	0</dataString>
           </testData>
         </entry>
@@ -96,12 +98,12 @@
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>SR Latch with Enable</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>21</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>SR Latch with Enable</string>
         </entry>
         <entry>
           <string>RectWidth</string>
