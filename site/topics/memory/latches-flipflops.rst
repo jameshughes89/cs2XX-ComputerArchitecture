@@ -29,8 +29,8 @@ Set-Reset Latch (S-R Latch)
 .. note::
 
     There are several possible designs for an S-R latch. The textbook uses a similar design to the above image, but
-    instead uses two NANDs instead of NORs. Although this NAND based design would work slightly differently, the general
-    idea is the same.
+    uses two NANDs instead of NORs. Although this NAND based design would work slightly differently, the general idea 
+    is the same.
 
 
 * In an S-R Latch
