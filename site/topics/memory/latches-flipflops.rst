@@ -129,7 +129,7 @@ Set-Reset Latch (S-R Latch)
 
     * :math:`Q/\lnot Q` designate the state before changing :math:`S/R`
     * :math:`Q'/\lnot Q'` designate the state after changing :math:`S/R`
-    * Also note that `Q/\lnot Q` should never be equal
+    * Also note that :math:`Q/\lnot Q` should never be equal
 
 
 * When :math:`S` and :math:`R` are both ``0``, the output state of the circuit will not change
@@ -145,32 +145,34 @@ Set-Reset Latch (S-R Latch)
         * This will happen when the output of :math:`Q` is already ``1``
 
 
-    * The circuit is put into an *unstable state*, meaning the values of the output change
+    * Alternatively, the circuit may be put into an *unstable state*, meaning the values of the output change
 
-        * This state is emphasized within the above truth table with ``*``
+        * The outputs of this state are emphasized within the above truth table with ``*``
         * This happens when the output of :math:`Q` is ``0``
         * This will cause :math:`Q` to become ``1``
         * This then causes the output of :math:`\lnot Q` to also change, putting the circuit into a stable state
         * In practice, the unstable state will be resolved nearly instantaneously --- on the order of nanoseconds
 
 
-* When :math:`R` is set high, like with setting, one of two things can happen
+* When :math:`R` is set high, like with setting :math:`S` high, one of two things can happen
 
     * The circuit may be in a *stable state*, meaning the outputs do not change
     * The circuit may be put into an *unstable state*, meaning the values change
 
-        * This state is emphasized within the above truth table with ``**``
+        * The outputs of this state are emphasized within the above truth table with ``**``
 
 
 * Finally, if both :math:`S` and :math:`R` are high, the outputs are both ``0``, but this is an invalid state
 
-    * It's not possible to set and reset at the same time
+    * It's not reasonable to set and reset at the same time
     * Further, having both :math:`Q` and :math:`\lnot Q` equal is inadmissible
+    * One *could* do it, but there is no real utility in doing so
 
 
 .. admonition:: Activity
 
-    When the circuit turns on for the first time and all inputs are ``0``, what will the outputs be?
+    When the circuit turns on for the first time and all inputs are ``0``, what will the outputs of :math:`Q` and
+    :math:`\lnot Q` be?
 
 
 
