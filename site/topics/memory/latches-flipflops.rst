@@ -17,11 +17,11 @@ Set-Reset Latch (S-R Latch)
     * The output of the circuit is fed back into itself as input
 
 
-.. figure:: transistors.png
-    :width: 333 px
+.. figure:: SR_latch.png
+    :width: 500 px
     :align: center
 
-    An S-R latch using NOR gates. The :mathc:`S` means "set", :math:`R` is "reset", :math:`Q` is the bit being stored,
+    An S-R latch using NOR gates. The :math:`S` means "set", :math:`R` is "reset", :math:`Q` is the bit being stored,
     and :math:`\lnot Q` is the inverse of the bit being stored. Notice how the outputs of the circuit (:math:`Q` and
     :math:`\lnot Q`) also serve as two of the four inputs to the circuit.
 
@@ -33,29 +33,150 @@ Set-Reset Latch (S-R Latch)
     idea is the same.
 
 
+* In an S-R Latch
+
+    * :math:`S` stands for "set" --- set the stored bit to ``1``
+    * :math:`R` stands for  "reset" --- clear the stored bit and set it to ``0``
+    * :math:`Q` is the value of the bit being stored
+    * :math:`\lnot Q` is the inverse of the bit being stored
 
 
+* Since this circuit has internal feedback, it's behaviour depends on the current state
+
+    * The way it behaves when changing :math:`S` or :math:`R` depends on the current output
+
+.. list-table:: Truth Table for S-R Latch
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`S`
+      - :math:`R`
+      -
+      - :math:`Q`
+      - :math:`\lnot Q`
+      -
+      - :math:`Q'`
+      - :math:`\lnot Q'`
+    * - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+    * - ``0``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``1*``
+      - ``0*``
+    * - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+    * - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      -
+      - ``0**``
+      - ``1**``
+    * - ``1``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``0``
+    * - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
 
 
-* Truth table
+* In the above table
 
-    * What the labels mean
+    * :math:`Q/\lnot Q` designate the state before changing :math:`S/R`
+    * :math:`Q'/\lnot Q'` designate the state after changing :math:`S/R`
+    * Also note that `Q/\lnot Q` should never be equal
 
-* Quiet state, but unstable
-* Set
-* Reset
-* Both on means nothing
+
+* When :math:`S` and :math:`R` are both ``0``, the output state of the circuit will not change
+
+    * The values of :math:`Q` and :math:`\lnot Q`, whatever they are, will not change
+    * This is called the *quiet state*, or *quiescent state*
+
+
+* When :math:`S` is set high, one of two things can happen
+
+    * The circuit may be in a *stable state*, meaning the outputs do not change
+
+        * This will happen when the output of :math:`Q` is already ``1``
+
+
+    * The circuit is put into an *unstable state*, meaning the values of the output change
+
+        * This state is emphasized within the above truth table with ``*``
+        * This happens when the output of :math:`Q` is ``0``
+        * This will cause :math:`Q` to become ``1``
+        * This then causes the output of :math:`\lnot Q` to also change, putting the circuit into a stable state
+        * In practice, the unstable state will be resolved nearly instantaneously --- on the order of nanoseconds
+
+
+* When :math:`R` is set high, like with setting, one of two things can happen
+
+    * The circuit may be in a *stable state*, meaning the outputs do not change
+    * The circuit may be put into an *unstable state*, meaning the values change
+
+        * This state is emphasized within the above truth table with ``**``
+
+
+* Finally, if both :math:`S` and :math:`R` are high, the outputs are both ``0``, but this is an invalid state
+
+    * It's not possible to set and reset at the same time
+    * Further, having both :math:`Q` and :math:`\lnot Q` equal is inadmissible
+
+
+.. admonition:: Activity
+
+    When the circuit turns on for the first time and all inputs are ``0``, what will the outputs be?
+
 
 
 S-R Latch with Enable
 ---------------------
 
-* Sometimes we want to control when the latch is actually "enabled"
-* Show image
-* Show truth table?
-
-* Oscillating state
-* But really, there's no need to try to set and reset at the same time...
 
 
 
