@@ -195,6 +195,7 @@ D Flip-Flop
 For Next Time
 =============
 
+* Check out the :download:`S-R Latch <SR_latch.dig>` schematic for Digital
 * Read Chapter 3 Section 6 of your text
 
     * 14 pages
