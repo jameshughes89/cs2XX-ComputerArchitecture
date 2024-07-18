@@ -11,14 +11,35 @@ Latches and Flip-Flops
 Set-Reset Latch (S-R Latch)
 ===========================
 
-* The most basic one is an SR latch
-* IMAGE
+* One of the most basic circuits for storing data is a set-reset latch (S-R latch)
+* What's unusual about this circuit is that it has internal feedback
 
-* Can also be designed with NANDs
+    * The output of the circuit is fed back into itself as input
 
-* The trick here is that it has feedback into itself
+
+.. figure:: transistors.png
+    :width: 333 px
+    :align: center
+
+    An S-R latch using NOR gates. The :mathc:`S` means "set", :math:`R` is "reset", :math:`Q` is the bit being stored,
+    and :math:`\lnot Q` is the inverse of the bit being stored. Notice how the outputs of the circuit (:math:`Q` and
+    :math:`\lnot Q`) also serve as two of the four inputs to the circuit.
+
+
+.. note::
+
+    There are several possible designs for an S-R latch. The textbook uses a similar design to the above image, but
+    instead uses two NANDs instead of NORs. Although this NAND based design would work slightly differently, the general
+    idea is the same.
+
+
+
+
+
 
 * Truth table
+
+    * What the labels mean
 
 * Quiet state, but unstable
 * Set
