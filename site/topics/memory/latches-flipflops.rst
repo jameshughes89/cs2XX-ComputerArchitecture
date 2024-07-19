@@ -227,13 +227,21 @@ D Latch with Enable
 D Flip-Flop
 ===========
 
-Clocks are a thing
-We want to synchronoze everything with the clock, so we can use a clock as a control for enable
+* A clock is a device within computers used to synchronize most of the components performing operations
+* It produces a periodic waveform at a constant frequency, jumping from low to high to low, etc.
 
-but value stored changes whenever enable is on
-We really only want to latch the data the instant the clock pulses on, not for the duration of being on
+.. figure:: clock_signal.png
+    :width: 500 px
+    :align: center
 
-The solution for this to combine two D latches, but control enables with inverters
+    Example clock signal. This signal has a constant frequency and oscillates between a low and high signal.
+
+
+* Typically, one would want to synchronize when data is stored with the clock cycles
+* However, the D latch with enable will change the value stored whenever the clock enable is high
+* For practical reasons, the data should only be latched the instant the clock pulses
+
+* One solution to this problem is to combine two D latches in series, but carefully control when each D latch is enabled
 
 .. figure:: D_flip_flop.png
     :width: 666 px
@@ -246,7 +254,7 @@ The solution for this to combine two D latches, but control enables with inverte
 
 C is clock, which is serving as enable
 Notice how one of the clock enables is inverted before attached
-Only one can be in quiet state at a time 
+Only one can be in quiet state at a time
 
 When clock is low, first d latch will store whatever is on D input
 
