@@ -227,6 +227,32 @@ D Latch with Enable
 D Flip-Flop
 ===========
 
+Clocks are a thing
+We want to synchronoze everything with the clock, so we can use a clock as a control for enable
+
+but value stored changes whenever enable is on
+We really only want to latch the data the instant the clock pulses on, not for the duration of being on
+
+The solution for this to combine two D latches, but control enables with inverters
+
+IMAGE
+
+When clock is low, first d latch will store whatever is on D input
+
+    * Can toggle a bunch, doesn't matter, whatever is there is stored
+    * Second D latch is in quiet state, nothing changes
+
+When clock goes high, the first D latch goes to a quiet state
+    Second latch goes active, and whatever is stored in first D latch moves to second
+    the value output by first D latch moves to second D latch
+
+When clock goes high, there is no direct way to modify the second d latches' data input as it comes from a quiet d latch
+
+
+
+
+
+
 
 
 For Next Time
