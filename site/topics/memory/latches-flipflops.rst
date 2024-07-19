@@ -189,6 +189,21 @@ Data Latch (D Latch)
 D Latch with Enable
 -------------------
 
+Solve this issue by being able to have both inputs 0, while preserving either or
+Enable option, feed through and gates
+    * if en off, everything off
+    * if en on, relay whatever else is there
+
+If off, all 0s, if on, can toggle
+
+Provides control over when we latch the data
+
+
+IMAGE
+
+
+
+
 
 D Flip-Flop
 ===========
