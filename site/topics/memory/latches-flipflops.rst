@@ -185,21 +185,43 @@ S-R Latch with Enable
 Data Latch (D Latch)
 ====================
 
-Both on is a problem
-No need to set and reset at the same time as it makes no sense
+* The S-R latch can be modified to eliminate the ability for both set and reset to be high at the same time
+
+    * Make it such that only one can be active at a time
 
 
-Make it so it's either or
+* This can be achieved by having a single input split into two signals
 
-Modify the SR latch
-
-IMAGE
-
-Unfortunately, hoever, we now lose the quiet state where the data is left unchanged
-Only way for Q to be 1 is if D is on
-effectively not storing data
+    * One of the two parts of the split signal is fed into the S-R latch
+    * The other part is inverted before being fed into the S-R latch
 
 
+.. figure:: D_latch.png
+    :width: 500 px
+    :align: center
+
+    A D latch, which is a modified S-R latch. Here, :math:`D` is the label for the input data. Like the S-R latch,
+    :math:`Q` is the bit being stored, and :math:`\lnot Q` is the inverse of the bit being stored.
+
+
+* The above figure shows how the S-R latch may be modified into what is called a Data latch (D latch)
+
+    * The :math:`D` means data
+
+
+* With this configuration, it's not possible to have the :math:`S` and :math:`R` both be high at the same time
+
+    * Or at least, the inputs that were :math:`S` and :math:`R` in the S-R latch
+
+
+* Unfortunately, however, it's also not possible to have :math:`S` and :math:`R` both be low at the same time
+* This eliminates the quiet state, which was necessary for storing, or *latching*, the bit
+
+    * When :math:`D` is ``1``, :math:`Q` is ``1``
+    * When :math:`D` is ``0``, :math:`Q` is ``0``
+
+
+* This D latch design effectively only relays the input to the output with no way to save data
 
 
 D Latch with Enable
