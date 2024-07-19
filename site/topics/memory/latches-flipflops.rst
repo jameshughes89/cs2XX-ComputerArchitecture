@@ -237,8 +237,9 @@ D Flip-Flop
     Example clock signal. This signal has a constant frequency and oscillates between a low and high signal.
 
 
-* Typically, one would want to synchronize when data is stored with the clock cycles
-* However, the D latch with enable will change the value stored whenever the clock enable is high
+* Typically, one would want to synchronize when data is stored in latches with the clock cycles
+* A simple solution to this is to use the clock signal as the enable signal for the D latch
+* However, the D latch with enable will change the value stored whenever the enable is high
 * For practical reasons, the data should only be latched the instant the clock pulses
 
 * One solution to this problem is to combine two D latches in series, but carefully control when each D latch is enabled
@@ -252,25 +253,30 @@ D Flip-Flop
     for both D latches to be active at once.
 
 
-C is clock, which is serving as enable
-Notice how one of the clock enables is inverted before attached
-Only one can be in quiet state at a time
+* In the above figure, :math:`C` is the label for the clock signal, which is serving as an enable for the D latches
+* Notice how the clock input is inverted before being fed into the first D latch, but not before the second D latch
 
-When clock is low, first d latch will store whatever is on D input
-
-    * Can toggle a bunch, doesn't matter, whatever is there is stored
-    * Second D latch is in quiet state, nothing changes
-
-When clock goes high, the first D latch goes to a quiet state
-    Second latch goes active, and whatever is stored in first D latch moves to second
-    the value output by first D latch moves to second D latch
-
-When clock goes high, there is no direct way to modify the second d latches' data input as it comes from a quiet d latch
+    * Only one of the D latches can be in the quiet state at any time
 
 
+* When the clock signal is low
+
+    * The first D latch is active and can store whatever is on the :math:`D` input
+    * The :math:`D` input can toggle several times, which would change what the first D latch is outputting
+    * However, the second D latch is in the quiet state, meaning that it's output value does not change
+    * In other words, the value of :math:`D` does not affect the value of :math:`Q`/:math:`\lnot Q` at this stage
 
 
+* When the clock signal transitions to high
 
+    * The first D latch enters the quiet state, meaning the last value of :math:`D` is latched into the first D latch
+    * The second D latch becomes active, latching in the value being output by the first D latch
+    * At this time, :math:`D` can change, but it will not impact the stored value as the first D latch is disabled
+
+
+* With this configuration, the value of :math:`D` can never directly alter the value of :math:`Q`/:math:`\lnot Q`
+
+    * The value of :math:`D` must first move through the first D latch
 
 
 
@@ -278,6 +284,7 @@ For Next Time
 =============
 
 * Check out the :download:`S-R Latch <SR_latch.dig>` schematic for Digital
+* Check out the :download:`D Flip-Flop <D_flip_flop.dig>` schematic for Digital
 * Read Chapter 3 Section 6 of your text
 
     * 14 pages
