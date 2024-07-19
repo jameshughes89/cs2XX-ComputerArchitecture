@@ -185,6 +185,25 @@ S-R Latch with Enable
 Data Latch (D Latch)
 ====================
 
+Both on is a problem
+No need to set and reset at the same time as it makes no sense
+
+
+Make it so it's either or
+
+Modify the SR latch
+
+IMAGE
+
+Unfortunately, hoever, we now lose the quiet state where the data is left unchanged
+Only way for Q to be 1 is if D is on
+effectively not storing data
+
+
+
+
+D Latch with Enable
+-------------------
 
 
 D Flip-Flop
