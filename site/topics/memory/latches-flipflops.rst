@@ -189,19 +189,34 @@ Data Latch (D Latch)
 D Latch with Enable
 -------------------
 
-Solve this issue by being able to have both inputs 0, while preserving either or
-Enable option, feed through and gates
-    * if en off, everything off
-    * if en on, relay whatever else is there
+* To store data, the D latch needs a way to enter the quiet state
 
-If off, all 0s, if on, can toggle
-
-Provides control over when we latch the data
+    * Where :math:`S` and :math:`R` are ``0``
 
 
-IMAGE
+* In other words, there needs to be a way to
+
+    * Allow :math:`S` and :math:`R` to be ``0`` at the same time
+    * Allow :math:`S` to be ``1`` and :math:`R` being ``0``, and *vice versa*
+    * Disallow the ability for both :math:`S` and :math:`R` to be ``1`` at the same time
 
 
+* This can be achieved with an *enable* input that can deactivate the NORs' inputs
+
+    * If the enable is off, :math:`S` and :math:`R` are both ``0``
+    * If the enable is on, relay the value's of :math:`S` and :math:`R` to the NORs
+
+
+* By reintroducing the circuit's ability to enter the quiet state, data can not be latched/stored
+
+.. figure:: D_latch_with_enable.png
+    :width: 500 px
+    :align: center
+
+    A D latch with an enable input. The enable input controls when the D latch is in the quiet state to store data
+    (enable low) or when the data stored in the latch can be updated by toggling the :math:`D` input (enable high). The
+    labels :math:`S` and :math:`R` are included here as a reference to what these inputs were called in the S-R latch,
+    but are not typically included in diagrams of D latches.
 
 
 
@@ -214,6 +229,8 @@ For Next Time
 =============
 
 * Check out the :download:`S-R Latch <SR_latch.dig>` schematic for Digital
+* Check out the :download:`D Latch without Enable <D_latch.dig>` schematic for Digital
+* Check out the :download:`D Latch with Enable <D_latch_with_enable.dig>` schematic for Digital
 * Read Chapter 3 Section 6 of your text
 
     * 14 pages
