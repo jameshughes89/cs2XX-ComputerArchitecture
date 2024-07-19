@@ -176,12 +176,6 @@ Set-Reset Latch (S-R Latch)
 
 
 
-S-R Latch with Enable
----------------------
-
-
-
-
 Data Latch (D Latch)
 ====================
 
