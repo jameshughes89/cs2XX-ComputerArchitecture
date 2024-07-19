@@ -186,6 +186,9 @@ Data Latch (D Latch)
 ====================
 
 
+D Latch with Enable
+-------------------
+
 
 D Flip-Flop
 ===========
