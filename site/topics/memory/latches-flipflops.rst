@@ -201,7 +201,9 @@ Data Latch (D Latch)
     :align: center
 
     A D latch, which is a modified S-R latch. Here, :math:`D` is the label for the input data. Like the S-R latch,
-    :math:`Q` is the bit being stored, and :math:`\lnot Q` is the inverse of the bit being stored.
+    :math:`Q` is the bit being stored, and :math:`\lnot Q` is the inverse of the bit being stored. The labels
+    :math:`S` and :math:`R` are included here as a reference to what these inputs were called in the S-R latch, but
+    are not typically included in diagrams of D latches.
 
 
 * The above figure shows how the S-R latch may be modified into what is called a Data latch (D latch)
