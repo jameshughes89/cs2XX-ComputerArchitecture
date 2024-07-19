@@ -235,7 +235,18 @@ We really only want to latch the data the instant the clock pulses on, not for t
 
 The solution for this to combine two D latches, but control enables with inverters
 
-IMAGE
+.. figure:: D_flip_flop.png
+    :width: 666 px
+    :align: center
+
+    A D flip-flop made by combining two D latches. The enable is labelled :math:`C` for clock and controls when each
+    D latch is enabled. Notice how the clock's enable line is inverted into the first D latch, meaning it's not possible
+    for both D latches to be active at once.
+
+
+C is clock, which is serving as enable
+Notice how one of the clock enables is inverted before attached
+Only one can be in quiet state at a time 
 
 When clock is low, first d latch will store whatever is on D input
 
