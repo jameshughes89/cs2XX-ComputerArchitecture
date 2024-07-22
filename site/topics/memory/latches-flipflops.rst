@@ -279,6 +279,22 @@ D Flip-Flop
     * The value of :math:`D` must first move through the first D latch
 
 
+D Flip-Flop Symbol
+------------------
+
+* D flip-flops are a common tool used in digital circuits, and as such, are commonly represented with a single symbol
+* Below is an image of how D flip-flops are represented within Digital
+
+
+.. figure:: D_flip_flop_symbol.png
+    :width: 200 px
+    :align: center
+
+    The symbol of a D flip-flop used within Digital. The triangle at the clock input is a common symbol used to denote
+    a clock input.
+
+
+
 
 For Next Time
 =============
