@@ -547,19 +547,19 @@
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>8 Bit Register</string>
+          <string>RectHeight</string>
+          <int>110</int>
         </entry>
         <entry>
-          <string>RectHeight</string>
-          <int>112</int>
+          <string>Label</string>
+          <string>8 Bit Register</string>
         </entry>
         <entry>
           <string>RectWidth</string>
           <int>54</int>
         </entry>
       </elementAttributes>
-      <pos x="260" y="0"/>
+      <pos x="260" y="40"/>
     </visualElement>
   </visualElements>
   <wires>

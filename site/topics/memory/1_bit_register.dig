@@ -33,7 +33,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>D_0</string>
+          <string>D</string>
         </entry>
       </elementAttributes>
       <pos x="420" y="360"/>
@@ -73,7 +73,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Q_0</string>
+          <string>Q</string>
         </entry>
       </elementAttributes>
       <pos x="1240" y="300"/>
@@ -98,7 +98,7 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>Clock	Enable	D_0	Q_0
+            <dataString>Clock	Enable	D	Q
 C	0	0	0
 C	0	1	0
 C	1	0	0
