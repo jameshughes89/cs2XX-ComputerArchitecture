@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
-  <version>1</version>
+  <version>2</version>
   <attributes/>
   <visualElements>
     <visualElement>
@@ -548,7 +548,7 @@
       <elementAttributes>
         <entry>
           <string>RectHeight</string>
-          <int>110</int>
+          <int>114</int>
         </entry>
         <entry>
           <string>Label</string>
@@ -559,7 +559,31 @@
           <int>54</int>
         </entry>
       </elementAttributes>
-      <pos x="260" y="40"/>
+      <pos x="260" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Register_test</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>Clock	Enable	D_0	Q_0
+C	0	0	0
+C	0	1	0
+C	1	0	0
+C	1	1	1
+C	1	1	1
+C	0	0	1
+C	0	1	1
+C	1	0	0</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="320" y="0"/>
     </visualElement>
   </visualElements>
   <wires>
