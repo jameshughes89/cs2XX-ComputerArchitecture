@@ -223,9 +223,105 @@ Data Latch (D Latch)
 D Latch with Enable
 -------------------
 
+* To store data, the D latch needs a way to enter the quiet state
+
+    * Where :math:`S` and :math:`R` are ``0``
+
+
+* In other words, there needs to be a way to
+
+    * Allow :math:`S` and :math:`R` to be ``0`` at the same time
+    * Allow :math:`S` to be ``1`` and :math:`R` being ``0``, and *vice versa*
+    * Disallow the ability for both :math:`S` and :math:`R` to be ``1`` at the same time
+
+
+* This can be achieved with an *enable* input that can deactivate the NORs' inputs
+
+    * If the enable is off, :math:`S` and :math:`R` are both ``0``
+    * If the enable is on, relay the value's of :math:`S` and :math:`R` to the NORs
+
+
+* By reintroducing the circuit's ability to enter the quiet state, data can not be latched/stored
+
+.. figure:: D_latch_with_enable.png
+    :width: 500 px
+    :align: center
+
+    A D latch with an enable input. The enable input controls when the D latch is in the quiet state to store data
+    (enable low) or when the data stored in the latch can be updated by toggling the :math:`D` input (enable high). The
+    labels :math:`S` and :math:`R` are included here as a reference to what these inputs were called in the S-R latch,
+    but are not typically included in diagrams of D latches.
+
+
 
 D Flip-Flop
 ===========
+
+* A clock is a device within computers used to synchronize most of the components performing operations
+* It produces a periodic waveform at a constant frequency, jumping from low to high to low, etc.
+
+.. figure:: clock_signal.png
+    :width: 500 px
+    :align: center
+
+    Example clock signal. This signal has a constant frequency and oscillates between a low and high signal.
+
+
+* Typically, one would want to synchronize when data is stored in latches with the clock cycles
+* A simple solution to this is to use the clock signal as the enable signal for the D latch
+* However, the D latch with enable will change the value stored whenever the enable is high
+* For practical reasons, the data should only be latched the instant the clock pulses
+
+* One solution to this problem is to combine two D latches in series, but carefully control when each D latch is enabled
+
+.. figure:: D_flip_flop.png
+    :width: 666 px
+    :align: center
+
+    A D flip-flop made by combining two D latches. The enable is labelled :math:`C` for clock and controls when each
+    D latch is enabled. Notice how the clock's enable line is inverted into the first D latch, meaning it's not possible
+    for both D latches to be active at once.
+
+
+* In the above figure, :math:`C` is the label for the clock signal, which is serving as an enable for the D latches
+* Notice how the clock input is inverted before being fed into the first D latch, but not before the second D latch
+
+    * Only one of the D latches can be in the quiet state at any time
+
+
+* When the clock signal is low
+
+    * The first D latch is active and can store whatever is on the :math:`D` input
+    * The :math:`D` input can toggle several times, which would change what the first D latch is outputting
+    * However, the second D latch is in the quiet state, meaning that it's output value does not change
+    * In other words, the value of :math:`D` does not affect the value of :math:`Q`/:math:`\lnot Q` at this stage
+
+
+* When the clock signal transitions to high
+
+    * The first D latch enters the quiet state, meaning the last value of :math:`D` is latched into the first D latch
+    * The second D latch becomes active, latching in the value being output by the first D latch
+    * At this time, :math:`D` can change, but it will not impact the stored value as the first D latch is disabled
+
+
+* With this configuration, the value of :math:`D` can never directly alter the value of :math:`Q`/:math:`\lnot Q`
+
+    * The value of :math:`D` must first move through the first D latch
+
+
+D Flip-Flop Symbol
+------------------
+
+* D flip-flops are a common tool used in digital circuits, and as such, are commonly represented with a single symbol
+* Below is an image of how D flip-flops are represented within Digital
+
+
+.. figure:: D_flip_flop_symbol.png
+    :width: 200 px
+    :align: center
+
+    The symbol of a D flip-flop used within Digital. The triangle at the clock input is a common symbol used to denote
+    a clock input.
 
 
 
@@ -233,6 +329,9 @@ For Next Time
 =============
 
 * Check out the :download:`S-R Latch <SR_latch.dig>` schematic for Digital
+* Check out the :download:`D Latch without Enable <D_latch.dig>` schematic for Digital
+* Check out the :download:`D Latch with Enable <D_latch_with_enable.dig>` schematic for Digital
+* Check out the :download:`D Flip-Flop <D_flip_flop.dig>` schematic for Digital
 * Read Chapter 3 Section 6 of your text
 
     * 14 pages
