@@ -75,25 +75,25 @@
           </testData>
         </entry>
       </elementAttributes>
-      <pos x="40" y="120"/>
+      <pos x="100" y="120"/>
     </visualElement>
     <visualElement>
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>D Latch with Enable</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>21</int>
         </entry>
         <entry>
+          <string>Label</string>
+          <string>D Latch with Enable</string>
+        </entry>
+        <entry>
           <string>RectWidth</string>
-          <int>49</int>
+          <int>47</int>
         </entry>
       </elementAttributes>
-      <pos x="-60" y="80"/>
+      <pos x="-20" y="80"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -134,6 +134,26 @@
         </entry>
       </elementAttributes>
       <pos x="240" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>&quot;R&quot;</string>
+        </entry>
+      </elementAttributes>
+      <pos x="320" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>&quot;S&quot;</string>
+        </entry>
+      </elementAttributes>
+      <pos x="320" y="460"/>
     </visualElement>
   </visualElements>
   <wires>
