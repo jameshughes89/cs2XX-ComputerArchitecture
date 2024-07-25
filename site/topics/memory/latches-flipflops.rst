@@ -332,6 +332,3 @@ For Next Time
 * Check out the :download:`D Latch without Enable <D_latch.dig>` schematic for Digital
 * Check out the :download:`D Latch with Enable <D_latch_with_enable.dig>` schematic for Digital
 * Check out the :download:`D Flip-Flop <D_flip_flop.dig>` schematic for Digital
-* Read Chapter 3 Section 6 of your text
-
-    * 14 pages
