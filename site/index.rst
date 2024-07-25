@@ -70,6 +70,7 @@ Office Hours
     topics/logic/combinational-logic
     topics/memory/memory
     topics/memory/latches-flipflops
+    topics/memory/registers-ram
     topics/logic/sequential-logic
     topics/arithmetic/adder
     topics/numbers/2s-complement
