@@ -256,7 +256,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>en_w</string>
+          <string>EN_w</string>
         </entry>
       </elementAttributes>
       <pos x="20" y="80"/>
@@ -281,7 +281,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>en_r</string>
+          <string>EN_r</string>
         </entry>
       </elementAttributes>
       <pos x="20" y="120"/>
@@ -341,7 +341,7 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>C	en_w	en_r	A_1	A_0	D_0	D_1	D_2	D_3	O_0	O_1	O_2	O_3
+            <dataString>C	EN_w	EN_r	A_1	A_0	D_0	D_1	D_2	D_3	O_0	O_1	O_2	O_3
 C	0	0	X	X	X	X	X	X	Z	Z	Z	Z
 C	0	1	X	X	X	X	X	X	0	0	0	0
 C	1	0	0	0	1	0	0	0	Z	Z	Z	Z
