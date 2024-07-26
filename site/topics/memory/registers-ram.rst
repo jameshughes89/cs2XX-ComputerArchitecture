@@ -44,13 +44,13 @@ Registers
     :width: 500 px
     :align: center
 
-    A D flip-flop with a multiplexer, which can be used as a register. When the :math:`EN` signal is low, the
-    multiplexer selects the :math:`Q` signal, meaning the value of :math:`Q` will be fed back into the D flip-flop,
-    which will be re-latched on a clock pulse, leaving the value stored effectively unchanged. When :math:`EN` is high,
-    the value from the :math:`D` line will be latched on a clock pulse.
+    A D flip-flop with enable, which can be used as a register. When the :math:`EN` signal is low, the multiplexer
+    selects the :math:`Q` signal, meaning the value of :math:`Q` will be fed back into the D flip-flop, which will be
+    re-latched on a clock pulse, leaving the value stored effectively unchanged. When :math:`EN` is high, the value from
+    the :math:`D` line will be latched on a clock pulse.
 
 
-* This type of structure is called a *register*
+* This type of structure is called a D flip-flop with enable, and can be used as a *register*
 
     * For registers, it is common to ignore :math:`\lnot Q`
 
