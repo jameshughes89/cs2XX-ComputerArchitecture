@@ -3,7 +3,7 @@ Registers and RAM
 *****************
 
 * D flip-flops allow one to store a single bit of information
-* However, they always updates what's stored on every clock pulse
+* However, they always update what's stored on every clock pulse
 * In many cases, one wants more control over *when* the stored data in the D flip-flop is updated
 
 
@@ -24,6 +24,10 @@ Registers
 * However, for general purpose memory, the goal is to leave the stored data alone for several clock cycles
 * In other words, there needs to be a way to toggle when the signal on the data line is to be stored on a clock pulse
 
+    * When enabled, store the data on the data line when the clock pulses
+    * When not enabled, ignore the data on the data line and leave the stored data unchanged when the clock pulses
+
+
 * One way this can be achieved is to still update the stored value on every clock pulse
 * However, it will update to either
 
@@ -37,25 +41,42 @@ Registers
     * A feedback line from the D flip-flop's output
 
 
-* Then, all that is needed is some control structure to toggle between which of the two data lines need to be read form
+* Then, all that is needed is a multiplexer to toggle between which of the two data lines should be read form
 
 
 .. figure:: 1_bit_register.png
     :width: 500 px
     :align: center
 
-    A D flip-flop with enable, which can be used as a register. When the :math:`EN` signal is low, the value of
-    :math:`Q` will be fed back into the D flip-flop, which will be re-latched on a clock pulse, leaving the value stored
-    effectively unchanged. When :math:`EN` is high, the value from the :math:`D` line will be latched on a clock pulse.  
+    A D flip-flop with a multiplexer, which can be used as a register. When the :math:`EN` signal is low, the
+    multiplexer selects the :math:`Q` signal, meaning the value of :math:`Q` will be fed back into the D flip-flop,
+    which will be re-latched on a clock pulse, leaving the value stored effectively unchanged. When :math:`EN` is high,
+    the value from the :math:`D` line will be latched on a clock pulse.
 
 
-* EXPLAIN
+* This type of structure is called a *register*
+* The two data lines are
 
-IMAGES
+    * :math:`D` --- the actual data line
+    * :math:`Q` --- the output of the D flip-flop
 
 
+* The multiplexer in front of the D flip-flop allows for selecting which data line's signal is stored
 
-* This type of structure, with the D flip-flop, is called a *register*
+* When :math:`EN` is low
+
+    * The multiplexer selects the :math:`Q` line
+    * The value of :math:`D` is ignored
+    * The value of :math:`Q`, whatever it is, will be re-latched into the D flip-flop on a clock pulse
+    * The value stored in the register is effectively unchanged
+
+
+* When :math:`EN` is high
+
+    * The multiplexer selects the :math:`D` line
+    * The value of :math:`Q` is ignored
+    * The value of :math:`D`, whatever it is, is latched into the D flip-flop on a clock pulse
+    * The value stored in the register is updated
 
 
 Storing a Byte
