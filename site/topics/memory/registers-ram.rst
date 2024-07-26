@@ -51,6 +51,10 @@ Registers
 
 
 * This type of structure is called a *register*
+
+    * For registers, it is common to ignore :math:`\lnot Q`
+
+
 * The two data lines are
 
     * :math:`D` --- the actual data line
