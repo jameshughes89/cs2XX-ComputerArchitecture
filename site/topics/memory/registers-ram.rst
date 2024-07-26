@@ -79,6 +79,18 @@ Registers
     * The value stored in the register is updated
 
 
+.. note::
+
+    One may wonder, why go through the trouble of using a multiplexer and feeding the output :math:`Q` back into the
+    circuit when one could simply AND the clock signal with the enable signal? If this were the case, when :math:`EN` is
+    low, no clock pulse will reach the D flip-flop, when :math:`EN` is high, clock pulses can pass through the AND gate.
+    In other words, this simpler design would function perfectly as a D flip-flop with enable.
+
+    One could absolutely do this; however, in practice, although this *can* work, it would cause a slight delay in the
+    clock signal which could cause problems. Usually, it's a good idea to leave the clock signal alone.
+
+
+
 Storing a Byte
 --------------
 
