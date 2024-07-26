@@ -11,16 +11,12 @@ Registers and RAM
 Registers
 =========
 
-.. figure:: D_flip_flop.png
-    :width: 666 px
-    :align: center
-
-    D flip-flops always update the data being stored/latched whenever the clock pulses. If the data line is low, then
-    the D flip-flop will store a ``0`` on a clock pulse, if the data line is high, then a ``1`` is stored on a clock
-    pulse.
-
-
 * D flip-flops have several uses, but they always update the stored value every time the clock pulses
+
+    * If the data line is low, then the D flip-flop will store a ``0`` on a clock pulse
+    * If the data line is high, then a ``1`` is stored on a clock pulse
+
+
 * However, for general purpose memory, the goal is to leave the stored data alone for several clock cycles
 * In other words, there needs to be a way to toggle when the signal on the data line is to be stored on a clock pulse
 
