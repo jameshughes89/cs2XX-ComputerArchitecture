@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
-  <version>2</version>
+  <version>1</version>
   <attributes/>
   <visualElements>
     <visualElement>
@@ -8,7 +8,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Enable</string>
+          <string>EN</string>
         </entry>
       </elementAttributes>
       <pos x="420" y="160"/>
@@ -18,7 +18,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Clock</string>
+          <string>C</string>
         </entry>
       </elementAttributes>
       <pos x="420" y="100"/>
@@ -571,7 +571,7 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>Clock	Enable	D_0	Q_0
+            <dataString>C	EN	D_0	Q_0
 C	0	0	0
 C	0	1	0
 C	1	0	0

@@ -8,7 +8,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Enable</string>
+          <string>EN</string>
         </entry>
       </elementAttributes>
       <pos x="420" y="160"/>
@@ -18,7 +18,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Clock</string>
+          <string>C</string>
         </entry>
       </elementAttributes>
       <pos x="420" y="100"/>
@@ -98,7 +98,7 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>Clock	Enable	D	Q
+            <dataString>C	EN	D	Q
 C	0	0	0
 C	0	1	0
 C	1	0	0
@@ -110,7 +110,7 @@ C	1	0	0</dataString>
           </testData>
         </entry>
       </elementAttributes>
-      <pos x="320" y="0"/>
+      <pos x="340" y="0"/>
     </visualElement>
     <visualElement>
       <elementName>Rectangle</elementName>
@@ -125,10 +125,10 @@ C	1	0	0</dataString>
         </entry>
         <entry>
           <string>RectWidth</string>
-          <int>54</int>
+          <int>52</int>
         </entry>
       </elementAttributes>
-      <pos x="260" y="-40"/>
+      <pos x="300" y="-40"/>
     </visualElement>
   </visualElements>
   <wires>
