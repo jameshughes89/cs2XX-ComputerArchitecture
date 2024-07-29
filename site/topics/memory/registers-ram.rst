@@ -49,16 +49,13 @@ Random Access Memory
     A 4x4 block of RAM using registers to store bits with controllable inputs, a clock signal, and read/write enables.
 
 
-
-Same idea as above, but
-1 bit registers are added to each of the bits
-Add a clock
-Added controllable inputs
-    data in
-    addresses
-
-A way to contorl writes
-a way to control reads
+* The above figure is a modified version of the same idea
+* Here, 1 bit registers are used to store the data
+* A clock signal is included
+* Controllable inputs for the memory address are added
+* Controllable inputs for the input data along with outputs are included
+* This design also includes a control over when data is written to RAM
+* Additionally, it includes a control over when data is read from RAM
 
 
 Controlling Writes
