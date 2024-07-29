@@ -8,8 +8,8 @@ Registers
 =========
 
 
-Storing a Byte
---------------
+Storing More than a Bit
+-----------------------
 
 * A D flip-flop with enable can act as a register to effectively store a single bit of information
 * To store more than a single bit, configure multiple registers in parallel
@@ -21,6 +21,9 @@ Storing a Byte
 
     Eight D flip-flops with enables (registers) configured in parallel such that they can store eight bits/one byte of
     information. A single :math:`EN` signal controls when all bits are stored in the register.
+
+
+* The design shown above can scale such that an arbitrary number of bits can be stored
 
 
 Random Access Memory
