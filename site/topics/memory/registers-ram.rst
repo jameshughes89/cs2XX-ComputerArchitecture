@@ -20,6 +20,14 @@ Random Access Memory
 Controlling Writes
 ------------------
 
+With the decoder, one of the signals is always high, meaning at least one memory address will store whatever is on data in on clock pulses
+However, we want more control on when to write
+
+We use an enable, that will effectively toggle the decoder's decoded signal
+
+COULD and with clock, but as discussed above with registers, this can cause issues
+
+
 
 Controlling Reads
 -----------------
