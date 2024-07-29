@@ -24,6 +24,17 @@ Controlling Writes
 Controlling Reads
 -----------------
 
+When will the RAM ACTUALLY output data?
+We need to be careful about outputting 0s and 1s as they both MEAN something
+We need a way to mean NOTHING
+TRI STATE
+
+show BUFFER
+
+Remember, a 0 is a sink, not _nothing_
+high impedence (Z)
+
+The selected memory address' REGs is always outputting, but controlled by buffer
 
 
 For Next Time
