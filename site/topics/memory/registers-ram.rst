@@ -11,6 +11,11 @@ Registers
 Storing a Byte
 --------------
 
+* A D flip-flop with enable can act as a register to effectively store a single bit of information
+* To store more than a single bit, configure multiple registers in parallel
+* For example, to store 8 bits/1 byte of data, stack eight registers together
+
+
 
 
 Random Access Memory
