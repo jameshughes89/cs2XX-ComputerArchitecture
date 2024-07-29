@@ -37,19 +37,21 @@ Random Access Memory
 
 * Multiplexers are used to relay the stored data out from the selected memory address
 
-    * Notice that there is a multiplexer for each of the four bits in the memory addresses
+    * Notice that there is a multiplexer for each of the 4 bits in the memory addresses
 
 
 * Since registers (D flip-flops with enable) can be used to store data, they can be used for building RAM
 
+.. figure:: 4x4_ram_with_plexers_clock_en.png
+    :width: 750 px
+    :align: center
 
-
-
-SHOW IMAGE
+    A 4x4 block of RAM using registers to store bits with controllable inputs, a clock signal, and read/write enables.
 
 
 
 Same idea as above, but
+1 bit registers are added to each of the bits
 Add a clock
 Added controllable inputs
     data in
