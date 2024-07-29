@@ -15,7 +15,12 @@ Storing a Byte
 * To store more than a single bit, configure multiple registers in parallel
 * For example, to store 8 bits/1 byte of data, stack eight registers together
 
+.. figure:: 8_bit_register.png
+    :width: 333 px
+    :align: center
 
+    Eight D flip-flops with enables (registers) configured in parallel such that they can store eight bits/one byte of
+    information. A single :math:`EN` signal controls when all bits are stored in the register.
 
 
 Random Access Memory
