@@ -193,9 +193,89 @@ Random Access Memory
 Controlling Writes
 ------------------
 
+* When using a decoder to select a memory address, one of the decoded signals is always going to be high
+* This creates a problem as one of the memory addresses would be written to every clock pulse, even if not intended
+* Thus, there needs to be a way to have more control over when data is written to a memory address
+
+* One possible way to address this problem is to have a write enable signal toggle if clock pulses reach the registers
+
+    * This *can* work, but as discussed above, it may create problems in practice
+    * In general, it is best to not manipulate the clock signal
+
+
+* An alternative is to have a write enable signal control if the decoded signals are active or not
+* This can be achieved by ANDing an enable signal with each decoded signal
+* Below is a figure showing the relevant portion of the 4x4 block of RAM
+
+.. figure:: 4x4_memory_write_en.png
+    :width: 500 px
+    :align: center
+
+    Controlling writes with a write enable signal. Here, the memory address selected is ``00``, which means the
+    corresponding decoded signal (top) after the decoder is active. However, since :math:`EN_{w}` is low, the decoded
+    signal can not reach the registers at memory address ``00``.
+
+
 
 Controlling Reads
 -----------------
+
+* Similar to the decoder, multiplexers will always be outputting the selected signal
+* However, it is desirable to have control over when a signal is being read/output from RAM
+
+* Here, a problem arises
+* Typically, several computer components share a collection of signal lines to transfer data
+* This shared collection of signal lines is called the *bus*
+
+    * The bus will be discussed in more detail in the subsequent topic
+
+
+* Therefore, it is important that only specific components are reading/writing form the bus at a time
+
+    * Otherwise, the signals on the bus could become corrupted and lose meaning
+
+
+* The trouble here is, when a component is outputting a low signal, it isn't simply outputting nothing
+* Instead, the component connects the signal line to ground, thereby sinking the signal
+
+    * Trying to put any data on a signal line that is sunk to ground would result in it also being sunk to ground
+
+
+* In other words, there needs to be a way to output a ``0``, a ``1``, and to output *nothing*
+* This is where a *driver* comes in
+
+.. figure:: driver_symbol.png
+    :width: 150 px
+    :align: center
+
+    A driver component capable of allowing a signal to pass only when the control signal is high. When enabled, the
+    input signal is relayed to the output. When enable is low, the driver's output signal is in a high impedance
+    state, meaning there is effectively no output.
+
+
+* A driver is a component that can act as a switch
+* When the driver is active, it relays, or *drives*, the input signal to the output
+* When it is not active, it is in a "high impedance", or "high-Z" state
+
+    * This effectively means the driver outputs nothing
+
+
+* This facilitates tri-state logic
+
+    * ``0``
+    * ``1``
+    * ``Z`` (nothing)
+
+
+* Therefore, drivers are an ideal tool for controlling when RAM is being read from
+
+.. figure:: 4x4_memory_read_en.png
+    :width: 750 px
+    :align: center
+
+    Drivers controlling when data is being read from RAM. Here, despite the data being read from RAM being ``1010``, as
+    seen by the multiplexer signal lines, the :math:`EN_{r}` signal is low, meaning the drivers are in a high impedance
+    state, thereby effectively outputting nothing.
 
 
 
