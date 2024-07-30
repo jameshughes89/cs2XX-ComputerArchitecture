@@ -236,6 +236,16 @@ RAM Symbols
     * However, it can be modified to share the same data line by connecting the outputs back to the input lines
 
 
+.. note::
+
+    The style of RAM discussed here is called *static RAM* (SRAM), and is a very high quality, but expensive way of
+    making RAM. Whatever data is latched into RAM will remain there until power is removed from the circuit.
+
+    In modern computers, a different style called *dynamic RAM* (DRAM) is often used. The nuanced details of which will
+    not be covered here, but briefly, instead of using a form of latch to store a bit, DRAM uses a single transistor and
+    a capacitor, which stores a temporary charge that needs to be continuously re-charged by a separate circuit.
+
+
 
 For Next Time
 =============
