@@ -19,13 +19,25 @@ The Bus
 Tri-State Logic
 ===============
 
-Already discussed with drivers
-on/off/high-impedance (z), meaning nothing
+* Tri-state logic was discussed in the previous topic when introducing drivers
 
-When 1, signal line is connected to a voltage source
-When 0, it's not nothing, it's connected to ground
-If a line is connected to ground and another component connects to voltage source, it will get sunk to ground
-This is why Z is important, it's nothing
+    * Drivers were used to control RAM out
+
+
+* Briefly, components can have three different states
+
+    * Output a high signal by connecting the line to some voltage source (``1``)
+    * Output a low signal by connecting the line to ground (``0``)
+    * High impedance state/do nothing (``Z``)
+
+
+* Outputting ``0`` is not the same as outputting nothing since any other signal on the same line would be sunk to ground
+* In other words, if two components are connected to the same output line
+
+    * If one component outputs ``0`` by connecting the line to ground
+    * And the other outputs ``1`` by connecting the line to a voltage source
+    * The line would ultimately have no voltage as it would be connected to ground
+
 
 
 Analogy
