@@ -51,17 +51,16 @@ Tri-State Logic
 
 
 * Here, the sink represents some shared signal line that several components can connect to
-* The component's connections to the signal lines are represented by the faucets and corresponding drains
+* The components' connections to the signal line are represented by the faucets and corresponding drains
 
 * If a components is outputting a signal to the shared line, the faucet will either be on, or the drain will be open
 
     * When the output is ``1``, the faucet will be on adding water to the sink
     * When the output is ``0``, the drain will be opened, allowing any residual water to drain from the sink
 
-* All other components will be left alone (``Z``), with neither the faucet on or the drains opened
 
-* The presence of water in the sink means that the signal is high
-* A lack of water in the sink means that the signal is low
+* All other components will be left alone (``Z``), with neither the faucet on or the drains opened
+* The presence or absence of water in the sink means that the signal is high or low, respectively
 
 * Consider what would happen in this analogy if one tried to use ``0`` to mean nothing
 * If one of the components had their faucets on, but others had their drains open, the water would immediately drain
