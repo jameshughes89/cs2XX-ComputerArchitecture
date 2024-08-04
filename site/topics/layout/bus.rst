@@ -12,9 +12,6 @@ The Bus
     * Control bus --- Sends signals responsible for controlling when components are active
 
 
-* Depending on the system architecture, these busses can be physically separate or combined
-
-
 
 Tri-State Logic
 ===============
