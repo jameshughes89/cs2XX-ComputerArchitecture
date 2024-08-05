@@ -22,7 +22,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "sphinx==7.3.7",
+    "sphinx==8.0.2",
     "sphinx-rtd-theme==2.0.0",
 ]
 
