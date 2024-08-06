@@ -87,6 +87,10 @@ Connecting Components
 * The memory address the RAM component is referencing is controlled by address input buttons
 * Finally, the components are controlled by turning on/off their inputs and outputs
 
+    * Notice how the register only has an input enable on the component
+    * To control the register's output, a driver is added after the register's output
+
+
 * Here, how the components' signal lines are connected is important, not the actual physical layout of the components
 
     * The location of each component in the layout is arbitrary
