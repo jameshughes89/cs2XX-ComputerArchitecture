@@ -73,7 +73,14 @@ Tri-State Logic
 Connecting Components
 =====================
 
-IMAGE
+.. figure:: ram_register_schematic.png
+    :width: 500 px
+    :align: center
+
+    RAM and a register connected to a BUS. This configuration allows for inputting data into the bus from an external
+    source (the input buttons), controlling the memory address used in RAM, and controlling when the RAM and register
+    components are inputting/outputting data. 
+
 
 Here is a configuration
 It's important how the components are connected
@@ -83,12 +90,18 @@ But the location of components are arbitrary
 The thre busses are in this image
 Data bus
     for data
+    here, the data bus is tri-state
+    Will be clear why this is important later
+    Output at bottom is only so one can see what is currently on the data bus
 
 Address Bus
     for memory addresses
+    Labels
+
 
 Control Bus
     For controlling the components
+    labels
 
 IMAGE
 
