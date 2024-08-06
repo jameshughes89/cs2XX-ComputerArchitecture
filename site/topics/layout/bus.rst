@@ -73,6 +73,27 @@ Tri-State Logic
 Connecting Components
 =====================
 
+IMAGE
+
+Here is a configuration
+It's important how the components are connected
+But the location of components are arbitrary
+
+
+The thre busses are in this image
+Data bus
+    for data
+
+Address Bus
+    for memory addresses
+
+Control Bus
+    For controlling the components
+
+IMAGE
+
+
+
 
 
 Loading Data into RAM
