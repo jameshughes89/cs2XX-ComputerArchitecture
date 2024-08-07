@@ -145,14 +145,68 @@ Loading Data into RAM
     both scenarios to have the data be stored in RAM. These images correspond to the two rows in the above table.
 
 
+* If one wants to verify that the data did in fact get stored, a different set of signals is needed
+* The data stored in RAM would be displayed on the outputs at the end of the data bus
+* Be mindful that the data input lines need to be set to ``Z``, otherwise their inputs will interfere with RAM's output
+* Clock pulses are not actually needed here, but are included in the table for completeness
+
+.. list-table:: Program to verify that data is in RAM
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`RM_{i}`
+      - :math:`RM_{o}`
+      - :math:`RG_{i}`
+      - :math:`RG_{o}`
+      -
+      - :math:`A_{1}`
+      - :math:`A_{0}`
+      -
+      - :math:`D_{3}`
+      - :math:`D_{2}`
+      - :math:`D_{1}`
+      - :math:`D_{0}`
+      -
+      - :math:`C`
+    * - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      - ``Z``
+      - ``Z``
+      - ``Z``
+      -
+      - ``C``
+    * - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``Z``
+      - ``Z``
+      - ``Z``
+      - ``Z``
+      -
+      - ``C``
 
 
+.. figure:: ram_register_schematic_checking_data.png
+    :width: 666 px
+    :align: center
 
-Verify it by outputting the data to the bus
-Must set data input to Z
-
-Show images?
-
+    The left image shows how the signals should be set to verify that the value ``0001`` is stored in memory address
+    ``00``, and the right shows how they should be set to verify that the value ``1000`` to memory address ``01``. These
+    images correspond to the two rows in the above table. The data stored in RAM at the specified memory addresses is
+    displayed on the output at the bottom of the data bus.
 
 
 
