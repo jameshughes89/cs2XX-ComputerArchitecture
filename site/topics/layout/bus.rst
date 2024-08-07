@@ -78,18 +78,75 @@ Connecting Components
 Loading Data into RAM
 =====================
 
-consider how one would add data
-We need to think about what should be happening on the three busses
-worj through example
+* Consider how one would add data to RAM
+* This would require manipulating the signals along the three busses in a specific way
 
-Say we want to put the data `0001` in memory address `0` and `1000` in memory address 1
-What pattern would be needed
+* This is probably best explained with an example
+* Add the value ``0001`` to memory address ``00`` and ``1000`` to memory address ``01``
+* Below is a table showing how the signals would need to be set to achieve this
+* This table however is not a truth table, but instead represents what is effectively a *program*
+* In the below table, ``C`` means *clock pulse*, which would happen only after all other signals are set
 
-Show TABLE
+.. list-table:: Program to add data to RAM
+    :widths: auto
+    :align: center
+    :header-rows: 1
 
-C means to do a clock pulse after everything is set
+    * - :math:`RM_{i}`
+      - :math:`RM_{o}`
+      - :math:`RG_{i}`
+      - :math:`RG_{o}`
+      -
+      - :math:`A_{1}`
+      - :math:`A_{0}`
+      -
+      - :math:`D_{3}`
+      - :math:`D_{2}`
+      - :math:`D_{1}`
+      - :math:`D_{0}`
+      -
+      - :math:`C`
+    * - ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``C``
+    * - ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``C``
 
-Show images?
+
+.. figure:: ram_register_schematic_adding_data.png
+    :width: 666 px
+    :align: center
+
+    The left image shows how the signals should be set to add the value ``0001`` to memory address ``00``, and the right
+    shows how they should be set to add the value ``1000`` to memory address ``01``. A clock pulse would be required in
+    both scenarios to have the data be stored in RAM. These images correspond to the two rows in the above table.
+
+
+
+
 
 Verify it by outputting the data to the bus
 Must set data input to Z
