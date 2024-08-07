@@ -78,6 +78,25 @@ Connecting Components
 Loading Data into RAM
 =====================
 
+consider how one would add data
+We need to think about what should be happening on the three busses
+worj through example
+
+Say we want to put the data `0001` in memory address `0` and `1000` in memory address 1
+What pattern would be needed
+
+Show TABLE
+
+C means to do a clock pulse after everything is set
+
+Show images?
+
+Verify it by outputting the data to the bus
+Must set data input to Z
+
+Show images?
+
+
 
 
 Swapping Data
