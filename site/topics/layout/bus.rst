@@ -111,7 +111,7 @@ Connecting Components
 
         * For controlling which memory address in RAM is currently being used
         * Here, for simplicity, there are two address lines, meaning only four memory addresses can be accessed from RAM
-        * These are controllable via the buttons labelled :math:`A_{0}` through :math:`A_{2}`
+        * These are controllable via the buttons labelled :math:`A_{0}` and :math:`A_{1}`
 
 
     * The control bus
