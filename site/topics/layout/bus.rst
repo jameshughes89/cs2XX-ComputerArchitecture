@@ -83,7 +83,7 @@ Connecting Components
 
 
 * Above is a RAM component connected to a register component via a data bus
-* With this configuration, data can be inputted into the system via the input buttons
+* With this configuration, data can be input into the system via the input buttons
 * The memory address the RAM component is referencing is controlled by address input buttons
 * Finally, the components are controlled by turning on/off their inputs and outputs
 
