@@ -415,6 +415,33 @@ Swapping Data
       - ``C``
 
 
+.. figure:: ram_register_schematic_a0_a2.png
+    :width: 666 px
+    :align: center
+
+    The left image shows how the signals should be set for moving the contents of memory address ``00`` to the register.
+    The right shows how they should be set to move the contents of the register to memory address ``10``. These two
+    images correspond to the first two rows in the above table.
+
+
+.. figure:: ram_register_schematic_a1_a0.png
+    :width: 666 px
+    :align: center
+
+    The left image shows the signals for moving the contents of memory address ``01`` to the register and the right
+    shows how to move the contents of the register to address ``00``. These two images correspond to the middle two
+    tows in the above table.
+
+
+.. figure:: ram_register_schematic_a2_a1.png
+    :width: 666 px
+    :align: center
+
+    The left shows how to move the contents of address ``10`` to the register, and the right shows how to move the data
+    in the register to memory address ``01``. These two images correspond to the last two rows in the above table.
+
+
+
 For Next Time
 =============
 
