@@ -288,18 +288,28 @@ Swapping Data
     * Move the value in address ``10`` to ``01``
 
 
-But RAM can only input OR output at a clock cycle, we can't move A0 to A2 from RAM to RAM
-We need reg
+* However, RAM can only output *or* input at a clock pulse
 
-So, this means
-A0 to REG
-REG to A2
-A1 to REG
-REG A0
-A2 to REG
-Reg to A1
+    * It's not possible to move a value between RAM addresses directly
 
-What does that mean in terms of a program?
+
+* This is where the register comes in
+
+    * The register will serve as temporary storage to facilitate moving data between RAM addresses
+
+
+* This means the strategy to swap data would more accurately be
+
+    * Move the value from memory address ``00`` to the register
+    * Move the value from the register to address ``10``
+    * Move the value at address ``01`` to the register
+    * Move the value from the register to address ``00``
+    * Move address ``10``\'s value to the register
+    * Move the register's value to ``01``
+
+
+* What would this mean in terms of the signals along the busses?
+
 
 
 
