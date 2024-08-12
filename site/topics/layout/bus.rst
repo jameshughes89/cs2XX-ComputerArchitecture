@@ -445,6 +445,7 @@ Swapping Data
 For Next Time
 =============
 
+* Check out the :download:`Bus, RAM, and register <ram_register.dig>` schematic for Digital
 * Read Chapter 2 Section 2 of your text
 
     * 2 pages
