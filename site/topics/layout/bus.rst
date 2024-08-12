@@ -283,7 +283,7 @@ Swapping Data
 * What would this program be?
 * At a high level, the solution would be
 
-    * Move the value stored at memory address ``00`` to a free address, like ``10``
+    * Move the value stored at memory address ``00`` to a free address, such as ``10``
     * Move the value at memory address ``01`` to ``00``
     * Move the value in address ``10`` to ``01``
 
@@ -308,7 +308,7 @@ Swapping Data
     * Move the register's value to ``01``
 
 
-* What would this mean in terms of the signals along the busses?
+* Below is a table showing the program of how the signals should be set along the busses
 
 .. list-table:: Program to swap values between memory address ``00`` and ``01``
     :widths: auto
