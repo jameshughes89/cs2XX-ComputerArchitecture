@@ -269,13 +269,24 @@ Loading Data into RAM
 Swapping Data
 =============
 
-consider theproblem of swapping the contents of A0 and A1
-what would the program be?
+* Now consider a more complex problem --- swap the values between the two memory addresses
 
-Abstractly, we need to move A0 to A1, but if we do, we over write it
-So, we need A0 to a free address, like A2,
-Then A1 to A0
-then A2 to A1
+    * Move the contents of memory address ``00``, which is ``0001`` to memory address ``01``
+    * And move the contents of address ``01`` (``1000``) to memory address ``00``
+
+
+* Be careful to not overwrite the values in either memory address
+
+    * A third, unused memory address should be used to ensure no data is lost
+
+
+* What would this program be?
+* At a high level, the solution would be
+
+    * Move the value stored at memory address ``00`` to a free address, like ``10``
+    * Move the value at memory address ``01`` to ``00``
+    * Move the value in address ``10`` to ``01``
+
 
 But RAM can only input OR output at a clock cycle, we can't move A0 to A2 from RAM to RAM
 We need reg
