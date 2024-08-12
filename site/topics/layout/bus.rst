@@ -269,6 +269,30 @@ Loading Data into RAM
 Swapping Data
 =============
 
+consider theproblem of swapping the contents of A0 and A1
+what would the program be?
+
+Abstractly, we need to move A0 to A1, but if we do, we over write it
+So, we need A0 to a free address, like A2,
+Then A1 to A0
+then A2 to A1
+
+But RAM can only input OR output at a clock cycle, we can't move A0 to A2 from RAM to RAM
+We need reg
+
+So, this means
+A0 to REG
+REG to A2
+A1 to REG
+REG A0
+A2 to REG
+Reg to A1
+
+What does that mean in terms of a program?
+
+
+
+
 
 
 For Next Time
