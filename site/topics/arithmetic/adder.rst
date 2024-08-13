@@ -10,6 +10,11 @@ Half & Full Adder
 
 
 
+Binary Addition as a Logical Operation
+======================================
+
+
+
 Half Adder
 ==========
 
