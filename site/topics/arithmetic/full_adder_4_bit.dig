@@ -18,7 +18,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>full adder_test</string>
+          <string>4 bit full adder_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -40,7 +40,7 @@ end loop</dataString>
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Big Full Adder</string>
+          <string>4 bit Full Adder</string>
         </entry>
         <entry>
           <string>RectHeight</string>
@@ -48,10 +48,10 @@ end loop</dataString>
         </entry>
         <entry>
           <string>RectWidth</string>
-          <int>57</int>
+          <int>58</int>
         </entry>
       </elementAttributes>
-      <pos x="-180" y="40"/>
+      <pos x="-200" y="40"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
