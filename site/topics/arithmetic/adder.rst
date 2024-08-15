@@ -13,11 +13,79 @@ Half & Full Adder
 Binary Addition as a Logical Operation
 ======================================
 
-How many bits
+* If one wants to add two bits together, how many output bits are needed?
+* To answer this, consider the possibilities
+
+    * :math:`0_{2} + 0_{2} = 0_{2}`
+    * :math:`0_{2} + 1_{2} = 1_{2}`
+    * :math:`1_{2} + 0_{2} = 1_{2}`
+    * :math:`1_{2} + 1_{2} = 10_{2}`
+
+
+* As one can see, when adding two ``1``\s together, a carry bit is needed
+* Thus, when adding two bits together, two output bits are required
+
+* In general, when adding two :math:`n` bit numbers together, :math:`n+1` bits is sufficient to output the correct sum
+
+    * Consider that the largest number that can be represented with :math:`n` bits is :math:`2^{n} - 1`
+    * The largest sum of adding two :math:`n` bit numbers together is :math:`2(2^{n} - 1) = 2^{n+1} - 2`
+
+        * Adding the largest :math:`n` bit number to itself
+
+    * The largest number representable with :math:`n+1` bits is :math:`2^{n+1} - 1`
+    * Since :math:`2^{n+1} - 2 < 2^{n+1} - 1`, :math:`n+1` bits is sufficient
+
+
+* Consider the below table showing the result of adding two one bit numbers together
+
+    * :math:`A` and :math:`B` are the two one bit numbers
+    * :math:`S` is the sum bit
+    * :math:`C` is the carry bit
+
+
+.. list-table:: Two Bit Addition as a Logical Operation
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`A`
+      - :math:`B`
+      -
+      - :math:`C`
+      - :math:`S`
+    * - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+    * - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+
+
+* Referring to the above table, notice how this is effectively a logical operation
+
+    * When both inputs are ``0``, output ``00``
+    * When one input is ``1``, output ``01``
+    * When both inputs are ``1``, output ``10``
+
+
 
 What it is
 Show table
-Show build as logic 
+Show build as logic
 
 
 Half Adder
