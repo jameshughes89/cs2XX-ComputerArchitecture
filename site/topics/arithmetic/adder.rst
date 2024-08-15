@@ -82,10 +82,17 @@ Binary Addition as a Logical Operation
     * When both inputs are ``1``, output ``10``
 
 
+* As previously discussed, programmable logic arrays can be configured to create any boolean logical function
 
-What it is
-Show table
-Show build as logic
+.. figure:: half_adder_with_pla.png
+    :width: 500 px
+    :align: center
+
+    A PLA designed to perform the function of adding two one bit numbers together.
+
+
+* A circuit capable of adding two one bit numbers together is called a *half adder*
+
 
 
 Half Adder
