@@ -13,6 +13,11 @@ Half & Full Adder
 Binary Addition as a Logical Operation
 ======================================
 
+How many bits
+
+What it is
+Show table
+Show build as logic 
 
 
 Half Adder
