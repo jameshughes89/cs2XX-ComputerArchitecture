@@ -104,8 +104,8 @@ Adding Larger Numbers
 
 
 
-Adder Symbol
-============
+Full Adder Symbol
+-----------------
 
 * Adders are represented as a labeled box
 * Within Digital, adders can be edited to allow for arbitrary input sizes
