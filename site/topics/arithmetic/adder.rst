@@ -100,7 +100,23 @@ Full Adder
 
 
 Adding Larger Numbers
-=====================
+---------------------
+
+* The full adder design scales to arbitrary size to enable the addition of large binary numbers
+* To achieve this by chaining multiple full adders together
+
+    * A full adder is required for each bit
+    * Each full adder's :math:`C_{out}` is fed into the next significant bit's full adder's :math:`C_{in}`
+
+
+* Below is an example of full adder capable of adding two four bit numbers together
+
+.. figure:: full_adder_4_bit.png
+    :width: 500 px
+    :align: center
+
+    A four bit full adder. Notice how each output bit is summed with it's own full adder and each full adder's
+    :math:`C_{out}` is fed back into the full adder at the next significant bit.
 
 
 
