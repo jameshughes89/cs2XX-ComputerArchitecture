@@ -27,13 +27,7 @@ Binary Addition as a Logical Operation
 
 * In general, when adding two :math:`n` bit numbers together, :math:`n+1` bits is sufficient to output the correct sum
 
-    * Consider that the largest number that can be represented with :math:`n` bits is :math:`2^{n} - 1`
-    * The largest sum of adding two :math:`n` bit numbers together is :math:`2(2^{n} - 1) = 2^{n+1} - 2`
-
-        * Adding the largest :math:`n` bit number to itself
-
-    * The largest number representable with :math:`n+1` bits is :math:`2^{n+1} - 1`
-    * Since :math:`2^{n+1} - 2 < 2^{n+1} - 1`, :math:`n+1` bits is sufficient
+    * Remember, adding a bit doubles the number of representable values
 
 
 * Consider the below table showing the result of adding two one bit numbers together
