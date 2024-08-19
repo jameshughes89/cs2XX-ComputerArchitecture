@@ -97,28 +97,101 @@ Half Adder
 Full Adder
 ==========
 
-* The general idea is the same, but we need to allow for carry bits to be inputted to be accounted for in the sum
-* show table
+* A *full adder* is a circuit designed to add binary numbers of arbitrary size
+* The idea is the same as a half adder, but they provide a way to input carry bits to be accounted for in the sum
+* Below is a table showing the desired functionality of a full adder
 
-Again, look at each output independetly
-S is 1 only when 1 or 3 bits are 1 (odd number of 1s)
-    * this is XOR still
-    * remember that XOR is an even/odd checker
+.. list-table:: Full Adder Functionality
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`A`
+      - :math:`B`
+      - :math:`C_{in}`
+      -
+      - :math:`C_{out}`
+      - :math:`S`
+    * - ``0``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``0``
+    * - ``0``
+      - ``0``
+      - ``1``
+      -
+      - ``0``
+      - ``1``
+    * - ``0``
+      - ``1``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+    * - ``0``
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``0``
+      - ``0``
+      -
+      - ``0``
+      - ``1``
+    * - ``1``
+      - ``0``
+      - ``1``
+      -
+      - ``1``
+      - ``0``
+    * - ``1``
+      - ``1``
+      - ``0``
+      -
+      - ``1``
+      - ``0``
+
+    * - ``1``
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      - ``1``
 
 
-C is 1 when any combination of two or more input bits are 1
+* Again, observe each output independently and find the patterns of when the output should be active
 
-    * A + B
-    * A + C
-    * B + C
-    * A + B + C
+    * :math:`S` is high only when one or three of the inputs are ``1``; when an odd number of inputs are ``1``
 
-* C can be simplified by checking if A + B, or if (A + B) + C
+        * This is, again, XOR's functionality
+        * Remember from earlier, XOR can be used as a way to check even/odd
 
-SHOW IMAGE
 
-This is called a full adder
-Now, just chain them
+    * :math:`C_{out}` is ``1`` when any combination of two or more input bits are ``1``
+
+        * If :math:`A` and :math:`B` are both ``1``
+        * Or if :math:`A` and :math:`C_{in}` are both ``1``
+        * Or if :math:`B` and :math:`C_{in}` are both ``1``
+        * Or if :math:`A`, :math:`B`, and :math:`C_{in}` are all ``1``
+
+
+* :math:`C_{out}` can be simplified to check if
+
+    * :math:`A` and :math:`B` are both ``1``
+    * Or if the sum of :math:`A` and :math:`B` is ``1`` and :math:`C_{in}` is ``1``
+
+        * Note, if the sum of :math:`A` and :math:`B` is ``1``, then at least one of the inputs was ``1``
+
+
+.. figure:: full_adder.png
+    :width: 500 px
+    :align: center
+
+    A full adder, which is capable of including an inputted carry bit in the summation of the inputs.
 
 
 
