@@ -97,6 +97,29 @@ Half Adder
 Full Adder
 ==========
 
+* The general idea is the same, but we need to allow for carry bits to be inputted to be accounted for in the sum
+* show table
+
+Again, look at each output independetly
+S is 1 only when 1 or 3 bits are 1 (odd number of 1s)
+    * this is XOR still
+    * remember that XOR is an even/odd checker
+
+
+C is 1 when any combination of two or more input bits are 1
+
+    * A + B
+    * A + C
+    * B + C
+    * A + B + C
+
+* C can be simplified by checking if A + B, or if (A + B) + C
+
+SHOW IMAGE
+
+This is called a full adder
+Now, just chain them
+
 
 
 Adding Larger Numbers
