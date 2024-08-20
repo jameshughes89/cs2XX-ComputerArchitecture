@@ -92,6 +92,43 @@ Binary Addition as a Logical Operation
 Half Adder
 ==========
 
+* A programmable logic array is sufficient for building a half adder
+* However,  using programmable logic arrays is a bit like a brute force solution
+
+* It is possible to greatly simplify the circuit and use less gates/transistors
+* Referring to the above table describing the half adder's functionality, look at each output independently
+
+    * :math:`S` is ``1`` only when either of the input bits are ``1``
+
+        * This is the functionality of XOR
+
+
+    * :math:`C` is ``1`` only when both input bits are ``1``
+
+        * This is the functionality of AND
+
+
+* In other words, instead of using 5 gates with a programmable logic array, a half adder can be built with only 2 gates
+* Below is the typical configuration of a half adder
+
+.. figure:: half_adder.png
+    :width: 500 px
+    :align: center
+
+    A half adder created with only two gates, namely, an XOR calculating the value of the sum bit (:math:`S`), and
+    an AND for calculating the value of the carry bit (:math:`C`). This is the typical design of a half adder circuit.
+
+
+* Unfortunately, a half adder is only capable of adding two one bit numbers together
+* To add numbers with more bits, one may be tempted to chain half adders together
+* However, this will not work as the carry bit has no way to be accounted for in the next bit's addition
+
+    * Think about regular base 10 addition
+    * If the sum of one digit is greater than 10, the value is carried over and included in the sum of the next digit
+
+
+* Thus, the half adder must be modified to incorporate an input of a carry bit
+
 
 
 Full Adder
