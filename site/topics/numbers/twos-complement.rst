@@ -1,6 +1,6 @@
-*************
-2s Complement
-*************
+****************
+Two's Complement
+****************
 
 * As long as enough bits are available, any positive integer (and zero) can be represented
 

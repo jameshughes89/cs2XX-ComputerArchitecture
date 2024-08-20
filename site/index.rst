@@ -73,7 +73,7 @@ Office Hours
     topics/memory/registers-ram
     topics/layout/bus
     topics/arithmetic/adder
-    topics/numbers/2s-complement
+    topics/numbers/twos-complement
     topics/logic/logic-engine
     topics/logic/conditionals
     topics/numbers/encoding-decoding
