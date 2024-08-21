@@ -24,6 +24,10 @@
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
+        <entry>
+          <string>Label</string>
+          <string>O_0</string>
+        </entry>
       </elementAttributes>
       <pos x="780" y="460"/>
     </visualElement>
@@ -129,16 +133,16 @@
       <elementName>Splitter</elementName>
       <elementAttributes>
         <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
           <string>Input Splitting</string>
           <string>1,1,1,1</string>
         </entry>
         <entry>
           <string>Output Splitting</string>
           <string>4</string>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="3"/>
         </entry>
       </elementAttributes>
       <pos x="780" y="-20"/>
@@ -172,6 +176,10 @@
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
+        <entry>
+          <string>Label</string>
+          <string>O_1</string>
+        </entry>
       </elementAttributes>
       <pos x="760" y="460"/>
     </visualElement>
@@ -186,6 +194,10 @@
           <string>rotation</string>
           <rotation rotation="3"/>
         </entry>
+        <entry>
+          <string>Label</string>
+          <string>O_3</string>
+        </entry>
       </elementAttributes>
       <pos x="720" y="460"/>
     </visualElement>
@@ -199,6 +211,10 @@
         <entry>
           <string>rotation</string>
           <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>O_2</string>
         </entry>
       </elementAttributes>
       <pos x="740" y="460"/>
@@ -303,6 +319,10 @@
       <elementName>Splitter</elementName>
       <elementAttributes>
         <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
           <string>Input Splitting</string>
           <string>1,1</string>
         </entry>
@@ -310,12 +330,40 @@
           <string>Output Splitting</string>
           <string>2</string>
         </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="3"/>
-        </entry>
       </elementAttributes>
       <pos x="540" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>ram register_test</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>RAM_i	RAM_o	REG_i	REG_o	A_1	A_0	D_3	D_2	D_1	D_0	O_3	O_2	O_1	O_0	C
+# Add data to RAM
+1	0	0	0	0	0	0	0	0	1	0	0	0	1	C
+1	0	0	0	0	1	1	0	0	0	1	0	0	0	C
+# Verify data is in RAM
+0	1	0	0	0	0	Z	Z	Z	Z	0	0	0	1	C
+0	1	0	0	0	1	Z	Z	Z	Z	1	0	0	0	C
+# Swap contents of address 0b00 and 0b01
+0	1	1	0	0	0	Z	Z	Z	Z	0	0	0	1	C
+1	0	0	1	1	0	Z	Z	Z	Z	0	0	0	1	C
+0	1	1	0	0	1	Z	Z	Z	Z	1	0	0	0	C
+1	0	0	1	0	0	Z	Z	Z	Z	1	0	0	0	C
+0	1	1	0	1	0	Z	Z	Z	Z	0	0	0	1	C
+1	0	0	1	0	1	Z	Z	Z	Z	0	0	0	1	C
+# Verify data in RAM was swapped
+0	1	0	0	0	0	Z	Z	Z	Z	1	0	0	0	C
+0	1	0	0	0	1	Z	Z	Z	Z	0	0	0	1	C</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="320" y="-180"/>
     </visualElement>
   </visualElements>
   <wires>
