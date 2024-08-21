@@ -17,8 +17,8 @@ Sign Bit
 
 
 
-Ones Compliment
-===============
+One's Compliment
+================
 
 
 
