@@ -176,15 +176,73 @@ Sign Bit
 Problems and Limitations
 ------------------------
 
+* One may have started to notice some issues with this strategy
+* First, there are two patterns that represent the number :math:`0`
+
+    * ``1000`` meaning :math:`-0`
+    * ``0000`` meaning :math:`0`
+    * Although one is negative, this does not have any meaning for integers
 
 
-problems/limitations are:
-1. need to know how many bits there are/what the most significant bit is
-    8 bit -5 vs 4 bit -5
+* Another issue is that the pattern for the numbers change depending on the number of bits
+* With positive numbers, this is not a problem
 
-2. Two 0s, which is weird
+    * ``0101`` is the same as ``00000101``
+    * They both represent :math:`5`
 
-3. Addition is weird
+* But consider the four bit binary number ``1101`` and the eight bit number ``10000101``
+
+    * Both represent the number :math:`-5`, yet they have different patterns
+
+
+* And finally, another issue is addition
+* With decimal numbers, adding a negative number is the same as subtraction
+
+    * :math:`5 + -5 = 0`
+
+
+* If one were to try to add a negative number with a sign bit, it will not work properly 
+
+.. list-table:: Adding a negative binary number with a sign bit
+    :widths: auto
+    :align: center
+
+    * - **Carry**
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      -
+      -
+      -
+    * - **Number 1**
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+      -
+      - :math:`5`
+    * - **Number 2**
+      -
+      - ``1``
+      - ``1``
+      - ``0``
+      - ``1``
+      -
+      - :math:`-5`
+    * - **Sum**
+      - ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``0``
+      -
+      - :math:`2?`
+
+
+* Even if one ignores the fact that the sign bit got carried to a fifth bit, the arithmetic does not work out
+
 
 
 
