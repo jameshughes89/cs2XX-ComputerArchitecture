@@ -120,14 +120,63 @@ Sign Bit
     * The left side is binary addition, the right side is decimal
 
 
+* A simple way to represent negative numbers is to use the most significant bit as a sign bit
+* Consider the number :math:`5` --- ``00000101``
+* To represent :math:`-5`, replace the most significant bit (left most) with a ``1`` --- ``10000101``
+
+    * With this strategy, ``10000101`` would be :math:`-5`, not :math:`133`
 
 
-no way to do negative numbers
+* Since the most significant bit is used as a sign, fewer positive numbers can be represented
 
-use most significant bit as the sign bit
-show 5 example
+    * But negative numbers are now possible
 
-show whole table of all 4/3 bit numbers
+
+* Below is a table showing all the possible values a four bit binary number can represent with the use of a sign bit
+
+.. list-table:: All four bit values representable with the use of a sign bit
+    :widths: auto
+    :align: center
+
+    * - ``1111``
+      - :math:`-7`
+    * - ``1110``
+      - :math:`-6`
+    * - ``1101``
+      - :math:`-5`
+    * - ``1100``
+      - :math:`-4`
+    * - ``1011``
+      - :math:`-3`
+    * - ``1010``
+      - :math:`-2`
+    * - ``1001``
+      - :math:`-1`
+    * - ``1000``
+      - :math:`-0`
+    * - ``0000``
+      - :math:`0`
+    * - ``0001``
+      - :math:`1`
+    * - ``0010``
+      - :math:`2`
+    * - ``0011``
+      - :math:`3`
+    * - ``0100``
+      - :math:`4`
+    * - ``0101``
+      - :math:`5`
+    * - ``0110``
+      - :math:`6`
+    * - ``0111``
+      - :math:`7`
+
+
+
+Problems and Limitations
+------------------------
+
+
 
 problems/limitations are:
 1. need to know how many bits there are/what the most significant bit is
