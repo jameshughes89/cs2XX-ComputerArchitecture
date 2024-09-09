@@ -245,9 +245,36 @@ Problems and Limitations
 
 
 
-
 One's Compliment
 ================
+
+A simple alternative is called ones complement
+flip every bit for negative numbers
+    the "complement"
+
+SHOW TABLE
+
+This somewhat addresses the weird issue of different patterns/encodings for a number depending on the number of bits
+
+    for example, 100 means -3, and 1100 means 3
+    different, but with a pattern of leading 1s
+
+Still the issue of two zeros
+And addition with the negative numbers gets wonky
+
+    SHOW EXAMPLES
+
+
+Notice how everything seems to be off my one
+    Sure, 0 wasn't, but it kinda' was
+
+
+In conclusion, we can do the addition, but then add 1 to everything, and that would work
+
+
+
+With this, there are still two zer
+
 
 
 
