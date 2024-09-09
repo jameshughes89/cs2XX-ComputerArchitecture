@@ -248,16 +248,63 @@ Problems and Limitations
 One's Compliment
 ================
 
-A simple alternative is called ones complement
-flip every bit for negative numbers
-    the "complement"
+* A potential alternative to using a sign bit is *ones complement*
+* The strategy is similar to a sign bit, but with ones complement, all bits are flipped for negative numbers
 
-SHOW TABLE
+    * Take the *complement* of each bit
 
-This somewhat addresses the weird issue of different patterns/encodings for a number depending on the number of bits
+.. list-table:: All four bit values representable with the ones complement
+    :widths: auto
+    :align: center
 
-    for example, 100 means -3, and 1100 means 3
-    different, but with a pattern of leading 1s
+    * - ``1000``
+      - :math:`-7`
+    * - ``1001``
+      - :math:`-6`
+    * - ``1010``
+      - :math:`-5`
+    * - ``1011``
+      - :math:`-4`
+    * - ``1100``
+      - :math:`-3`
+    * - ``1101``
+      - :math:`-2`
+    * - ``1110``
+      - :math:`-1`
+    * - ``1111``
+      - :math:`-0`
+    * - ``0000``
+      - :math:`0`
+    * - ``0001``
+      - :math:`1`
+    * - ``0010``
+      - :math:`2`
+    * - ``0011``
+      - :math:`3`
+    * - ``0100``
+      - :math:`4`
+    * - ``0101``
+      - :math:`5`
+    * - ``0110``
+      - :math:`6`
+    * - ``0111``
+      - :math:`7`
+
+
+* Like with a sign bit, it is simple to identify negative numbers by looking for a ``1`` in the most significant bit
+
+* But the issue of the pattern for negative numbers changing depending on the number of bits is *somewhat* resolved
+* Consider the number :math:`-3`
+
+    * With three bits, :math:`-3` is represented as ``100``
+    * With four bits, :math:`-3` is represented as ``1100``
+
+* Although the pattern is different, the idea is that negative numbers have an infinite number of leading ``1``\s
+
+    * As opposed to an infinite number of ``0``\s as with positive numbers
+
+
+
 
 Still the issue of two zeros
 And addition with the negative numbers gets wonky
