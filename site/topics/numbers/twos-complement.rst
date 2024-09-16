@@ -491,6 +491,22 @@ Problems and Limitations
 Two's Compliment
 ================
 
+With 1s, we add 1 after and we're good
+
+but we could also add 1 before any arithmetic
+
+In other words, for negative numbers, flip all bits, then add 1
+
+SHOW TABLE
+
+neat, no two 0s issue
+
+no multiple patterns issue
+
+
+arithmetic works perfect!
+SHOW EXAMPLES
+
 
 
 For Next Time
