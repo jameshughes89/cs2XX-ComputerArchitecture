@@ -492,7 +492,7 @@ Two's Compliment
 ================
 
 * With one's complement, the issue with arithmetic and negative numbers could be resolved by adding one to the result
-* However, due to the associative property, one could add one *before* any arithemetic
+* However, due to the associative property, one could be added *before* any arithemetic
 
 * In other words, to create negative numbers, one could flip all bits and add one
 * This idea is called *two's complement*
