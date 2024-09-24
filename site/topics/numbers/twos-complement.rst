@@ -739,7 +739,7 @@ Negation and Subtraction
 * Here, a :math:`sub` input provides a way to toggle the negation of one of the inputs
 
     * When :math:`sub` is high, XOR will flip the bits of the input and the carry in input to the adder will be high
-    * When :math:`1`sub` is low, XOR has no effect and the carry in value for the adder will be low
+    * When :math:`sub` is low, XOR has no affect and the carry in value for the adder will be low
 
 
 * With this configuration, the full adder can be toggled to perform addition or subtraction
