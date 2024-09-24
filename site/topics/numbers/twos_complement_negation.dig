@@ -318,7 +318,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>Negation_test</string>
+          <string>negation_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
