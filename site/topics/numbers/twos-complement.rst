@@ -253,7 +253,7 @@ One's Compliment
 
     * Take the *complement* of each bit
 
-.. list-table:: All four bit values representable with the ones complement
+.. list-table:: All four bit values representable with the one's complement
     :widths: auto
     :align: center
 
@@ -316,7 +316,7 @@ Problems and Limitations
 * Further, addition with negative numbers is still not perfect
 
 
-.. list-table:: Adding a negative binary number with ones complement
+.. list-table:: Adding a negative binary number with one's complement
     :widths: auto
     :align: center
 
@@ -364,12 +364,12 @@ Problems and Limitations
     would be ``0000``.
 
 
-.. list-table:: Adding a negative binary number with ones complement
+.. list-table:: Adding a negative binary number with one's complement
     :widths: auto
     :align: center
 
     * - **Carry**
-      -
+      - ``1``
       - ``1``
       -
       -
@@ -402,12 +402,12 @@ Problems and Limitations
       - :math:`1?`
 
 
-.. list-table:: Adding a negative binary number with ones complement
+.. list-table:: Adding a negative binary number with one's complement
     :widths: auto
     :align: center
 
     * - **Carry**
-      -
+      - ``1``
       - ``1``
       -
       -
@@ -440,12 +440,12 @@ Problems and Limitations
       - :math:`3?`
 
 
-.. list-table:: Adding a negative binary number with ones complement
+.. list-table:: Adding a negative binary number with one's complement
     :widths: auto
     :align: center
 
     * - **Carry**
-      -
+      - ``1``
       - ``1``
       - ``1``
       - ``1``
@@ -490,6 +490,218 @@ Problems and Limitations
 
 Two's Compliment
 ================
+
+* With one's complement, the issue with arithmetic and negative numbers could be resolved by adding one to the result
+* However, due to the associative property, one could be added *before* any arithemetic
+
+* In other words, to create negative numbers, one could flip all bits and add one
+* This idea is called *two's complement*
+
+.. list-table:: All four bit values representable with the two's complement
+    :widths: auto
+    :align: center
+
+    * - ``1000``
+      - :math:`-8`
+    * - ``1001``
+      - :math:`-7`
+    * - ``1010``
+      - :math:`-6`
+    * - ``1011``
+      - :math:`-5`
+    * - ``1100``
+      - :math:`-4`
+    * - ``1101``
+      - :math:`-3`
+    * - ``1110``
+      - :math:`-2`
+    * - ``1111``
+      - :math:`-1`
+    * - ``0000``
+      - :math:`0`
+    * - ``0001``
+      - :math:`1`
+    * - ``0010``
+      - :math:`2`
+    * - ``0011``
+      - :math:`3`
+    * - ``0100``
+      - :math:`4`
+    * - ``0101``
+      - :math:`5`
+    * - ``0110``
+      - :math:`6`
+    * - ``0111``
+      - :math:`7`
+
+
+* Notice that with this encoding of negative numbers, the peculiarity of having two zeros is eliminated
+* Further, like with one's complement, different bit length numbers don't have different patterns for negative numbers
+
+    * Remember, imagine that negative numbers have an infinite number of leading ``1``\s
+
+
+* And finally, arithmetic with negative numbers works perfectly
+
+.. list-table:: Adding a negative binary number with two's complement
+    :widths: auto
+    :align: center
+
+    * - **Carry**
+      - ``1``
+      - ``1``
+      - ``1``
+      - ``1``
+      -
+      -
+      -
+    * - **Number 1**
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+      -
+      - :math:`5`
+    * - **Number 2**
+      -
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``1``
+      -
+      - :math:`-5`
+    * - **Sum**
+      - (ignore overflow) ``1``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0``
+      -
+      - :math:`0`
+
+
+.. list-table:: Adding a negative binary number with two's complement
+    :widths: auto
+    :align: center
+
+    * - **Carry**
+      - ``1``
+      - ``1``
+      -
+      - ``1``
+      -
+      -
+      -
+    * - **Number 1**
+      -
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``1``
+      -
+      - :math:`5`
+    * - **Number 2**
+      -
+      - ``1``
+      - ``1``
+      - ``0``
+      - ``1``
+      -
+      - :math:`-3`
+    * - **Sum**
+      -  (ignore overflow) ``1``
+      - ``0``
+      - ``0``
+      - ``1``
+      - ``0``
+      -
+      - :math:`2`
+
+
+.. list-table:: Adding a negative binary number with two's complement
+    :widths: auto
+    :align: center
+
+    * - **Carry**
+      - ``1``
+      - ``1``
+      - ``1``
+      -
+      -
+      -
+      -
+    * - **Number 1**
+      -
+      - ``1``
+      - ``1``
+      - ``1``
+      - ``0``
+      -
+      - :math:`-2`
+    * - **Number 2**
+      -
+      - ``0``
+      - ``1``
+      - ``1``
+      - ``0``
+      -
+      - :math:`6`
+    * - **Sum**
+      -  (ignore overflow) ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+      - ``0``
+      -
+      - :math:`4`
+
+
+.. list-table:: Adding a negative binary number with two's complement
+    :widths: auto
+    :align: center
+
+    * - **Carry**
+      - ``1``
+      - ``1``
+      -
+      -
+      -
+      -
+      -
+    * - **Number 1**
+      -
+      - ``1``
+      - ``1``
+      - ``0``
+      - ``0``
+      -
+      - :math:`-4`
+    * - **Number 2**
+      -
+      - ``1``
+      - ``1``
+      - ``1``
+      - ``0``
+      -
+      - :math:`-2`
+    * - **Sum**
+      -  (ignore overflow) ``1``
+      - ``1``
+      - ``0``
+      - ``1``
+      - ``0``
+      -
+      - :math:`-6`
+
+
+* With two's complement, notice how there is an uneven number of positive and negative numbers
+
+    * With four bits, there are seven positive numbers and eight negative numbers
+
+
+* With a single encoding for zero, there will be a mismatch between the number of positive and negative numbers
+* However, with four bits, there are still a total of 16 unique values that can be represented with four bits
 
 
 
