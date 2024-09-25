@@ -705,6 +705,47 @@ Two's Compliment
 
 
 
+Negation and Subtraction
+========================
+
+* There are many ways one could physically implement two's complement negation
+* A simple strategy is to literally NOT every bit and add one via a full adder
+
+
+.. figure:: twos_complement_negation.png
+    :width: 500 px
+    :align: center
+
+    Negating an eight bit binary value to two's complement encoding. Here, the value is negated by applying NOT to each
+    bit and adding one.
+
+
+* In the above example, the input bits are flipped with a NOT gate and one is added with a full adder
+
+    * Here, the full adder is adding zero to the inverted input value with a carry in bit that is always ``1``
+
+
+* Subtraction can be done by providing a way to negate one of the input values to a full adder
+
+.. figure:: subtraction.png
+    :width: 500 px
+    :align: center
+
+    A full adder with the ability to perform subtraction. Here, :math:`sub` controls whether the adder is performing
+    subtraction as it provides a way to flip the bits of one of the inputs with the use of XOR while also controlling
+    the value on the adder's carry in (:math:`C_{i}`).
+
+
+* Here, a :math:`sub` input provides a way to toggle the negation of one of the inputs
+
+    * When :math:`sub` is high, XOR will flip the bits of the input and the carry in input to the adder will be high
+    * When :math:`sub` is low, XOR has no affect and the carry in value for the adder will be low
+
+
+* With this configuration, the full adder can be toggled to perform addition or subtraction
+
+
+
 For Next Time
 =============
 
