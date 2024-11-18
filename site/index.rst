@@ -74,9 +74,6 @@ Office Hours
     topics/layout/bus
     topics/arithmetic/adder
     topics/numbers/twos-complement
-    topics/logic/logic-engine
-    topics/logic/conditionals
-    topics/numbers/encoding-decoding
     topics/alu/alu
 
 
