@@ -217,19 +217,29 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>A_i	A_o	B_i	B_o	ALU_o	sub	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	O_7	O_6	O_5	O_4	O_3	O_2	O_1	O_0	C
+            <dataString>	A_i	A_o	B_i	B_o	ALU_o	sub	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	O_7	O_6	O_5	O_4	O_3	O_2	O_1	O_0	C
+	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	C
+	# Load 15 into A and Verify
+	1	0	0	0	0	0	0	0	0	0	1	1	1	1	0	0	0	0	1	1	1	1	C
+	0	1	0	0	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	1	1	1	C
+	# Load 4 into B and Verify
+	0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	C
+	0	0	0	1	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	1	0	0	C
+	# Output Sum of A and B (15 + 4)
+	0	0	0	0	1	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	1	0	0	1	1	C
+	# Output Difference of A and B (15 - 4), Save in A, and Verify (note, after clock pulse, ALU otuput updates to the new A - B, thus it would be A - B - B)
+	1	0	0	0	1	1	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	1	1	1	C
+	0	1	0	0	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	0	1	1	C
 
-# Load 15 into A and Verify
-1	0	0	0	0	0	0	0	0	0	1	1	1	1	0	0	0	0	1	1	1	1	C
-0	1	0	0	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	1	1	1	C
-# Load 4 into B and Verify
-0	0	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	C
-0	0	0	1	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	1	0	0	C
-# Output Sum of A and B (15 + 4)
-0	0	0	0	1	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	1	0	0	1	1	C
-# Output Difference of A and B (15 - 4), Save in A, and Verify (note, after clock pulse, ALU otuput updates to the new A - B, thus it would be A - B - B)
-1	0	0	0	1	1	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	1	1	1	C
-0	1	0	0	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	0	1	1	C</dataString>
+# Add and Subtract Random Numbers
+loop(a, 50)
+	let r1 = random(255);
+	let r2 = random(255);
+	1	0	0	0	0	0	bits(8, r1)							bits(8, r1)							C
+	0	0	1	0	0	0	bits(8, r2)							bits(8, r2)							C
+	0	0	0	0	1	0	Z	Z	Z	Z	Z	Z	Z	Z	bits(8, r1+r2)							C
+	0	0	0	0	1	1	Z	Z	Z	Z	Z	Z	Z	Z	bits(8, r1-r2)							C
+end loop</dataString>
           </testData>
         </entry>
       </elementAttributes>
