@@ -53,6 +53,16 @@ The Idea of the ALU
 * Even with the simple ALU, the system being designed will be Turing Complete
 
 
+.. note::
+
+    One may have noticed that the ALU is effectively a function that takes inputs to produce outputs. However, one may
+    also notice that this function may have *side effects* --- changing system status flags.
+
+    In your computer science courses there has been a strong emphasis on avoiding side effects and writing pure
+    functions, which this seems to violate. For better or worse, under the hood, the common modern designs/architectures
+    for computers are very stateful and full of side effects.
+
+
 
 The Eater Simple as Possible Architecture (ESAP)
 ================================================
