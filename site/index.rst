@@ -74,7 +74,7 @@ Office Hours
     topics/layout/bus
     topics/arithmetic/adder
     topics/numbers/twos-complement
-    topics/alu/alu
+    topics/alu/esap-alu
 
 
 
