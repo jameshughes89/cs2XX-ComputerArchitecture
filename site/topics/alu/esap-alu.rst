@@ -93,19 +93,12 @@ The Eater Simple as Possible Architecture (ESAP)
 
 
 * The design is simple to follow and understand, while still being Turing Complete
-* Further, it is straightforward to add to
-* It will also serve as the basis of going deeper in architecture complexity
+
+    * Further, it is straightforward to add to
+    * It will also serve as the basis of going deeper in architecture complexity
 
 
-
-
-
-Time to start putting the comp together
-Start with the ALU portion
-Build from here
-
-
-
+* The ALU will serve as the starting point for building a computer with this architecture
 
 
 
