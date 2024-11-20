@@ -70,20 +70,17 @@ The Idea of the ALU
 The Eater Simple as Possible Architecture (ESAP)
 ================================================
 
-built on SAP (ref)
-IMAGE
-Ben Eater example (ref)
-link to playlist
+* The base architecture for the system being built is the *Simple as Possible* (SAP) design [#]_
 
-Simple to follow and understand
-basis for going deeper
-simple to add to
-still turing complete
+    * Created by Malvino & Brown
 
 
-Time to start putting the comp together
-Start with the ALU portion
-Build from here
+* `There exist several versions of the SAP design <https://en.wikipedia.org/wiki/Simple-As-Possible_computer>`_
+* For this course, a modified version of the SAP architecture by Ben Eater is used
+
+    * This architecture will be referred to as Eater's SAP, or *ESAP*
+    * `Ben Eater has a YouTube playlist of him physically building this computer on breadboards <https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU>`_
+    * Note, however, that slight modifications to this design are made for the purposes of this course
 
 
 .. figure:: esap_architecture_overview.png
@@ -93,6 +90,22 @@ Build from here
 
     Overview of the ESAP Architecture. Arrows show how data is transferred between components of the computer system.
     With this design, the address and data bus are not entirely separate. This overview does not show the control bus.
+
+
+* The design is simple to follow and understand, while still being Turing Complete
+* Further, it is straightforward to add to
+* It will also serve as the basis of going deeper in architecture complexity
+
+
+
+
+
+Time to start putting the comp together
+Start with the ALU portion
+Build from here
+
+
+
 
 
 
@@ -105,3 +118,8 @@ For Next Time
 =============
 
 * Something?
+
+
+----------------------
+
+.. [#] Albert P. Malvino and Jerald A. Brown. *Digital computer electronics.* Glencoe/McGraw-Hill, 1992.
