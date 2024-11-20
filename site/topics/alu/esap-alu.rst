@@ -70,6 +70,30 @@ The Idea of the ALU
 The Eater Simple as Possible Architecture (ESAP)
 ================================================
 
+built on SAP (ref)
+IMAGE
+Ben Eater example (ref)
+link to playlist
+
+Simple to follow and understand
+basis for going deeper
+simple to add to
+still turing complete
+
+
+Time to start putting the comp together
+Start with the ALU portion
+Build from here
+
+
+.. figure:: esap_architecture_overview.png
+    :width: 500 px
+    :align: center
+    :target: https://en.wikipedia.org/wiki/Simple-As-Possible_computer
+
+    Overview of the ESAP Architecture. Arrows show how data is transferred between components of the computer system.
+    With this design, the address and data bus are not entirely separate. This overview does not show the control bus.
+
 
 
 Design of the ESAP ALU
