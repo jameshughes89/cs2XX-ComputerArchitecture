@@ -62,6 +62,9 @@ The Idea of the ALU
     functions, which this seems to violate. For better or worse, under the hood, the common modern designs/architectures
     for computers are very stateful and full of side effects.
 
+    Fortunately, as one goes to higher levels of abstraction, like software, systems are designed such that side effects
+    can be eliminated, despite the fact that the underlying hardware is stateful.
+
 
 
 The Eater Simple as Possible Architecture (ESAP)
