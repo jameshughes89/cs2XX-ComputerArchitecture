@@ -101,14 +101,47 @@ Design of the ESAP ALU
     * :math:`ALU_{o}`
 
 
-* compare to the arch image
-    * the physical layout is irrelevant
-    * Difference here is B out exists
-    * Data bus is there, control bus is not showin in arch, but on the right of the ALU
+.. figure:: esap_alu_vs_architecture_overview.png
+    :width: 666 px
+    :align: center
+
+    Comparison of the ALU and the ESAP architecture overview. This ALU includes several parts of the whole ESAP design
+    --- two registers, ALU, clock, and data bus. The ALU does include the start of the control bus for the whole system
+    (the vertical signal lines on the right hand side of the ALU), which is not shown in the architecture overview.
 
 
+* It is possible to see how the ALU fits into the whole ESAP architecture design
+* With the ALU, several components of the whole system are present
+
+    * Register A
+    * Register B
+    * Adder
+    * Data bus
+    * Clock
 
 
+* Further, the ALU does include the start of the control bus for the system
+
+    * This is not shown in the ESAP architecture overview
+    * A control bus will be required for the system to function
+
+
+* One may have noticed the layout of register B and the adder are swapped
+
+    * This difference is effectively irrelevant
+    * As long as the inputs/outputs are configured correctly, this will have no functional impact on the system
+
+
+* However, there is one slight difference that will have a functional impact on the system --- register B out
+
+    * The designed ALU's register B can receive input and output to the data bus
+    * But the architecture overview shows that register B can only receive input
+
+
+* Adding the ability to output from register B does provide some additional, yet minimal, flexibility to the design
+* The original design does not allow for outputting from register B due to physical constraints and the minimal benefit
+
+    * Remember, the original design was physically built on breadboards
 
 
 
