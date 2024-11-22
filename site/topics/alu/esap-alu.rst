@@ -75,6 +75,21 @@ The Eater Simple as Possible Architecture (ESAP)
 Design of the ESAP ALU
 ======================
 
+* Show image
+
+* Only add and subtract
+* Will make use of 2 registers that are always outputting to alu
+* control by controlling ALU output
+
+* compare to the arch image
+    * the physical layout is irrelevant
+    * Difference here is B out exists
+    * Data bus is there, control bus is not showin in arch, but on the right of the ALU
+
+
+
+
+
 
 
 For Next Time
