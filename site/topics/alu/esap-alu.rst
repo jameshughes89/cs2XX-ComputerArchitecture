@@ -75,11 +75,34 @@ The Eater Simple as Possible Architecture (ESAP)
 Design of the ESAP ALU
 ======================
 
-* Show image
+.. figure:: esap_alu.png
+    :width: 500 px
+    :align: center
 
-* Only add and subtract
-* Will make use of 2 registers that are always outputting to alu
-* control by controlling ALU output
+    Configuration of the ESAP ALU connected to a data bus and control bus within Digital. This ALU always calculates the
+    sum (or difference) of the integer values stored in registers A and B.
+
+
+* The ESAP ALU is only capable of performing addition and subtraction
+
+    * A control line (:math:`sub`) controls if the ALU performs addition or subtraction
+
+        * Addition when :math:`sub = 0`
+        * Subtraction when :math:`sub = 1`
+
+
+* It is always calculating the sum/difference of the two integer values stored in registers A and B
+
+    * Loading from the data bus into the registers is controlled by :marh:`A_{i}` and :math:`B_{i}`
+    * There is control logic for the registers to output to the data bus --- :math:`A_{o}` and :math:`B_{o}`
+    * However, there is no control for the registers' output to the adder, meaning, the sum is always
+    * Thus, the adder is always the sum of whatever value is stored in A and B
+
+
+* Although the ALU is always calculating the sum/difference, its output is controlled with a control signal
+
+    * :math:`ALU_{o}`
+
 
 * compare to the arch image
     * the physical layout is irrelevant
