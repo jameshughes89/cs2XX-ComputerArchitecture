@@ -115,7 +115,7 @@ Design of the ESAP ALU
 
     * Register A
     * Register B
-    * Adder
+    * ALU
     * Data bus
     * Clock
 
@@ -126,15 +126,16 @@ Design of the ESAP ALU
     * A control bus will be required for the system to function
 
 
-* One may have noticed the layout of register B and the adder are swapped
+* One may have noticed the layout of register B and the ALU are swapped
 
+    * ALU is below both registers in the Digital design, but between the registers in the overview
     * This difference is effectively irrelevant
     * As long as the inputs/outputs are configured correctly, this will have no functional impact on the system
 
 
 * However, there is one slight difference that will have a functional impact on the system --- register B out
 
-    * The designed ALU's register B can receive input and output to the data bus
+    * The designed ALU's register B can receive input from and output to the data bus
     * But the architecture overview shows that register B can only receive input
 
 
