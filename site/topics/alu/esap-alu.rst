@@ -87,16 +87,13 @@ Design of the ESAP ALU
 
     * A control line (:math:`sub`) controls if the ALU performs addition or subtraction
 
-        * Addition when :math:`sub = 0`
-        * Subtraction when :math:`sub = 1`
 
+* The ALU is always calculating the sum/difference of the two integer values stored in registers A and B
 
-* It is always calculating the sum/difference of the two integer values stored in registers A and B
-
-    * Loading from the data bus into the registers is controlled by :marh:`A_{i}` and :math:`B_{i}`
-    * There is control logic for the registers to output to the data bus --- :math:`A_{o}` and :math:`B_{o}`
-    * However, there is no control for the registers' output to the adder, meaning, the sum is always
-    * Thus, the adder is always the sum of whatever value is stored in A and B
+    * Loading from the data bus into the registers is controlled by :math:`A_{i}` and :math:`B_{i}`
+    * There is control logic for the registers to output to the data bus (:math:`A_{o}` and :math:`B_{o}`)
+    * There is no control for the registers' output to the adder
+    * Thus, the adder always has the sum/difference of whatever data is stored in A and B
 
 
 * Although the ALU is always calculating the sum/difference, its output is controlled with a control signal
