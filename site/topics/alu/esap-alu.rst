@@ -148,6 +148,16 @@ show table
 
 
 
+
+.. figure:: esap_alu.gif
+    :width: 500 px
+    :align: center
+
+    Animation of (a) loading 15 into register A, (b) loading 4 into register B, (c) outputting and saving the difference
+    to register A, and (d) outputting the contents of register A to the data bus.
+
+
+
 For Next Time
 =============
 
