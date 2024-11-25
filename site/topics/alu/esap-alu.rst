@@ -80,6 +80,72 @@ Design of the ESAP ALU
 Executing Arithmetic on the ESAP ALU
 ====================================
 
+same idea as when loading data into ram
+set control logic lines to input to registers
+
+add 15 and 4
+
+think about what that means
+load 15 into A
+load 4 into B
+output ALU
+
+HEX HERE
+
+show table
+
+.. figure:: esap_alu_load_data_into_registers.png
+    :width: 666 px
+    :align: center
+
+    The left image shows the signals to load the value 15 (``0x0F``) into register A, and the right shows the signals to
+    load the value 4 (``0x04``) into register B. A clock pulse would be required in both scenarios to have the data
+    latch into the registers. These images correspond to the first two rows in the above table.
+
+
+.. figure:: esap_alu_output_sum.png
+    :width: 500 px
+    :align: center
+
+    Signals to output the sum of registers A and B to the data bus. This image corresponds to the third and final row in
+    the above table.
+
+
+
+* 15 - 4 load back into A
+
+
+
+.. figure:: esap_alu_output_difference_to_a.png
+    :width: 500 px
+    :align: center
+
+    Signals to output the difference of registers A and B to the data bus and back into register A. This image
+    corresponds to the third row in the above table.
+
+
+.. note::
+
+    WATCH OUT FOR THE OUTPUT AFTER CLOCK PULSE
+
+    .. figure:: esap_alu_output_difference_to_a_post_clock.png
+        :width: 500 px
+        :align: center
+
+        State of the system immediately following the clock pulse to output the difference of A and B back into A. Since
+        the difference was just put into register A, the ALU is always calculating the sum/difference of the contents of
+        registers A and B, and it's output control signal is still high, it will effectively output the result of
+        applying the operation twice. However, the true result is safely stored in register A.
+
+
+.. figure:: esap_alu_output_difference_from_a.png
+    :width: 500 px
+    :align: center
+
+    Signals to output the difference that was stored in register A to the data bus. This image corresponds to the forth
+    row in the above table.
+
+
 
 
 For Next Time
