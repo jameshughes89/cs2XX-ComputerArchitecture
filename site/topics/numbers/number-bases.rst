@@ -474,7 +474,7 @@ Hexadecimal (Base 16)
           - ...
 
 
-* Like binary, the hexadecimal digits don't really names, but they can be named to get a sense of their meaning
+* Like binary, the hexadecimal digits don't really have names, but they can be named to get a sense of their meaning
 
     .. list-table:: Hexadecimal Digit Position Names
         :widths: 50 50 50 50
