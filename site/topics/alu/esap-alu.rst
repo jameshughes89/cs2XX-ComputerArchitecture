@@ -80,17 +80,40 @@ Design of the ESAP ALU
 Executing Arithmetic on the ESAP ALU
 ====================================
 
-same idea as when loading data into ram
-set control logic lines to input to registers
+* Running a *program* on the ALU will be done the same way it was swapping data between RAM and registers
 
-add 15 and 4
+    * Careful control over which parts of the system are inputting/outputting
 
-think about what that means
-load 15 into A
-load 4 into B
-output ALU
 
-HEX HERE
+* As an example, consider the problem of adding the numbers 15 and 4 together
+* Based on the configuration of the ALU, think about the individual steps that would need to be performed
+
+
+    #. Load the number 15 into register A
+    #. Load the number 4 into register B
+    #. Output the sum from the ALU to the output bus
+
+
+.. note::
+
+    For brevity, hexadecimal will be used to encode binary numbers where appropriate. Fortunately, it is simple to
+    convert numbers between bases when they are powers of each other, as previously discussed
+    :doc:`here </topics/numbers/number-bases>`.
+
+    Consider that :math:`2^{4} = 16`. It is possible to take groupings of 4 bits and easily convert it a single
+    hexadecimal digit. Further, it is possible to take an 8 bit binary number and convert it to two hexadecimal
+    digits.
+
+        #. Given some 8 bit binary number --- ``0b01101011``
+        #. Split the number into two groups of 4 bits --- ``0b0110`` and ``0b1011``
+        #. Convert the 4 bit numbers into their hex digits --- ``0x6`` and ``0xB``
+        #. Put the digits together to form the two digit hex number --- ``0x6B``
+
+
+    Note that ``0b`` and ``0x`` prefixed the binary and hexadecimal numbers to eliminate ambiguity. These are common
+    prefixes used in computing.
+
+
 
 show table
 
