@@ -80,9 +80,9 @@ Design of the ESAP ALU
 Executing Arithmetic on the ESAP ALU
 ====================================
 
-* Running a *program* on the ALU will be done the same way it was swapping data between RAM and registers
+* With careful control over which parts of the system are inputting and outputting, a program can be run on the ALU
 
-    * Careful control over which parts of the system are inputting/outputting
+    * In the same way data was swapped between RAM and registers in an earlier topic
 
 
 * As an example, consider the problem of adding the numbers 15 and 4 together
@@ -91,7 +91,7 @@ Executing Arithmetic on the ESAP ALU
 
     #. Load the number 15 into register A
     #. Load the number 4 into register B
-    #. Output the sum from the ALU to the output bus
+    #. Output the sum from the ALU to the data bus
 
 
 .. note::
@@ -110,11 +110,13 @@ Executing Arithmetic on the ESAP ALU
         #. Put the digits together to form the two digit hex number --- ``0x6B``
 
 
+    This patten would also work with more groupings of four bits.
+
     Note that ``0b`` and ``0x`` prefixed the binary and hexadecimal numbers to eliminate ambiguity. These are common
     prefixes used in computing.
 
 
-* Below is a table showing how to add the numbers 15 and 4 together with the ESAP ALU
+* Below is a table showing how to add the numbers 15 and 4 together with the ALU
 
     * Like with the bus, this is not so much a truth table, but a program
     * ``C`` means clock pulse
@@ -208,6 +210,9 @@ Executing Arithmetic on the ESAP ALU
 * Below is a table representing the above program
 * Notice how, in this example, several steps are able to be performed in a single clock pulse
 
+    * Namely, setting subtraction, outputting from the ALU, and inputting into A
+
+
 .. list-table:: Program to subtract 15 and 4 and store the result in A, then output the final result
     :widths: auto
     :align: center
@@ -272,6 +277,8 @@ Executing Arithmetic on the ESAP ALU
     * ``0x0F`` - ``0x04`` = ``0x0B``
 
 
+* Below is an animation of the program being executed
+
 .. figure:: esap_alu.gif
     :width: 500 px
     :align: center
@@ -284,7 +291,7 @@ Executing Arithmetic on the ESAP ALU
 .. note::
 
     Be mindful of the current state of the system. Consider what is happening when outputting the difference from the
-    ALU to register A after the clock pulses.
+    ALU to register A before and after the clock pulses.
 
     .. figure:: esap_alu_output_difference_to_a.png
         :width: 400 px
@@ -293,7 +300,8 @@ Executing Arithmetic on the ESAP ALU
         State of the system before the clock pulse to output the difference of A and B back into A.
 
 
-    In the above image, it is clear that the output of the system is 11 (``0b00001011``).
+    In the above image showing the state of the system before the clock pulse, it is clear that the output of the system
+    is 11 (``0b00001011``).
 
     .. figure:: esap_alu_output_difference_to_a_post_clock.png
         :width: 400 px
@@ -301,14 +309,14 @@ Executing Arithmetic on the ESAP ALU
 
         State of the system immediately following the clock pulse to output the difference of A and B back into A.
 
-    However, after the clock pulse, suddenly the output changes to 7 (``0b00000111``), which is clearly not the
-    difference between 15 and 4. In fact, it appears to have applied the operation twice (15 - 4 - 4 = 7).
+    However, after the clock pulse, the output changes to 7 (``0b00000111``), which is not the correct difference. In
+    fact, it appears to have applied the operation twice (15 - 4 - 4 = 7).
 
-    However, based on the state of the system, everything is correct. Remember, when the clock pulsed, the difference
-    was stored into register A, the ALU is always calculating the sub/difference of the contents of the registers, and
-    the ALU is still outputting to the data bus as per the control signal. In other words, the value on the data bus
-    will in fact be the result of applying the operation twice. However, the true result of the subtraction is savely
-    stored in register A.
+    Nevertheless, based on the state of the system, everything is correct. Remember, when the clock pulsed, the
+    difference was stored into register A, the ALU is always calculating the sub/difference of the contents of the
+    registers, and the ALU is still outputting to the data bus as per the control signal. In other words, the value on
+    the data bus will in fact be the result of applying the operation twice. However, the true result of the subtraction
+    is safely stored in register A.
 
 
 
