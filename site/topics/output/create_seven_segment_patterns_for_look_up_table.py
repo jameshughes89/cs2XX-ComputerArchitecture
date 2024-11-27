@@ -49,7 +49,7 @@ Finally, bitwise ORing them together effectively puts each digit's part together
     123 00000110 01011011 01001111
 """
 unsigned_three_digit_patterns = []
-for i in range(0, 255):
+for i in range(0, 256):
     hundreds_pattern = DIGITS[(i//100) % 10] << 16
     tens_pattern = DIGITS[(i//10) % 10] << 8
     ones_pattern = DIGITS[(i//1) % 10] << 0
