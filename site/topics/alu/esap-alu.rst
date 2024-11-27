@@ -105,6 +105,75 @@ The Eater Simple as Possible Architecture (ESAP)
 Design of the ESAP ALU
 ======================
 
+.. figure:: esap_alu.png
+    :width: 500 px
+    :align: center
+
+    Configuration of the ESAP ALU connected to a data bus and control bus within Digital. This ALU always calculates the
+    sum (or difference) of the integer values stored in registers A and B.
+
+
+* The ESAP ALU is only capable of performing addition and subtraction
+
+    * A control line (:math:`sub`) controls if the ALU performs addition or subtraction
+
+
+* The ALU is always calculating the sum/difference of the two integer values stored in registers A and B
+
+    * Loading from the data bus into the registers is controlled by :math:`A_{i}` and :math:`B_{i}`
+    * There is control logic for the registers to output to the data bus (:math:`A_{o}` and :math:`B_{o}`)
+    * There is no control for the registers' output to the adder
+    * Thus, the adder always has the sum/difference of whatever data is stored in A and B
+
+
+* Although the ALU is always calculating the sum/difference, its output is controlled with a control signal
+
+    * :math:`ALU_{o}`
+
+
+.. figure:: esap_alu_vs_architecture_overview.png
+    :width: 666 px
+    :align: center
+
+    Comparison of the ALU and the ESAP architecture overview. This ALU includes several parts of the whole ESAP design
+    --- two registers, ALU, clock, and data bus. The ALU does include the start of the control bus for the whole system
+    (the vertical signal lines on the right hand side of the ALU), which is not shown in the architecture overview.
+
+
+* It is possible to see how the ALU fits into the whole ESAP architecture design
+* With the ALU, several components of the whole system are present
+
+    * Register A
+    * Register B
+    * ALU
+    * Data bus
+    * Clock
+
+
+* Further, the ALU does include the start of the control bus for the system
+
+    * This is not shown in the ESAP architecture overview
+    * A control bus will be required for the system to function
+
+
+* One may have noticed the layout of register B and the ALU are swapped
+
+    * ALU is below both registers in the Digital design, but between the registers in the overview
+    * This difference is effectively irrelevant
+    * As long as the inputs/outputs are configured correctly, this will have no functional impact on the system
+
+
+* However, there is one slight difference that will have a functional impact on the system --- register B out
+
+    * The designed ALU's register B can receive input from and output to the data bus
+    * But the architecture overview shows that register B can only receive input
+
+
+* Adding the ability to output from register B does provide some additional, yet minimal, flexibility to the design
+* The original design does not allow for outputting from register B due to physical constraints and the minimal benefit
+
+    * Remember, the original design was physically built on breadboards
+
 
 
 For Next Time
