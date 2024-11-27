@@ -40,7 +40,7 @@ For example, consider the number 123, each digit's pattern is as follows
     3   01001111
 
 Bit shift the hundreds to the left 16 bits, tens to the left 8 bits, and shift the ones 0 (do nothing). Spaces between
-groupings of 8 are included below for visual clarity, but these are to be considered a single number
+groupings of 8 are included below for visual clarity, but each row is to be considered a single number
     1   00000110 00000000 00000000
     2   00000000 01011011 00000000
     3   00000000 00000000 01001111
@@ -55,6 +55,7 @@ for i in range(0, 255):
     ones_pattern = DIGITS[(i//1) % 10] << 0
     three_digit_pattern = hundreds_pattern | tens_pattern | ones_pattern
     unsigned_three_digit_patterns.append(three_digit_pattern)
+
 
 """
 Create the signed three digit patterns for the numbers -128 -- 127. Following the pattern of 2s complement, the numbers
@@ -77,6 +78,7 @@ for i in range(-128, 0):
     ones_pattern = DIGITS[(abs(i)//1) % 10] << 0
     three_digit_pattern = negation_pattern | hundreds_pattern | tens_pattern | ones_pattern
     signed_three_digit_patterns.append(three_digit_pattern)
+
 
 """
 Write the lists to a hex file such that each row corresponds to a bit pattern, starting at 0, and the hex value in that
