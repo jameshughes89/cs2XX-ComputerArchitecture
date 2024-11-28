@@ -320,7 +320,7 @@
           <string>Testdata</string>
           <testData>
             <dataString>	PC_e	PC_i	PC_o	D_3	D_2	D_1	D_0	O_3	O_2	O_1	O_0	C
-	0	0	0	X	X	X	X	X	X	X	X	C
+	0	0	0	0	0	0	0	0	0	0	0	C
 # Pulse with No Enable Causes No Change 
 	0	0	1	Z	Z	Z	Z	0	0	0	0	C
 # Pulse with Enable and No Output Still counts
