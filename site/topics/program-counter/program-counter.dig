@@ -163,7 +163,12 @@
     </visualElement>
     <visualElement>
       <elementName>Clock</elementName>
-      <elementAttributes/>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>C</string>
+        </entry>
+      </elementAttributes>
       <pos x="1520" y="100"/>
     </visualElement>
     <visualElement>
@@ -311,8 +316,29 @@
           <string>Label</string>
           <string>PC_test</string>
         </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>	PC_e	PC_i	PC_o	D_3	D_2	D_1	D_0	O_3	O_2	O_1	O_0	C
+	0	0	0	X	X	X	X	X	X	X	X	C
+# Pulse with No Enable Causes No Change 
+	0	0	1	Z	Z	Z	Z	0	0	0	0	C
+# Pulse with Enable and No Output Still counts
+	1	0	0	Z	Z	Z	Z	Z	Z	Z	Z	C
+	1	0	0	Z	Z	Z	Z	Z	Z	Z	Z	C
+	0	0	1	Z	Z	Z	Z	0	0	1	0	C
+# Load 0 into program counter and confirm
+	X	1	0	0	0	0	0	0	0	0	0	C
+	0	0	1	Z	Z	Z	Z	0	0	0	0	C
+# Pulse clock 15 times to count to 1 -&gt; 2 -&gt; ... -&gt; 15 -&gt; 0
+loop(i, 15)
+	1	0	1	Z	Z	Z	Z	bits(4, i+1)			C
+end loop
+</dataString>
+          </testData>
+        </entry>
       </elementAttributes>
-      <pos x="1440" y="0"/>
+      <pos x="1420" y="0"/>
     </visualElement>
     <visualElement>
       <elementName>Rectangle</elementName>
