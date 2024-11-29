@@ -56,21 +56,21 @@ Mirocodes for the 16 possible instructions. Each microcode could be up to 8 inst
 5, thus, there is some "wasted" space in the lookup table. Not all 16 operations are implemented here. 
 """
 INSTRUCTIONS = [
-  [PCO|RMI,   RMO|IRI|PCE, 0,       0,        0,            0, 0, 0],    # 0000 --- NOOP --- No Operation
-  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|ARI,  0,            0, 0, 0],    # 0001 --- LDAR --- Load A From RAM
-  [PCO|RMI,   RMO|IRI|PCE, IRO|ARI, 0,        0,            0, 0, 0],    # 0010 --- LDAD --- Load A Direct
-  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|BRI,  0,            0, 0, 0],    # 0011 --- LDBR --- Load B From RAM
-  [PCO|RMI,   RMO|IRI|PCE, IRO|BRI, 0,        0,            0, 0, 0],    # 0100 --- LDBD --- Load B Direct
-  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, ARO|RMI,  0,            0, 0, 0],    # 0101 --- SAVA --- Save A to RAM
-  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, BRO|RMI,  0,            0, 0, 0],    # 0110 --- SAVB --- Save B to RAM
-  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|BRI,  ALU|ARI,      0, 0, 0],    # 0111 --- ADDB --- Add to A
-  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|BRI,  ALU|SUB|ARI,  0, 0, 0],    # 1000 --- SUBB --- Subtract from A
-  [PCO|RMI,   RMO|IRI|PCE, 0,       0,        0,            0, 0, 0],    # 1001 --- JUMP --- Jump
-  [PCO|RMI,   RMO|IRI|PCE, 0,       0,        0,            0, 0, 0],    # 1010 --- NOOP --- No Operation
-  [PCO|RMI,   RMO|IRI|PCE, 0,       0,        0,            0, 0, 0],    # 1011 --- NOOP --- No Operation
-  [PCO|RMI,   RMO|IRI|PCE, 0,       0,        0,            0, 0, 0],    # 1100 --- NOOP --- No Operation
-  [PCO|RMI,   RMO|IRI|PCE, 0,       0,        0,            0, 0, 0],    # 1101 --- OUTU --- Output Unsigned Integer
-  [PCO|RMI,   RMO|IRI|PCE, 0,       0,        0,            0, 0, 0],    # 1110 --- OUTS --- Output Signed Integer
-  [PCO|RMI,   RMO|IRI|PCE, HLT,     0,        0,            0, 0, 0],    # 1111 --- HALT --- Halt
+  [PCO|RMI,   RMO|IRI|PCE, 0,       0           ],  # 0b0000 --- 0x0 --- NOOP --- No Operation
+  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|ARI     ],  # 0b0001 --- 0x1 --- LDAR --- Load A From RAM
+  [PCO|RMI,   RMO|IRI|PCE, IRO|ARI, 0           ],  # 0b0010 --- 0x2 --- LDAD --- Load A Direct
+  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|BRI     ],  # 0b0011 --- 0x3 --- LDBR --- Load B From RAM
+  [PCO|RMI,   RMO|IRI|PCE, IRO|BRI, 0           ],  # 0b0100 --- 0x4 --- LDBD --- Load B Direct
+  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, ARO|RMI     ],  # 0b0101 --- 0x5 --- SAVA --- Save A to RAM
+  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, BRO|RMI     ],  # 0b0110 --- 0x6 --- SAVB --- Save B to RAM
+  [PCO|RMI,   RMO|IRI|PCE, ALU|ARI, 0           ],  # 0b0111 --- 0x7 --- ADDB --- Add to A
+  [PCO|RMI,   RMO|IRI|PCE, ALU|SUB|ARI,         ],  # 0b1000 --- 0x8 --- SUBB --- Subtract from A
+  [PCO|RMI,   RMO|IRI|PCE, IRO|PCI, 0           ],  # 0b1001 --- 0x9 --- JUMP --- Jump
+  [PCO|RMI,   RMO|IRI|PCE, 0,       0           ],  # 0b1010 --- 0xA --- NOOP --- No Operation
+  [PCO|RMI,   RMO|IRI|PCE, 0,       0           ],  # 0b1011 --- 0xB --- NOOP --- No Operation
+  [PCO|RMI,   RMO|IRI|PCE, 0,       0           ],  # 0b1100 --- 0xC --- NOOP --- No Operation
+  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|ORI     ],  # 0b1101 --- 0xD --- OUTU --- Output Unsigned Integer
+  [PCO|RMI,   RMO|IRI|PCE, IRO|ADR, RMO|ORI|SGN ],  # 0b1110 --- 0xE --- OUTS --- Output Signed Integer
+  [PCO|RMI,   RMO|IRI|PCE, HLT,     0           ],  # 0b1111 --- 0xF --- HALT --- Halt
 ]
 
