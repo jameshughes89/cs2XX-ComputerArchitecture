@@ -463,7 +463,7 @@
           <string>C</string>
         </entry>
       </elementAttributes>
-      <pos x="180" y="60"/>
+      <pos x="180" y="100"/>
     </visualElement>
     <visualElement>
       <elementName>Register</elementName>
@@ -802,6 +802,10 @@
       <p2 x="820" y="160"/>
     </wire>
     <wire>
+      <p1 x="180" y="100"/>
+      <p2 x="380" y="100"/>
+    </wire>
+    <wire>
       <p1 x="640" y="100"/>
       <p2 x="1100" y="100"/>
     </wire>
@@ -892,10 +896,6 @@
     <wire>
       <p1 x="420" y="440"/>
       <p2 x="920" y="440"/>
-    </wire>
-    <wire>
-      <p1 x="180" y="60"/>
-      <p2 x="380" y="60"/>
     </wire>
     <wire>
       <p1 x="740" y="380"/>
@@ -1182,7 +1182,7 @@
       <p2 x="380" y="20"/>
     </wire>
     <wire>
-      <p1 x="380" y="60"/>
+      <p1 x="380" y="100"/>
       <p2 x="380" y="160"/>
     </wire>
     <wire>
