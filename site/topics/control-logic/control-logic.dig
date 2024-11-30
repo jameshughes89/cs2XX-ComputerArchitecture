@@ -93,7 +93,12 @@
     </visualElement>
     <visualElement>
       <elementName>Clock</elementName>
-      <elementAttributes/>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>C</string>
+        </entry>
+      </elementAttributes>
       <pos x="-60" y="100"/>
     </visualElement>
     <visualElement>
@@ -919,6 +924,29 @@
         </entry>
       </elementAttributes>
       <pos x="760" y="580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Instruction Register_Test</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>instruction_i	instruction_o	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	O_7	O_6	O_5	O_4	O_3	O_2	O_1	O_0	C
+# Instruction Register Only Outputs 4 Lowest Significant Bits
+1		0		0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	C
+0		0		0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	C
+0		1		Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	1	0	1	C
+1		0		1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	C
+0		0		0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	C
+0		1		Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	0	1	0	C</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="-160" y="-120"/>
     </visualElement>
   </visualElements>
   <wires>
