@@ -2,20 +2,21 @@
 Address Register and RAM
 ************************
 
-
-
-Address Register
-================
+* RAM stores data and instructions for the computer
+* Although RAM was discussed in earlier topics, it is time to incorporate it into the ESAP sytem design
 
 
 
 RAM Module
 ==========
 
+Address Register
+----------------
 
 
-Adding RAM to the System
-========================
+
+Including RAM in the System
+===========================
 
 
 
