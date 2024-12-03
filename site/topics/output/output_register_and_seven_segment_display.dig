@@ -89,7 +89,7 @@
           <string>signed</string>
         </entry>
       </elementAttributes>
-      <pos x="-1340" y="260"/>
+      <pos x="-1320" y="260"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -261,50 +261,22 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>output_test</string>
+          <string>output register_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>signed	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	-	100s	10s	1s
-# Test unsigned 00 -- 10 
-0	0	0	0	0	0	0	0	0	0	0x3F	0x3F	0x3F
-0	0	0	0	0	0	0	0	1	0	0x3F	0x3F	0x06
-0	0	0	0	0	0	0	1	0	0	0x3F	0x3F	0x5B
-0	0	0	0	0	0	0	1	1	0	0x3F	0x3F	0x4F
-0	0	0	0	0	0	1	0	0	0	0x3F	0x3F	0x66
-0	0	0	0	0	0	1	0	1	0	0x3F	0x3F	0x6D
-0	0	0	0	0	0	1	1	0	0	0x3F	0x3F	0x7D
-0	0	0	0	0	0	1	1	1	0	0x3F	0x3F	0x07
-0	0	0	0	0	1	0	0	0	0	0x3F	0x3F	0x7F
-0	0	0	0	0	1	0	0	1	0	0x3F	0x3F	0x6F
-0	0	0	0	0	1	0	1	0	0	0x3F	0x06	0x3F
-# Test unsigned 11 -- 99, by 11s (11 -&gt; 22 -&gt; 33...)
-0	0	0	0	0	1	0	1	1	0	0x3F	0x06	0x06
-0	0	0	0	1	0	1	1	0	0	0x3F	0x5B	0x5B
-0	0	0	1	0	0	0	0	1	0	0x3F	0x4F	0x4F
-0	0	0	1	0	1	1	0	0	0	0x3F	0x66	0x66
-0	0	0	1	1	0	1	1	1	0	0x3F	0x6D	0x6D
-0	0	1	0	0	0	0	1	0	0	0x3F	0x7D	0x7D
-0	0	1	0	0	1	1	0	1	0	0x3F	0x07	0x07
-0	0	1	0	1	1	0	0	0	0	0x3F	0x7F	0x7F
-0	0	1	1	0	0	0	1	1	0	0x3F	0x6F	0x6F
-# Test unsigned 111, 222, and 255
-0	0	1	1	0	1	1	1	1	0	0x06	0x06	0x06
-0	1	1	0	1	1	1	1	0	0	0x5B	0x5B	0x5B
-0	1	1	1	1	1	1	1	1	0	0x5B	0x6D	0x6D
-# Test signed 0, 1, 127 and -128, -127, and -2, -1
-1	0	0	0	0	0	0	0	0	0	0x3F	0x3F	0x3F
-1	0	0	0	0	0	0	0	1	0	0x3F	0x3F	0x06
-1	0	1	1	1	1	1	1	1	0	0x06	0x5B	0x07
-1	1	0	0	0	0	0	0	0	1	0x06	0x5B	0x7F
-1	1	0	0	0	0	0	0	1	1	0x06	0x5B	0x07
-1	1	1	1	1	1	1	1	0	1	0x3F	0x3F	0x5B
-1	1	1	1	1	1	1	1	1	1	0x3F	0x3F	0x06</dataString>
+            <dataString>output_e	signed	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	-	100s	10s	1s	C
+# Load 219 (unsigned)/-37 (signed)
+1		0	1	1	0	1	1	0	1	1	0	0x35B	0x06	0x6F	C
+# No outputput enable makes no change 
+0		0	X	X	X	X	X	X	X	X	0	0x35B	0x06	0x6F	C
+0		1	X	X	X	X	X	X	X	X	1	0x3F	0x4F	0x07	C
+</dataString>
           </testData>
         </entry>
       </elementAttributes>
-      <pos x="-1880" y="-100"/>
+      <pos x="-1420" y="-200"/>
     </visualElement>
     <visualElement>
       <elementName>Probe</elementName>
@@ -745,10 +717,28 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>ouputt_e</string>
+          <string>output_e</string>
         </entry>
       </elementAttributes>
-      <pos x="-1340" y="20"/>
+      <pos x="-1320" y="20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Output Register and Display</string>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>40</int>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>61</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-1480" y="-240"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -785,7 +775,7 @@
       <p2 x="-1200" y="-100"/>
     </wire>
     <wire>
-      <p1 x="-1340" y="260"/>
+      <p1 x="-1320" y="260"/>
       <p2 x="-900" y="260"/>
     </wire>
     <wire>
@@ -933,7 +923,7 @@
       <p2 x="-320" y="500"/>
     </wire>
     <wire>
-      <p1 x="-1340" y="20"/>
+      <p1 x="-1320" y="20"/>
       <p2 x="-1040" y="20"/>
     </wire>
     <wire>
