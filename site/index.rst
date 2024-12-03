@@ -75,8 +75,8 @@ Office Hours
     topics/arithmetic/adder
     topics/numbers/twos-complement
     topics/alu/esap-alu
-    topics/output/output
-
+    topics/output/seven-segment-displays
+    topics/output/output-register
 
 
 
