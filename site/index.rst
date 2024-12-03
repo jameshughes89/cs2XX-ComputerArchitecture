@@ -94,6 +94,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
+    assignments/hello-world/hello-world
 
 
 
