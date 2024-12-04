@@ -218,7 +218,7 @@ NOT Gate
 
 
 * Notice how the output is on the source end of the transistor
-* This is because the output should be ``1`` when the gate is "off",
+* This is because the output should be ``1`` when the gate is "off"
 * But as soon as the gate is "on", the output should become ``0``
 
 * If it is unclear how this works, consider that
