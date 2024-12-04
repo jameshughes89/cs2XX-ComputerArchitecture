@@ -190,40 +190,6 @@
       <pos x="260" y="-480"/>
     </visualElement>
     <visualElement>
-      <elementName>Testcase</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>ALU with RAM_test</string>
-        </entry>
-        <entry>
-          <string>Testdata</string>
-          <testData>
-            <dataString>address	RAM_i	RAM_o	A_i	A_o	B_i	B_o	ALU_o	sub	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	O_7	O_6	O_5	O_4	O_3	O_2	O_1	O_0	C
-# Load 15 into RAM address 0
-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	C
-0	1	0	0	0	0	0	0	0	0	0	0	0	1	1	1	1	0	0	0	0	1	1	1	1	C
-# Load 4 into RAM address 1
-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	C
-0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	C
-# Load RAM address 0 into A
-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	C
-0	0	1	1	0	0	0	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	1	1	1	C
-# Load RAM address 1 into B
-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	C
-0	0	1	0	0	1	0	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	1	0	0	C
-# Save ALU difference to RAM address 2
-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	C
-0	1	0	0	0	0	0	1	1	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	0	1	1	C
-# Output RAM address 2 to data bus
-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	C
-0	0	1	0	0	0	0	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	1	0	1	1	C</dataString>
-          </testData>
-        </entry>
-      </elementAttributes>
-      <pos x="-40" y="-540"/>
-    </visualElement>
-    <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
