@@ -269,7 +269,7 @@
             <dataString>output_e	signed	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	-	100s	10s	1s	C
 # Load 219 (unsigned)/-37 (signed)
 1		0	1	1	0	1	1	0	1	1	0	0x35B	0x06	0x6F	C
-# No outputput enable makes no change 
+# No output enable makes no change 
 0		0	X	X	X	X	X	X	X	X	0	0x35B	0x06	0x6F	C
 0		1	X	X	X	X	X	X	X	X	1	0x3F	0x4F	0x07	C
 </dataString>
@@ -726,12 +726,12 @@
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>Output Register and Display</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>40</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Output Register and Display</string>
         </entry>
         <entry>
           <string>RectWidth</string>
