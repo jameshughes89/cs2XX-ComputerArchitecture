@@ -75,6 +75,7 @@ Office Hours
     topics/arithmetic/adder
     topics/numbers/twos-complement
     topics/alu/esap-alu
+    topics/memory/esap-ram
     topics/output/seven-segment-displays
     topics/output/output-register
 
@@ -95,6 +96,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
+    assignments/hello-world/hello-world
 
 
 
