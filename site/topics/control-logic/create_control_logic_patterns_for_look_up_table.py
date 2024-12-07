@@ -3,23 +3,23 @@ Constants for the control logic of the computer. Each control logic signal is co
 of a lookup table. The order, from most to lease significant output bit is below. The ordering is based on the physical
 layout of the system:
 
+  - HLT (Halt)
+  - ADR (Address Register)
+  - RMI (RAM In)
+  - RMO (RAM Out)
   - IRO (Instruction Register Out)
   - IRI (Instruction Register In)
-  - RMO (RAM Out)
-  - RMI (RAM In)
-  - ADR (Address Register)
-  - HLT (Halt)
-  - PCE (Program Counter Enable)
-  - PCI (Program Counter In)
-  - PCO (Program Counter Out)
-  - ARI (A Register In)
-  - ARO (A Register Out)
-  - BRI (B Register In)
-  - BRO (B Register Out)
-  - ALU (ALU Out)
-  - SUB (Subtraction)
-  - ORI (Output Register In)
   - SGN (Signed Integer)
+  - ORI (Output Register In)
+  - SUB (Subtraction)
+  - ALU (ALU Out)
+  - BRO (B Register Out)
+  - BRI (B Register In)
+  - ARO (A Register Out)
+  - ARI (A Register In)
+  - PCO (Program Counter Out)
+  - PCI (Program Counter In)
+  - PCE (Program Counter Enable)
 
 
 To create a microcode, constants can be bitwise ORed together. For example, the two microcodes for a 'fetch' would be:
@@ -32,23 +32,23 @@ Note: The order of the operands does not matter, however, a pattern of FROM -> T
 
 Underscore are included in the constants below for visual clarity
 """
-IRO = 0b1_00000000_00000000
-IRI = 0b0_10000000_00000000
-RMO = 0b0_01000000_00000000
-RMI = 0b0_00100000_00000000
-ADR = 0b0_00010000_00000000
-HLT = 0b0_00001000_00000000
-PCE = 0b0_00000100_00000000
-PCI = 0b0_00000010_00000000
-PCO = 0b0_00000001_00000000
-ARI = 0b0_00000000_10000000
-ARO = 0b0_00000000_01000000
+HLT = 0b1_00000000_00000000
+ADR = 0b0_10000000_00000000
+RMI = 0b0_01000000_00000000
+RMO = 0b0_00100000_00000000
+IRO = 0b0_00010000_00000000
+IRI = 0b0_00001000_00000000
+SGN = 0b0_00000100_00000000
+ORI = 0b0_00000010_00000000
+SUB = 0b0_00000001_00000000
+ALU = 0b0_00000000_10000000
+BRO = 0b0_00000000_01000000
 BRI = 0b0_00000000_00100000
-BRO = 0b0_00000000_00010000
-ALU = 0b0_00000000_00001000
-SUB = 0b0_00000000_00000100
-ORI = 0b0_00000000_00000010
-SGN = 0b0_00000000_00000001
+ARO = 0b0_00000000_00010000
+ARI = 0b0_00000000_00001000
+PCO = 0b0_00000000_00000100
+PCI = 0b0_00000000_00000010
+PCE = 0b0_00000000_00000001
 
 
 """
@@ -65,7 +65,7 @@ INSTRUCTIONS = [
   [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     BRO|RMI     ],  # 0b0110 --- 0x6 --- SAVB --- Save B to RAM
   [PCO|ADR,   RMO|IRI|PCE, ALU|ARI,     0           ],  # 0b0111 --- 0x7 --- ADDB --- Add B to A
   [PCO|ADR,   RMO|IRI|PCE, ALU|SUB|ARI, 0           ],  # 0b1000 --- 0x8 --- SUBB --- Subtract B from A
-  [PCO|ADR,   RMO|IRI|PCE, IRO|PCI,     0           ],  # 0b1001 --- 0x9 --- JUMP --- Jump
+  [PCO|ADR,   RMO|IRI|PCE, IRO|PCI,     0           ],  # 0b1001 --- 0x9 --- JMPA --- Jump Always
   [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1010 --- 0xA --- NOOP --- No Operation
   [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1011 --- 0xB --- NOOP --- No Operation
   [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1100 --- 0xC --- NOOP --- No Operation
