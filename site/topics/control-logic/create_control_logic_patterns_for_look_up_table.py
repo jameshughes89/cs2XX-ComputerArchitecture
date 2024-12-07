@@ -1,6 +1,6 @@
 """
 Constants for the control logic of the computer. Each control logic signal is controlled by a single bit of the output
-of a lookup table. The order, from most to lease significant output bit is below. The orderins is based on the pysical
+of a lookup table. The order, from most to lease significant output bit is below. The ordering is based on the physical
 layout of the system:
 
   - IRO (Instruction Register Out)
