@@ -75,6 +75,7 @@ Office Hours
     topics/arithmetic/adder
     topics/numbers/twos-complement
     topics/alu/esap-alu
+    topics/memory/esap-ram
 
 
 
