@@ -16,14 +16,18 @@ Address Register and RAM
 RAM Module
 ==========
 
-As already already discussed
+* As previously discussed, memory stores data in individually indexable memory addresses
+* The number of unique memory addresses is called the address space
+* Each location stores some amount of data, called the addressability
+* The amount of data in memory address is independent from the number of memory addresses
 
-Memory address
-address space
-Each location in memory stores some amount of data --- addressability
+* Most computers are byte addressable, meaning each memory address stores one byte of data
 
-The number of memory locations does not impact how many bits can be stored in each address
-But, the number of addresses and addressabiity determins the amount of data stored
+    * This is not a requirement, however
+
+
+* The total amount of data storable is the size of the address space times the addressability
+
 
 .. figure:: memory_abstract_idea.png
     :width: 400 px
