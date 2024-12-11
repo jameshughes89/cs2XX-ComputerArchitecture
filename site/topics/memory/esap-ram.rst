@@ -19,29 +19,63 @@ RAM Module
 Address Register
 ----------------
 
-* shared busses
-* problem as data on bus on bus is always changing, but ram address may want to be fixed
-    * in others words, EXAMPLE
-        * Store a value other than 0 into address 0
+* Having the memory addresses and data share a bus poses a problem for the system
 
-* Thus, there needs to be a way to seperate the data bus and address
-* Simple solution is to have a register to store the address
-    * store address into register, which is persistent until updated
-    * Now data on bus can change without messing up the RAM address
-    *
+    * The vales on the bus are always changing, but the indexed memory location may need to be static for some time
 
 
-SHOW IMAGE
+.. figure:: RAM_with_bus_no_register.png
+    :width: 500 px
+    :align: center
 
-* Really, there is a seperate address bus, which is what connects the address register and RAM
+    A not particularly useful configuration of A RAM component with a shared address and data bus.
 
-* as previously discussed, only 4 bits from the main data bus will be used for the address
-* That's why we ignore the 4 bits via the splitter
 
-* Talk about an example of what one could do here
+* Consider the above configuration of RAM in a system with a shard address and data bus
 
-    * Store a memory address into the address register
+    * Mind the splitter used
+    * Remember, only 4 bits are used to index memory
+    * Thus, only the 4 least significant bits are useful for indexing RAM
+    * The 4 most significant bits are ignored
 
+
+* Is it possible, for example, to store the value 4 in memory address 2?
+
+    * It's possible to index memory address 2 by configuring the data on the bus to ``0b00000010``
+    * But as soon as the value 4 is added to the bus (``0b00000100``), memory address 4 is indexed, not 2
+
+
+* The problem is, the memory address indexed in RAM will always be based on what value is currently on the bus
+* Therefore, there needs to be a way to isolate the memory address from the value on the data bus
+
+* A simple solution to this problem is to add an address register
+
+    * Input the memory address to index into the address register
+    * This value will be unchanged until explicitly updated
+    * The address value stored in the address register will be what is indexing RAM
+    * Now the data on the bus can change without impacting the memory address being indexed
+
+
+.. figure:: address_register_and_RAM.png
+    :width: 600 px
+    :align: center
+
+    A configuration of RAM component with an address register facilitating the separation of a memory address and the
+    changing values stored on the bus.
+
+
+* With this configuration, there is now a small, but isolated address bus
+
+    * The line connecting the output of the address register and the RAM component's address input
+    * Between the register's :math:`Q` and RAM's :math:`A`
+
+
+* To return to the previous example problem, it is now possible to load the value 4 into memory address 2
+
+    #. Configure the data on the bus to be 2 (``0b00000010``)
+    #. Load the value from the bus into the address register with the :math:`address` control signal
+    #. Configure the data on the bus to be 4 (``0b00000100``)
+    #. Load the value from the bus into RAM with the :math:`RAM_{i}` control signal
 
 
 
