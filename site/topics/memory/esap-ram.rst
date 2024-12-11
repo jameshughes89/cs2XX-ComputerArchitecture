@@ -26,7 +26,7 @@ The number of memory locations does not impact how many bits can be stored in ea
 But, the number of addresses and addressabiity determins the amount of data stored
 
 .. figure:: memory_abstract_idea.png
-    :width: 333 px
+    :width: 400 px
     :align: center
 
     Visualization of RAM. The left column is memory addresses, and the right is the data stored at the respective memory
