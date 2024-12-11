@@ -57,18 +57,22 @@ RAM Module
     * In the image, the addressability is not represented; one cannot determine the amount of data in each location
 
 
+* In the current ESAP system being built, the address bus and data bus are partially shared
+* However, even though the data bus has a total of 8 bits, only 4 bits will be used to index memory
+
+    * The reasons for this is due to how program instructions will be encoded
+
+        * 4 bits for the instruction and 4 for an operand
 
 
-We have a shared data and address bus
-Although we have an 8 bit bus,
-Due to the limitations of the system, we will only have 4 address lines
-    will be clear later
+    * Details on how instructions are encoded will be covered in detail in a later topic
+    * Thus, the reasons for this limitation will be made clear later
 
-16 possible addresses
 
-4 bits can be moved on the bus to address RAM
-each memory location will store 8 bits of data, that can be moved around by the bus
-most computers are byte addressable
+* With 4 bits, a total of 16 unique memory locations can be indexed
+* The system will store 1 byte in each memory location, like most systems
+
+    * A total of 8 bits will be stored in each memory location
 
 
 .. note::
