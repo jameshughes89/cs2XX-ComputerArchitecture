@@ -51,15 +51,14 @@ Due to the limitations of the system, we will only have 4 address lines
 
 4 bits can be moved on the bus to address RAM
 each memory location will store 8 bits of data, that can be moved around by the bus
+most computers are byte addressable
 
 
-NOTE ON 32 bit comps?
+.. note::
 
-
-
-
-
-
+    Until the late 2000s/early 2010s, a typical computer used a 32 bit processor. One of the limitations of such a
+    system is the address space --- 32 bits could index :math:`2^{32}`, or :math:`4,294,967,296` unique memory
+    addresses. This may feel like a lot, but to put this into perspective, that's only :math:`4GB`.
 
 
 Address Register
