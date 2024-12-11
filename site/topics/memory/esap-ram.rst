@@ -51,9 +51,11 @@ RAM Module
 
 * With an address space of 16, a total of four bits would be required to index each memory address
 
-* In the above RAM example, the data stored in each of the 16 address is represented as the 16 letters ``a`` -- ``p``
+* The data stored in each of the 16 memory address is represented as the 16 letters
 
-    * However, the addressability is not represented here
+    * The letters ``a`` -- ``p``, one in each row
+    * In the image, the addressability is not represented; one cannot determine the amount of data in each location
+
 
 
 
