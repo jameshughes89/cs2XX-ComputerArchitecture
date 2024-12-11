@@ -27,7 +27,7 @@ Including RAM in the System
 
 
 Executing Arithmetic on the ALU with RAM
-========================================
+----------------------------------------
 
 
 
