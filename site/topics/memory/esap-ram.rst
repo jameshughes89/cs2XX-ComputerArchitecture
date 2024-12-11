@@ -37,13 +37,24 @@ RAM Module
     address.
 
 
-above example, 16 memory locations
-    0000 -- 1111
-    or can think 0 -- F
+* In the above example, a total of 16 unique memory addresses exist
 
-This needs 4 address lines to index ecah location
+    * Each address is represented as a row in the table
+    * The memory address is included in the left column of the table
 
-The amount of data in the above example is not clear, but the data data itself is represented by the 16 letters
+
+* This means, in this example, there is an address space of 16
+
+    * Locations ``0b0000`` -- ``0b1111``
+    * Or, ``0x0`` -- ``0xF``
+
+
+* With an address space of 16, a total of four bits would be required to index each memory address
+
+* In the above RAM example, the data stored in each of the 16 address is represented as the 16 letters ``a`` -- ``p``
+
+    * However, the addressability is not represented here
+
 
 
 We have a shared data and address bus
