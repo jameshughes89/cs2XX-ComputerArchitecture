@@ -99,6 +99,23 @@ Executing Arithmetic on the ALU with RAM
 ========================================
 
 
+Like with ALU, lets add and subtract 15 and 4 together
+this time, let's pre-load these values into RAM in addresses 0 and 1
+Then have RAM output to A and B
+Then save result in RAM for fun
+etc.
+
+Load data
+
+load from RAM to Registers
+
+Add together and save to ram
+Subtract and save to ram
+
+verify the contents
+
+
+
 
 For Next Time
 =============
