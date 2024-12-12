@@ -109,9 +109,91 @@ Executing Arithmetic on the ALU with RAM
     #. Calculate the difference between the calculated sum and 7 and save the result to RAM
 
 
+* Like in previous topics, the below tables represent programs
+* However, due to space limitations, if a module has an input and output control signal, their columns are combined
+
+    * Values will be represented as ``input/output``
+    * For example, a low input, but high output would be represented as ``0/1``
 
 
-Load data
+.. list-table:: Load 15, 4, and 7 into RAM addresses 0, 1, and 2 respectively
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      -
+      - :math:`D`
+      -
+      - :math:`C`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x00``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x0F``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x01``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x04``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x02``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x07``
+      -
+      - ``C``
+
+
+* With the data loaded into RAM, the next steps are to load the data from RAM, perform addition, and save the result
 
 load from RAM to Registers
 
