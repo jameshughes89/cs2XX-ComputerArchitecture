@@ -232,7 +232,7 @@ Executing Arithmetic on the ESAP ALU
       - :math:`B_{i}`
       - :math:`B_{o}`
       - :math:`ALU_{o}`
-      - :math:`sub_{o}`
+      - :math:`sub`
       -
       - :math:`D`
       -
@@ -322,7 +322,7 @@ Executing Arithmetic on the ESAP ALU
       - :math:`B_{i}`
       - :math:`B_{o}`
       - :math:`ALU_{o}`
-      - :math:`sub_{o}`
+      - :math:`sub`
       -
       - :math:`D`
       -
