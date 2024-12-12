@@ -98,12 +98,18 @@ Including RAM in the System
 Executing Arithmetic on the ALU with RAM
 ========================================
 
+* Like in the previous topic, consider performing arithmetic on arbitrary numbers
+* This time, the numbers will be loaded to RAM, which will later be accessed to perform the operations
+* For an example, consider calculating :math:`15 + 4 - 7`
 
-Like with ALU, lets add and subtract 15 and 4 together
-this time, let's pre-load these values into RAM in addresses 0 and 1
-Then have RAM output to A and B
-Then save result in RAM for fun
-etc.
+* For demonstration purposes, the high-level program to be executed on the system will be as follows
+
+    #. Load the data into RAM
+    #. Calculate the sum of 15 and 4 and save the result to RAM
+    #. Calculate the difference between the calculated sum and 7 and save the result to RAM
+
+
+
 
 Load data
 
