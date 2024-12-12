@@ -98,6 +98,270 @@ Including RAM in the System
 Executing Arithmetic on the ALU with RAM
 ========================================
 
+* Like in the previous topic, consider performing arithmetic on arbitrary numbers
+* This time, the numbers will be loaded to RAM, which will later be accessed to perform the operations
+* For an example, consider calculating :math:`15 + 4 - 7`
+
+* For demonstration purposes, the high-level program to be executed on the system will be as follows
+
+    #. Load the data into RAM
+    #. Calculate the sum of 15 and 4 and save the result to RAM
+    #. Calculate the difference between the calculated sum and 7 and save the result to RAM
+
+
+* Like in previous topics, the below tables represent programs
+* However, due to space limitations, if a module has an input and output control signal, their columns are combined
+
+    * Values will be represented as ``input/output``
+    * For example, a low input, but high output would be represented as ``0/1``
+
+
+.. list-table:: Load 15, 4, and 7 into RAM addresses 0, 1, and 2 respectively
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      -
+      - :math:`D`
+      -
+      - :math:`C`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x00``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x0F``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x01``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x04``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x02``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x07``
+      -
+      - ``C``
+
+
+* With the data loaded into RAM, the next steps are to load the data from RAM, perform addition, and save the result
+
+.. list-table:: Load data for addition and save the result to RAM address 3
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      -
+      - :math:`D`
+      -
+      - :math:`C`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x00``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x01``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``1/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x03``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``1``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+
+
+* Since the goal is to now subtract 7 from the result, it would be fine to save the result back into register A
+* But for demonstration purposes, the result is being saved to RAM first
+
+* The next step is to load more data from RAM to perform subtraction and save the result
+
+.. list-table:: Load data for subtraction and save the result to RAM address 4
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      -
+      - :math:`D`
+      -
+      - :math:`C`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x03``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x02``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``1/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x04``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``1``
+      - ``1``
+      -
+      - ``Z``
+      -
+      - ``C``
+
+
+* If everything worked correctly, the contents of RAM should be
+
+    * Address 0 --- 15
+    * Address 1 --- 4
+    * Address 2 --- 7
+    * Address 3 --- 19
+    * Address 4 --- 12
+
 
 
 For Next Time
