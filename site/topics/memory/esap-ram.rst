@@ -195,13 +195,172 @@ Executing Arithmetic on the ALU with RAM
 
 * With the data loaded into RAM, the next steps are to load the data from RAM, perform addition, and save the result
 
-load from RAM to Registers
+.. list-table:: Load data for addition and save the result to RAM address 3
+    :widths: auto
+    :align: center
+    :header-rows: 1
 
-Add together and save to ram
-Subtract and save to ram
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      -
+      - :math:`D`
+      -
+      - :math:`C`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x00``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x01``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``1/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x03``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``1``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
 
-verify the contents
 
+* Since the goal is to now subtract 7 from the result, it would be fine to save the result back into register A
+* But for demonstration purposes, the result is being saved to RAM first
+
+* The next step is to load more data from RAM to perform subtraction and save the result
+
+.. list-table:: Load data for subtraction and save the result to RAM address 4
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      -
+      - :math:`D`
+      -
+      - :math:`C`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x03``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x02``
+      -
+      - ``C``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``1/0``
+      - ``0``
+      - ``0``
+      -
+      - ``Z``
+      -
+      - ``C``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      -
+      - ``0x04``
+      -
+      - ``C``
+    * - ``0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``1``
+      - ``1``
+      -
+      - ``Z``
+      -
+      - ``C``
+
+
+* If everything worked correctly, the contents of RAM should be
+
+    * Address 0 --- 15
+    * Address 1 --- 4
+    * Address 2 --- 7
+    * Address 3 --- 19
+    * Address 4 --- 12
 
 
 
