@@ -80,9 +80,9 @@ RAM Module
 
 .. note::
 
-    Until the late 2000s/early 2010s, a typical computer used a 32 bit processor. One of the limitations of such a
-    system is the address space --- 32 bits could index :math:`2^{32}`, or :math:`4,294,967,296` unique memory
-    addresses. This may feel like a lot, but to put this into perspective, that's only :math:`4GB`.
+    Until the late 2000s/early 2010s, a typical computer used a 32 bit address space. One of the limitations of such a
+    system is that 32 bits could index :math:`2^{32}`, or :math:`4,294,967,296` unique memory addresses. This may feel
+    like a lot, but to put this into perspective, that's only :math:`4GB`.
 
 
 Address Register
