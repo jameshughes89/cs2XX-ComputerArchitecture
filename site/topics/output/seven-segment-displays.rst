@@ -128,10 +128,19 @@ Binary Numbers to Decimal for a Seven Segment Displays
     nonetheless.
 
 
+* Consider, however, the number 10, which is easily representable in binary with 8 bits
+* One cannot represent this number with a single digit
+
+    * Although hex can be used, and an ``A`` can be displayed on a seven segment display, this misses the point
+    * The goal is to show decimal numerals
+    * Further, the same issue arises with hexadecimal numbers once the number 16 is hit
+
+
+
 what about the number 10? Sure we cna do a, but (a) we want decimal, and (b) the number 16 would have the same issue
 we need more digits, in fact we need 3
 
-SIMPLE, I GUESS... 
+SIMPLE, I GUESS...
 
 2s complement numbers?
 
