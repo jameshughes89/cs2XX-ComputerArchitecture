@@ -26,16 +26,48 @@ Seven Segment Displays
 Seven Segment Display
 =====================
 
+* Seven segment displays are made up of seven toggleable segments
+* By turning these segments on/off, different symbols can be represented
 
-* They're simple
-* They have a name
-* One input line controls a segment
-* 8 input lines because there is also a decimal point
+    * A total of :math:`2^{7}` (:math:`128`) unique patterns can be represented
 
-* Show image
+        * Although not all would necessary be meaningful
 
-* 8 inputs, so a byte
-* Notice that the pattern has nothing to do with the binary number though
+
+IMAGE
+
+
+
+* Although they are called seven segment displays, it's common to have an eighth segment representing a decimal point
+
+    * Which explains why these components have eight inputs
+    * Thus, there is actually a total of :math:`2^{8}` (:math:`256`) unique patterns
+
+
+* Since a one signal controls one segment, eight signals are required to control the eight total segments
+
+IMAGE
+
+
+* One can think of these eight signals as 8 bits/1 byte
+* But, it is important to remember that the bit patterns is an encoding
+
+    * Some decoding is needed to derive meaning
+
+
+* For example, assume a byte is used to control the seven segment display such that ``a`` is the least significant bit
+
+    * Each bit in the byte controls one segment
+    * ``hgfedcba``
+
+
+* The number 9 is ``0b00001001``
+* However, this bit pattern would display the following
+
+IMAGE
+
+
+* In other words, the byte representing 9 as a number has an entirely different meaning when used for the display
 
 
 
