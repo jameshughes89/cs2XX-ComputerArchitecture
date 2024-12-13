@@ -136,13 +136,40 @@ Binary Numbers to Decimal for a Seven Segment Displays
     * Further, the same issue arises with hexadecimal numbers once the number 16 is hit
 
 
+* The system being designed can represent eight bit numbers, meaning a total of 256 numbers
 
-what about the number 10? Sure we cna do a, but (a) we want decimal, and (b) the number 16 would have the same issue
-we need more digits, in fact we need 3
+    * 0 -- 255
 
-SIMPLE, I GUESS...
 
-2s complement numbers?
+* Thus, a total of three digits are required for this system's output
+
+SIMPLE SOLUTION
+
+
+.. figure:: seven_segment_display_123.png
+    :width: 250 px
+    :align: center
+
+    Three seven segment displays showing the number 123. The number 123, represented in binary as ``0b01111011`` must
+    map to three bytes to display 1, 2, and 3. These bytes would be ``0b00000110``, ``0b01011011``, and ``0b01001111``
+    respectively.
+
+
+negative too, with 2s compleent
+but -128 -- 127
+
+, thus, only the ``g`` input would be active.
+non negative numbers would display nothing in the left most display
+
+.. figure:: seven_segment_display_-123.png
+    :width: 333 px
+    :align: center
+
+    Four seven segment displays showing the twos complement number -123 (``0b10000101``). The left most display in this
+    configuration would only ever be used to show the negative sign, when appropriate.
+
+
+
 
 
 Programmable Logic Array
