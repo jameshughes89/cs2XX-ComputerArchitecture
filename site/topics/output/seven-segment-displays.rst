@@ -35,7 +35,7 @@ Seven Segment Display
 
 
 .. figure:: seven_segment_display_labelled.png
-    :width: 250 px
+    :width: 200 px
     :align: center
 
     A seven segment display from Digital with the eight inputs and corresponding segments labelled. When a high signal
