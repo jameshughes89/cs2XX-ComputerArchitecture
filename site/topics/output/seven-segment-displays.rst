@@ -31,6 +31,106 @@ Seven Segment Display
 Binary Numbers to Decimal for a Seven Segment Displays
 ======================================================
 
+System frim bin to 7segment
+
+first, start with what the patterns would be
+assume ``hgfedcba``
+    this is arbitrary
+
+
+
+.. list-table:: Decimal Numbers and Their Seven Segment Display Patterns
+    :widths: auto
+
+    * - Decimal
+      - Binary
+      -
+      - Display Pattern
+      - Display Hex
+      - Output
+    * - ``0``
+      - ``0b00000000``
+      -
+      - ``0b00111111``
+      - ``0x3F``
+      - .. image:: seven_segment_display_0.png
+            :width: 50
+    * - ``1``
+      - ``0b00000001``
+      -
+      - ``0b00000110``
+      - ``0x06``
+      - .. image:: seven_segment_display_1.png
+            :width: 50
+    * - ``2``
+      - ``0b00000010``
+      -
+      - ``0b01011011``
+      - ``0x5B``
+      - .. image:: seven_segment_display_2.png
+            :width: 50
+    * - ``3``
+      - ``0b00000011``
+      -
+      - ``0b01001111``
+      - ``0x4F``
+      - .. image:: seven_segment_display_3.png
+            :width: 50
+    * - ``4``
+      - ``0b00000100``
+      -
+      - ``0b01100110``
+      - ``0x66``
+      - .. image:: seven_segment_display_4.png
+            :width: 50
+    * - ``5``
+      - ``0b00000101``
+      -
+      - ``0b01101101``
+      - ``0x6D``
+      - .. image:: seven_segment_display_5.png
+            :width: 50
+    * - ``6``
+      - ``0b00000110``
+      -
+      - ``0b01111101``
+      - ``0x7D``
+      - .. image:: seven_segment_display_6.png
+            :width: 50
+    * - ``7``
+      - ``0b00000111``
+      -
+      - ``0b00000111``
+      - ``0x07``
+      - .. image:: seven_segment_display_7.png
+            :width: 50
+    * - ``8``
+      - ``0b00001000``
+      -
+      - ``0b01111111``
+      - ``0x7F``
+      - .. image:: seven_segment_display_8.png
+            :width: 50
+    * - ``9``
+      - ``0b00001001``
+      -
+      - ``0b01101111``
+      - ``0x6F``
+      - .. image:: seven_segment_display_9.png
+            :width: 50
+
+.. note::
+
+    One may have noticed that the **seven** segment display pattern for the number **seven** is the binary number **seven**.
+
+    This is in no way meaningful, and is a consequence of our bit ordering to the inputs, but an interesting observation
+    nonetheless.
+
+
+
+WHAT ABOUT 3 DIGIT NUMBERS?
+2s complement numbers?
+
 
 Programmable Logic Array
 ------------------------
