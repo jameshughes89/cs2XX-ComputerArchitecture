@@ -131,9 +131,9 @@ Binary Numbers to Decimal for a Seven Segment Displays
 * Consider, however, the number 10, which is easily representable in binary with 8 bits
 * One cannot represent this number with a single digit
 
-    * Although hex can be used, and an ``A`` can be displayed on a seven segment display, this misses the point
+    * Although hexadecimal can be used, and an ``A`` can be displayed on a seven segment display, this misses the point
     * The goal is to show decimal numerals
-    * Further, the same issue arises with hexadecimal numbers once the number 16 is hit
+    * And further, the same issue arises with hexadecimal numbers once the number 16 is hit
 
 
 * The system being designed can represent eight bit numbers
@@ -144,7 +144,7 @@ Binary Numbers to Decimal for a Seven Segment Displays
 
 * Thus, a total of three digits are required for this system's output
 
-* Fortunately, there is a simple solution to this problem
+* Fortunately, there is a simple way to deal with this
 * Use three displays and three bytes for an 8 bit integer
 
     * Map a single 8 bit integer to three 8 bit patterns, one for each of the three displays
@@ -174,9 +174,9 @@ Binary Numbers to Decimal for a Seven Segment Displays
     * Numbers -128 -- 127
 
 
-* This is easily achieved with a forth display that would only ever activate the ``g`` input, when necessary
+* This is achieved with a forth display that would only ever activate the ``g`` input, when necessary
 
-    * This forth. leftmost display would only activate ``g`` when showing a negative number
+    * This forth, leftmost display would only activate ``g`` when showing a negative number
     * Positive numbers would have nothing displayed on this forth display
 
 
