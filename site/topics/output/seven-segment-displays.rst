@@ -40,7 +40,7 @@ Binary Numbers to Decimal for a Seven Segment Displays
 
 * Below is a table showing each decimal number's bit pattern for the seven segment display
 
-.. list-table:: Decimal Numbers and Their Seven Segment Display Patterns
+.. list-table:: Decimal Numbers and Their Seven Segment Display Patterns following ``hgfedcba``
     :widths: auto
 
     * - Decimal
@@ -124,8 +124,8 @@ Binary Numbers to Decimal for a Seven Segment Displays
 
     One may have noticed that the **seven** segment display pattern for the number **seven** is the binary number **seven**.
 
-    This is in no way meaningful, and is a consequence of our bit ordering to the inputs, but an interesting observation
-    nonetheless.
+    This is in no way meaningful, and is a consequence of the arbitrary bit ordering to the inputs, but an interesting
+    observation nonetheless.
 
 
 * Consider, however, the number 10, which is easily representable in binary with 8 bits
@@ -136,14 +136,28 @@ Binary Numbers to Decimal for a Seven Segment Displays
     * Further, the same issue arises with hexadecimal numbers once the number 16 is hit
 
 
-* The system being designed can represent eight bit numbers, meaning a total of 256 numbers
+* The system being designed can represent eight bit numbers
 
+    * A total of 256
     * 0 -- 255
 
 
 * Thus, a total of three digits are required for this system's output
 
-SIMPLE SOLUTION
+* Fortunately, there is a simple solution to this problem
+* Use three displays and three bytes for an 8 bit integer
+
+    * Map a single 8 bit integer to three 8 bit patterns, one for each of the three displays
+
+
+* In other words, the number 10 maps to a byte for 0, a byte for 1, and another byte for 0
+
+    * ``0b00001010`` maps to ``0b0011111111``, ``0b00000110``, and ``0b0011111111``
+
+
+* Below is an example of displaying the number 123
+
+    * ``0b01111011`` maps to ``0b00000110``, ``0b01011011``, and ``0b01001111``
 
 
 .. figure:: seven_segment_display_123.png
@@ -155,11 +169,16 @@ SIMPLE SOLUTION
     respectively.
 
 
-negative too, with 2s compleent
-but -128 -- 127
+* Further, since the system works with two's complement numbers, negative numbers should be displayable on the output
 
-, thus, only the ``g`` input would be active.
-non negative numbers would display nothing in the left most display
+    * Numbers -128 -- 127
+
+
+* This is easily achieved with a forth display that would only ever activate the ``g`` input, when necessary
+
+    * This forth. leftmost display would only activate ``g`` when showing a negative number
+    * Positive numbers would have nothing displayed on this forth display
+
 
 .. figure:: seven_segment_display_-123.png
     :width: 333 px
