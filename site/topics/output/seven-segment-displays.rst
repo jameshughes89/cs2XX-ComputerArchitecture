@@ -27,6 +27,17 @@ Seven Segment Display
 =====================
 
 
+* They're simple
+* They have a name
+* One input line controls a segment
+* 8 input lines because there is also a decimal point
+
+* Show image
+
+* 8 inputs, so a byte
+* Notice that the pattern has nothing to do with the binary number though
+
+
 
 Binary Numbers to Decimal for a Seven Segment Displays
 ======================================================
