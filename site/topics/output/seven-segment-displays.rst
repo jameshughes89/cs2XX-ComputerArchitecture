@@ -34,8 +34,12 @@ Seven Segment Display
         * Although not all would necessary be meaningful
 
 
-IMAGE
+.. figure:: seven_segment_display_labelled.png
+    :width: 250 px
+    :align: center
 
+    A seven segment display from Digital with the eight inputs and corresponding segments labelled. When a high signal
+    is applied to an input, the respective segment would turn on.
 
 
 * Although they are called seven segment displays, it's common to have an eighth segment representing a decimal point
