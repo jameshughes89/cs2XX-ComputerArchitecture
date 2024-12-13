@@ -31,13 +31,14 @@ Seven Segment Display
 Binary Numbers to Decimal for a Seven Segment Displays
 ======================================================
 
-System frim bin to 7segment
+* A system to convert the binary numbers to their respective seven segment display patterns needs to be developed
+* As discussed, a single byte can be used for each seven segment display
+* Here, the display's ``a`` input will be the least significant bit, and ``h`` will be the most significant
 
-first, start with what the patterns would be
-assume ``hgfedcba``
-    this is arbitrary
+    * This ordering is a design decision and not a requirement
 
 
+* Below is a table showing each decimal number's bit pattern for the seven segment display
 
 .. list-table:: Decimal Numbers and Their Seven Segment Display Patterns
     :widths: auto
@@ -127,8 +128,11 @@ assume ``hgfedcba``
     nonetheless.
 
 
+what about the number 10? Sure we cna do a, but (a) we want decimal, and (b) the number 16 would have the same issue
+we need more digits, in fact we need 3
 
-WHAT ABOUT 3 DIGIT NUMBERS?
+SIMPLE, I GUESS... 
+
 2s complement numbers?
 
 
