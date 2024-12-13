@@ -50,7 +50,12 @@ Seven Segment Display
 
 * Since a one signal controls one segment, eight signals are required to control the eight total segments
 
-IMAGE
+.. figure:: seven_segment_display.gif
+    :width: 250 px
+    :align: center
+
+    Animation of each of the eight inputs on a seven segment display being activated. As each input is made high, the
+    corresponding segment turns on.
 
 
 * One can think of these eight signals as 8 bits/1 byte
@@ -68,10 +73,17 @@ IMAGE
 * The number 9 is ``0b00001001``
 * However, this bit pattern would display the following
 
-IMAGE
+.. figure:: seven_segment_display_00001001.png
+    :width: 250 px
+    :align: center
+
+    The state of a seven segment display when the inputs are set to ``0b00001001``, ordered such that ``a`` is the least
+    significant bit and ``h`` is the most significant.
 
 
-* In other words, the byte representing 9 as a number has an entirely different meaning when used for the display
+* In other words, the byte representing 9 as an integer has an entirely different meaning when used for the display
+
+    * ``0b00001001`` is only an encoding
 
 
 
