@@ -51,7 +51,7 @@ Seven Segment Display
 * Since a one signal controls one segment, eight signals are required to control the eight total segments
 
 .. figure:: seven_segment_display.gif
-    :width: 250 px
+    :width: 200 px
     :align: center
 
     Animation of each of the eight inputs on a seven segment display being activated. As each input is made high, the
@@ -74,7 +74,7 @@ Seven Segment Display
 * However, this bit pattern would display the following
 
 .. figure:: seven_segment_display_00001001.png
-    :width: 250 px
+    :width: 333 px
     :align: center
 
     The state of a seven segment display when the inputs are set to ``0b00001001``, ordered such that ``a`` is the least
