@@ -32,12 +32,10 @@ Binary Numbers to Decimal for a Seven Segment Displays
 ======================================================
 
 
-Programmable Logic Array
-------------------------
+Programmable Logic Arrays and Look Up Tables
+--------------------------------------------
 
 
-Look Up Table
--------------
 
 
 
