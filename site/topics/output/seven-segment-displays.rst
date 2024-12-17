@@ -198,6 +198,22 @@ Creating Seven Segment Display Patterns
 
 
 * Once generated, the hex file can be loaded into the LUT
+* Below are examples of using the LUT to decode the signal ``0b10101010`` as an unsigned and signed integer
+
+.. figure:: lut_with_seven_segment_displays_170.png
+    :width: 500 px
+    :align: center
+
+    LUT decoding the binary pattern ``0b10101010`` to the unsigned decimal number 170``.
+
+
+.. figure:: lut_with_seven_segment_displays_-86.png
+    :width: 500 px
+    :align: center
+
+    LUT decoding the binary pattern ``0b10101010`` to the signed, two's complement decimal number -86``. The LUT is
+    outputting the two's complement pattern since the 9th input bit, which acts as a control signal for signed integers,
+    is set to high.
 
 
 
