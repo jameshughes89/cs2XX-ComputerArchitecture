@@ -111,7 +111,7 @@ Creating Seven Segment Display Patterns
         * Move bits to the left/right in a binary pattern
         * For example, consider shifting a binary pattern 4 bits to the left
 
-            * ``0b1010 << 4`` results in ``0b10100000``
+            * ``0b0101 << 4`` results in ``0b01010000``
 
 
     * Bitwise ``OR``
@@ -122,21 +122,82 @@ Creating Seven Segment Display Patterns
             * ``0b11001100 | 0b11110000`` results in ``0b11111100``
 
 
+* Further, it is possible to obtain the each individual digit in a number
+
+    * Divide the number by the desired digit's *place* value, then mod 10
+    * For example, consider the number ``123``
+
+        * ``123 / 100 = 1``, ``1 % 10 = 1`, therefore the 100s place is ``1``
+        * ``123 / 10 = 12``, ``12 % 10 = 2`, therefore the 10s place is ``2``
+        * ``123 / 1 = 123``, ``123 % 10 = 3`, therefore the 1s place is ``3``
 
 
-Create the regular unsigned ints
+* With this, the idea is to take each 8 bit number, obtain each place's digit's pattern and left shift where necessary
+* This is best explained with an example
+* Consider the number 123 --- each digits pattern is as follows
 
-    Mind the division
+    * 1 --- ``00000110``
+    * 2 --- ``01011011``
+    * 3 --- ``01001111``
 
-    bit shifting
+* Bit shift the 8 bits for the 100s number 16 bits to the left, shift the 10s 8 bits to the left, and the 1s shift 0
+* Each pattern would then be as follows (leading ``0``\s and spaces are included for visual clarity)
+
+    * 1 --- ``00000110 00000000 00000000``
+    * 2 --- ``00000000 01011011 00000000``
+    * 3 --- ``00000000 00000000 01001111``
 
 
+* Finally, performing bitwise ``OR`` on these patterns would result in the full pattern for the 8 bit number
+
+    * 123 ---  ``00000110 01011011 01001111``
 
 
-Now create the 2s complement
+* Note that the most significant, 25th bit, is not needed here as the number is positive
 
-Save the list to a file and load it up
+    * If a bit is not explicitly set to ``1``, it will be ``0``
 
+
+.. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-unsigned_patterns]
+    :end-before: # [end-unsigned_patterns]
+
+
+* Note that, in the above code, bit shifting the 1s digit to the left 0 bits has no functional purpose
+
+    * It is included for consistency
+
+
+* The same idea is used for the signed integers
+
+* The catch is
+
+    * BE AWARE OF THE PATTERNS ARE DIFFERENT
+    * WE TREAT THE "SIGN" CONTROL LIKE
+    * INCLUDE A SIGN BIT WHERE NECESSARY
+
+.. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-signed_patterns]
+    :end-before: # [end-signed_patterns]
+
+
+* Finally, the lists of patterns are saved to a hex file that can be loaded into the LUT
+* The ``v2.0 raw`` is necessary for Digital to parse the hex files
+* The first 256 patterns are the unsigned integer patterns
+* The following 256 patterns are the signed integers
+
+.. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-save_to_file]
+    :end-before: # [end-save_to_file]
+
+
+* Once generated, the hex file can be loaded into the LUT
 
 
 

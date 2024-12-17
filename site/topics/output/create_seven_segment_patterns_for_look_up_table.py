@@ -56,7 +56,7 @@ for i in range(0, 256):
     ones_pattern = DIGITS[(i//1) % 10] << 0
     three_digit_pattern = hundreds_pattern | tens_pattern | ones_pattern
     unsigned_three_digit_patterns.append(three_digit_pattern)
-# [begin-unsigned_patterns]
+# [end-unsigned_patterns]
 
 """
 Create the signed three digit patterns for the numbers -128 -- 127. Following the pattern of 2s complement, the numbers
