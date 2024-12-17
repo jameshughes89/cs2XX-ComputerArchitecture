@@ -44,6 +44,39 @@ Look Up Table
 Creating Seven Segment Display Patterns
 =======================================
 
+Create a script to write all combinations
+Can load the script's output into the LUT
+
+Want to have a signal for 2s complement or not
+    Thus, we will have 8 inputs, plus 1 more for 2s complement mode
+    or, 9 total
+
+Three digits, so we need 1 byte for each, so, 3 bytes (24 bits)
+plus one more bit for the sign
+so, total of 25 bits
+
+based on the configuration we will have, 8 least sig bits will be digit 1, etc.
+
+    PICTURE?
+
+
+To start, let's make constants
+    Makes indexing easy
+
+Create the regular unsigned ints
+
+    Mind the division
+
+    bit shifting
+
+
+
+
+Now create the 2s complement
+
+Save the list to a file and load it up
+
+
 
 
 For Next Time
