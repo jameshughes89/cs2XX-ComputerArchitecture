@@ -193,6 +193,16 @@ Creating Seven Segment Display Patterns
 * The first 256 patterns are the unsigned integer patterns
 * The following 256 patterns are the signed integers
 
+    * Remember, there are 9 input bits, meaning a total of :math:`2^{9}` (:math:`512`) unique values can be indexed
+
+        * 8 bits representing the number, with the 9th input being the :math:`signed` flag
+        * In other words ``0b0 00000000`` -- ``0b0 11111111`` store the unsigned integers
+        * ``0b1 00000000`` -- ``0b1 11111111`` store the signed integers
+
+
+    * One could think of it as the 9th bit selecting which block of 256 values to index
+
+
 .. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
     :language: python
     :lineno-match:
