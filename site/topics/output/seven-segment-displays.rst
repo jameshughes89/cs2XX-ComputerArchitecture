@@ -104,6 +104,24 @@ Creating Seven Segment Display Patterns
     :end-before: # [end-seven_segment_digit_pattern_constants]
 
 
+* To create the 25 bit output patterns, two bitwise operators will be used
+
+    * Bit shifting
+
+        * Move bits to the left/right in a binary pattern
+        * For example, consider shifting a binary pattern 4 bits to the left
+
+            * ``0b1010 << 4`` results in ``0b10100000``
+
+
+    * Bitwise ``OR``
+
+        * Perform ``OR`` on each bit in two bit patterns
+        * For example
+
+            * ``0b11001100 | 0b11110000`` results in ``0b11111100``
+
+
 
 
 Create the regular unsigned ints
