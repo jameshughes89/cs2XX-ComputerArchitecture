@@ -158,6 +158,10 @@ Creating Seven Segment Display Patterns
     * If a bit is not explicitly set to ``1``, it will be ``0``
 
 
+* Further, in the below code, bit shifting the 1s digit to the left 0 bits has no functional purpose
+
+    * It is included for consistency
+
 .. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
     :language: python
     :lineno-match:
@@ -165,18 +169,17 @@ Creating Seven Segment Display Patterns
     :end-before: # [end-unsigned_patterns]
 
 
-* Note that, in the above code, bit shifting the 1s digit to the left 0 bits has no functional purpose
+* The same idea is used for the signed integers, but following the two's complement pattern
 
-    * It is included for consistency
+    * ``0b00000000`` -- ``0b011111111`` corresponds to integers 0 -- 127
+    * ``0b10000000`` -- ``0b11111111`` correspond to integers -128 -- -1
 
 
-* The same idea is used for the signed integers
+* For all patterns representing negative numbers, the most significant, 25th bit, is set high
 
-* The catch is
+    * To represent the negative sign
+    * A single ``1`` would be bit shifted to the left 25
 
-    * BE AWARE OF THE PATTERNS ARE DIFFERENT
-    * WE TREAT THE "SIGN" CONTROL LIKE
-    * INCLUDE A SIGN BIT WHERE NECESSARY
 
 .. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
     :language: python
