@@ -91,11 +91,20 @@ Creating Seven Segment Display Patterns
 ---------------------------------------
 
 * A Python script will be used to generate the hex file to be loaded into the LUT
+* A series of constants for each bit pattern will be created
+
+    * Notice that these constants are added to a list
+    * Within this list, the bit pattern for ``X`` is found in index ``X``
+
+
+.. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-seven_segment_digit_pattern_constants]
+    :end-before: # [end-seven_segment_digit_pattern_constants]
 
 
 
-To start, let's make constants
-    Makes indexing easy
 
 Create the regular unsigned ints
 
