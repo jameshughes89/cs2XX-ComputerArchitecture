@@ -20,13 +20,22 @@ Output Module
 * This register will be called the *output register*
 * The seven segment displays will always show the contents of the output register
 
+.. figure:: output_register_and_seven_segment_display.png
+    :width: 666 px
+    :align: center
 
-IMAGE
+    A register is added to the LUT and seven segment displays to create the output module for the system.
 
-with this design, we cna control when we load data into reg
-no need to output data from reg
 
-The signed signal reall yis treated like a control signal
+* With this design, one can control when the data is loaded into the output register for displaying
+
+    * There is no need for outputting data from the output register to the data bus
+
+
+* As discussed in the previous topic, the :math:`signed` signal controls when to output two's complement numbers
+
+    * Remember, this signal is ultimately an input signal like the other 8 input signals to the LUT
+    * However, it effectively controls which block of 256 values are addressed by the 8 bits from the output register
 
 
 
