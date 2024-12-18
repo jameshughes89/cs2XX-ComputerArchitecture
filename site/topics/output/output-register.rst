@@ -20,21 +20,18 @@ Including Output in the System
 Example of Outputting from the System
 =====================================
 
-following same as before adding two numbers
-keep it simple though
+* Like previous examples, the numbers 15 and 4 will be added together, but this time the result will be output
+* A simpler version of the program will be implemented here
 
-    Load data straight to registers
-    output addition
+    * Load 15 into A
+    * Load 4 into B
+    * Output the sum to the output register
 
 
-    load to ram
-    put into regs
-    get addition
-    output addition to output
+* The below table shows the control logic configuration to execute this program
 
-The below table is the program
+    * The address register and RAM in/out are excluded for space
 
-    Address register and RAM in/out are excluded for space
 
 .. list-table:: Add 15 and 4, and output the result
     :widths: auto
