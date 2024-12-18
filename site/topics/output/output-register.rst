@@ -15,6 +15,18 @@ Output Module
 Including Output in the System
 ==============================
 
+Add to the whole design the same way the other components were
+
+
+
+IMAGE
+
+again, control signals are moved to bottom
+
+it's palcement is not important, but does match the layout
+
+IMAGE
+
 
 
 Example of Outputting from the System
