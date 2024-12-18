@@ -10,11 +10,18 @@ Output Register
 Output Module
 =============
 
-We have a LUT and output
-Like with the RAM module, we need a way to seperate a value form the bus --- reg
+* With the LUT and seven segment display configuration, it is possible to output values from our system
+* However, like with the memory module, there needs to be a way to separate the data to be output from the bus
 
-Add a reg
-show image
+    * Otherwise, the display would show whatever is currently on the bus
+
+
+* Thus, like with the memory module, a register will be used to store the value that is of interest
+* This register will be called the *output register*
+* The seven segment displays will always show the contents of the output register
+
+
+IMAGE
 
 with this design, we cna control when we load data into reg
 no need to output data from reg
