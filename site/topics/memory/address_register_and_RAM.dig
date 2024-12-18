@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
-  <version>2</version>
+  <version>1</version>
   <attributes/>
   <visualElements>
     <visualElement>
@@ -127,7 +127,7 @@
           </testData>
         </entry>
       </elementAttributes>
-      <pos x="300" y="40"/>
+      <pos x="280" y="40"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -501,19 +501,19 @@
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>Address Register and RAM</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>27</int>
         </entry>
         <entry>
+          <string>Label</string>
+          <string>Address Register and RAM</string>
+        </entry>
+        <entry>
           <string>RectWidth</string>
-          <int>39</int>
+          <int>40</int>
         </entry>
       </elementAttributes>
-      <pos x="220" y="0"/>
+      <pos x="200" y="0"/>
     </visualElement>
   </visualElements>
   <wires>
