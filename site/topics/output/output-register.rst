@@ -28,14 +28,13 @@ Output Module
 
 
 * With this design, one can control when the data is loaded into the output register for displaying
-
-    * There is no need for outputting data from the output register to the data bus
-
-
 * As discussed in the previous topic, the :math:`signed` signal controls when to output two's complement numbers
 
     * Remember, this signal is ultimately an input signal like the other 8 input signals to the LUT
     * However, it effectively controls which block of 256 values are addressed by the 8 bits from the output register
+
+        * When the signal is low, the 8 bits from the output register address 0 -- 255
+        * When the signal is high, the 8 bits from the output register address 256 -- 511
 
 
 
