@@ -10,6 +10,17 @@ Output Register
 Output Module
 =============
 
+We have a LUT and output
+Like with the RAM module, we need a way to seperate a value form the bus --- reg
+
+Add a reg
+show image
+
+with this design, we cna control when we load data into reg
+no need to output data from reg
+
+The signed signal reall yis treated like a control signal
+
 
 
 Including Output in the System
