@@ -78,6 +78,7 @@ Office Hours
     topics/memory/esap-ram
     topics/output/seven-segment-displays
     topics/output/output-register
+    topics/program-counter/program-counter
 
 
 
