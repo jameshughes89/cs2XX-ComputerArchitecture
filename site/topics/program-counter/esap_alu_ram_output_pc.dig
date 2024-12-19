@@ -982,7 +982,7 @@
     <visualElement>
       <elementName>Splitter</elementName>
       <elementAttributes/>
-      <pos x="380" y="-900"/>
+      <pos x="400" y="-900"/>
     </visualElement>
     <visualElement>
       <elementName>Const</elementName>
@@ -996,7 +996,7 @@
           <int>4</int>
         </entry>
       </elementAttributes>
-      <pos x="360" y="-880"/>
+      <pos x="380" y="-880"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -1103,12 +1103,8 @@
       <p2 x="520" y="-900"/>
     </wire>
     <wire>
-      <p1 x="400" y="-900"/>
-      <p2 x="420" y="-900"/>
-    </wire>
-    <wire>
       <p1 x="340" y="-900"/>
-      <p2 x="380" y="-900"/>
+      <p2 x="400" y="-900"/>
     </wire>
     <wire>
       <p1 x="260" y="-900"/>
@@ -1563,12 +1559,12 @@
       <p2 x="20" y="-620"/>
     </wire>
     <wire>
-      <p1 x="360" y="-880"/>
-      <p2 x="380" y="-880"/>
-    </wire>
-    <wire>
       <p1 x="-20" y="-880"/>
       <p2 x="280" y="-880"/>
+    </wire>
+    <wire>
+      <p1 x="380" y="-880"/>
+      <p2 x="400" y="-880"/>
     </wire>
     <wire>
       <p1 x="780" y="240"/>
