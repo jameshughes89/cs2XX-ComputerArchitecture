@@ -15,18 +15,18 @@ Instructions and Microcodes
 
 
 
-Output Module
-=============
+Instruction Constraints
+=======================
 
 
 
-Including Output in the System
-==============================
+Microcodes
+==========
 
 
 
-Example of Outputting from the System
-=====================================
+Instruction Set
+===============
 
 
 
