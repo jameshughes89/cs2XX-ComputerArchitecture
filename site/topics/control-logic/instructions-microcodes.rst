@@ -15,8 +15,8 @@ Instructions and Microcodes
 
 
 
-Instruction Constraints
-=======================
+Constraints
+===========
 
 
 
