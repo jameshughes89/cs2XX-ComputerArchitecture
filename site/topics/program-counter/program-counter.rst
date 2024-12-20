@@ -118,6 +118,22 @@ Program Counter Design
     are 16 RAM addresses, therefore splitters/mergers are used to have the program counter interface with the bus.
 
 
+* Due to ESAP's design, only 4 bits are used to index RAM
+
+    * The least significant 4 bits on the bus
+
+
+* Since the program counter is keeping track of memory addresses, the program counter only needs to manage 4 bits
+* Therefore, configuring the program counter to fit into the 8 bit design requires splitters/mergers
+
+* Data from the bus is split
+
+    * Only the least significant 4 bits are connected to the program counter's register
+
+
+* Data to the bus is merged with zeros
+
+    * To pad the counter's 4 bit output to be a full 8 bits
 
 
 Counter Component
@@ -126,7 +142,7 @@ Counter Component
 * Since counters are a common tool, they are often represented as a single component
 
 .. figure:: counter_preset_symbol.png
-    :width: 250 px
+    :width: 200 px
     :align: center
 
     Counter component with an input for loading in data.
