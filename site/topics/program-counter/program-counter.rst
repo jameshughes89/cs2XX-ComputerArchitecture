@@ -49,7 +49,7 @@ Storing and Incrementing Values
 * Storing a value can be achieved with a register
 * Incrementing a value can be achieved with an adder set to only ever add 1 to some inputted value
 
-* With the above configuration, the adder is always adding 1 to the value stored in the register/output at :math:`Q`
+* With the above configuration, the adder is always adding 1 to the value stored/output by the register (:math:`Q`)
 
     * The adder's carry in is set to ``0`` and the carry out is ignored
 
@@ -73,7 +73,7 @@ Controlling Output
     output (:math:`Q`), not the output of the adder (:math:`S`).
 
 
-* To control the output, use a buffer like in previous designs
+* To control the output, use a driver like in previous designs
 * Note, the counter's output is :math:`Q` --- the register's output
 
     * The output of the adder is for updating the state of the counter
@@ -97,11 +97,11 @@ Controlling Inputs
     * Some input data from elsewhere
 
 
-* A multiplexer can be used to control which of the two signals is active on the register's input :mhat:`D`
+* A multiplexer can be used to control which of the two signals is active on the register's input :math:`D`
 * A control signal :math:`PC_{i}` controls the multiplexer
 
-    * In the above configuration, when :math:`PC_{i}` is low, the register's input is the incremented value
-    * When :math:`PC_{i}` is high, the register's input is the input data
+    * In the above configuration, when :math:`PC_{i}` is low, the register's :math:`D` input is the incremented value
+    * When :math:`PC_{i}` is high, the register's :math:`D` input is the input data
 
 
 * If either :math:`PC{i}` or :math:`PC_{e}` are high, the program counter's register must be enabled
@@ -124,16 +124,17 @@ Program Counter Design
 
 
 * Since the program counter is keeping track of memory addresses, the program counter only needs to manage 4 bits
-* Therefore, configuring the program counter to fit into the 8 bit design requires splitters/mergers
+* Therefore, some mechanism to interface between the two bit lengths is needed
+* Here, splitters/mergers are used to fit the 4 bit program counter into the 8 bit design
 
-* Data from the bus is split
+    * Data from the bus is split
 
-    * Only the least significant 4 bits are connected to the program counter's register
+        * Only the least significant 4 bits are connected to the program counter's register
 
 
-* Data to the bus is merged with zeros
+    * Data to the bus is merged with zeros
 
-    * To pad the counter's 4 bit output to be a full 8 bits
+        * To pad the counter's 4 bit output to be a full 8 bits
 
 
 Counter Component
@@ -157,6 +158,10 @@ Counter Component
 
     * The clear input, which resets the counter to 0, is not needed
     * The direction input, which controls the counter direction, does not need to be manipulated
+
+        * Only needs to count up for the ESAP system
+
+
     * For both, these inputs could be tied to constants
 
 
