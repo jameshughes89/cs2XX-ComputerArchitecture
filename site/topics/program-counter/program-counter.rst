@@ -110,14 +110,14 @@ Controlling Inputs
 Program Counter Design
 ----------------------
 
-
 .. figure:: program_counter.png
     :width: 500 px
     :align: center
 
-    SOMETHING
+    Program counter module with an 8 bit data bus. For the ESAP system, the program counter only needs 4 bits as there
+    are 16 RAM addresses, therefore splitters/mergers are used to have the program counter interface with the bus.
 
-here's the big boy
+
 
 
 Counter Component
