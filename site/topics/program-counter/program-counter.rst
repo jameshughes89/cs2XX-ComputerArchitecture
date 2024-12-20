@@ -26,14 +26,50 @@ Also want to be able to add data to it to facilitate jumping around
     looping and conditions
     will be made clear in later topics
 
-IMAGE
+
+
+.. figure:: program_counter_count.png
+    :width: 500 px
+    :align: center
+
+    SOMETHING
+
 
 Focus on addition
 
-Focus on outputting
 
-On inputting 
+.. figure:: program_counter_count_out.png
+    :width: 500 px
+    :align: center
 
+    SOMETHING
+
+
+.. figure:: program_counter_count_out_in.png
+    :width: 500 px
+    :align: center
+
+    SOMETHING
+
+
+
+On inputting
+
+
+.. figure:: program_counter.png
+    :width: 500 px
+    :align: center
+
+    SOMETHING
+
+here's the big boy
+
+
+.. figure:: counter_preset_symbol.png
+    :width: 250 px
+    :align: center
+
+    SOMETHING
 
 DIGITAL component
 
