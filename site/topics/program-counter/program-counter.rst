@@ -65,6 +65,11 @@ On inputting
 here's the big boy
 
 
+Counter Component
+-----------------
+
+* Since counters are a common tool, they are often represented as a single component
+
 .. figure:: counter_preset_symbol.png
     :width: 250 px
     :align: center
@@ -82,6 +87,13 @@ here's the big boy
     * The clear input, which resets the counter to 0, is not needed
     * The direction input, which controls the counter direction, does not need to be manipulated
     * For both, these inputs could be tied to constants
+
+
+.. figure:: program_counter_component.png
+    :width: 500 px
+    :align: center
+
+    Program counter module configuration using the built in counter component.
 
 
 
