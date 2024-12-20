@@ -18,6 +18,26 @@ Program Counter
 Program Counter Module
 ======================
 
+keep track of current address
+needs to control increment (add 1) (not every clock cycle)
+need to be able to get data from it
+
+Also want to be able to add data to it to facilitate jumping around
+    looping and conditions
+    will be made clear in later topics
+
+IMAGE
+
+Focus on addition
+
+Focus on outputting
+
+On inputting 
+
+
+DIGITAL component
+
+
 
 
 Including the Program Counter in the System
