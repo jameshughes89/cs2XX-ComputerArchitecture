@@ -18,42 +18,97 @@ Program Counter
 Program Counter Module
 ======================
 
-keep track of current address
-needs to control increment (add 1) (not every clock cycle)
-need to be able to get data from it
+* The program counter has several important functions
 
-Also want to be able to add data to it to facilitate jumping around
-    looping and conditions
-    will be made clear in later topics
+    * Keeps track of the memory address of the next instruction to run
+    * Increment the memory address stored
+
+        * However, this should not happen on every clock cycle
+        * Instructions often take several clock cycles to complete
+        * Thus, there needs to be a way to control when the program counter increments
 
 
+    * Output its current value
+    * Set its current value to a specific memory address
+
+        * Important for looping and conditionals
+
+
+Storing and Incrementing Values
+-------------------------------
 
 .. figure:: program_counter_count.png
     :width: 500 px
     :align: center
 
-    SOMETHING
+    Configuration of a register and adder set to add 1 to the value in the register. Although the adder is always adding
+    one to the value stored in the register, the value in the register only updates when the :math:`PC_{e}` signal is
+    high.
 
 
-Focus on addition
+* Storing a value can be achieved with a register
+* Incrementing a value can be achieved with an adder set to only ever add 1 to some inputted value
 
+* With the above configuration, the adder is always adding 1 to the value stored in the register/output at :math:`Q`
+
+    * The adder's carry in is set to ``0`` and the carry out is ignored
+
+
+* However, even though the value at the register's :math:`D` input is always :math:`Q+1`, it only updates when enabled
+
+    * When the :math:`PC_{e}` control signal is set high
+
+
+* This design provides control over when the counter increments
+
+
+Controlling Output
+------------------
 
 .. figure:: program_counter_count_out.png
     :width: 500 px
     :align: center
 
-    SOMETHING
+    A driver can be used to control when the counter's value is output. Note that the counter's output is the register's
+    output (:math:`Q`), not the output of the adder (:math:`S`).
 
+
+* To control the output, use a buffer like in previous designs
+* Note, the counter's output is :math:`Q` --- the register's output
+
+    * The output of the adder is for updating the state of the counter
+
+
+Controlling Inputs
+------------------
 
 .. figure:: program_counter_count_out_in.png
-    :width: 500 px
+    :width: 666 px
     :align: center
 
-    SOMETHING
+    A multiplexer and a new signal :math:`PC_i` to control which value to store to the register --- the output of the
+    adder or the input data.
 
 
+* In addition to incrementing, the program counter must be able to store specified input data when needed
+* Therefore, the counter's register must be able to store one of two potential values
 
-On inputting
+    * The output from the adder, containing the incremented value
+    * Some input data from elsewhere
+
+
+* A multiplexer can be used to control which of the two signals is active on the register's input :mhat:`D`
+* A control signal :math:`PC_{i}` controls the multiplexer
+
+    * In the above configuration, when :math:`PC_{i}` is low, the register's input is the incremented value
+    * When :math:`PC_{i}` is high, the register's input is the input data
+
+
+* If either :math:`PC{i}` or :math:`PC_{e}` are high, the program counter's register must be enabled
+
+
+Program Counter Design
+----------------------
 
 
 .. figure:: program_counter.png
