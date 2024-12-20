@@ -69,10 +69,19 @@ here's the big boy
     :width: 250 px
     :align: center
 
-    SOMETHING
+    Counter component with an input for loading in data.
 
-DIGITAL component
 
+* The above image shows the counter component with presets
+
+    * A counter with the ability to load data into the counter
+
+
+* This component includes several inputs not required for the ESAP's program counter
+
+    * The clear input, which resets the counter to 0, is not needed
+    * The direction input, which controls the counter direction, does not need to be manipulated
+    * For both, these inputs could be tied to constants
 
 
 
