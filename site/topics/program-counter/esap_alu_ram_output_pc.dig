@@ -977,7 +977,7 @@
           <string>4,4</string>
         </entry>
       </elementAttributes>
-      <pos x="100" y="-840"/>
+      <pos x="180" y="-840"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -1375,12 +1375,12 @@
       <p2 x="-200" y="-580"/>
     </wire>
     <wire>
-      <p1 x="120" y="-840"/>
+      <p1 x="200" y="-840"/>
       <p2 x="280" y="-840"/>
     </wire>
     <wire>
       <p1 x="20" y="-840"/>
-      <p2 x="100" y="-840"/>
+      <p2 x="180" y="-840"/>
     </wire>
     <wire>
       <p1 x="540" y="200"/>
