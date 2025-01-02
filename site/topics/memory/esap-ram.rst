@@ -21,7 +21,7 @@ Address Register
 
 * Having the memory addresses and data share a bus poses a problem for the system
 
-    * The vales on the bus are always changing, but the indexed memory location may need to be static for some time
+    * The values on the bus are always changing, but the indexed memory location may need to be static for some time
 
 
 .. figure:: RAM_with_bus_no_register.png
