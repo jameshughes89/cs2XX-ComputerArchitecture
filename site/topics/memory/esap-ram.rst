@@ -24,10 +24,9 @@ Address Register
 Including RAM in the System
 ===========================
 
-* Adding the RAM module to the system is trivial
 
-    * Connect the corresponding components up to the existing ESAP ALU system
-    * Each of the control signal lines are moved to the bottom of the system
+* To include the RAM module, connect the corresponding components up to the existing ESAP ALU system
+* Each of the control signal lines are moved to the bottom of the system
 
 
 .. figure:: esap_alu_ram.png
