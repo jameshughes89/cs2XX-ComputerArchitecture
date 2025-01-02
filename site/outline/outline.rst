@@ -1,5 +1,5 @@
 ==============================================
-Computer Science 263 --- Computer Orginization
+Computer Science 263 --- Computer Organization
 ==============================================
 
 
@@ -25,25 +25,35 @@ Prerequisites
 Instructor
 ==========
 
-
 * Dr. James Hughes
-* Office: Annex 20B
-* Office Hours: 
-
-    * Tuesday, 12:30 -- 13:30
-    * Wednesday, 12:30 -- 13:30
-    * Thursday, 13:30 -- 14:30
-    * Friday, 13:30 -- 14:00
-
-
-* Email: jhughes at stfx.ca
+* jhughes at stfx.ca
+* Annex 20B
 
 
 
 Class Times
 ===========
 
-* TBD
+* Tue 9:30 -- 10:20 (L1), MULH 4024
+* Thr 8:30 -- 9:20 (L2), MULH 4024
+* Fri 10:30 -- 11:20 (L3), MULH 4024
+
+
+
+Lab
+====
+
+* Lab Sec 20: Wed 14:30 -- 16:20 (B8-C9), MULH 4024
+
+
+
+Office Hours
+============
+
+* Tue 12:30 -- 13:20, Annex 20B
+* Wed 12:30 -- 13:20, Annex 20B
+* Thu 13:30 -- 14:20, Annex 20B
+* Fri 13:30 -- 14:20, Annex 20B
 
 
 
@@ -74,7 +84,20 @@ Topics
 
 Below is a list of topics in no particular order that may or may not be covered in the course:
 
-* TBD
+* Transistors
+* Logic Gates
+* Combinational & Sequential Logic
+* Computer System Architectures
+* Computer System Components
+
+    * Registers
+    * RAM
+    * Adders
+    * Program Counters
+    * Control Logic
+
+
+* Assembly Language
 
 
 
