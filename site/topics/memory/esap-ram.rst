@@ -16,8 +16,135 @@ Address Register and RAM
 RAM Module
 ==========
 
+* As previously discussed, memory stores data in individually indexable memory locations called addresses
+* The number of unique memory addresses is called the address space
+* Each location stores some amount of data, called the addressability
+* The amount of data in a memory location is independent from the number of memory addresses
+
+* Most computers are byte addressable, meaning each memory location stores one byte of data
+
+    * This is not a requirement, however
+
+
+* The total amount of data storable is the size of the address space times the addressability
+
+
+.. figure:: memory_abstract_idea.png
+    :width: 400 px
+    :align: center
+
+    Visualization of RAM. The left column is memory addresses, and the right is the data stored at the respective memory
+    address.
+
+
+* In the above example, a total of 16 unique memory addresses exist
+
+    * Each address is represented as a row in the table
+    * The memory address is included in the left column of the table
+
+
+* This means, in this example, there is an address space of 16
+
+    * Locations ``0b0000`` -- ``0b1111``
+    * Or, ``0x0`` -- ``0xF``
+
+
+* With an address space of 16, a total of four bits would be required to index each memory address
+
+* The data stored in each of the 16 memory address is represented as the 16 letters
+
+    * The letters ``a`` -- ``p``, one in each row
+    * In the image, the addressability is not represented; one cannot determine the amount of data in each location
+
+
+* In the current ESAP system being built, the address bus and data bus are partially shared
+* However, even though the data bus has a total of 8 bits, only 4 bits will be used to index memory
+
+    * The reasons for this is due to how program instructions will be encoded
+
+        * 4 bits for the instruction and 4 for an operand
+
+
+    * Details on how instructions are encoded will be covered in detail in a later topic
+    * Thus, the reasons for this limitation will be made clear later
+
+
+* With 4 bits, a total of 16 unique memory locations can be indexed
+* The system will store 1 byte in each memory location, like most systems
+
+    * A total of 8 bits will be stored in each memory location
+
+
+* This means the system can store up to 16 bytes of data in RAM
+
+
+.. note::
+
+    Until the late 2000s/early 2010s, a typical computer used a 32 bit address space. One of the limitations of such a
+    system is that 32 bits could index :math:`2^{32}`, or :math:`4,294,967,296` unique memory addresses. This may feel
+    like a lot, but to put this into perspective, that's only :math:`4GB`.
+
+
 Address Register
 ----------------
+
+* Having the memory addresses and data share a bus poses a problem for the system
+
+    * The values on the bus are always changing, but the indexed memory location may need to be static for some time
+
+
+.. figure:: RAM_with_bus_no_register.png
+    :width: 500 px
+    :align: center
+
+    A not particularly useful configuration of A RAM component with a shared address and data bus.
+
+
+* Consider the above configuration of RAM in a system with a shard address and data bus
+
+    * Mind the splitter used
+    * Remember, only 4 bits are used to index memory
+    * Thus, only the 4 least significant bits are useful for indexing RAM
+    * The 4 most significant bits are ignored
+
+
+* Is it possible, for example, to store the value 4 in memory address 2?
+
+    * It's possible to index memory address 2 by configuring the data on the bus to ``0b00000010``
+    * But as soon as the value 4 is added to the bus (``0b00000100``), memory address 4 is indexed, not 2
+
+
+* The problem is, the memory address indexed in RAM will always be based on what value is currently on the bus
+* Therefore, there needs to be a way to isolate the memory address from the value on the data bus
+
+* A simple solution to this problem is to add an address register
+
+    * Input the memory address to index into the address register
+    * This value will be unchanged until explicitly updated
+    * The address value stored in the address register will be what is indexing RAM
+    * Now the data on the bus can change without impacting the memory address being indexed
+
+
+.. figure:: address_register_and_RAM.png
+    :width: 600 px
+    :align: center
+
+    A configuration of RAM component with an address register facilitating the separation of a memory address and the
+    changing values stored on the bus.
+
+
+* With this configuration, there is now a small, but isolated address bus
+
+    * The line connecting the output of the address register and the RAM component's address input
+    * Between the register's :math:`Q` and RAM's :math:`A`
+
+
+* To return to the previous example problem, it is now possible to load the value 4 into memory address 2
+
+    #. Configure the data on the bus to be 2 (``0b00000010``)
+    #. Load the value from the bus into the address register with the :math:`address` control signal
+    #. Configure the data on the bus to be 4 (``0b00000100``)
+    #. Load the value from the bus into RAM with the :math:`RAM_{i}` control signal
 
 
 
