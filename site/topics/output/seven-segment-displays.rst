@@ -336,7 +336,7 @@ Using a LUT to Map Numbers to Seven Segment Display Patterns
 
 
 * The LUT takes 8 input lines representing an 8 bit number
-* Additionally, the LUT will have one additional input line to signify if the number is signed
+* Additionally, the LUT will have one additional input line to specify if the number is signed
 
     * If the number is two's complement
     * This will be discussed in greater detail below
@@ -473,8 +473,40 @@ Signed Integers
     :end-before: # [end-signed_patterns]
 
 
-Saving to Hex File
-^^^^^^^^^^^^^^^^^^
+* Since that there are two sets of numbers to decode (unsigned and signed), each set can be stored in their own LUT
+
+    * One LUT has all the unsigned 8 bit integer patterns
+    * The other LUT has all the signed 8 bit integer patterns
+
+
+* A control signal and multiplexer can be used to select which type of integer to display
+
+.. figure:: two_lut_with_mux.png
+    :width: 333 px
+    :align: center
+
+    Two look up tables, each storing their respective 8 bit unsigned/signed integer patterns for seven segment displays.
+    A signal called :math:`signed` controls a multiplexer which allows for selecting which integer type
+    (unsigned/signed) is actually output to the seven segment displays.
+
+
+
+Can use 1 LUT with a 9th bit
+IMAGE
+
+* Remember, there are 9 input bits, meaning a total of :math:`2^{9}` (:math:`512`) unique values can be indexed
+
+    * 8 bits representing the number, with the 9th input being the :math:`signed` flag
+    * In other words ``0b0 00000000`` -- ``0b0 11111111`` store the unsigned integers
+    * ``0b1 00000000`` -- ``0b1 11111111`` store the signed integers
+
+
+* One could think of it as the 9th bit selecting which block of 256 values to index
+
+
+
+Saving to a Hex File
+^^^^^^^^^^^^^^^^^^^^
 
 * Finally, the lists of patterns are saved to a hex file that can be loaded into the LUT
 * The ``v2.0 raw`` is necessary for Digital to parse the hex files
@@ -482,13 +514,6 @@ Saving to Hex File
 * The following 256 patterns are the signed integers
 
     * Remember, there are 9 input bits, meaning a total of :math:`2^{9}` (:math:`512`) unique values can be indexed
-
-        * 8 bits representing the number, with the 9th input being the :math:`signed` flag
-        * In other words ``0b0 00000000`` -- ``0b0 11111111`` store the unsigned integers
-        * ``0b1 00000000`` -- ``0b1 11111111`` store the signed integers
-
-
-    * One could think of it as the 9th bit selecting which block of 256 values to index
 
 
 .. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
