@@ -382,6 +382,9 @@ Creating Seven Segment Display Patterns
     :end-before: # [end-seven_segment_digit_pattern_constants]
 
 
+Unsigned Integers
+^^^^^^^^^^^^^^^^^
+
 * To create the 25 bit output patterns, two bitwise operators will be used
 
     * Bit shifting
@@ -400,7 +403,7 @@ Creating Seven Segment Display Patterns
             * ``0b11001100 | 0b11110000`` results in ``0b11111100``
 
 
-* Further, it is possible to obtain the each individual digit in a number
+* Further, given some number, it is possible to obtain the each individual digit with basic arithmetic
 
     * Divide the number by the desired digit's *place* value, then mod 10
     * For example, consider the number ``123``
@@ -417,6 +420,7 @@ Creating Seven Segment Display Patterns
     * 1 --- ``00000110``
     * 2 --- ``01011011``
     * 3 --- ``01001111``
+
 
 * Bit shift the 8 bits for the 100s number 16 bits to the left, shift the 10s 8 bits to the left, and the 1s shift 0
 * Each pattern would then be as follows (leading ``0``\s and spaces are included for visual clarity)
@@ -447,6 +451,9 @@ Creating Seven Segment Display Patterns
     :end-before: # [end-unsigned_patterns]
 
 
+Signed Integers
+^^^^^^^^^^^^^^^
+
 * The same idea is used for the signed integers, but following the two's complement pattern
 
     * ``0b00000000`` -- ``0b011111111`` corresponds to integers 0 -- 127
@@ -465,6 +472,9 @@ Creating Seven Segment Display Patterns
     :start-after: # [begin-signed_patterns]
     :end-before: # [end-signed_patterns]
 
+
+Saving to Hex File
+^^^^^^^^^^^^^^^^^^
 
 * Finally, the lists of patterns are saved to a hex file that can be loaded into the LUT
 * The ``v2.0 raw`` is necessary for Digital to parse the hex files
