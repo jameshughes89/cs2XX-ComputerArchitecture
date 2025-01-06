@@ -490,18 +490,19 @@ Signed Integers
     (unsigned/signed) is actually output to the seven segment displays.
 
 
+* However, the same functionality can be achieved with a single LUT with an additional input signal
+* Eight bits represent the number, and the ninth input would be the :math:`signed` control line
 
-Can use 1 LUT with a 9th bit
-IMAGE
+* Remember, with 9 input bits, a total of :math:`2^{9}` (:math:`512`) unique values can be indexed
 
-* Remember, there are 9 input bits, meaning a total of :math:`2^{9}` (:math:`512`) unique values can be indexed
-
-    * 8 bits representing the number, with the 9th input being the :math:`signed` flag
+    * Thus, the first 256 numbers could be unsigned integers, and the following 256 could be signed
     * In other words ``0b0 00000000`` -- ``0b0 11111111`` store the unsigned integers
     * ``0b1 00000000`` -- ``0b1 11111111`` store the signed integers
 
 
 * One could think of it as the 9th bit selecting which block of 256 values to index
+
+    * In the same way as the control signal and multiplexer would select which LUT's pattern is output 
 
 
 
