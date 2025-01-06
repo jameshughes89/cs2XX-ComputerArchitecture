@@ -350,7 +350,7 @@ Using a LUT to Map Numbers to Seven Segment Display Patterns
     * The number ``0b10101010`` would map to the pattern for -086 if the :math:`signed` signal was high
 
 
-* Since each digit uses 8 bits to represent, and there are three digits, a total of 24 bits are needed
+* Since each digit uses 8 bits for its display pattern, and there are three digits, a total of 24 bits are needed
 * However, there is an additional output signal needed to control the negative sign
 
     * Notice in the design that only one line from the LUT is connected to the left most seven segment display
@@ -413,7 +413,7 @@ Unsigned Integers
         * ``123 / 1 = 123``, ``123 % 10 = 3``, therefore the 1s place is ``3``
 
 
-* With this, the idea is to take each 8 bit number, obtain each place's digit's pattern and left shift where necessary
+* With this, the idea is to take each 8 bit number, obtain each place's digit's pattern, and left shift where necessary
 * This is best explained with an example
 * Consider the number 123 --- each digits pattern is as follows
 
@@ -437,7 +437,7 @@ Unsigned Integers
 
 * Note that the most significant, 25th bit, is not needed here as the number is positive
 
-    * If a bit is not explicitly set to ``1``, it will be ``0``
+    * If a leading bit is not explicitly set to ``1``, it will be ``0``
 
 
 * Further, in the below code, bit shifting the 1s digit to the left 0 bits has no functional purpose
@@ -481,7 +481,7 @@ Signed Integers
 
 * A control signal and multiplexer can be used to select which type of integer to display
 
-.. figure:: two_lut_with_mux.png
+.. figure:: two_lut_and_mux.png
     :width: 333 px
     :align: center
 
@@ -529,9 +529,6 @@ Saving to a Hex File
 * The ``v2.0 raw`` is necessary for Digital to parse the hex files
 * The first 256 patterns are the unsigned integer patterns
 * The following 256 patterns are the signed integers
-
-    * Remember, there are 9 input bits, meaning a total of :math:`2^{9}` (:math:`512`) unique values can be indexed
-
 
 .. literalinclude:: create_seven_segment_patterns_for_look_up_table.py
     :language: python
