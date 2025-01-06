@@ -339,6 +339,7 @@ Using a LUT to Map Numbers to Seven Segment Display Patterns
 * Additionally, the LUT will have one additional input line to signify if the number is signed
 
     * If the number is two's complement
+    * This will be discussed in greater detail below
 
 
 * Thus, the LUT will have a total of 9 input signals
@@ -404,9 +405,9 @@ Creating Seven Segment Display Patterns
     * Divide the number by the desired digit's *place* value, then mod 10
     * For example, consider the number ``123``
 
-        * ``123 / 100 = 1``, ``1 % 10 = 1`, therefore the 100s place is ``1``
-        * ``123 / 10 = 12``, ``12 % 10 = 2`, therefore the 10s place is ``2``
-        * ``123 / 1 = 123``, ``123 % 10 = 3`, therefore the 1s place is ``3``
+        * ``123 / 100 = 1``, ``1 % 10 = 1``, therefore the 100s place is ``1``
+        * ``123 / 10 = 12``, ``12 % 10 = 2``, therefore the 10s place is ``2``
+        * ``123 / 1 = 123``, ``123 % 10 = 3``, therefore the 1s place is ``3``
 
 
 * With this, the idea is to take each 8 bit number, obtain each place's digit's pattern and left shift where necessary
