@@ -491,7 +491,7 @@ Signed Integers
 
 
 * However, the same functionality can be achieved with a single LUT with an additional input signal
-* Eight bits represent the number, and the ninth input would be the :math:`signed` control line
+* 8 bits represent the number, and the 9th input would be the :math:`signed` control line
 
 * Remember, with 9 input bits, a total of :math:`2^{9}` (:math:`512`) unique values can be indexed
 
@@ -502,7 +502,23 @@ Signed Integers
 
 * One could think of it as the 9th bit selecting which block of 256 values to index
 
-    * In the same way as the control signal and multiplexer would select which LUT's pattern is output 
+    * In the same way as the control signal and multiplexer would select which LUT's pattern is output
+
+
+.. figure:: single_lut_input_pattern_breakdown_table.png
+    :width: 500 px
+    :align: center
+
+    Table representing how the nine input signals on the look up table map to the 512 unique display patterns. When the
+    :math:`signed` control signal is low, the 8 bit binary number input would map to the 256 unsigned integer patterns
+    in 0 -- 255. When the :math:`signed` control signal is high, the 8 bit binary number maps the 256 signed integer
+    patterns in 256 -- 512.
+
+
+* Notice how, with this configuration, the *meaning* of the input signals differ
+
+    * The first 8 bits represent some binary number
+    * The ninth bit is not part of the binary number, but represent a control signal
 
 
 
