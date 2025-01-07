@@ -15,6 +15,11 @@ Instructions and Microcodes
 
 
 
+Microcodes
+==========
+
+
+
 Constraints
 ===========
 
@@ -27,11 +32,6 @@ need to be able to index RAM, so we need 4 bits for operand
 thus we have 4 bits for instructions
 meaning we can have a total of 16 instructions
 this is fine. We don't need much to be turing complete
-
-
-
-Microcodes
-==========
 
 
 
