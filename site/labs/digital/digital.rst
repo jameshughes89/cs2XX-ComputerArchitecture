@@ -25,13 +25,13 @@ Starting with Digital
 
     * Open the uncompressed folder and run it
     * On Windows, run the executable (exe) file
-    * On Mac or Linux, run the bash (sh) file or java archive (jar) file from a terminal
+    * On Mac or Linux, run the bash (sh) or java archive (jar) file from a terminal opened to the proper directory
 
         * ``./Digital.sh``
         * ``java -jar Digital.jar``
 
 
-    * You may require a java runtime environment to run the software
+    * A java runtime environment is required to run the software
 
         * Digital should prompt for a download if necessary
 
@@ -60,7 +60,7 @@ Interacting with the Workspace
 
 #. Make a copy of the circuit
 
-    * This can achieved easily by selecting the whole circuit with a click and drag, copy, and paste
+    * This can achieved by selecting the whole circuit with a click and drag, copy, and paste
     * Once selected, copy with the hotkey ctrl + c
     * Paste with ctrl + p
 
@@ -71,9 +71,9 @@ Interacting with the Workspace
     * Redo can be done with ctrl + y
 
 
-#. Move the output higher or lower such that the input and output are not on the same line
+#. Move the output higher or lower vertically such that the input and output are not on the same line
 
-    * This can easily be done by selecting a portion of the circuit to move with a click and drag
+    * This can be done by selecting a portion of the circuit to move with a click and drag
     * Then, click and drag the selected portion of the circuit up or down
     * Be mindful to have the output component and the wire selected before moving it
 
@@ -88,7 +88,7 @@ Interacting with the Workspace
 
     * Be mindful of what segments of the wire are selected before dragging them around the workspace
     * This takes some getting used to
-    * If diagonals are appearing, try re-selecting different segments of the wire
+    * If diagonals are created, undo and try re-selecting different segments of the wire before dragging components
 
 
 #. Excluding the "Components" menu, explore the different top menus and options within them,
@@ -135,7 +135,7 @@ course. At this stage, there is no expectation that any of these components are 
 #. Start adding different components to the workspace and try to interact with them
 
     * Some of these will be easier to understand than others
-    * Some components have special settings that can be altered by right clicking on them
+    * Some components have special settings that can be altered by right clicking on the component
     * If a component does not make sense, right click on the component and select "Help"
 
 
@@ -155,6 +155,9 @@ Digital provides many example circuits that are included with the software.
         * Some are quite fun
 
 
+    * Share interesting ones with those around you 
+
+
 
 Playing
 =======
@@ -163,4 +166,4 @@ Playing
 
     * Work together and share ideas with one another
     * Ask questions if stuck
-    * Have fun 
+    * Have fun
