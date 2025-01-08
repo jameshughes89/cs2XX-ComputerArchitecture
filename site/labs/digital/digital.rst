@@ -48,10 +48,18 @@ Starting with Digital
     * Wires are added by clicking and then moving the mouse around the workspace
     * Have the input and output components such that a single, straight horizontal wire connects them
 
+    .. figure:: input_output.png
+        :width: 333 px
+        :align: center
+
 
 #. Run the circuit and interact with the input button
 
     * Select the play button to run the circuit
+
+    .. figure:: run_button.png
+        :width: 333 px
+        :align: center
 
 
 
@@ -82,6 +90,11 @@ Interacting with the Workspace
 
 #. After doing this, the wire is likely diagonal; however, ideally the wires are kept horizontal and vertical only
 
+    .. figure:: input_output_diagonal.png
+        :width: 333 px
+        :align: center
+
+
 #. Delete the wire and add a new wire that is made up of only vertical and horizontal segments
 
 #. Now try to move the output component around, while staying connected to the circuit, without adding diagonal segments
@@ -89,6 +102,10 @@ Interacting with the Workspace
     * Be mindful of what segments of the wire are selected before dragging them around the workspace
     * This takes some getting used to
     * If diagonals are created, undo and try re-selecting different segments of the wire before dragging components
+
+    .. figure:: input_output_segments.png
+        :width: 333 px
+        :align: center
 
 
 #. Excluding the "Components" menu, explore the different top menus and options within them,
@@ -112,6 +129,10 @@ Tutorial
 #. Re-run the circuit in "Single Gate Stepping" mode and see how this differs from running the circuit regularly
 
     * Make use of the "Gate Step" button
+
+    .. figure:: run_step_button.png
+        :width: 333 px
+        :align: center
 
 
 #. Stop the circuit open the analyze window and make sense of what it shows
@@ -155,7 +176,7 @@ Digital provides many example circuits that are included with the software.
         * Some are quite fun
 
 
-    * Share interesting ones with those around you 
+    * Share interesting ones with those around you
 
 
 
