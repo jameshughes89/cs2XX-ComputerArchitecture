@@ -169,6 +169,7 @@ Digital provides many example circuits that are included with the software.
 
 #. Explore provided files by loading them, running them, and interacting with them
 
+    * Open these files through the "File -> Open" menu
     * These provided circuits cam be found within the "examples" folder within the "Digital" folder
     * There are many, so do not expect to open every one
     * Take the time to explore those that seem interesting
