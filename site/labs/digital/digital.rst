@@ -129,28 +129,38 @@ Tutorial
 Explore Components
 ==================
 
-Much of these are complex, and many we will build towards
-for now we are playing around
+Much of the components that Digital provides are complex, and several will be discussed and worked towards in this
+course. At this stage, there is no expectation that any of these components are understood by the students.
 
-Start using and interacting with the components
-see if you can get them working and see if you can make sense of what they are doing
-some compoents have settings you can modify if you ricjt click on them
-If you are stuck, right click the component and select HELP for a description
+#. Start adding different components to the workspace and try to interact with them
+
+    * Some of these will be easier to understand than others
+    * Some components have special settings that can be altered by right clicking on them
+    * If a component does not make sense, right click on the component and select "Help"
 
 
 
 Digital's Example Files
 =======================
 
-Load up some and play with several of the example file sprovided with Digital
-They are within the Digital example folder's
-There are a lot, but go ghrough and open those that look interesting
-run them and interact with them if you can
+Digital provides many example circuits that are included with the software.
+
+
+#. Explore provided files by loading them, running them, and interacting with them
+
+    * These provided circuits cam be found within the "examples" folder within the "Digital" folder
+    * There are many, so do not expect to open every one
+    * Take the time to explore those that seem interesting
+
+        * Some are quite fun
 
 
 
 Playing
 =======
 
-Play around within Digital and see what you can build
-Work together, ask questions, have fun
+#. Play around within Digital and the various components to try and build something interesting
+
+    * Work together and share ideas with one another
+    * Ask questions if stuck
+    * Have fun 
