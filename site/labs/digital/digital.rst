@@ -65,7 +65,13 @@ Interacting with the Workspace
     * Paste with ctrl + p
 
 
-#. On one of the two circuits, move the output higher or lower such that the input and output are not on the same line
+#. Remove the copy by performing undo commands
+
+    * Undo can be done with the hotkey ctrl + z
+    * Redo can be done with ctrl + y
+
+
+#. Move the output higher or lower such that the input and output are not on the same line
 
     * This can easily be done by selecting a portion of the circuit to move with a click and drag
     * Then, click and drag the selected portion of the circuit up or down
@@ -94,21 +100,29 @@ Interacting with the Workspace
 Tutorial
 ========
 
-delete everything, or create a new file
+#. Delete everything or create a new file
 
-Run the totorial
-    if you miss it, it's under the menue View
+#. Run the tutorial
 
-
-run the circuit and see how the output reacts in real time
-try to run in gate step mode
-
-open the analyze menu
-    Analysis -> Analysis
-    It's showing the truth table for the circuit
+    * The tutorial can be started by selecting "View -> Start Tutorial"
 
 
-add a graph data component and run again and interact with the circuit
+#. As the tutorial instructed, run the circuit and interact with it in real time
+
+#. Re-run the circuit in "Single Gate Stepping" mode and see how this differs from running the circuit regularly
+
+    * Make use of the "Gate Step" button
+
+
+#. Stop the circuit open the analyze window and make sense of what it shows
+
+    * Found in "Analysis -> Analysis"
+
+
+#. Add a Data Graph component to the workspace, re-run the circuit, and interact with the inputs
+
+    * The Data Graph component is found under "Component -> IO -> Data Graph"
+    * The Data Graph component does not need to be connected to anything
 
 
 
