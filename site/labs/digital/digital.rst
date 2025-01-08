@@ -14,49 +14,80 @@ Digital
 Starting with Digital
 =====================
 
-download digital and uncompress it
+#. Download and uncompress Digital, the simulation software used in this course
 
-    on windows, can run exe
-    on Mac and Linux, you can run the bash script
-
-
-skip the totorial for now
-    will come back to this later
+    * Digital can be downloaded from `here <https://github.com/hneemann/Digital/releases/latest/download/Digital.zip>`_
+    * Be sure to save it somewhere useful
+    * Don't forget to uncompress the file
 
 
-Place an input and output and connect them
+#. Run Digital
 
-    components -> io -> input
-    components -> io -> output
+    * Open the uncompressed folder and run it
+    * On Windows, run the executable (exe) file
+    * On Mac or Linux, run the bash (sh) file or java archive (jar) file from a terminal
 
-    click in the work space to start making a wire
-
-
-Run the circuit and interact with it
-    click input button
+        * ``./Digital.sh``
+        * ``java -jar Digital.jar``
 
 
-Make a copy of the circuit
-    click and drag to select and copy (ctrl-c)
-    paste with ctrl p
+    * You may require a java runtime environment to run the software
+
+        * Digital should prompt for a download if necessary
 
 
-Make one of the circuits have the input and output not on the same horizontal line
-    Do this by selecting and dragging
+#. Skip the tutorial for now
+
+    * The tutorial will be done shortly
 
 
-Ideally, wires should be horizontal or vertical, so do it like this
+#. Place an input and output on the workspace and connect them with a wire
+
+    * Input components can be found through the top menu "Components -> IO -> Input"
+    * Output components can be found in the same menu
+    * Wires are added by clicking and then moving the mouse around the workspace
+    * Have the input and output components such that a single, straight horizontal wire connects them
 
 
-Try to move the input and/or output around without causing diagonal wires and not redrawing the wires
-    this takes getting used to
-    be mindful which segment of the wires are selected before clicking and dragging
+#. Run the circuit and interact with the input button
+
+    * Select the play button to run the circuit
 
 
-excluding the components mnue, look through the menues
-    much of this we wont use, but still look
-    play around with things, interacti with the software to get a sense of what things do
 
+Interacting with the Workspace
+==============================
+
+#. Make a copy of the circuit
+
+    * This can achieved easily by selecting the whole circuit with a click and drag, copy, and paste
+    * Once selected, copy with the hotkey ctrl + c
+    * Paste with ctrl + p
+
+
+#. On one of the two circuits, move the output higher or lower such that the input and output are not on the same line
+
+    * This can easily be done by selecting a portion of the circuit to move with a click and drag
+    * Then, click and drag the selected portion of the circuit up or down
+    * Be mindful to have the output component and the wire selected before moving it
+
+        * Otherwise the output will disconnect from the circuit
+
+
+#. After doing this, the wire is likely diagonal; however, ideally the wires are kept horizontal and vertical only
+
+#. Delete the wire and add a new wire that is made up of only vertical and horizontal segments
+
+#. Now try to move the output component around, while staying connected to the circuit, without adding diagonal segments
+
+    * Be mindful of what segments of the wire are selected before dragging them around the workspace
+    * This takes some getting used to
+    * If diagonals are appearing, try re-selecting different segments of the wire
+
+
+#. Excluding the "Components" menu, explore the different top menus and options within them,
+
+    * Play around with the options and settings to see what they do
 
 
 
