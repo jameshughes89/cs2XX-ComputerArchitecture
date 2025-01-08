@@ -91,7 +91,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
-    labs/hello-world/hello-world
+    labs/digital/digital
 
 
 
