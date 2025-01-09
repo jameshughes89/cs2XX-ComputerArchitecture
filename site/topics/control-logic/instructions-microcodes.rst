@@ -40,7 +40,7 @@ Constraints
     * Operand
 
 
-* For example, imagine trying to load data from a RAM address into register A
+* For example, imagine an instruction to load data from a RAM address into register A
 
     * The operation/operator is --- load data into register A
     * The operand is --- the RAM address of the data to be loaded into register A
@@ -48,7 +48,7 @@ Constraints
 
 * This means, there needs to be a way to encode the operator and the operand into the 8 bits
 
-    * There needs to be a way to encode *load into A* and the *memory address of the data to load into A*
+    * There needs to be a way to encode *load into A* and *the memory address of the data to load into A*
 
 
 * A design decision must be made here --- how many bits for each of the two parts?
@@ -56,13 +56,19 @@ Constraints
 * For the ESAP system, the most significant 4 bits will be for the operator, and the remaining 4 will be for the operand
 
     * This means, a total of 16 unique operators and 16 unique operands can be represented
-    * With only 16 unique values for operands, only 16 memory address may be indexed
+    * If the operand is a memory address, with 16 unique values, only 16 memory address may be indexed
 
         * This is why the system was designed with only 16 bytes or RAM
 
 
+.. figure:: instruction_operator_operand.png
+    :width: 333 px
+    :align: center
 
-IMAGE
+    The ESAP system's 8 bit instruction broken down into the two parts --- operator and operand. The 4 most significant
+    bits, represented as ``XXX`` would specify some operator, while the 4 least significant bits, represented as
+    ``YYYY`` would be the operand.
+
 
 * Ultimately, it is possible to have different breakdowns of the 8 bits
 
@@ -77,7 +83,7 @@ IMAGE
     * Less vs. more flexibility with the number of operators, at the cost/benefit of operands and address space
 
 
-* As previously mentioned, more details are to come on how the system encodes manages the instructions
+* As previously mentioned, more details are to come on how the system encodes and manages the instructions
 * For now, the takeaway is understanding how the 8 bits constrains the system's instructions
 
 
