@@ -156,7 +156,7 @@ Names
 ^^^^^
 
 * Each of these positions has a name
-* From left to right, they are
+* From right to left, they are
 
     .. list-table:: Digit Position Names
         :widths: 50 50 50 50
