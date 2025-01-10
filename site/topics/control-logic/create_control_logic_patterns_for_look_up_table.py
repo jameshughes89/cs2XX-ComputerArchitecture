@@ -47,9 +47,8 @@ BRI = 0b0_00000000_00100000
 ARO = 0b0_00000000_00010000
 ARI = 0b0_00000000_00001000
 PCO = 0b0_00000000_00000100
-PCI = 0b0_00000000_00000010
-PCE = 0b0_00000000_00000001
-
+PCE = 0b0_00000000_00000010
+PCI = 0b0_00000000_00000001
 
 """
 Mirocodes for the 16 possible instructions. Each microcode could be up to 8 instructions long, but currently the max is 
