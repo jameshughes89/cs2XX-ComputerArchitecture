@@ -488,7 +488,7 @@ Hexadecimal (Base 16)
           - :math:`16^{1}`
           - :math:`16`
         * - Third Digit
-          - Two Hundred and Fifty Fives
+          - Two Hundred and Fifty Sixes
           - :math:`16^{2}`
           - :math:`255`
         * - Fourth Digit
