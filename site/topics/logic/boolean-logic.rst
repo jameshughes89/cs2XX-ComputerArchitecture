@@ -397,7 +397,7 @@ Properties of Logical Operators
     * - Distributivity of :math:`\lor` over :math:`\land`
       - :math:`a \lor (b \land c) = (a \lor b) \land (a \lor c)`
     * - Distributivity of :math:`\land` over :math:`\lor`
-      - :math:`a \land (b \land c) = (a \land b) \lor (a \land c)`
+      - :math:`a \land (b \lor c) = (a \land b) \lor (a \land c)`
     * - Absorption 1
       - :math:`a \lor (a \land b) = a`
     * - Absorption 2
