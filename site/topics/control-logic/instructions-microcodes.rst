@@ -99,15 +99,12 @@ Microcodes
       - ``0``
 
 
-in fact, consider the operation being ``XXXX 1111`` where ``1111`` is the address and ``XXXX`` the unique identifier for the operation LOAD A
+* These two steps put together achieve the operation of loading data from a specific RAM address into register A
+* The steps individual steps are called *microcodes*
+* Each of these microcodes took one clock cycle
 
-These small steps are put together to achieve the operation/instruction of loading data from RAM into A
-These are called micro codes
-
-Most of our instructions are made up of several micro codes
-what they are are up to the designer
-how many there are depends
-Thus, we cna see why 1 instruction takes several clock cycles
+* Most operations/instructions we want the computer to perform are made up of several microcodes
+* Thus, individual instructions may take multiple clock cycles
 
 
 
