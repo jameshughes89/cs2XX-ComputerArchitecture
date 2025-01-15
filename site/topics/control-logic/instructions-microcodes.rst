@@ -103,7 +103,12 @@ Microcodes
 * The steps individual steps are called *microcodes*
 * Each of these microcodes took one clock cycle
 
-* Most operations/instructions we want the computer to perform are made up of several microcodes
+* Most operations/instructions are made up of several microcodes
+
+    * These operations/instructions would be things like loading data from RAM, addition, outputting data, etc.
+    * Additional instructions are to be discussed shortly
+
+
 * Thus, individual instructions may take multiple clock cycles
 
 
