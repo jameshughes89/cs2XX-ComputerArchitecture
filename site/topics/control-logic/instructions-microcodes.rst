@@ -56,7 +56,47 @@ Microcodes
     (``0b1111``) to the bus, and input the data from the bus into register A.
 
 
-have table?
+* Below is a table showing how the control lines would be configured for the two steps
+
+    * The data and clock columns are excluded
+    * Like before, each row corresponds to one clock cycle
+
+
+.. list-table:: Control logic for loading data from some memory address to register A
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      - :math:`out_{i}`
+      - :math:`sign`
+      - :math:`PC`
+      - :math:`PC_e`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0/0``
+      - ``0``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0/0``
+      - ``0``
 
 
 in fact, consider the operation being ``XXXX 1111`` where ``1111`` is the address and ``XXXX`` the unique identifier for the operation LOAD A
