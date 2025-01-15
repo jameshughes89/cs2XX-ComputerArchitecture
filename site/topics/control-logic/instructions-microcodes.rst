@@ -40,15 +40,24 @@ Microcodes
     #. Output the value stored in RAM to the bus and input the value from the bus into register A
 
 
+.. figure:: esap_in_memory_register.png
+    :width: 666 px
+    :align: center
 
-IMAGE
+    Subsection of the ESAP system so far, corresponds to step 1 above. From the bus, load into the memory address
+    register the address of the data to be accessed from RAM. Here, the address is ``15``, or ``0b1111``.
 
-what are the steps?
-    - spell out
+
+.. figure:: esap_out_ram_in_register_a.png
+    :width: 666 px
+    :align: center
+
+    Subsection of the ESAP system so far, corresponds to step 2 above. Output the data stored in RAM address ``15``
+    (``0b1111``) to the bus, and input the data from the bus into register A.
+
 
 have table?
 
-IMAGES
 
 in fact, consider the operation being ``XXXX 1111`` where ``1111`` is the address and ``XXXX`` the unique identifier for the operation LOAD A
 
