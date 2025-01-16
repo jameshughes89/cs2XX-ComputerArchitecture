@@ -8,14 +8,6 @@
         <roms/>
       </romList>
     </entry>
-    <entry>
-      <string>preloadProgram</string>
-      <boolean>true</boolean>
-    </entry>
-    <entry>
-      <string>preloadProgramFile</string>
-      <file>/home/jhughes/Desktop/cs2XX-ComputerArchitecture/site/topics/control-logic/add_subtract_output.hex</file>
-    </entry>
   </attributes>
   <visualElements>
     <visualElement>
