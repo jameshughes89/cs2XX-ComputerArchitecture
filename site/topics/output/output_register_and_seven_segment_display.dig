@@ -267,12 +267,15 @@
           <string>Testdata</string>
           <testData>
             <dataString>output_e	signed	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	-	100s	10s	1s	C
-# Load 219 (unsigned)/-37 (signed)
+# Load 0b110110110  (219 unsigned)
 1		0	1	1	0	1	1	0	1	1	0	0x35B	0x06	0x6F	C
 # No output enable makes no change 
-0		0	X	X	X	X	X	X	X	X	0	0x35B	0x06	0x6F	C
-0		1	X	X	X	X	X	X	X	X	1	0x3F	0x4F	0x07	C
-</dataString>
+0		X	X	X	X	X	X	X	X	X	0	0x35B	0x06	0x6F	C
+
+# Load 0b110110110 (-37 signed)
+1		1	1	1	0	1	1	0	1	1	1	0x3F	0x4F	0x07	C
+# No output enable makes no change 
+0		X	X	X	X	X	X	X	X	X	1	0x3F	0x4F	0x07	C</dataString>
           </testData>
         </entry>
       </elementAttributes>
@@ -689,10 +692,10 @@
         </entry>
         <entry>
           <string>Bits</string>
-          <int>8</int>
+          <int>9</int>
         </entry>
       </elementAttributes>
-      <pos x="-1020" y="-20"/>
+      <pos x="-1000" y="-20"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -703,11 +706,11 @@
         </entry>
         <entry>
           <string>Input Splitting</string>
-          <string>8</string>
+          <string>9</string>
         </entry>
         <entry>
           <string>Output Splitting</string>
-          <string>1,1,1,1,1,1,1,1</string>
+          <string>1,1,1,1,1,1,1,1,1</string>
         </entry>
       </elementAttributes>
       <pos x="-900" y="60"/>
@@ -747,18 +750,22 @@
           <string>Input Splitting</string>
           <string>8,1</string>
         </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>9</string>
+        </entry>
       </elementAttributes>
       <pos x="-1080" y="-40"/>
     </visualElement>
   </visualElements>
   <wires>
     <wire>
-      <p1 x="-960" y="0"/>
+      <p1 x="-940" y="0"/>
       <p2 x="-900" y="0"/>
     </wire>
     <wire>
       <p1 x="-1200" y="0"/>
-      <p2 x="-1020" y="0"/>
+      <p2 x="-1000" y="0"/>
     </wire>
     <wire>
       <p1 x="-960" y="160"/>
@@ -791,6 +798,10 @@
     <wire>
       <p1 x="-600" y="260"/>
       <p2 x="-540" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="-1060" y="260"/>
+      <p2 x="-880" y="260"/>
     </wire>
     <wire>
       <p1 x="-900" y="100"/>
@@ -902,7 +913,7 @@
     </wire>
     <wire>
       <p1 x="-1040" y="-20"/>
-      <p2 x="-1020" y="-20"/>
+      <p2 x="-1000" y="-20"/>
     </wire>
     <wire>
       <p1 x="-980" y="180"/>
@@ -942,7 +953,7 @@
     </wire>
     <wire>
       <p1 x="-1320" y="20"/>
-      <p2 x="-1020" y="20"/>
+      <p2 x="-1000" y="20"/>
     </wire>
     <wire>
       <p1 x="-600" y="280"/>
@@ -1053,12 +1064,12 @@
       <p2 x="-460" y="460"/>
     </wire>
     <wire>
-      <p1 x="-1040" y="-40"/>
-      <p2 x="-1040" y="-20"/>
-    </wire>
-    <wire>
       <p1 x="-1040" y="80"/>
       <p2 x="-1040" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-1040" y="-40"/>
+      <p2 x="-1040" y="-20"/>
     </wire>
     <wire>
       <p1 x="-720" y="280"/>
@@ -1161,6 +1172,10 @@
       <p2 x="-420" y="500"/>
     </wire>
     <wire>
+      <p1 x="-1060" y="80"/>
+      <p2 x="-1060" y="260"/>
+    </wire>
+    <wire>
       <p1 x="-680" y="440"/>
       <p2 x="-680" y="460"/>
     </wire>
@@ -1241,6 +1256,10 @@
       <p2 x="-440" y="480"/>
     </wire>
     <wire>
+      <p1 x="-1020" y="80"/>
+      <p2 x="-1020" y="220"/>
+    </wire>
+    <wire>
       <p1 x="-700" y="80"/>
       <p2 x="-700" y="220"/>
     </wire>
@@ -1255,10 +1274,6 @@
     <wire>
       <p1 x="-380" y="200"/>
       <p2 x="-380" y="460"/>
-    </wire>
-    <wire>
-      <p1 x="-1020" y="80"/>
-      <p2 x="-1020" y="220"/>
     </wire>
     <wire>
       <p1 x="-640" y="80"/>
