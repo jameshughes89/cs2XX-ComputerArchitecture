@@ -20,45 +20,82 @@ Part 1 --- Non-Digital
 This portion of the assignment will not make use of the Digital simulation software. All answers must be typed and use
 proper math typesetting, where appropriate.
 
-
 #. Given the 26 letters of the alphabet
 
-    #. What is the fewest number of bits needed to give each letter a unique bit pattern?
-    #. How many bits would be needed for both lowercase and uppercase letters?
-    #. How many bits would be needed to identify uppercase and lowercase letters, and numerals (the 10 digits)?
+    a. What is the fewest number of bits needed to give each letter a unique bit pattern?
+    b. How many bits would be needed for both lowercase and uppercase letters?
+    c. How many bits would be needed to identify uppercase and lowercase letters, and numerals (the 10 digits)?
 
 
-- What is the fewest number of bits needed to encode all 26 lower case letters of the alphabet.
-- how many would be needed to encode uppercase and lowercase letters
-- With this number of bits, how many more symbols could be added
+#. Create a table showing all 4 bit binary integers and their corresponding decimal value.
 
-2.
-- Make a table of all 4 bit integers and their decimal value
-- show example start of the table
+    .. list-table:: Example start of the table
+        :widths: 50 50
+        :header-rows: 1
 
-3.
-- Convert binary numbers to decimal and show work
+        * - Binary
+          - Decimal
+        * - :math:`0000_{2}`
+          - :math:`0_{10}`
+        * - :math:`0001_{2}`
+          - :math:`1_{10}`
+        * - ``...``
+          - :math:`...`
+        * - ``...``
+          - :math:`...`
 
-4.
-- Convert decimal to binary and show work
 
-5.
-- convert decimal to hex and show work
+#. Convert the following binary (base 2) numbers to decimal (base 10) --- show all work.
 
-6.
-add binary numbers and leave results in binary
+    a. :math:`10101010_{2}`
+    b. :math:`01010101_{2}`
+    c. :math:`11111010_{2}`
 
-7.
-do bitwise boolean operations
 
-8.
-generate truth tables for the following binary expressions
+#. Convert the following decimal (base 10) numbers to binary (base 2) --- show all work.
 
-9.
-prove the two demorgans with truth table for each
+    a. :math:`123_{10}`
+    b. :math:`31_{10}`
+    c. :math:`128_{10}`
 
-10.
-Generate and, or, and not with only nand, and then again with only nor (show with truth table)
+
+#. Convert the following numbers between the specified bases --- show all work.
+
+    a. :math:`123_{5}` = :math:`?_{4}`
+    b. :math:`123_{7}` = :math:`?_{8}`
+    c. :math:`123_{8}` = :math:`?_{16}`
+
+
+#. Add the following binary numbers and leave the result in binary --- show all work (e.g. carrying).
+
+    * For visual clarity, the typesetting of binary numbers is changed for this and the following questions.
+
+    b. ``1010 + 101``
+    c. ``1010011 + 101011``
+    d. ``1111 + 1``
+
+
+#. Perform the following bitwise boolean operations (perform the operation on each bit, in order, to obtain the result).
+
+    a. ``NOT 1010``
+    b. ``1010 AND 1100``
+    c. ``1010 OR 1100``
+
+
+#. Generate truth tables for each of the following binary expressions.
+
+    a. :math:`\lnot a \land b`
+    b. :math:`a \lor (a \land b)`
+    c. :math:`\lnot a \land \lnot b`
+
+
+#. Demonstrate the two De Morgan's laws with truth tables (one table for each).
+
+
+#. With truth tables, show how :math:`and`, :math:`or`, and :math:`not` operations can be achieved with only
+
+    a. :math:`nand`
+    b. :math:`nor`
 
 
 
