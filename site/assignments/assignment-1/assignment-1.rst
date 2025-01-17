@@ -49,7 +49,7 @@ do bitwise boolean operations
 generate truth tables for the following binary expressions
 
 9.
-prove the two demorgans with one truth table each
+prove the two demorgans with truth table for each
 
 10.
 Generate and, or, and not with only nand, and then again with only nor (show with truth table)
@@ -61,6 +61,15 @@ Part 2 --- Digital
 
 This portion of the assignment will make use of the Digital simulation software.
 
+1. Make each logic gat ewith N transistors with
+
+2. Make a nand and nor, BUT NOT WITH JUST CHAINING AND/OR AND NOT
+
+3. implement xor with transistors
+
+4. build demorgans with transistrs
+
+5. With generate and, or, and not with nand, then again with nor
 
 
 
