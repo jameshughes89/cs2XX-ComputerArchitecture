@@ -117,17 +117,17 @@ This portion of the assignment will make use of the Digital simulation software.
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`nor` and :math:`nand` with 3 N-channel transistors each.
+#. Create :math:`nor` and :math:`nand` with three N-channel transistors each.
 
-    * Use the provided file titled "2_3-nor_nand.dig" --- the same file is used for the following question
+    * Use the provided file titled "2-nor_nand_three.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`nor` and :math:`nand` with 2 N-channel transistors each.
+#. Create :math:`nor` and :math:`nand` with two N-channel transistors each.
 
-    * Use the provided file titled "2_3-nor_nand.dig" --- the same file is used for the previous question
+    * Use the provided file titled "3-nor_nand_two.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
