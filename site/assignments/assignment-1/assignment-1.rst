@@ -21,7 +21,13 @@ This portion of the assignment will not make use of the Digital simulation softw
 proper math typesetting, where appropriate.
 
 
-1.
+#. Given the 26 letters of the alphabet
+
+    #. What is the fewest number of bits needed to give each letter a unique bit pattern?
+    #. How many bits would be needed for both lowercase and uppercase letters?
+    #. How many bits would be needed to identify uppercase and lowercase letters, and numerals (the 10 digits)?
+
+
 - What is the fewest number of bits needed to encode all 26 lower case letters of the alphabet.
 - how many would be needed to encode uppercase and lowercase letters
 - With this number of bits, how many more symbols could be added
@@ -63,7 +69,9 @@ This portion of the assignment will make use of the Digital simulation software.
 
 1. Make each logic gat ewith N transistors with
 
-2. Make a nand and nor, BUT NOT WITH JUST CHAINING AND/OR AND NOT
+2. Make a nand and nor, BUT NOT WITH JUST CHAINING AND/OR AND NOT (limit transistor count)
+
+    with 3 transistors, then with 2
 
 3. implement xor with transistors
 
