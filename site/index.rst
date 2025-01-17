@@ -101,7 +101,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
-    assignments/hello-world/hello-world
+    assignments/assignment-1/assignment-1
 
 
 
