@@ -112,27 +112,47 @@ This portion of the assignment will make use of the Digital simulation software.
     * Run tests to ensure functional correctness
 
 
+#. Create :math:`nor` and :math:`nand` with 3 N-channel transistors each.
 
-#. Create :math:`nor` and :math:`nand` with 3 N-channel transistors, then again using only 2 transistors each.
-
-    * Use the provided file titled "2-nor_nand.dig"
+    * Use the provided file titled "2_3-nor_nand.dig" --- the same file is used for the following question
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
-    * **Hint** For the 3 transistors, consider chaining configurations of the gates created for the previous question
-    * **Hint** For the 2 transistors, take special note of the design of the :math:`not` gate from the previous question
 
 
+#. Create :math:`nor` and :math:`nand` with 2 N-channel transistors each.
 
-Make a nand and nor, BUT NOT WITH JUST CHAINING AND/OR AND NOT (limit transistor count)
+    * Use the provided file titled "2_3-nor_nand.dig" --- the same file is used for the previous question
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
+    * **Hint** Take special note of the design of the :math:`not` gate built with a transistor
 
-    with 3 transistors, then with 2
 
-3. implement xor with transistors
+#. Create :math:`xor` (exclusive or) with N-channel transistors
 
-4. build demorgans with transistrs
+    * Use the provided file titled "4-xor.dig"
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
 
-5. With generate and, or, and not with nand, then again with nor
+
+#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nand` transistor configurations
+
+    * Use the provided file titled "5_6-universal.dig" --- the same file is used for the following question
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
+    * **Hint** It may be required to chain several of the :math:`nand` configurations together
+
+
+#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nor` transistor configurations
+
+    * Use the provided file titled "5_6-universal.dig" --- the same file is used for the previous question
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
+    * **Hint** It may be required to chain several of the :math:`nor` configurations together
 
 
 
