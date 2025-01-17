@@ -134,30 +134,28 @@ This portion of the assignment will make use of the Digital simulation software.
     * **Hint** Take special note of the design of the :math:`not` gate built with a transistor
 
 
-#. Create :math:`xor` (exclusive or) with N-channel transistors
-
-    * Use the provided file titled "4-xor.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
-
-
 #. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nand` transistor configurations
 
-    * Use the provided file titled "5_6-universal.dig" --- the same file is used for the following question
+    * Use the provided file titled "4-nand_universal.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
-    * **Hint** It may be required to chain several of the :math:`nand` configurations together
 
 
 #. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nor` transistor configurations
 
-    * Use the provided file titled "5_6-universal.dig" --- the same file is used for the previous question
+    * Use the provided file titled "5-nor_universal.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
-    * **Hint** It may be required to chain several of the :math:`nor` configurations together
+
+
+#. Create :math:`xor` (exclusive or) with N-channel transistors
+
+    * Use the provided file titled "6-xor.dig"
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
 
 
 
