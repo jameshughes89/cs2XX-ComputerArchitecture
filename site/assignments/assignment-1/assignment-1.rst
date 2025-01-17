@@ -104,15 +104,27 @@ Part 2 --- Digital
 
 This portion of the assignment will make use of the Digital simulation software.
 
-#. Create :math:`not`, :math:`or`, and :math:`and` with N channel resistors.
+#. Create :math:`not`, :math:`or`, and :math:`and` gates with N-channel transistors.
 
     * Use the provided file titled "1-not_or_and.dig"
     * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
 
 
 
-2. Make a nand and nor, BUT NOT WITH JUST CHAINING AND/OR AND NOT (limit transistor count)
+#. Create :math:`nor` and :math:`nand` with 3 N-channel transistors, then again using only 2 transistors each.
+
+    * Use the provided file titled "2-nor_nand.dig"
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
+    * **Hint** For the 3 transistors, consider chaining configurations of the gates created for the previous question
+    * **Hint** For the 2 transistors, take special note of the design of the :math:`not` gate from the previous question
+
+
+
+Make a nand and nor, BUT NOT WITH JUST CHAINING AND/OR AND NOT (limit transistor count)
 
     with 3 transistors, then with 2
 
