@@ -104,7 +104,13 @@ Part 2 --- Digital
 
 This portion of the assignment will make use of the Digital simulation software.
 
-1. Make each logic gat ewith N transistors with
+#. Create :math:`not`, :math:`or`, and :math:`and` with N channel resistors.
+
+    * Use the provided file titled "1-not_or_and.dig"
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary
+
+
 
 2. Make a nand and nor, BUT NOT WITH JUST CHAINING AND/OR AND NOT (limit transistor count)
 
