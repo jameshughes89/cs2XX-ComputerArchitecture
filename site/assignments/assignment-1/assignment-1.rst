@@ -166,8 +166,8 @@ Some Hints
 * Some parts of the assignment build on the previous, so get each part working before you go on to the next one
 * Test each design as you build it
 
-    * This is a really nice thing about programming; you can run your design and see what happens
-    * Mentally test before you even write --- what does this design do? What problem is it solving?
+    * This is a really nice thing about these circuits; you can run your design and see what happens
+    * Mentally test before you even implement --- what does this design do? What problem is it solving?
 
 
 * If you need help, ask
@@ -189,7 +189,6 @@ Below is a list of both *quantitative* and *qualitative* things we will look for
 
 * Correctness?
 * Did you follow instructions?
-* Comments?
 * Label names?
 * Design, layout, and style?
 * Did you do weird things that make no sense?
@@ -211,8 +210,7 @@ What to Submit to Moodle
 
 
 * Submit your completed Digital (*.dig*) files to Moodle
-
-    * Do **not** compress the files
+* Do **not** compress the files before uploading to Moodle
 
 
 .. warning::
