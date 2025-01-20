@@ -38,7 +38,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>OR2_test</string>
+          <string>NOR2_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
@@ -62,7 +62,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>OR2</string>
+          <string>NOR2</string>
         </entry>
         <entry>
           <string>RectWidth</string>
