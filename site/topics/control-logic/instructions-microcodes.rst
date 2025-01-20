@@ -36,13 +36,13 @@ Constraints
 * Details on what the instructions are and how the system deals with them will be covered later
 * For now, consider that, for the ESAP system, individual instructions for the system will be made up of two parts
 
-    * Operation/operator
+    * Operator (specifying an operation)
     * Operand
 
 
 * For example, imagine an instruction to load data from a RAM address into register A
 
-    * The operation/operator is --- load data into register A
+    * The operator is --- load data into register A
     * The operand is --- the RAM address of the data to be loaded into register A
 
 
@@ -74,7 +74,7 @@ Constraints
 
     * For example, 3 and 5 could have been used for the operator and operands respectively
 
-        * 3 bits for the operation/operator --- 8 total
+        * 3 bits for the operator --- 8 total
         * 5 bits for the operand --- 32 total
 
 
