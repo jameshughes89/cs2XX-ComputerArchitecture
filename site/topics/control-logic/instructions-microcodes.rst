@@ -23,18 +23,18 @@ Constraints
 Microcodes
 ==========
 
-* In several previous topics, it was observed that operations were performed by moving data around the system
+* In several previous topics, it was observed that instructions were performed by moving data around the system
 
     * Moving data around to different modules
     * Some modules output data, while others input
 
 
-* Consider the operation of loading data from some memory address into register A
+* Consider the instruction of loading data from some memory address into register A
 
     * Any of the 16 memory addresses could be used in this example, but ``15`` (``0b1111``) is used here
 
 
-* Think about the steps involved to perform this operation within the context of the ESAP system design
+* Think about the steps involved to perform this instruction within the context of the ESAP system design
 
     #. Load the value of the target memory address (``0b1111``) from the bus into the memory address register
     #. Output the value stored in RAM to the bus and input the value from the bus into register A
@@ -99,13 +99,13 @@ Microcodes
       - ``0``
 
 
-* These two steps put together achieve the operation of loading data from a specific RAM address into register A
+* These two steps put together achieve the instruction of loading data from a specific RAM address into register A
 * The steps individual steps are called *microcodes*
 * Each of these microcodes took one clock cycle
 
-* Most operations/instructions are made up of several microcodes
+* Most instructions are made up of several microcodes
 
-    * These operations/instructions would be things like loading data from RAM, addition, outputting data, etc.
+    * These instructions would be things like loading data from RAM, addition, outputting data, etc.
     * Additional instructions are to be discussed shortly
 
 
