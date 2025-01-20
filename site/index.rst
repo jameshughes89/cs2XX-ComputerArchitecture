@@ -92,6 +92,7 @@ Office Hours
     :numbered:
 
     labs/digital/digital
+    labs/gates/basic-gates
 
 
 

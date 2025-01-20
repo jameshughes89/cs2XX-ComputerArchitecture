@@ -39,6 +39,10 @@ Test case". Once a test component is placed on the workspace, right click on the
 -------
 
 #. Using only ``NOR``, create a circuit that performs ``NOR``
+
+        * This circuit is intentionally trivial
+
+
 #. Using only ``NOR``, create a circuit that performs ``NOT``
 #. Using only ``NOR`` and ``NOT``, perform ``OR``
 #. Using only ``NOR`` and ``NOT``, perform ``AND``
