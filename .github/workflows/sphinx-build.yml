@@ -34,6 +34,9 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install .
+    - name: Compress Assignment Files
+      run: |
+        zip -r assignment_1-dig_files.zip assignment_1-dig_files
     - name: Sphinx Build
       run: |
         sphinx-build -b html site/ out/
