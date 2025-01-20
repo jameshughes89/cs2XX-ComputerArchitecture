@@ -21,7 +21,7 @@ Constraints
 * The designers of the computer (us) decide what instructions to include and how they are to be performed
 * However, it is important to consider the limitations and constraints of the system
 
-* Although the ESAP system is to be Turing Complete, it is limited by the fact that it's an 8 bit system
+* Although the ESAP system is to be fully functional computer, it is limited by the fact that it's an 8 bit system
 
     * RAM is byte addressable
     * The main bus is 8 bits wide
