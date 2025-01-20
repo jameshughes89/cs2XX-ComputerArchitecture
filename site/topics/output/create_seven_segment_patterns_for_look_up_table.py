@@ -13,6 +13,7 @@ Labelling is clockwise, starting at twelve o'clock, with the centre being the la
 that is not be used here. Based on the physical layout of the output module as designed in DIGITAL, the bitstring
 ordering is hgfedcba. The most significant bit is always 0 since the decimal is not used.
 """
+# [begin-seven_segment_digit_pattern_constants]
 ZERO        = 0b00111111  # 0x3F
 ONE         = 0b00000110  # 0x06
 TWO         = 0b01011011  # 0x5B
@@ -24,7 +25,7 @@ SEVEN       = 0b00000111  # 0x07
 EIGHT       = 0b01111111  # 0x7F
 NINE        = 0b01101111  # 0x6F
 DIGITS = [ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE]
-
+# [end-seven_segment_digit_pattern_constants]
 
 """
 Create the three digit patterns for the numbers 0 -- 255. Since each digit is an 8 bit pattern for the seven segment 
@@ -47,6 +48,7 @@ groupings of 8 are included below for visual clarity, but each row is to be cons
 Finally, bitwise ORing them together effectively puts each digit's part together in a single number
     123 00000110 01011011 01001111
 """
+# [begin-unsigned_patterns]
 unsigned_three_digit_patterns = []
 for i in range(0, 256):
     hundreds_pattern = DIGITS[(i//100) % 10] << 16
@@ -54,7 +56,7 @@ for i in range(0, 256):
     ones_pattern = DIGITS[(i//1) % 10] << 0
     three_digit_pattern = hundreds_pattern | tens_pattern | ones_pattern
     unsigned_three_digit_patterns.append(three_digit_pattern)
-
+# [end-unsigned_patterns]
 
 """
 Create the signed three digit patterns for the numbers -128 -- 127. Following the pattern of 2s complement, the numbers
@@ -62,6 +64,7 @@ will be ordered 0 -- 127, then -128 -- -1. Based on the configuration of the out
 seven segment display will show a negative when the most significant bit of a 25 bit pattern is high (three groups of 8 
 bits plus the bit for the negative sign).  
 """
+# [begin-signed_patterns]
 signed_three_digit_patterns = []
 for i in range(0, 128):
     hundreds_pattern = DIGITS[(i//100) % 10] << 16
@@ -77,7 +80,7 @@ for i in range(-128, 0):
     ones_pattern = DIGITS[(abs(i)//1) % 10] << 0
     three_digit_pattern = negation_pattern | hundreds_pattern | tens_pattern | ones_pattern
     signed_three_digit_patterns.append(three_digit_pattern)
-
+# [end-signed_patterns]
 
 """
 Write the lists to a hex file such that each row corresponds to a bit pattern, starting at 0, and the hex value in that
@@ -90,7 +93,9 @@ Rows 0 -- 255 contain the unsigned integers 0 -- 255
 Rows 256 -- 383 contains the signed integers 0 -- 127
 Rows 384 -- 511 contains tge signed integers -128 -- -1 
 """
+# [begin-save_to_file]
 with open("seven_segment_patterns_for_look_up_table.hex", "w") as hex_file:
     hex_file.write("v2.0 raw\n")
     hex_file.writelines(f"{hex(pattern)}\n" for pattern in unsigned_three_digit_patterns)
     hex_file.writelines(f"{hex(pattern)}\n" for pattern in signed_three_digit_patterns)
+# [end-save_to_file]
