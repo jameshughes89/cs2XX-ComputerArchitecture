@@ -66,7 +66,7 @@ Constraints
     :align: center
 
     The ESAP system's 8 bit instruction broken down into the two parts --- operator and operand. The 4 most significant
-    bits, represented as ``XXX`` would specify some operator, while the 4 least significant bits, represented as
+    bits, represented as ``XXXX`` would specify some operator, while the 4 least significant bits, represented as
     ``YYYY`` would be the operand.
 
 
