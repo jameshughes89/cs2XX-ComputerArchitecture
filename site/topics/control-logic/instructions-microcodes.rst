@@ -212,43 +212,34 @@ Fetch and Instruction Register
     * Update it to store the value of the *next* instruction to be executed
 
 
-.. list-table:: Control logic of the fetch cycle
+.. list-table:: Control logic of the fetch cycle. In the below table, the output register in and sign bit are combined
     :widths: auto
     :align: center
     :header-rows: 1
 
-    * - :math:`Adr`
+    * - :math:`Address`
       - :math:`RAM`
       - :math:`A`
       - :math:`B`
-      - :math:`ALU_{o}`
-      - :math:`sub`
-      - :math:`out_{i}`
-      - :math:`sign`
+      - :math:`ALU`
+      - :math:`out`
       - :math:`PC`
-      - :math:`PC_e`
-      - :math:`Inst`
+      - :math:`Instruction`
     * - ``1``
       - ``0/0``
       - ``0/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0/1``
-      - ``0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
       - ``0/0``
     * - ``0``
       - ``0/1``
       - ``0/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
       - ``0/0``
-      - ``1``
+      - ``0/0``
+      - ``0/0/1``
       - ``1/0``
 
 
