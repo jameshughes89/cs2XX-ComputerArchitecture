@@ -205,25 +205,90 @@ Fetch and Instruction Register
 
 * Therefore, a new register will be created --- the *instruction register*
 * This instruction register will store the instruction for the duration of its execution on the system
+* Thus, the instruction from RAM must be moved to the instruction register
+* And finally, the program counter needs to be incremented
 
 
+.. list-table:: Control logic of the fetch cycle
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Adr`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU_{o}`
+      - :math:`sub`
+      - :math:`out_{i}`
+      - :math:`sign`
+      - :math:`PC`
+      - :math:`PC_e`
+      - :math:`Inst`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0/1``
+      - ``0``
+      - ``0/0``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``0/0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0``
+      - ``0/0``
+      - ``1``
+      - ``1/0``
 
 
-further, like verything on the bus, it's transient, thus we must store it somewhere
-    register
+* The above table shows the control logic configuration for the fetch cycle
+* Incrementing the program counter does not require the data bus
 
-Configured funny though
-remember the XXXX YYYY --- YYYY must be able to be moved around the system again, thus we must be able to send it to bus
+    * It is isolated from moving data from RAM to the instruction register, and can therefore happen at the same time
 
 
-SHOW IMAGE
+.. figure:: instruction_register.png
+    :width: 500 px
+    :align: center
+
+    Configuration of the instruction register. Only the least significant four bits of the register can output to the
+    bus as this would be the four operand bits from the instruction. The four most significant bits, corresponding to
+    the operand of the instruction, is yet to be used.
+
+
+* Above is a configuration of the instruction register
+* Consider the example in the previous section of loading data from RAM into register A
+
+    * The 8 bit instruction is ``XXXX YYYY``
+    * The four bits ``XXXX`` is some bit pattern designating the operand for loading data from RAM to register A
+
+        * What the pattern for the operand is at this stage is not important
+
+
+    * The four bits ``YYYY`` is the operand, specifying some RAM address
+
+        * The value of ``YYYY`` is variable
+        * The above example used ``0b1111``, or ``15``
+
+
+* The least significant four bits must be loaded into the address register to specify the address to load data from
+* In other words, the value of these lower four bits must be able to be put back onto the main bus
+
+* The value of the most significant four bits, ``XXXX``, can remain in the instruction register for processing
+
 
 
 End of the day, no matter what we are doing in the system, the first part of any instruction is fetch
     Not even REALLY part of instruction...
 
-
-SHOW IMAGE OF WHOLE THING
 
 
 
