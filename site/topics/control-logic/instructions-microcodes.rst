@@ -255,6 +255,11 @@ Fetch and Instruction Register
     * It is isolated from moving data from RAM to the instruction register, and can therefore happen at the same time
 
 
+* Ultimately, this fetch cycle is the first part of any instruction
+
+    * All instructions must be fetched from RAM and put into the instruction register for processing
+
+
 .. figure:: instruction_register.png
     :width: 500 px
     :align: center
@@ -282,12 +287,21 @@ Fetch and Instruction Register
 * The least significant four bits must be loaded into the address register to specify the address to load data from
 * In other words, the value of these lower four bits must be able to be put back onto the main bus
 
+    * This allows the system to move the variable data operand between the different modules for manipulation
+
+
 * The value of the most significant four bits, ``XXXX``, can remain in the instruction register for processing
 
 
+.. figure:: esap_alu_ram_output_pc_instruction.png
+    :width: 666 px
+    :align: center
 
-End of the day, no matter what we are doing in the system, the first part of any instruction is fetch
-    Not even REALLY part of instruction...
+    Configuration of the ESAP system with the ALU, RAM, output, program counter, and instruction register modules
+    connected.
+
+
+
 
 
 
