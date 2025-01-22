@@ -207,7 +207,7 @@ Fetch and Instruction Register
     * Update it to store the value of the *next* instruction to be executed
 
 
-.. list-table:: Control logic of the fetch cycle. In the below table, the output register in and sign bit are combined
+.. list-table:: Control logic of the fetch cycle
     :widths: auto
     :align: center
     :header-rows: 1
@@ -287,6 +287,67 @@ Fetch and Instruction Register
 
     Configuration of the ESAP system with the ALU, RAM, output, program counter, and instruction register modules
     connected.
+
+
+* The below tables shows the control logic for all steps required to load data from RAM to register A
+
+    * The first two rows correspond to the fetch cycle
+    * The second two corresponds to loading data from RAM to register A
+
+
+* This table is almost a concatenation of the two previous tables
+
+    * The only difference is that the control logic for the instruction register is present for both parts
+
+        * The fetch part and the loading data from RAM to register A
+        * It was not present in the first table showing the control logic for loading data from RAM to register A
+
+
+.. list-table:: Control logic of the fetch cycle and the loading of data from some memory address into register A
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU`
+      - :math:`out`
+      - :math:`PC`
+      - :math:`Instruction`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+      - ``0/0``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+      - ``1/0``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+      - ``0/1``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+      - ``0/0``
 
 
 
