@@ -126,8 +126,12 @@ Microcodes
 
 * Below is a table showing how the control lines would be configured for the two steps
 
-    * The data and clock columns are excluded
     * Like before, each row corresponds to one clock cycle
+    * Due to space limitations, the data and clock columns are removed some control signals' columns are combined
+
+        * :math:`ALU_{o}` and :math:`sub` are combined (``alu/sub``)
+        * :math:`Out_{i}` and :math:`sign` are combined (``output/sign``)
+        * :math:`PC` and :math:`PC_{e}` are combined (``in/out/enable``)
 
 
 .. list-table:: Control logic for loading data from some memory address to register A
@@ -139,32 +143,23 @@ Microcodes
       - :math:`RAM`
       - :math:`A`
       - :math:`B`
-      - :math:`ALU_{o}`
-      - :math:`sub`
-      - :math:`out_{i}`
-      - :math:`sign`
+      - :math:`ALU`
+      - :math:`out`
       - :math:`PC`
-      - :math:`PC_e`
     * - ``1``
       - ``0/0``
       - ``0/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
       - ``0/0``
-      - ``0``
+      - ``0/0``
+      - ``0/0/0``
     * - ``0``
       - ``0/1``
       - ``1/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
       - ``0/0``
-      - ``0``
+      - ``0/0``
+      - ``0/0/0``
 
 
 * These two steps put together achieve the instruction of loading data from a specific RAM address into register A
