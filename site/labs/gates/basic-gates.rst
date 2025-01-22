@@ -82,6 +82,8 @@ For these questions, first create the truth table if one is not already provided
 
 #. Using only ``OR`` and ``NOT``, create a circuit that always outputs ``1``, regardless of the input
 
+    * Do not use a voltage source or a ground component
+
     .. list-table::
         :widths: auto
         :header-rows: 1
@@ -98,6 +100,8 @@ For these questions, first create the truth table if one is not already provided
 
 
 #. Using only ``AND`` and ``NOT``, create a circuit that always outputs ``0``, regardless of the input
+
+    * Do not use a voltage source or a ground component
 
     .. list-table::
         :widths: auto
@@ -118,17 +122,25 @@ For these questions, first create the truth table if one is not already provided
 #. Using only a single ``AND`` and a single ``OR``, create a circuit that performs :math:`(a \lor b) \land (a \lor c)`
 #. Using only a single ``AND`` and a single ``OR``, create a circuit that performs the following
 
+    * This circuit must have two inputs connected
+    * Here, the ``X`` signifies that the state of :math:`B` does not matter
+
+        * In other words, the circuit should function as described, regardless of the state of :math:`B` 
+
     .. list-table::
         :widths: auto
         :header-rows: 1
 
         * - :math:`A`
+          - :math:`B`
           -
           - :math:`O`
         * - ``0``
+          - ``X``
           -
           - ``0``
         * - ``1``
+          - ``X``
           -
           - ``1``
 
