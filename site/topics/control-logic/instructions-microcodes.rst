@@ -191,22 +191,25 @@ Fetch and Instruction Register
     * The instruction would need to be *fetched* from RAM
 
 
-* In other words, before any control logic can be manipulated, the instruction must have been retrieved from RAM
-
 * Instructions will be stored sequentially within RAM, starting at address 0
 * The program counter starts at 0, and keeps track of the address of the next instruction to be executed
 * Thus, to get the next instruction from RAM, the value from the program counter must be sent to the address register
 
+    * Then, it can be output from RAM to the bus
+
+
 * However, as previously discussed, the data on the bus is transient
 
     * The bus needs to be free to transmit data around the system while performing the instruction
-    * The instruction must be stored elsewhere for processing
+    * The instruction must be stored somewhere for processing
 
 
 * Therefore, a new register will be created --- the *instruction register*
 * This instruction register will store the instruction for the duration of its execution on the system
 * Thus, the instruction from RAM must be moved to the instruction register
 * And finally, the program counter needs to be incremented
+
+    * Update it to store the value of the *next* instruction to be executed
 
 
 .. list-table:: Control logic of the fetch cycle
@@ -250,7 +253,7 @@ Fetch and Instruction Register
 
 
 * The above table shows the control logic configuration for the fetch cycle
-* Incrementing the program counter does not require the data bus
+* Note that, incrementing the program counter does not require the data bus
 
     * It is isolated from moving data from RAM to the instruction register, and can therefore happen at the same time
 
@@ -292,18 +295,12 @@ Fetch and Instruction Register
 
 * The value of the most significant four bits, ``XXXX``, can remain in the instruction register for processing
 
-
 .. figure:: esap_alu_ram_output_pc_instruction.png
     :width: 666 px
     :align: center
 
     Configuration of the ESAP system with the ALU, RAM, output, program counter, and instruction register modules
     connected.
-
-
-
-
-
 
 
 
