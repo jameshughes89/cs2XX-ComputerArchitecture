@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>RectHeight</string>
+          <int>23</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>NOR3</string>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>34</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-240" y="-880"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NOR3_test</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>NOR3_a	NOR3_b	NOR3_o
+0	0	1
+0	1	0
+1	0	0
+1	1	0</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="-220" y="-840"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NOR3_a</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="-660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NOR3_b</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-100" y="-600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NOR3_o</string>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="-660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>RectHeight</string>
+          <int>23</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>NAND3</string>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>34</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-240" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NAND3_test</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>NAND3_a	NAND3_b	NAND3_o
+0	0	1
+0	1	1
+1	0	1
+1	1	0</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="-220" y="-300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NAND3_o</string>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NAND3_a</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-80" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>NAND3_b</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-80" y="-60"/>
+    </visualElement>
+  </visualElements>
+  <wires/>
+  <measurementOrdering/>
+</circuit>
