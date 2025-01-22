@@ -184,6 +184,27 @@ Microcodes
 Fetch and Instruction Register
 ==============================
 
+These instructions are stored in ram
+PC stores where in RAM we are
+So they must be retrieved from ram
+
+further, like verything on the bus, it's transient, thus we must store it somewhere
+    register
+
+Configured funny though
+remember the XXXX YYYY --- YYYY must be able to be moved around the system again, thus we must be able to send it to bus
+
+
+SHOW IMAGE
+
+
+End of the day, no matter what we are doing in the system, the first part of any instruction is fetch
+    Not even REALLY part of instruction...
+
+
+SHOW IMAGE OF WHOLE THING
+
+
 
 
 Instruction Set
