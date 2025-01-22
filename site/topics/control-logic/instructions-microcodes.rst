@@ -184,6 +184,18 @@ Microcodes
 Fetch and Instruction Register
 ==============================
 
+* Remember, RAM stores both instructions and data
+* Continuing the above example of loading data from RAM to register A
+* Although the control logic to perform this action was discussed above, the instruction must have first come from RAM
+
+    * The instruction would need to be *fetched* from RAM
+
+
+* In other words, before any control logic can be manipulated, the instruction must have been retrieved from RAM
+
+
+And the PC keeps track of where the next instruction to run is
+
 These instructions are stored in ram
 PC stores where in RAM we are
 So they must be retrieved from ram
