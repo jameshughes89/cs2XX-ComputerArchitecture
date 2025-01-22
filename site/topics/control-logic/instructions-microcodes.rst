@@ -197,6 +197,14 @@ Fetch and Instruction Register
 * The program counter starts at 0, and keeps track of the address of the next instruction to be executed
 * Thus, to get the next instruction from RAM, the value from the program counter must be sent to the address register
 
+* However, as previously discussed, the data on the bus is transient
+
+    * The bus needs to be free to transmit data around the system while performing the instruction
+    * The instruction must be stored elsewhere for processing
+
+
+* Therefore, a new register will be created --- the *instruction register*
+* This instruction register will store the instruction for the duration of its execution on the system
 
 
 
