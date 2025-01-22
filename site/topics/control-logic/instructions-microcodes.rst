@@ -193,12 +193,13 @@ Fetch and Instruction Register
 
 * In other words, before any control logic can be manipulated, the instruction must have been retrieved from RAM
 
+* Instructions will be stored sequentially within RAM, starting at address 0
+* The program counter starts at 0, and keeps track of the address of the next instruction to be executed
+* Thus, to get the next instruction from RAM, the value from the program counter must be sent to the address register
 
-And the PC keeps track of where the next instruction to run is
 
-These instructions are stored in ram
-PC stores where in RAM we are
-So they must be retrieved from ram
+
+
 
 further, like verything on the bus, it's transient, thus we must store it somewhere
     register
