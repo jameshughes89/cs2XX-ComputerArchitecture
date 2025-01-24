@@ -231,7 +231,83 @@ Instruction Set
     * What matters is that each bit pattern uniquely identifies an instruction
 
 
-TABLE???
+* Below is a table summarizing the instruction set
+* Following the table is a description of each instruction
+
+
+.. list-table:: An Instruction Set for the Current ESAP System
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - Bit Pattern
+      - Hex
+      - Label
+      - Description
+    * - ``0000``
+      - ``0``
+      - ``NOOP``
+      - No Operation
+    * - ``0001``
+      - ``1``
+      - ``LDAR``
+      - Load A From RAM
+    * - ``0010``
+      - ``2``
+      - ``LDAD``
+      - Load A Direct
+    * - ``0011``
+      - ``3``
+      - ``LDBR``
+      - Load B From RAM
+    * - ``0100``
+      - ``4``
+      - ``LDBD``
+      - Load B Direct
+    * - ``0101``
+      - ``5``
+      - ``SAVA``
+      - Save A to RAM
+    * - ``0110``
+      - ``6``
+      - ``SAVB``
+      - Save B to RAM
+    * - ``0111``
+      - ``7``
+      - ``ADDB``
+      - Add B to A
+    * - ``1000``
+      - ``8``
+      - ``SUBB``
+      - Subtract B from A
+    * - ``1001``
+      - ``9``
+      - ``JMPA``
+      - Jump Always
+    * - ``1010``
+      - ``A``
+      - ``NOOP``
+      - No Operation
+    * - ``1011``
+      - ``B``
+      - ``NOOP``
+      - No Operation
+    * - ``1100``
+      - ``C``
+      - ``NOOP``
+      - No Operation
+    * - ``1101``
+      - ``D``
+      - ``OUTU``
+      - Output Unsigned Integer
+    * - ``1110``
+      - ``E``
+      - ``OUTS``
+      - Output Signed Integer
+    * - ``1111``
+      - ``F``
+      - ``HALT``
+      - Halt
 
 
 0x0 --- NOOP --- No Operation
