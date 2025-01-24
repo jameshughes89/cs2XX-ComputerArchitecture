@@ -189,6 +189,58 @@ Fetch and Instruction Register
 Instruction Set
 ===============
 
+As already discussed, we can have a total of 16
+We get to invent, within what we can actually do
+
+Here, we will create a suite of 13, which will leave room for a few if we want to add more later
+    though, nothng stopping from changing the any of the 13
+
+each instruction will be referred to by a bit pattern
+    how each bit pattern ultimately manges the control logic will be discussed shortly
+    here, we only talk about the instructions we want
+
+
+0x0 --- NOOP --- No Operation
+
+    Why
+    sits for a few clock cycles
+
+
+0x1 --- LDAR --- Load A From RAM
+    Load data form a specific memory address to register A
+    ``0001 YYYY``
+    operand from instruction reg to address register
+    RAM out to reg A in
+
+
+0x2 --- LDAD --- Load A Direct
+
+    Load data directly from instruction to register A
+    ``0010 YYYY``
+    YYYY is the data
+    operand from instruction reg to A reg in
+
+
+0x3 --- LDBR --- Load B From RAM
+
+    Similar to A
+
+0x4 --- LDBD --- Load B Direct
+
+    Similar to B
+
+0x5 --- SAVA --- Save A to RAM
+0x6 --- SAVB --- Save B to RAM
+0x7 --- ADDB --- Add B to A
+0x8 --- SUBB --- Subtract B from A
+0x9 --- JMPA --- Jump Always
+0xA --- NOOP --- No Operation
+0xB --- NOOP --- No Operation
+0xC --- NOOP --- No Operation
+0xD --- OUTU --- Output Unsigned Integer
+0xE --- OUTS --- Output Signed Integer
+0xF --- HALT --- Halt
+
 
 
 For Next Time
