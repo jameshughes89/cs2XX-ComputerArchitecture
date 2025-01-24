@@ -231,6 +231,9 @@ Instruction Set
     * What matters is that each bit pattern uniquely identifies an instruction
 
 
+The 13 Instructions
+-------------------
+
 * Below is a table summarizing the instruction set
 * Following the table is a description of each instruction
 
@@ -310,25 +313,52 @@ Instruction Set
       - Halt
 
 
-0x0 --- NOOP --- No Operation
+* ``0000`` --- ``NOOP``
 
-    Why
-    sits for a few clock cycles
-
-
-0x1 --- LDAR --- Load A From RAM
-    Load data form a specific memory address to register A
-    ``0001 YYYY``
-    operand from instruction reg to address register
-    RAM out to reg A in
+    * No Operation
+    * An instruction that takes a known number of clock cycles, but ultimately means *do nothing*
+    * This may seem silly, but there are practical reasons for this operation
+    * For the ESAP system, this operation can be used as a time delay
 
 
-0x2 --- LDAD --- Load A Direct
+* ``0001`` --- ``LDAR``
 
-    Load data directly from instruction to register A
-    ``0010 YYYY``
-    YYYY is the data
-    operand from instruction reg to A reg in
+    * Load data into register A from some defined RAM address
+    * The 4 bit operand for this instruction specifies some memory address to read the data from
+
+        * Consider the full 8 bit instruction ``0001YYYY``
+        * ``0001``, the operator, specifies the ``LDAR`` instruction
+        * ``YYYY``, the operand, would be the memory address to read the data from
+
+
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Output the value from RAM and put it into the A register
+
+
+* ``0010`` --- ``LDAD``
+
+    * Load the provided data directly into register A
+    * The 4 bit operand for this instruction is the data to be loaded into RAM
+
+        * Can only load 4 bit data into RAM through this instruction
+
+
+    * Reduces the amount of RAM needed for loading data into register A when working with small numbers
+
+        * Consider that ``LDAR`` requires 2 memory addresses
+
+            * One for the instruction
+            * Another for the memory address of the data to be loaded into A
+
+
+    * The high level microcode steps would be as follows
+
+        * Output the operand (data) from the instruction register and put it into the A register
+
+
+
 
 
 0x3 --- LDBR --- Load B From RAM
@@ -354,7 +384,7 @@ Instruction Set
 
 .. note::
 
-    Consider the ESAP system's current hardeware. What other instructions could be included? What variations of the
+    Consider the ESAP system's current hardware. What other instructions could be included? What variations of the
     existing instructions could be included?
 
 
