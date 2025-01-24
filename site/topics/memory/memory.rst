@@ -93,7 +93,7 @@ Bits, Bytes, and Data
 
 
 
-Random Access Memory (RAN)
+Random Access Memory (RAM)
 ==========================
 
 * Memory provides a way to store data for later use
