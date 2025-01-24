@@ -38,7 +38,7 @@ Bits, Bytes, and Data
     encodes/means would be information.
 
 
-* A *bit* is the most basic unit of data in typical computing
+* A *bit* is the most basic unit of data in typical computer
 * As already discussed, a bit is a single digit in base two
 * However, a bit is represented within computers as a single signal
 * These bits/signals can take on two possible states ``0`` or ``1``
