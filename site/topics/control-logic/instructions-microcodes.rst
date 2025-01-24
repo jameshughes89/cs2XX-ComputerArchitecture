@@ -189,15 +189,49 @@ Fetch and Instruction Register
 Instruction Set
 ===============
 
-As already discussed, we can have a total of 16
-We get to invent, within what we can actually do
+* The instruction set is a collection of instructions the computer can execute on the hardware
 
-Here, we will create a suite of 13, which will leave room for a few if we want to add more later
-    though, nothng stopping from changing the any of the 13
+    * Like the example instruction discussed, loading data from RAM into register A
 
-each instruction will be referred to by a bit pattern
-    how each bit pattern ultimately manges the control logic will be discussed shortly
-    here, we only talk about the instructions we want
+
+* As discussed, with 4 bit operators, a total of 16 unique instructions can be implemented for the ESAP system
+
+    * Each of the 16 instructions can be uniquely identified with a bit pattern
+
+
+* The specific instructions included in the instruction set is up to the designers of the system (us)
+
+    * The designers get to decide which instructions the computational system can perform
+    * Assuming the instruction can be performed on the hardware within the system
+
+
+* Below are 13 instructions that can be included on the system
+
+    * This leaves room for additional instructions to be added to the instruction set later
+
+
+* These 13 were chosen to balance a few considerations
+
+    * Small while still providing a breadth of functionality
+    * Minimizes the amount of RAM required to describe a whole program
+    * Minimizes the number of clock cycles/microcodes the instructions take
+
+
+* Further, the 13 instructions that are included may be changed at a later time by the designers
+
+    * One may discover that certain instructions are redundant or entirely unnecessary
+    * Refining the instruction set may allow for more, different and useful instructions to be included
+    * The process of refining the instruction set is a form of optimization for computational systems
+
+
+* How each instruction's bit pattern ultimately manages the control logic of the system will be discussed later
+* Here, only the instructions, along with their bit pattern, are presented
+
+    * For the ESAP system, the instruction's bit pattern is somewhat arbitrary
+    * What matters is that each bit pattern uniquely identifies an instruction
+
+
+TABLE???
 
 
 0x0 --- NOOP --- No Operation
@@ -240,6 +274,12 @@ each instruction will be referred to by a bit pattern
 0xD --- OUTU --- Output Unsigned Integer
 0xE --- OUTS --- Output Signed Integer
 0xF --- HALT --- Halt
+
+
+.. note::
+
+    Consider the ESAP system's current hardeware. What other instructions could be included? What variations of the
+    existing instructions could be included?
 
 
 
