@@ -358,16 +358,17 @@ The 13 Instructions
         * Output the operand (data) from the instruction register and put it into the A register
 
 
+* ``0011`` --- ``LDBR``
+
+    * Load data into register B from some defined RAM address
+    * Similar to ``LDAR``
 
 
+* ``0100`` --- ``LDBD``
 
-0x3 --- LDBR --- Load B From RAM
+    * Load the provided data directly into register B
+    * Similar to ``LDAD``
 
-    Similar to A
-
-0x4 --- LDBD --- Load B Direct
-
-    Similar to B
 
 0x5 --- SAVA --- Save A to RAM
 0x6 --- SAVB --- Save B to RAM
