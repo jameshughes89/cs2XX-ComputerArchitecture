@@ -202,7 +202,7 @@ Instruction Set
 * The specific instructions included in the instruction set is up to the designers of the system (us)
 
     * The designers get to decide which instructions the computational system can perform
-    * Assuming the instruction can be performed on the hardware within the system
+    * Assuming the hardware is sufficient to perform such an instruction
 
 
 * Below are 13 instructions that can be included on the system
@@ -212,7 +212,7 @@ Instruction Set
 
 * These 13 were chosen to balance a few considerations
 
-    * Small while still providing a breadth of functionality
+    * Small number of instructions while still providing a breadth of functionality
     * Minimizes the amount of RAM required to describe a whole program
     * Minimizes the number of clock cycles/microcodes the instructions take
 
@@ -326,7 +326,7 @@ The 13 Instructions
     * Load data into register A from some specified RAM address
     * The 4 bit operand for this instruction specifies some memory address to read the data from
 
-        * Consider the full 8 bit instruction ``0001YYYY``
+        * Consider the full 8 bit instruction ``0001 YYYY``
         * ``0001``, the operator, specifies the ``LDAR`` instruction
         * ``YYYY``, the operand, would be the memory address to read the data from
 
@@ -370,7 +370,7 @@ The 13 Instructions
     * Similar to ``LDAD``
 
 
-# ``0101`` --- ``SAVA``
+* ``0101`` --- ``SAVA``
 
     * Save the data from register A to some specified RAM address
     * The 4 bit operand for this instruction specifies some memory address to write the data to
