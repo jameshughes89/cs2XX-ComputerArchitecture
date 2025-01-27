@@ -1,6 +1,6 @@
-***********
-Basic Gates
-***********
+*******************
+Combinational Logic
+*******************
 
 * Feel free to use your laptop
 * You are strongly encourage to work with others
@@ -21,184 +21,44 @@ the gates; inputs, outputs, wires, etc. may be still be used.
 
 
 
-Creating Gates with Universal Operators
-=======================================
+Decoder
+=======
 
-For these questions, although only a single gate type may be used, feel free to use as many copies of these gates as
-needed.
+#. Create a 3 bit decoder with AND gates
 
-
-``NAND``
---------
-
-#. Using only ``NAND``, create a circuit that performs ``NAND``
-
-    * This circuit is intentionally trivial
+    * Do not use the decoder component
+    * The inputs on the AND gates may be directly inverted
 
 
-#. Using only ``NAND``, create a circuit that performs ``NOT``
-#. Using only ``NAND`` and ``NOT``, perform ``AND``
-#. Using only ``NAND`` and ``NOT``, perform ``OR``
-#. Using only ``NAND`` and ``NOT``, perform ``NOR``
+#. Create a 3 bit decoder with ANDs and only 2 NOTs
+
+    * Do not use the decoder component
+    * The inputs on the AND gates may not be directly inverted
+
+        * Do not change it such that their inputs have circles
 
 
-``NOR``
--------
 
-#. Using only ``NOR``, create a circuit that performs ``NOR``
+Multiplexers
+============
 
-        * This circuit is intentionally trivial
+#. Create an 8 input multiplexer with logic gates
+
+    * Do not use the multiplexer component
+    * An 8 input multiplexer requires 3 selector bits
 
 
-#. Using only ``NOR``, create a circuit that performs ``NOT``
-#. Using only ``NOR`` and ``NOT``, perform ``OR``
-#. Using only ``NOR`` and ``NOT``, perform ``AND``
-#. Using only ``NOR`` and ``NOT``, perform ``NAND``
+#. Create a demultiplexer with logic gates that can output to one of 4 signal lines
+
+    * Do not use the demultiplexer component
+    * Only 2 selector bits are required to select one of 4 lines
+
+
+#. Connect the multiplexer and demultiplexer such that one of 8 input lines can be mapped to one of 4 output lines
+
+    * This requires two sets of selector bits
 
 
 
 From Truth Tables
 =================
-
-For these questions, first create the truth table if one is not already provided.
-
-
-#. Using **at least** one ``NOT``, create a circuit that performs the following
-
-    .. list-table::
-        :widths: auto
-        :header-rows: 1
-
-        * - :math:`A`
-          -
-          - :math:`O`
-        * - ``0``
-          -
-          - ``0``
-        * - ``1``
-          -
-          - ``1``
-
-
-#. Using only ``OR`` and ``NOT``, create a circuit that always outputs ``1``, regardless of the input
-
-    * Do not use a voltage source or a ground component
-
-    .. list-table::
-        :widths: auto
-        :header-rows: 1
-
-        * - :math:`A`
-          -
-          - :math:`O`
-        * - ``0``
-          -
-          - ``1``
-        * - ``1``
-          -
-          - ``1``
-
-
-#. Using only ``AND`` and ``NOT``, create a circuit that always outputs ``0``, regardless of the input
-
-    * Do not use a voltage source or a ground component
-
-    .. list-table::
-        :widths: auto
-        :header-rows: 1
-
-        * - :math:`A`
-          -
-          - :math:`O`
-        * - ``0``
-          -
-          - ``0``
-        * - ``1``
-          -
-          - ``0``
-
-
-#. Using only ``AND``, ``OR``, and ``NOT``, create a circuit that performs ``XOR``
-#. Using only a single ``AND`` and a single ``OR``, create a circuit that performs :math:`(a \lor b) \land (a \lor c)`
-#. Using only a single ``AND`` and a single ``OR``, create a circuit that performs the following
-
-    * This circuit must have two inputs connected
-    * Here, the ``X`` signifies that the state of :math:`B` does not matter
-
-        * In other words, the circuit should function as described, regardless of the state of :math:`B` 
-
-    .. list-table::
-        :widths: auto
-        :header-rows: 1
-
-        * - :math:`A`
-          - :math:`B`
-          -
-          - :math:`O`
-        * - ``0``
-          - ``X``
-          -
-          - ``0``
-        * - ``1``
-          - ``X``
-          -
-          - ``1``
-
-
-#. Complete the following truth table and implement the functionality using only ``AND``, ``OR``, and ``NOT``
-
-    .. list-table::
-        :widths: auto
-        :align: center
-        :header-rows: 1
-
-        * - :math:`a`
-          - :math:`b`
-          -
-          - :math:`\lnot b`
-          - :math:`a \land b`
-          -
-          - :math:`a \land \lnot b`
-          - :math:`\lnot(a \land b)`
-          -
-          - :math:`\lnot(a \land b) \lor (a \land \lnot b)`
-        * -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-        * -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-        * -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-        * -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
