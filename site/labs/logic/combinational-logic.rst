@@ -60,5 +60,71 @@ Multiplexers
 
 
 
-From Truth Tables
-=================
+Programmable Logic Arrays
+=========================
+
+#. Create a Programmable Logic Array (PLA) to implement the following functionality
+
+    .. list-table::
+        :widths: auto
+        :header-rows: 1
+
+        * - a
+          - b
+          - ci
+          -
+          - s
+          - co
+        * - ``0``
+          - ``0``
+          - ``0``
+          -
+          - ``0``
+          - ``0``
+        * - ``0``
+          - ``0``
+          - ``1``
+          -
+          - ``1``
+          - ``0``
+        * - ``0``
+          - ``1``
+          - ``0``
+          -
+          - ``1``
+          - ``0``
+        * - ``0``
+          - ``1``
+          - ``1``
+          -
+          - ``0``
+          - ``1``
+        * - ``1``
+          - ``0``
+          - ``0``
+          -
+          - ``1``
+          - ``0``
+        * - ``1``
+          - ``0``
+          - ``1``
+          -
+          - ``0``
+          - ``1``
+        * - ``1``
+          - ``1``
+          - ``0``
+          -
+          - ``0``
+          - ``1``
+        * - ``1``
+          - ``1``
+          - ``1``
+          -
+          - ``1``
+          - ``1``
+
+
+#. Simplify the circuit design by reducing the number of gates that are used
+
+    * Try gate types other than NOT, OR, and AND
