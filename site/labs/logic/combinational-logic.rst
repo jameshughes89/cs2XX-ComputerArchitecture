@@ -24,16 +24,16 @@ the gates; inputs, outputs, wires, etc. may be still be used.
 Decoder
 =======
 
-#. Create a 3 bit decoder with AND gates
+#. Create a 3 bit decoder with ``AND`` gates
 
     * Do not use the decoder component
-    * The inputs on the AND gates may be directly inverted
+    * The inputs on the ``AND`` gates may be directly inverted
 
 
-#. Create a 3 bit decoder with ANDs and only 2 NOTs
+#. Create a 3 bit decoder with ``AND``\s and only 2 ``NOT``\s
 
     * Do not use the decoder component
-    * The inputs on the AND gates may not be directly inverted
+    * The inputs on the ``AND`` gates may not be directly inverted
 
         * Do not change it such that their inputs have circles
 
@@ -125,6 +125,12 @@ Programmable Logic Arrays
           - ``1``
 
 
+#. Create a new design using Digital's Synthesis tool
+
+    * The tool can be found under "Analysis -> Synthesis"
+    * The tool is tedious to use
+
+
 #. Simplify the circuit design by reducing the number of gates that are used
 
-    * Try gate types other than NOT, OR, and AND
+    * Try gate types other than ``NOT``, ``OR``, and ``AND``
