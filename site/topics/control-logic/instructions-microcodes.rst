@@ -424,15 +424,33 @@ The 13 Instructions
 
     * No Operation
     * Same as ``0000`` above
-    * Left open for potential future instructions
+    * Left open for potential additional instructions
+
+
+* ``1101`` --- ``OUTU``
+
+    * Output data as an unsigned integer from some specified RAM address
+    * The 4 bit operand for this instruction specifies some memory address of the data to be output
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Output the value from RAM and put it into the output register
 
 
 
-0xA --- NOOP --- No Operation
-0xB --- NOOP --- No Operation
-0xC --- NOOP --- No Operation
-0xD --- OUTU --- Output Unsigned Integer
-0xE --- OUTS --- Output Signed Integer
+* ``1110`` --- ``OUTS``
+
+    * Output data as a signed integer from some specified RAM address
+    * Similar to ``OUTU``
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Set the sign signal high and output the value from RAM and put it into the output register
+
+
+* ``1111`` --- ``HALT``
+
+
 0xF --- HALT --- Halt
 
 
