@@ -380,15 +380,33 @@ The 13 Instructions
         * Output the value from the A register and put it into RAM
 
 
-# ``0110`` --- ``SAVB``
+* ``0110`` --- ``SAVB``
 
     * Save the data from register B to some specified RAM address
     * Similar to ``SAVA``
 
 
+* ``0111`` --- ``ADDB``
 
-0x7 --- ADDB --- Add B to A
-0x8 --- SUBB --- Subtract B from A
+    * Add the contents of register B to register A
+    * This overwrites the contents of register A
+    * This instruction has no operand
+    * The high level microcode steps would be as follows
+
+        * Output sum from the ALU and put it into register A
+
+
+* ``1000`` --- ``SUBB``
+
+    * Subtract the contents of register B from register A
+    * This overwrites the contents of register A
+    * This instruction has no operand
+    * The high level microcode steps would be as follows
+
+        * Set the subtraction signal high and output difference from the ALU and put it into register A
+
+
+
 0x9 --- JMPA --- Jump Always
 0xA --- NOOP --- No Operation
 0xB --- NOOP --- No Operation
@@ -398,10 +416,12 @@ The 13 Instructions
 0xF --- HALT --- Halt
 
 
-.. note::
+.. admonition:: Activity
 
-    Consider the ESAP system's current hardware. What other instructions could be included? What variations of the
-    existing instructions could be included?
+    Consider the ESAP system's current hardware.
+
+        #. What other instructions could be included?
+        #. What variations of the existing instructions could be included?
 
 
 
