@@ -323,7 +323,7 @@ The 13 Instructions
 
 * ``0001`` --- ``LDAR``
 
-    * Load data into register A from some defined RAM address
+    * Load data into register A from some specified RAM address
     * The 4 bit operand for this instruction specifies some memory address to read the data from
 
         * Consider the full 8 bit instruction ``0001YYYY``
@@ -334,7 +334,7 @@ The 13 Instructions
     * The high level microcode steps would be as follows
 
         * Output the operand (memory address) from the instruction register and put it into the address register
-        * Output the value from RAM and put it into the A register
+        * Output the value from RAM and put it into register A
 
 
 * ``0010`` --- ``LDAD``
@@ -355,12 +355,12 @@ The 13 Instructions
 
     * The high level microcode steps would be as follows
 
-        * Output the operand (data) from the instruction register and put it into the A register
+        * Output the operand (data) from the instruction register and put it into register A
 
 
 * ``0011`` --- ``LDBR``
 
-    * Load data into register B from some defined RAM address
+    * Load data into register B from some specified RAM address
     * Similar to ``LDAR``
 
 
@@ -370,8 +370,23 @@ The 13 Instructions
     * Similar to ``LDAD``
 
 
-0x5 --- SAVA --- Save A to RAM
-0x6 --- SAVB --- Save B to RAM
+# ``0101`` --- ``SAVA``
+
+    * Save the data from register A to some specified RAM address
+    * The 4 bit operand for this instruction specifies some memory address to write the data to
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Output the value from the A register and put it into RAM
+
+
+# ``0110`` --- ``SAVB``
+
+    * Save the data from register B to some specified RAM address
+    * Similar to ``SAVA``
+
+
+
 0x7 --- ADDB --- Add B to A
 0x8 --- SUBB --- Subtract B from A
 0x9 --- JMPA --- Jump Always
