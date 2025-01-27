@@ -450,8 +450,12 @@ The 13 Instructions
 
 * ``1111`` --- ``HALT``
 
+    * Stop the program
+    * This will effectively deactivate the clock
+    * The high level microcode steps would be as follows
 
-0xF --- HALT --- Halt
+        * Send some control signal to turn deactivate the clock
+
 
 
 .. admonition:: Activity
