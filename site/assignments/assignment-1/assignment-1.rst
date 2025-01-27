@@ -87,7 +87,7 @@ proper math typesetting, where appropriate.
     c. ``1010 OR 1100``
 
 
-#. Generate truth tables for each of the following binary expressions.
+#. Generate truth tables for each of the following boolean expressions.
 
     a. :math:`\lnot a \land b`
     b. :math:`a \lor (a \land b)`
