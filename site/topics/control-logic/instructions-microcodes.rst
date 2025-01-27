@@ -406,8 +406,28 @@ The 13 Instructions
         * Set the subtraction signal high and output difference from the ALU and put it into register A
 
 
+* ``1001`` --- ``JMPA``
 
-0x9 --- JMPA --- Jump Always
+    * Jump to the instruction at the specified memory address
+    * This sets the program counter to the specified address such that it stores the next instruction to be run
+    * The 4 bit operand for this instruction specifies the memory address to jump to
+
+        * The address of the instruction to run next
+
+
+    * The high level microcode steps would be as follows
+
+        * Output the operand (address to jump to) from the instruction register and put it into the program counter
+
+
+* ``1010``, ``1011``, and ``1100`` --- ``NOOP``
+
+    * No Operation
+    * Same as ``0000`` above
+    * Left open for potential future instructions
+
+
+
 0xA --- NOOP --- No Operation
 0xB --- NOOP --- No Operation
 0xC --- NOOP --- No Operation
