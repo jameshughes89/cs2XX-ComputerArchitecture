@@ -131,6 +131,11 @@ Programmable Logic Arrays
     * The tool is tedious to use
 
 
+#. Create the same functionality with a Look Up Table
+
+    * Can be found under "Components -> Logic -> Lookup Table"
+
+
 #. Simplify the circuit design by reducing the number of gates that are used
 
     * Try gate types other than ``NOT``, ``OR``, and ``AND``
