@@ -9,8 +9,18 @@ But how do we make the instruction?
 
 
 
+Instruction and Microcode Steps
+===============================
 
 
+
+Look Up Table to Process Instruction
+====================================
+
+
+
+Including the Control Logic Module in the System
+================================================
 
 
 
