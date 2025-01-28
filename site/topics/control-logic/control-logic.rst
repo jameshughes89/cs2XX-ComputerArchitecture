@@ -5,7 +5,7 @@ Control Logic
 * Instructions are fetched and put into the instruction register for processing
 
     * An instruction set has already been defined
-    * Each instruction's micro codes are known
+    * Each instruction's microcodes are known
 
         * How the hardware is manipulated for each instruction
 
