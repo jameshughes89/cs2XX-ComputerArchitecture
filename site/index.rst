@@ -83,7 +83,7 @@ Office Hours
     topics/output/output-register
     topics/program-counter/program-counter
     topics/control-logic/instructions-microcodes
-    topics/programming/programming
+    topics/programming/programming-machine-code
 
 
 
