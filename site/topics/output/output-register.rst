@@ -37,6 +37,17 @@ Output Module
         * When the signal is high, the 8 bits from the output register address 256 -- 511
 
 
+* It is important that the :math:`signed` control signal is included in the output register as a ninth bit
+
+    * For the same reason that the registers exist to store the data and separate it from the data bus
+    * Otherwise, when the control signals on the control bus change, the state of the input to the LUT would change
+
+        * The :math:`signed` signal would likely go low, meaning that a signed int would be output as an unsigned int
+
+
+* However, remember that this ninth bit is not part of the data to be output, but storing the unsigned/signed state
+
+
 
 Including Output in the System
 ==============================

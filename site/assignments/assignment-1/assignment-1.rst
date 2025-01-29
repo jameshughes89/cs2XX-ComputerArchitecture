@@ -75,9 +75,9 @@ proper math typesetting, where appropriate.
 
     * For visual clarity, the typesetting of binary numbers is changed for this and the following questions.
 
-    b. ``1010 + 101``
-    c. ``1010011 + 101011``
-    d. ``1111 + 1``
+    a. ``1010 + 101``
+    b. ``1010011 + 101011``
+    c. ``1111 + 1``
 
 
 #. Perform the following bitwise boolean operations (perform the operation on each bit, in order, to obtain the result).
@@ -87,7 +87,7 @@ proper math typesetting, where appropriate.
     c. ``1010 OR 1100``
 
 
-#. Generate truth tables for each of the following binary expressions.
+#. Generate truth tables for each of the following boolean expressions.
 
     a. :math:`\lnot a \land b`
     b. :math:`a \lor (a \land b)`
