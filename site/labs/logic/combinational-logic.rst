@@ -30,7 +30,7 @@ Decoder
     * The inputs on the ``AND`` gates may be directly inverted
 
 
-#. Create a 3 bit decoder with ``AND``\s and only 2 ``NOT``\s
+#. Create a 3 bit decoder with ``AND``\s and only 3 ``NOT``\s
 
     * Do not use the decoder component
     * The inputs on the ``AND`` gates may not be directly inverted
