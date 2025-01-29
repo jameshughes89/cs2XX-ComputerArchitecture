@@ -83,6 +83,7 @@ Office Hours
     topics/output/output-register
     topics/program-counter/program-counter
     topics/control-logic/instructions-microcodes
+    topics/control-logic/control-logic
 
 
 
@@ -92,7 +93,8 @@ Office Hours
     :numbered:
 
     labs/digital/digital
-
+    labs/gates/basic-gates
+    labs/logic/combinational-logic
 
 
 
@@ -101,8 +103,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
-    assignments/hello-world/hello-world
-
+    assignments/assignment-1/assignment-1
 
 
 
