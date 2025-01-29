@@ -94,7 +94,7 @@ Office Hours
 
     labs/digital/digital
     labs/gates/basic-gates
-
+    labs/logic/combinational-logic
 
 
 
@@ -104,7 +104,6 @@ Office Hours
     :numbered:
 
     assignments/assignment-1/assignment-1
-
 
 
 
