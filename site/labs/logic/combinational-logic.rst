@@ -27,7 +27,7 @@ Decoder
 #. Create a 3 bit decoder with ``AND`` gates
 
     * Do not use the decoder component
-	* Right clicking on a gate allows for editing some properties
+    * Right clicking on a gate allows for editing some properties
     * The inputs on the ``AND`` gates may be directly inverted
 
 
