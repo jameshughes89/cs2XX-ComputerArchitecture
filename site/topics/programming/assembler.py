@@ -63,4 +63,6 @@ for i, line in enumerate(program):
 
     machine_code[i] = machine_code[i] | (operator << 4 | operand)
 
-    print(f"{hex(machine_code[i]):04}")
+with open("a.hex", "w") as hex_file:
+    hex_file.write("v2.0 raw\n")
+    hex_file.writelines([f"{hex(code):04}\n" for code in machine_code])
