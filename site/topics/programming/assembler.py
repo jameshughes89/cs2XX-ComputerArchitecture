@@ -27,68 +27,53 @@ HAS_OPERAND = {
     "OUTS",
 }
 
-
-def program_string_to_list_of_instructions(program:str) -> list[str]:
-    program_list = program.strip().split("\n")
-    if len(program_list) > 16:
-        raise ValueError(f"Program length of {len(program_list)} exceeds maximum size of 16 bytes")
-    return program_list
-
-
-def parse_instruction_operator(instruction:list[str]) -> int:
+def parse_number(number_string:str) -> int:
     try:
-        operator = OPERATORS[instruction[0]]
-    except KeyError:
-        raise ValueError(f"Unknown operator {instruction[0]}")
-    return operator
+        if number_string[:2] == "0b":
+            number = int(number_string, 2)
+        elif number_string[:2] == "0x":
+            number = int(number_string, 16)
+        else:
+            number = int(number_string)
+    except ValueError:
+        raise ValueError(f"Cannot parse operand {number_string}")
+    return number
 
 
-def parse_instruction_operand(instruction:list[str]) -> int:
-    if instruction[0] not in HAS_OPERAND:
-        if len(instruction) > 1:
-            raise ValueError(f"Operator {instruction[0]} requires no operand")
-        operand = 0
-    else:
-        if len(instruction) != 2:
-            raise ValueError(f"Operator {instruction[0]} requires one operand")
-        operand_string = instruction[1]
+file_to_assemble = sys.argv[1]
+with open(file_to_assemble) as file:
+    program_list = file.read().strip().split("\n")
+
+if len(program_list) > 16:
+    raise ValueError(f"Program length of {len(program_list)} exceeds maximum size of 16 bytes")
+
+machine_code = [0x00] * 16
+for i, raw_program_line in enumerate(program_list):
+    line = raw_program_line.split()
+    if line[0].isalpha():
         try:
-            if operand_string[:2] == "0b":
-                operand = int(operand_string, 2)
-            elif operand_string[:2] == "0x":
-                operand = int(operand_string, 16)
-            else:
-                operand = int(operand_string)
-        except ValueError:
-            raise ValueError(f"Cannot parse operand {operand_string}")
-        if operand >= 16:
-            raise ValueError(f"Operand value {operand_string} too large")
-    return operand
+            operator = OPERATORS[line[0]]
+        except KeyError:
+            raise ValueError(f"Unknown operator {line[0]}")
+        if line[0] not in HAS_OPERAND:
+            if len(line) > 1:
+                raise ValueError(f"Operator {line[0]} requires no operand")
+            operand = 0
+        else:
+            if len(line) != 2:
+                raise ValueError(f"Operator {line[0]} requires one operand")
+            operand = parse_number(line[1])
+            if operand >= 16:
+                raise ValueError(f"Operand value {line[1]} too large")
 
+        machine_code_line = (operator << 4) | operand
+    else:
+        number = parse_number(line[0])
+        if number >= 256:
+            raise ValueError(f"Data value {line[0]} too large")
+        machine_code_line = number
+    machine_code[i] = machine_code[i] | machine_code_line
 
-def create_assembled_string(machine_codes: list[int]) -> str:
-    raw_line = "v2.0 raw\n"
-    assembled_program = "".join([f"0x{code:02x}\n" for code in machine_codes])
-    return raw_line + assembled_program
-
-
-if __name__ == "__main__":
-    file_to_assemble = sys.argv[1]
-
-    with open(file_to_assemble) as file:
-        program_string = file.read()
-
-    instruction_list = program_string_to_list_of_instructions(program_string)
-    # PARSE A NUMBER!
-
-    machine_code = [0x00] * 16
-    for i, line in enumerate(instruction_list):
-        instruction = line.split()
-        operator = parse_instruction_operator(instruction)
-        operand = parse_instruction_operand(instruction)
-        machine_code[i] = machine_code[i] | (operator << 4 | operand)
-
-
-    assembled_string = create_assembled_string(machine_code)
-    with open("a.hex", "w") as hex_file:
-        hex_file.write(assembled_string)
+with open("a.hex", "w") as hex_file:
+    hex_file.write("v2.0 raw\n")
+    hex_file.writelines([f"0x{code:02x}\n" for code in machine_code])
