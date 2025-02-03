@@ -27,42 +27,52 @@ HAS_OPERAND = {
     "OUTS",
 }
 
-file_to_assemble = sys.argv[1]
-with open(file_to_assemble) as file:
-    program = file.read().split("\n")
+def program_string_to_list_of_instructions(program:str) -> list[str]:
+    program_list = program.strip().split("\n")
+    if len(program_list) > 16:
+        raise ValueError(f"Program length of {len(program_list)} exceeds maximum size of 16 bytes")
+    return program_list
 
-if len(program) > 16:
-    raise RuntimeError(f"Program length of {len(program)} exceeds maximum size of 16 bytes")
 
 
-machine_code = [0x00] * 16
-for i, line in enumerate(program):
-    instruction = line.split()
-    try:
-        operator = OPERATORS[instruction[0]]
-    except KeyError:
-        raise RuntimeError(f"Unknown operator {instruction[0]}")
-    if instruction[0] not in HAS_OPERAND:
-        if len(instruction) > 1:
-            raise RuntimeError(f"Operator {instruction[0]} requires no operand")
-        operand = 0
-    else:
-        if len(instruction) != 2:
-            raise RuntimeError(f"Operator {instruction[0]} requires one operand")
-        operand_string = instruction[1]
+if __name__ == "__main__":
+    file_to_assemble = sys.argv[1]
 
+    with open(file_to_assemble) as file:
+        program_string = file.read()
+
+    instruction_list = program_string_to_list_of_instructions(program_string)
+
+    
+
+    machine_code = [0x00] * 16
+    for i, line in enumerate(instruction_list):
+        instruction = line.split()
         try:
-            if operand_string[:2] == "0b":
-                operand = int(operand_string, 2)
-            elif operand_string[:2] == "0x":
-                operand = int(operand_string, 16)
-            else:
-                operand = int(operand_string)
-        except ValueError:
-            raise RuntimeError(f"Cannot parse operand {operand_string}")
+            operator = OPERATORS[instruction[0]]
+        except KeyError:
+            raise RuntimeError(f"Unknown operator {instruction[0]}")
+        if instruction[0] not in HAS_OPERAND:
+            if len(instruction) > 1:
+                raise RuntimeError(f"Operator {instruction[0]} requires no operand")
+            operand = 0
+        else:
+            if len(instruction) != 2:
+                raise RuntimeError(f"Operator {instruction[0]} requires one operand")
+            operand_string = instruction[1]
 
-    machine_code[i] = machine_code[i] | (operator << 4 | operand)
+            try:
+                if operand_string[:2] == "0b":
+                    operand = int(operand_string, 2)
+                elif operand_string[:2] == "0x":
+                    operand = int(operand_string, 16)
+                else:
+                    operand = int(operand_string)
+            except ValueError:
+                raise RuntimeError(f"Cannot parse operand {operand_string}")
 
-with open("a.hex", "w") as hex_file:
-    hex_file.write("v2.0 raw\n")
-    hex_file.writelines([f"{hex(code):04}\n" for code in machine_code])
+        machine_code[i] = machine_code[i] | (operator << 4 | operand)
+
+    with open("a.hex", "w") as hex_file:
+        hex_file.write("v2.0 raw\n")
+        hex_file.writelines([f"{hex(code):04}\n" for code in machine_code])
