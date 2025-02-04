@@ -84,6 +84,7 @@ Office Hours
     topics/program-counter/program-counter
     topics/control-logic/instructions-microcodes
     topics/control-logic/control-logic
+    topics/programming/programming-machine-code
 
 
 
