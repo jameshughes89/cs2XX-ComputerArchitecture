@@ -126,8 +126,12 @@ Microcodes
 
 * Below is a table showing how the control lines would be configured for the two steps
 
-    * The data and clock columns are excluded
     * Like before, each row corresponds to one clock cycle
+    * Due to space limitations, the data and clock columns are removed some control signals' columns are combined
+
+        * :math:`ALU_{o}` and :math:`sub` are combined (``alu/sub``)
+        * :math:`Out_{i}` and :math:`sign` are combined (``output/sign``)
+        * :math:`PC` and :math:`PC_{e}` are combined (``in/out/enable``)
 
 
 .. list-table:: Control logic for loading data from some memory address to register A
@@ -139,32 +143,23 @@ Microcodes
       - :math:`RAM`
       - :math:`A`
       - :math:`B`
-      - :math:`ALU_{o}`
-      - :math:`sub`
-      - :math:`out_{i}`
-      - :math:`sign`
+      - :math:`ALU`
+      - :math:`out`
       - :math:`PC`
-      - :math:`PC_e`
     * - ``1``
       - ``0/0``
       - ``0/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
       - ``0/0``
-      - ``0``
+      - ``0/0``
+      - ``0/0/0``
     * - ``0``
       - ``0/1``
       - ``1/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
       - ``0/0``
-      - ``0``
+      - ``0/0``
+      - ``0/0/0``
 
 
 * These two steps put together achieve the instruction of loading data from a specific RAM address into register A
@@ -183,6 +178,176 @@ Microcodes
 
 Fetch and Instruction Register
 ==============================
+
+* Remember, RAM stores both instructions and data
+* Continuing the above example of loading data from RAM to register A
+* Although the control logic to perform this action was discussed above, the instruction must have first come from RAM
+
+    * The instruction would need to be *fetched* from RAM
+
+
+* Instructions will be stored sequentially within RAM, starting at address 0
+* The program counter starts at 0, and keeps track of the address of the next instruction to be executed
+* Thus, to get the next instruction from RAM, the value from the program counter must be sent to the address register
+
+    * Then, it can be output from RAM to the bus
+
+
+* However, as previously discussed, the data on the bus is transient
+
+    * The bus needs to be free to transmit data around the system while performing the instruction
+    * The instruction must be stored somewhere for processing
+
+
+* Therefore, a new register will be created --- the *instruction register*
+* This instruction register will store the instruction for the duration of its execution on the system
+* Thus, the instruction from RAM must be moved to the instruction register
+* And finally, the program counter needs to be incremented
+
+    * Update it to store the value of the *next* instruction to be executed
+
+
+.. list-table:: Control logic of the fetch cycle
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU`
+      - :math:`out`
+      - :math:`PC`
+      - :math:`Instruction`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+      - ``0/0``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+      - ``1/0``
+
+
+* The above table shows the control logic configuration for the fetch cycle
+* Note that, incrementing the program counter does not require the data bus
+
+    * It is isolated from moving data from RAM to the instruction register, and can therefore happen at the same time
+
+
+* Ultimately, this fetch cycle is the first part of any instruction
+
+    * All instructions must be fetched from RAM and put into the instruction register for processing
+
+
+.. figure:: instruction_register.png
+    :width: 500 px
+    :align: center
+
+    Configuration of the instruction register. Only the least significant four bits of the register can output to the
+    bus as this would be the four operand bits from the instruction. The four most significant bits, corresponding to
+    the operand of the instruction, is yet to be used.
+
+
+* Above is a configuration of the instruction register
+* Consider the example in the previous section of loading data from RAM into register A
+
+    * The 8 bit instruction is ``XXXX YYYY``
+    * The four bits ``XXXX`` is some bit pattern designating the operand for loading data from RAM to register A
+
+        * What the pattern for the operand is at this stage is not important
+
+
+    * The four bits ``YYYY`` is the operand, specifying some RAM address
+
+        * The value of ``YYYY`` is variable
+        * The above example used ``0b1111``, or ``15``
+
+
+* The least significant four bits must be loaded into the address register to specify the address to load data from
+* In other words, the value of these lower four bits must be able to be put back onto the main bus
+
+    * This allows the system to move the variable data operand between the different modules for manipulation
+
+
+* The value of the most significant four bits, ``XXXX``, can remain in the instruction register for processing
+
+.. figure:: esap_alu_ram_output_pc_instruction.png
+    :width: 666 px
+    :align: center
+
+    Configuration of the ESAP system with the ALU, RAM, output, program counter, and instruction register modules
+    connected.
+
+
+* The below tables shows the control logic for all steps required to load data from RAM to register A
+
+    * The first two rows correspond to the fetch cycle
+    * The second two corresponds to loading data from RAM to register A
+
+
+* This table is almost a concatenation of the two previous tables
+
+    * The only difference is that the control logic for the instruction register is present for both parts
+
+        * The fetch part and the loading data from RAM to register A
+        * It was not present in the first table showing the control logic for loading data from RAM to register A
+
+
+.. list-table:: Control logic of the fetch cycle and the loading of data from some memory address into register A
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU`
+      - :math:`out`
+      - :math:`PC`
+      - :math:`Instruction`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+      - ``0/0``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+      - ``1/0``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+      - ``0/1``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+      - ``0/0``
 
 
 
