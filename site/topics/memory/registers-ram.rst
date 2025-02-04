@@ -286,7 +286,7 @@ RAM Symbols
 * Two that are likely to be used will be
 
     * RAM with separate data ports
-    * Ram with a shared data port
+    * RAM with a shared data port
 
 
 .. figure:: ram_symbols.png
