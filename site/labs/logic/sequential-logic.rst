@@ -55,7 +55,64 @@ Latches & Flip-Flops
 
     * Read the Test component's help to learn how to handle the clock input
 
-        * Right click the test component -> Edit -> Help
+        * Right click the Test component -> Edit -> Help
 
 
     * Be sure to include the new labelled output component to the tests
+
+
+
+Registers
+=========
+
+#. Create a 1 bit register using a D flip-flop component and a multiplexer
+
+    * This is the same design seen in lecture
+
+
+#. Using the design from above, create an 8 bit register
+
+    * Create 8 copies of the 1 bit register
+    * This is the same configuration seen in lecture
+
+
+#. Modify the above design to provide control over when the register outputs data
+
+    * Currently the :math:`EN` signal controls when data is written to the register
+
+        * Rename this component :math:`EN_{i}`
+
+
+    * A signal :math:`EN_{o}` is to be added to control when the output of the register reaches the output components
+    * **HINT:** Use a driver component
+
+        * Component -> Wires -> Driver
+
+
+    * Refer to the Test component's help to lean how to handle high impedance state
+
+
+#. Modify the above design to have the register's input and final output on the same signal lines
+
+    * You will need to alter the Input components to be tri-state
+
+        * Right click on an Input component -> Advanced tab -> toggle "Is three-state input"
+
+
+    * Refer to the following figure for an example of what this may look like
+
+    .. figure:: example_separate_8_signal_lines_bus.png
+        :width: 333 px
+        :align: center
+
+
+#. Simplify the above design by replacing the D flip-flop/mux 1 bit registers with a single 8 bit register component
+
+    * Components -> Memory -> Register
+    * Right click the register component to modify the number of data bits it has
+    * This design requires the signal lines to carry multiple bits
+    * Refer to the following figure for an example of what this may look like
+
+    .. figure:: example_combined_1_signal_line_bus.png
+        :width: 333 px
+        :align: center
