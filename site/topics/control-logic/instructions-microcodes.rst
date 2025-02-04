@@ -277,12 +277,12 @@ The 13 Instructions
       - Save B to RAM
     * - ``0111``
       - ``7``
-      - ``ADDB``
-      - Add B to A
+      - ``ADAB``
+      - Add B to A --- ``A += B``
     * - ``1000``
       - ``8``
-      - ``SUBB``
-      - Subtract B from A
+      - ``SUAB``
+      - Subtract B from A --- ``A -= B``
     * - ``1001``
       - ``9``
       - ``JMPA``
@@ -386,9 +386,9 @@ The 13 Instructions
     * Similar to ``SAVA``
 
 
-* ``0111`` --- ``ADDB``
+* ``0111`` --- ``ADAB``
 
-    * Add the contents of register B to register A
+    * Add the contents of register B to register A --- ``A += B``
     * This overwrites the contents of register A
     * This instruction has no operand
     * The high level microcode steps would be as follows
@@ -396,9 +396,9 @@ The 13 Instructions
         * Output sum from the ALU and put it into register A
 
 
-* ``1000`` --- ``SUBB``
+* ``1000`` --- ``SUAB``
 
-    * Subtract the contents of register B from register A
+    * Subtract the contents of register B from register A  --- ``A -= B``
     * This overwrites the contents of register A
     * This instruction has no operand
     * The high level microcode steps would be as follows
