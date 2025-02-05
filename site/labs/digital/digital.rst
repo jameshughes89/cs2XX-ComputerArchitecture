@@ -43,7 +43,7 @@ Starting with Digital
 
 #. Place an input and output on the workspace and connect them with a wire
 
-    * Input components can be found through the top menu "Components -> IO -> Input"
+    * Input components can be found through the top menu **Components -> IO -> Input**
     * Output components can be found in the same menu
     * Wires are added by clicking and then moving the mouse around the workspace
     * Have the input and output components such that a single, straight horizontal wire connects them
@@ -121,7 +121,7 @@ Tutorial
 
 #. Run the tutorial
 
-    * The tutorial can be started by selecting "View -> Start Tutorial"
+    * The tutorial can be started by selecting **View -> Start Tutorial**
 
 
 #. As the tutorial instructed, run the circuit and interact with it in real time
@@ -137,12 +137,12 @@ Tutorial
 
 #. Stop the circuit open the analyze window and make sense of what it shows
 
-    * Found in "Analysis -> Analysis"
+    * Found in **Analysis -> Analysis**
 
 
 #. Add a Data Graph component to the workspace, re-run the circuit, and interact with the inputs
 
-    * The Data Graph component is found under "Component -> IO -> Data Graph"
+    * The Data Graph component is found under **Component -> IO -> Data Graph**
     * The Data Graph component does not need to be connected to anything
 
 
@@ -169,7 +169,7 @@ Digital provides many example circuits that are included with the software.
 
 #. Explore provided files by loading them, running them, and interacting with them
 
-    * Open these files through the "File -> Open" menu
+    * Open these files through the **File -> Open** menu
     * These provided circuits cam be found within the "examples" folder within the "Digital" folder
     * There are many, so do not expect to open every one
     * Take the time to explore those that seem interesting
