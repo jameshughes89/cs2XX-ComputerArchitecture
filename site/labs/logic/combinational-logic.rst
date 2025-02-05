@@ -11,10 +11,11 @@ Combinational Logic
 
 
 For these questions, feel free to use a single Digital workspace for all the circuits. However, label each circuit with
-labelled rectangles. These are components that can be found under "Components -> Misc. -> Decoration -> Rectangle".
+labelled rectangles. These are components that can be found under **Components -> Misc. -> Decoration -> Rectangle**.
 
-Where possible, each question should have complete tests. The test component can be found under "Components -> Misc. ->
-Test case". Once a test component is placed on the workspace, right click on the component to edit the test data.
+Where possible, each question should have complete tests. The test component can be found under
+**Components -> Misc. -> Test case**. Once a test component is placed on the workspace, right click on the component to
+edit the test data.
 
 Questions may have restrictions on the logic gates that may be used. When restrictions are stated, they only apply to
 the gates; inputs, outputs, wires, etc. may be still be used.
@@ -128,13 +129,13 @@ Programmable Logic Arrays
 
 #. Create a new design using Digital's Synthesis tool
 
-    * The tool can be found under "Analysis -> Synthesis"
+    * The tool can be found under **Analysis -> Synthesis**
     * The tool is tedious to use
 
 
 #. Create the same functionality with a Look Up Table
 
-    * Can be found under "Components -> Logic -> Lookup Table"
+    * Can be found under **Components -> Logic -> Lookup Table**
 
 
 #. Simplify the circuit design by reducing the number of gates that are used
