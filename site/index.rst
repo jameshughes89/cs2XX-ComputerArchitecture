@@ -96,6 +96,7 @@ Office Hours
     labs/digital/digital
     labs/gates/basic-gates
     labs/logic/combinational-logic
+    labs/logic/sequential-logic
 
 
 
