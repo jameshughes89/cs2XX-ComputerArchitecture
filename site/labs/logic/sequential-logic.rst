@@ -40,7 +40,7 @@ Latches & Flip-Flops
 
     * Add a "Data Graph" component to the design
 
-        * Can be found under "Components -> IO -> Data Graph"
+        * Can be found under **Components -> IO -> Data Graph**
 
 
     * Play with the circuit enough to become comfortable with all possible states and inputs
@@ -55,7 +55,7 @@ Latches & Flip-Flops
 
     * Read the Test component's help to learn how to handle the clock input
 
-        * Right click the Test component -> Edit -> Help
+        * **Right click the Test component -> Edit -> Help**
 
 
     * Be sure to include the new labelled output component to the tests
@@ -86,7 +86,7 @@ Registers
     * A signal :math:`EN_{o}` is to be added to control when the output of the register reaches the output components
     * **HINT:** Use a driver component
 
-        * Component -> Wires -> Driver
+        * **Component -> Wires -> Driver**
 
 
     * Refer to the Test component's help to lean how to handle high impedance state
@@ -96,7 +96,7 @@ Registers
 
     * You will need to alter the Input components to be tri-state
 
-        * Right click on an Input component -> Advanced tab -> toggle "Is three-state input"
+        * **Right click on an Input component -> Advanced tab -> toggle "Is three-state input"**
 
 
     * Refer to the following figure for an example of what this may look like
@@ -108,7 +108,7 @@ Registers
 
 #. Simplify the above design by replacing the D flip-flop/mux 1 bit registers with a single 8 bit register component
 
-    * Components -> Memory -> Register
+    * **Components -> Memory -> Register**
     * Right click the register component to modify the number of data bits it has
     * This design requires the signal lines to carry multiple bits
     * Refer to the following figure for an example of what this may look like
@@ -116,3 +116,4 @@ Registers
     .. figure:: example_combined_1_signal_line_bus.png
         :width: 333 px
         :align: center
+
