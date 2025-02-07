@@ -124,7 +124,7 @@ Half Adder
 * However, this will not work as the carry bit has no way to be accounted for in the next bit's addition
 
     * Think about regular base 10 addition
-    * If the sum of one digit is greater than 10, the value is carried over and included in the sum of the next digit
+    * If the sum of one digit is 10 or more, the 10s value is carried over and included in the sum of the next digit
 
 
 * Thus, the half adder must be modified to incorporate an input of a carry bit
