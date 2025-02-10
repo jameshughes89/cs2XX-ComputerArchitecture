@@ -194,6 +194,15 @@ Instruction Set
     * Like the example instruction discussed, loading data from RAM into register A
 
 
+* Consider the functionality that would be required for a typical computing system
+
+    * Move data round the system
+    * Perform arithmatic operations
+    * Output data
+    * Loop
+    * Conditions/make decisions
+
+
 * As discussed, with 4 bit operators, a total of 16 unique instructions can be implemented for the ESAP system
 
     * Each of the 16 instructions can be uniquely identified with a bit pattern
@@ -205,7 +214,7 @@ Instruction Set
     * Assuming the hardware is sufficient to perform such an instruction
 
 
-* Below are 13 instructions that can be included on the system
+* Below are 13 instructions that can be included on the current system
 
     * This leaves room for additional instructions to be added to the instruction set later
 
