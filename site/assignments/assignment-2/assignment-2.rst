@@ -163,6 +163,122 @@ Part 1 --- Selectors
 Part 2 --- JK Flip-Flops
 ========================
 
+An SR flip-flop is similar to an SR latch except that the flip-flop only changes state on a clock pulse, similar to that
+of a D flip-flop.
+
+A JK Flip Flop is similar to an SR flip-flop, except that when both inputs (called :math:`J` and :math:`K`, for
+:math:`S` and :math:`R` respectively) are ``1``, the outputs :math:`Q` and :math:`\lnot Q` toggle/oscillate.
+
+    .. list-table:: JK Flip-Flop Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - :math:`C`
+          -
+          - :math:`J`
+          - :math:`K`
+          -
+          - :math:`Q`
+          - :math:`\lnot Q`
+          -
+          - :math:`Q`
+          - :math:`\lnot Q`
+        * - ``C``
+          -
+          - ``0``
+          - ``0``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``0``
+          - ``1``
+        * - ``C``
+          -
+          - ``0``
+          - ``0``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``1``
+          - ``0``
+        * - ``C``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``0``
+          - ``1``
+        * - ``C``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``0``
+          - ``1``
+        * - ``C``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``1``
+          - ``0``
+        * - ``C``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``1``
+          - ``0``
+        * - ``C``
+          -
+          - ``1``
+          - ``1``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``1``
+          - ``0``
+        * - ``C``
+          -
+          - ``1``
+          - ``1``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``0``
+          - ``1``
+
+
+This toggle feature has an interesting property that the :math:`Q` output toggles at half the frequency of the clock
+input. In other words, it takes two clock cycles for :math:`Q` to cycle once.
+
+
+#. Create a JK flip-flop
+
+    * Use the provided file titled "5-JK_flipflop.dig"
+    * Feel free to research designs of a JK flop-flop, however, most designs available will fail due to race conditions
+    * **HINT:** Use the idea of the D flip-flop design for the JK flop-flop
+
+        * **WARNING:** Unlike the the D flip-flop, have the final :math:`Q` value latch when the clock goes low
+
+
 
 Part 3 --- RAM
 ==============
