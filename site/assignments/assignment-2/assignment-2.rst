@@ -270,13 +270,44 @@ This toggle feature has an interesting property that the :math:`Q` output toggle
 input. In other words, it takes two clock cycles for :math:`Q` to cycle once.
 
 
+
 #. Create a JK flip-flop
 
     * Use the provided file titled "5-JK_flipflop.dig"
-    * Feel free to research designs of a JK flop-flop, however, most designs available will fail due to race conditions
-    * **HINT:** Use the idea of the D flip-flop design for the JK flop-flop
+    * Feel free to research designs of a JK flop-flop
+
+        * **WARNING:** Most designs available will fail due to race conditions
+
+
+    * **HINT:** Use the idea of the D flip-flop design for the JK flop-flop to resolve the race condition problem
 
         * **WARNING:** Unlike the the D flip-flop, have the final :math:`Q` value latch when the clock goes low
+
+
+
+#. Create a 4 bit counting circuit that increments 1 every clock pulse with 4 JK flip-flops
+
+    * For example, each arrow corresponds to one clock pulse
+
+        * ``0000`` -> ``0001`` -> ``0010`` -> ``0011`` -> ``0100`` -> ``0101`` -> ... -> ``1111`` -> ``0000`` -> ...
+
+
+    * Use the provided file titled "6-counter.dig"
+    * Use the JK flip-flop design from the above question and not the built in component
+
+        * Using Digital's built in JK flip-flop will not produce the desired result
+
+
+    * **HINT:** Chain JK flip-flops together
+    * **HINT:** Set each JK flip-flop's :math:`J` and :math:`K` inputs to ``1`` with a constant
+
+        * This puts the JK flip-flops into their toggle/oscillate state
+
+
+    * Ignore the :math:`\lnot Q`\s for this circuit
+    * Note that one should expect the outputs to start on some arbitrary value when running the circuit
+
+        * Do not expect the outputs to start at ``0000``
 
 
 
