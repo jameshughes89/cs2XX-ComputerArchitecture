@@ -10,152 +10,96 @@ Assignment 2
 Provided Files
 ==============
 
-Incomplete Digital files are provided for the questions for Part 2. These files contain tests, designated space for
-building circuits, and labelled inputs and outputs.
+Incomplete Digital files are provided for the questions. These files contain tests, a resizable designated space for
+building circuits, and labelled inputs, outputs, and other components.
 
-:download:`These files can be downloaded from here. <assignment_1-dig_files.zip>`
+:download:`These files can be downloaded from here. <assignment_2-dig_files.zip>`
 
 Uncompress this folder and open the files within Digital. Each question specifies which of the file to work in.
 
 
 
-Part 1 --- Non-Digital
-======================
+Part 1 --- Selectors
+====================
 
-This portion of the assignment will not make use of the Digital simulation software. All answers must be typed and use
-proper math typesetting, where appropriate.
+#. Create a circuit where the output of some input can be inverted with some other signal
 
-#. Given the 26 letters of the alphabet
+    * Use the provided file titled "1-bit_inverter.dig"
+    * Below is a truth table describing the desired functionality
 
-    a. What is the fewest number of bits needed to give each letter a unique bit pattern?
-    b. How many bits would be needed for both lowercase and uppercase letters?
-    c. How many bits would be needed to identify uppercase and lowercase letters, and numerals (the 10 digits)?
-
-
-#. Create a table showing all 4 bit binary integers and their corresponding decimal value.
-
-    .. list-table:: Example start of the table
-        :widths: 50 50
+    .. list-table:: Bit Inverter Truth Table
+        :widths: auto
+        :align: center
         :header-rows: 1
 
-        * - Binary
-          - Decimal
-        * - :math:`0000_{2}`
-          - :math:`0_{10}`
-        * - :math:`0001_{2}`
-          - :math:`1_{10}`
-        * - ``...``
-          - :math:`...`
-        * - ``...``
-          - :math:`...`
+        * - Input
+          -
+          - Invert
+          -
+          - Output
+        * - ``0``
+          -
+          - ``0``
+          -
+          - ``0``
+        * - ``0``
+          -
+          - ``1``
+          -
+          - ``1``
+        * - ``1``
+          -
+          - ``0``
+          -
+          - ``1``
+        * - ``1``
+          -
+          - ``1``
+          -
+          - ``1``
 
 
-#. Convert the following binary (base 2) numbers to decimal (base 10) --- show all work.
+#. Create a 1 bit selector circuit such that one of two inputs is mapped to the output with the following constraints
 
-    a. :math:`10101010_{2}`
-    b. :math:`01010101_{2}`
-    c. :math:`11111010_{2}`
+    * You may not use a multiplexer
+    * You may only use drivers and not gates
+    * Use the provided file titled "2-input_selector.dig"
+    * Below is a truth table describing the desired functionality
 
+        * Here, ``X``
 
-#. Convert the following decimal (base 10) numbers to binary (base 2) --- show all work.
+    .. list-table:: 1 Bit Selector Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
 
-    a. :math:`123_{10}`
-    b. :math:`31_{10}`
-    c. :math:`128_{10}`
-
-
-#. Convert the following numbers between the specified bases --- show all work.
-
-    a. :math:`123_{5}` = :math:`?_{4}`
-    b. :math:`123_{7}` = :math:`?_{8}`
-    c. :math:`123_{8}` = :math:`?_{16}`
-
-
-#. Add the following binary numbers and leave the result in binary --- show all work (e.g. carrying).
-
-    * For visual clarity, the typesetting of binary numbers is changed for this and the following questions.
-
-    a. ``1010 + 101``
-    b. ``1010011 + 101011``
-    c. ``1111 + 1``
-
-
-#. Perform the following bitwise boolean operations (perform the operation on each bit, in order, to obtain the result).
-
-    a. ``NOT 1010``
-    b. ``1010 AND 1100``
-    c. ``1010 OR 1100``
-
-
-#. Generate truth tables for each of the following boolean expressions.
-
-    a. :math:`\lnot a \land b`
-    b. :math:`a \lor (a \land b)`
-    c. :math:`\lnot a \land \lnot b`
-
-
-#. Demonstrate the two De Morgan's laws with truth tables (one table for each).
-
-
-#. With truth tables, show how :math:`and`, :math:`or`, and :math:`not` operations can be achieved with only
-
-    a. :math:`nand`
-    b. :math:`nor`
+        * - :math:`i_{0}`
+          - :math:`i_{1}`
+          -
+          - :math:`s`
+          -
+          - :math:`o`
+        * - ``X``
+          - ``Y``
+          -
+          - ``0``
+          -
+          - ``X``
+        * - ``X``
+          - ``Y``
+          -
+          - ``1``
+          -
+          - ``Y``
 
 
 
-Part 2 --- Digital
-==================
-
-This portion of the assignment will make use of the Digital simulation software.
-
-#. Create :math:`not`, :math:`or`, and :math:`and` gates with N-channel transistors.
-
-    * Use the provided file titled "1-not_or_and.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
+Part 2 --- JK Flip-Flops
+========================
 
 
-#. Create :math:`nor` and :math:`nand` with three N-channel transistors each.
-
-    * Use the provided file titled "2-nor_nand_three.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
-
-
-#. Create :math:`nor` and :math:`nand` with two N-channel transistors each.
-
-    * Use the provided file titled "3-nor_nand_two.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
-    * **Hint** Take special note of the design of the :math:`not` gate built with a transistor
-
-
-#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nand` transistor configurations
-
-    * Use the provided file titled "4-nand_universal.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
-
-
-#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nor` transistor configurations
-
-    * Use the provided file titled "5-nor_universal.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
-
-
-#. Create :math:`xor` (exclusive or) with N-channel transistors
-
-    * Use the provided file titled "6-xor.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
+Part 3 --- RAM
+==============
 
 
 
@@ -197,17 +141,6 @@ Below is a list of both *quantitative* and *qualitative* things we will look for
 
 What to Submit to Moodle
 ========================
-
-* Submit any necessary PDF files to Moodle
-
-    * Submissions for the non-digital portion of assignments that are not PDFs will not be marked
-    * PDFs must be generated from typed documents
-
-        * No PDFs of written work
-
-
-    * If necessary, save or print word processor files as PDFs
-
 
 * Submit your completed Digital (*.dig*) files to Moodle
 * Do **not** compress the files before uploading to Moodle
