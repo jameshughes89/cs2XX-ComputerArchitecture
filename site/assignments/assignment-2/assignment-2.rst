@@ -59,6 +59,7 @@ Part 1 --- Selectors
           - ``1``
 
 
+
 #. Create a 1 bit selector circuit such that one of two inputs is mapped to the output with the following constraints
 
     * A multiplexer may not be used
@@ -66,7 +67,7 @@ Part 1 --- Selectors
     * Use the provided file titled "2-input_selector.dig"
     * Below is a truth table describing the desired functionality
 
-        * Here, ``X`` and ``Y`` are variable inputs that can take on either ``0``/``1``
+        * Here, ``A`` and ``B`` are variable inputs that can take on either ``0``/``1``
 
 
     .. list-table:: 1 Bit Selector Truth Table
@@ -80,18 +81,19 @@ Part 1 --- Selectors
           - :math:`s`
           -
           - :math:`o`
-        * - ``X``
-          - ``Y``
+        * - ``A``
+          - ``B``
           -
           - ``0``
           -
-          - ``X``
-        * - ``X``
-          - ``Y``
+          - ``A``
+        * - ``A``
+          - ``B``
           -
           - ``1``
           -
-          - ``Y``
+          - ``B``
+
 
 
 #. Create a circuit that can map one of two inputs to one of two outputs with the following constraints
@@ -117,38 +119,45 @@ Part 1 --- Selectors
           -
           - :math:`o_{0}`
           - :math:`o_{1}`
-        * - ``X``
-          - ``Y``
+        * - ``A``
+          - ``B``
           -
           - ``0``
           - ``0``
           -
-          - ``X``
+          - ``A``
           - ``Z``
-        * - ``X``
-          - ``Y``
+        * - ``A``
+          - ``B``
           -
           - ``0``
           - ``1``
           -
           - ``Z``
-          - ``X``
-        * - ``X``
-          - ``Y``
+          - ``A``
+        * - ``A``
+          - ``B``
           -
           - ``1``
           - ``0``
           -
-          - ``Y``
+          - ``B``
           - ``Z``
-        * - ``X``
-          - ``Y``
+        * - ``A``
+          - ``B``
           -
           - ``1``
           - ``1``
           -
           - ``Z``
-          - ``Y``
+          - ``B``
+
+
+#. Create a circuit that can map one of four inputs to one of four outputs with the following constraints
+
+    * Multiplexers and demultiplexer may be used
+    * Use the provided file titled "4-plex_input_output_selector.dig"
+
 
 
 Part 2 --- JK Flip-Flops
