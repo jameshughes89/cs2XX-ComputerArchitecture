@@ -106,6 +106,7 @@ Office Hours
     :numbered:
 
     assignments/assignment-1/assignment-1
+    assignments/assignment-2/assignment-2
 
 
 
