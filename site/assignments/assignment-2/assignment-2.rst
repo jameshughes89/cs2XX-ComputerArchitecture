@@ -61,12 +61,13 @@ Part 1 --- Selectors
 
 #. Create a 1 bit selector circuit such that one of two inputs is mapped to the output with the following constraints
 
-    * You may not use a multiplexer
-    * You may only use drivers and not gates
+    * A multiplexer may not be used
+    * Only drivers and not gates may be used
     * Use the provided file titled "2-input_selector.dig"
     * Below is a truth table describing the desired functionality
 
-        * Here, ``X``
+        * Here, ``X`` and ``Y`` are variable inputs that can take on either ``0``/``1``
+
 
     .. list-table:: 1 Bit Selector Truth Table
         :widths: auto
@@ -92,6 +93,62 @@ Part 1 --- Selectors
           -
           - ``Y``
 
+
+#. Create a circuit that can map one of two inputs to one of two outputs with the following constraints
+
+    * A multiplexer may not be used
+    * Only drivers and not gates may be used
+    * **Hint:** Use the general bit selector design from the previous question
+    * Use the provided file titled "3-input_output_selector.dig"
+    * Below is a truth table describing the desired functionality
+
+        * Note that ``Z`` denotes the high impedance state and does not represent some variable input
+
+    .. list-table:: 1 Bit Input/Output Selector Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - :math:`i_{0}`
+          - :math:`i_{1}`
+          -
+          - :math:`s_{i}`
+          - :math:`s_{o}`
+          -
+          - :math:`o_{0}`
+          - :math:`o_{1}`
+        * - ``X``
+          - ``Y``
+          -
+          - ``0``
+          - ``0``
+          -
+          - ``X``
+          - ``Z``
+        * - ``X``
+          - ``Y``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``Z``
+          - ``X``
+        * - ``X``
+          - ``Y``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``Y``
+          - ``Z``
+        * - ``X``
+          - ``Y``
+          -
+          - ``1``
+          - ``1``
+          -
+          - ``Z``
+          - ``Y``
 
 
 Part 2 --- JK Flip-Flops
