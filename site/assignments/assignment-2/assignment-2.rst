@@ -314,6 +314,14 @@ input. In other words, it takes two clock cycles for :math:`Q` to cycle once.
 Part 3 --- RAM
 ==============
 
+#. Create a 4 byte RAM design with four 8 bit register components, a multiplexer, demultiplexer, and a driver
+
+    * Use the provided file titled "7-4_byte_ram.dig"
+    * This file already contains the components needed in the workspace
+
+        * The design must use these components
+        * No other components may be added to the design
+
 
 
 Some Hints
