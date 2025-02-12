@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>RectHeight</string>
+          <int>26</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Flags</string>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>23</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-20" y="-260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>flags_test</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	Carry	Z_flag	S_flag	C_flag		
+0	0	0	0	0	0	0	0	0	1	0	0	
+0	0	0	0	0	0	0	0	1	1	0	1
+1	0	0	0	0	0	0	0	0	0	1	0
+1	0	0	0	0	0	0	0	1	0	1	1
+0	1	0	1	0	1	0	1	0	0	0	0
+0	1	0	1	0	1	0	1	1	0	0	1
+1	0	1	0	1	0	1	0	0	0	1	0
+1	0	1	0	1	0	1	0	1	0	1	1</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="0" y="-220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_0</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_1</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="-100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_2</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_3</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_4</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_5</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_6</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>D_7</string>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Z_flag</string>
+        </entry>
+      </elementAttributes>
+      <pos x="320" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NOr</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Inputs</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="180" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Carry</string>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>S_flag</string>
+        </entry>
+      </elementAttributes>
+      <pos x="320" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>C_flag</string>
+        </entry>
+      </elementAttributes>
+      <pos x="320" y="180"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="100" y="0"/>
+      <p2 x="180" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="-20"/>
+      <p2 x="180" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="-100"/>
+      <p2 x="180" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="20"/>
+      <p2 x="180" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="180"/>
+      <p2 x="320" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="100"/>
+      <p2 x="320" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="-120"/>
+      <p2 x="180" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="-40"/>
+      <p2 x="320" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="40"/>
+      <p2 x="140" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="40"/>
+      <p2 x="180" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="-60"/>
+      <p2 x="180" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="-80"/>
+      <p2 x="180" y="-80"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="40"/>
+      <p2 x="140" y="100"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
