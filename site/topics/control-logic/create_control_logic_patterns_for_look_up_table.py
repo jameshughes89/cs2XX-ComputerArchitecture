@@ -62,8 +62,8 @@ INSTRUCTIONS = [
   [PCO|ADR,   RMO|IRI|PCE, IRO|BRI,     0           ],  # 0b0100 --- 0x4 --- LDBD --- Load B Direct
   [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     ARO|RMI     ],  # 0b0101 --- 0x5 --- SAVA --- Save A to RAM
   [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     BRO|RMI     ],  # 0b0110 --- 0x6 --- SAVB --- Save B to RAM
-  [PCO|ADR,   RMO|IRI|PCE, ALU|ARI,     0           ],  # 0b0111 --- 0x7 --- ADDB --- Add B to A
-  [PCO|ADR,   RMO|IRI|PCE, ALU|SUB|ARI, 0           ],  # 0b1000 --- 0x8 --- SUBB --- Subtract B from A
+  [PCO|ADR,   RMO|IRI|PCE, ALU|ARI,     0           ],  # 0b0111 --- 0x7 --- ADAB --- Add B to A
+  [PCO|ADR,   RMO|IRI|PCE, ALU|SUB|ARI, 0           ],  # 0b1000 --- 0x8 --- SUAB --- Subtract B from A
   [PCO|ADR,   RMO|IRI|PCE, IRO|PCI,     0           ],  # 0b1001 --- 0x9 --- JMPA --- Jump Always
   [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1010 --- 0xA --- NOOP --- No Operation
   [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1011 --- 0xB --- NOOP --- No Operation
