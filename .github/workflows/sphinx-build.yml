@@ -37,6 +37,7 @@ jobs:
     - name: Compress Assignment Files
       run: |
         zip -jr site/assignments/assignment-1/assignment_1-dig_files.zip site/assignments/assignment-1/assignment_1-dig_files
+        zip -jr site/assignments/assignment-2/assignment_2-dig_files.zip site/assignments/assignment-2/assignment_2-dig_files
     - name: Sphinx Build
       run: |
         sphinx-build -b html site/ out/
