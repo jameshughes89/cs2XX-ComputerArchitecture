@@ -40,6 +40,9 @@ def parse_number(number_string:str) -> int:
     return number
 
 
+if len(sys.argv) != 2:
+    raise ValueError(f"Assembler requires exactly one argument specifying a file name, {len(sys.argv) - 1} given")
+
 file_to_assemble = sys.argv[1]
 with open(file_to_assemble) as file:
     program_list = file.read().strip().split("\n")
