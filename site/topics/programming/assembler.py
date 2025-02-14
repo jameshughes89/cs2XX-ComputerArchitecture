@@ -1,19 +1,21 @@
+import re
 import sys
 
-SYNTAX = {
+VALID_SYNTAX = {
     r"NOOP",
-    r"LDAR\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
-    r"LDAD\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
-    r"LDBR\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
-    r"LDBD\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
-    r"SAVA\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
-    r"SAVB\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
+    r"LDAR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDAD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"SAVA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"SAVB\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"ADAB",
     r"SUAB",
-    r"JMPA\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
-    r"OUTU\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
-    r"OUTS\s+\b(0x[0-9a-fA-F]|0b[0-1]+|[0-9]+)\b",
+    r"JMPA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"OUTU\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"OUTS\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"HALT",
+    r"\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
 }
 
 OPERATORS = {
@@ -44,11 +46,33 @@ HAS_OPERAND = {
 }
 
 def parse_number(number_string:str) -> int:
+    """
+    Convert a string of a number to a decimal integer. This function will work with binary (0bXXXX), hex (0xXX),
+    decimal, etc.
+
+    :param number_string: String of a number to be converted.
+    :return: Value of the string as a decimal integer.
+    """
     try:
         number = int(eval(number_string))
     except (ValueError, SyntaxError):
         raise ValueError(f"Cannot parse operand {number_string}")
     return number
+
+def verify_syntax_return_string(program_line):
+    """
+    Verifies that a given program line is valid syntax for the assembler. If valid, this function returns the string,
+    otherwise the function raises a ValueError.
+
+    :param program_line:
+    :raise ValueError: If the program line does not match a valid syntax pattern.
+    :return: Returns a valid program line
+    """
+    for syntax in VALID_SYNTAX:
+        syntax_match = re.match(syntax, program_line)
+        if syntax_match:
+            return syntax_match[0]
+    raise ValueError(f"Invalid operator and/or operand {program_line}")
 
 
 if len(sys.argv) != 2:
@@ -63,23 +87,16 @@ if len(program_list) > 16:
 
 machine_code = [0x00] * 16
 for i, raw_program_line in enumerate(program_list):
-    line = raw_program_line.split()
+    verified_program_line = verify_syntax_return_string(raw_program_line)
+    line = verified_program_line.split()
     if line[0].isalpha():
-        try:
-            operator = OPERATORS[line[0]]
-        except KeyError:
-            raise ValueError(f"Unknown operator {line[0]}")
+        operator = OPERATORS[line[0]]
         if line[0] not in HAS_OPERAND:
-            if len(line) > 1:
-                raise ValueError(f"Operator {line[0]} requires no operand")
             operand = 0
         else:
-            if len(line) != 2:
-                raise ValueError(f"Operator {line[0]} requires one operand")
             operand = parse_number(line[1])
             if operand >= 16:
                 raise ValueError(f"Operand value {line[1]} too large")
-
         machine_code_line = (operator << 4) | operand
     else:
         number = parse_number(line[0])
