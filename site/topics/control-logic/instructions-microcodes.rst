@@ -126,8 +126,12 @@ Microcodes
 
 * Below is a table showing how the control lines would be configured for the two steps
 
-    * The data and clock columns are excluded
     * Like before, each row corresponds to one clock cycle
+    * Due to space limitations, the data and clock columns are removed some control signals' columns are combined
+
+        * :math:`ALU_{o}` and :math:`sub` are combined (``alu/sub``)
+        * :math:`Out_{i}` and :math:`sign` are combined (``output/sign``)
+        * :math:`PC` and :math:`PC_{e}` are combined (``in/out/enable``)
 
 
 .. list-table:: Control logic for loading data from some memory address to register A
@@ -139,32 +143,23 @@ Microcodes
       - :math:`RAM`
       - :math:`A`
       - :math:`B`
-      - :math:`ALU_{o}`
-      - :math:`sub`
-      - :math:`out_{i}`
-      - :math:`sign`
+      - :math:`ALU`
+      - :math:`out`
       - :math:`PC`
-      - :math:`PC_e`
     * - ``1``
       - ``0/0``
       - ``0/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
       - ``0/0``
-      - ``0``
+      - ``0/0``
+      - ``0/0/0``
     * - ``0``
       - ``0/1``
       - ``1/0``
       - ``0/0``
-      - ``0``
-      - ``0``
-      - ``0``
-      - ``0``
       - ``0/0``
-      - ``0``
+      - ``0/0``
+      - ``0/0/0``
 
 
 * These two steps put together achieve the instruction of loading data from a specific RAM address into register A
@@ -184,10 +179,465 @@ Microcodes
 Fetch and Instruction Register
 ==============================
 
+* Remember, RAM stores both instructions and data
+* Continuing the above example of loading data from RAM to register A
+* Although the control logic to perform this action was discussed above, the instruction must have first come from RAM
+
+    * The instruction would need to be *fetched* from RAM
+
+
+* Instructions will be stored sequentially within RAM, starting at address 0
+* The program counter starts at 0, and keeps track of the address of the next instruction to be executed
+* Thus, to get the next instruction from RAM, the value from the program counter must be sent to the address register
+
+    * Then, it can be output from RAM to the bus
+
+
+* However, as previously discussed, the data on the bus is transient
+
+    * The bus needs to be free to transmit data around the system while performing the instruction
+    * The instruction must be stored somewhere for processing
+
+
+* Therefore, a new register will be created --- the *instruction register*
+* This instruction register will store the instruction for the duration of its execution on the system
+* Thus, the instruction from RAM must be moved to the instruction register
+* And finally, the program counter needs to be incremented
+
+    * Update it to store the value of the *next* instruction to be executed
+
+
+.. list-table:: Control logic of the fetch cycle
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU`
+      - :math:`out`
+      - :math:`PC`
+      - :math:`Instruction`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+      - ``0/0``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+      - ``1/0``
+
+
+* The above table shows the control logic configuration for the fetch cycle
+* Note that, incrementing the program counter does not require the data bus
+
+    * It is isolated from moving data from RAM to the instruction register, and can therefore happen at the same time
+
+
+* Ultimately, this fetch cycle is the first part of any instruction
+
+    * All instructions must be fetched from RAM and put into the instruction register for processing
+
+
+.. figure:: instruction_register.png
+    :width: 500 px
+    :align: center
+
+    Configuration of the instruction register. Only the least significant four bits of the register can output to the
+    bus as this would be the four operand bits from the instruction. The four most significant bits, corresponding to
+    the operand of the instruction, is yet to be used.
+
+
+* Above is a configuration of the instruction register
+* Consider the example in the previous section of loading data from RAM into register A
+
+    * The 8 bit instruction is ``XXXX YYYY``
+    * The four bits ``XXXX`` is some bit pattern designating the operand for loading data from RAM to register A
+
+        * What the pattern for the operand is at this stage is not important
+
+
+    * The four bits ``YYYY`` is the operand, specifying some RAM address
+
+        * The value of ``YYYY`` is variable
+        * The above example used ``0b1111``, or ``15``
+
+
+* The least significant four bits must be loaded into the address register to specify the address to load data from
+* In other words, the value of these lower four bits must be able to be put back onto the main bus
+
+    * This allows the system to move the variable data operand between the different modules for manipulation
+
+
+* The value of the most significant four bits, ``XXXX``, can remain in the instruction register for processing
+
+.. figure:: esap_alu_ram_output_pc_instruction.png
+    :width: 666 px
+    :align: center
+
+    Configuration of the ESAP system with the ALU, RAM, output, program counter, and instruction register modules
+    connected.
+
+
+* The below tables shows the control logic for all steps required to load data from RAM to register A
+
+    * The first two rows correspond to the fetch cycle
+    * The second two corresponds to loading data from RAM to register A
+
+
+* This table is almost a concatenation of the two previous tables
+
+    * The only difference is that the control logic for the instruction register is present for both parts
+
+        * The fetch part and the loading data from RAM to register A
+        * It was not present in the first table showing the control logic for loading data from RAM to register A
+
+
+.. list-table:: Control logic of the fetch cycle and the loading of data from some memory address into register A
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU`
+      - :math:`out`
+      - :math:`PC`
+      - :math:`Instruction`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+      - ``0/0``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+      - ``1/0``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+      - ``0/1``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+      - ``0/0``
+
 
 
 Instruction Set
 ===============
+
+* The instruction set is a collection of instructions the computer can execute on the hardware
+
+    * Like the example instruction discussed, loading data from RAM into register A
+
+
+* Consider the functionality that would be required for a typical computing system
+
+    * Move data round the system
+    * Perform arithmatic operations
+    * Output data
+    * Loop
+    * Conditions/make decisions
+
+
+* As discussed, with 4 bit operators, a total of 16 unique instructions can be implemented for the ESAP system
+
+    * Each of the 16 instructions can be uniquely identified with a bit pattern
+
+
+* The specific instructions included in the instruction set is up to the designers of the system (us)
+
+    * The designers get to decide which instructions the computational system can perform
+    * Assuming the hardware is sufficient to perform such an instruction
+
+
+* Below are 13 instructions that can be included on the current system
+
+    * This leaves room for additional instructions to be added to the instruction set later
+
+
+* These 13 were chosen to balance a few considerations
+
+    * Small number of instructions while still providing a breadth of functionality
+    * Minimizes the amount of RAM required to describe a whole program
+    * Minimizes the number of clock cycles/microcodes the instructions take
+
+
+* Further, the 13 instructions that are included may be changed at a later time by the designers
+
+    * One may discover that certain instructions are redundant or entirely unnecessary
+    * Refining the instruction set may allow for more, different and useful instructions to be included
+    * The process of refining the instruction set is a form of optimization for computational systems
+
+
+* How each instruction's bit pattern ultimately manages the control logic of the system will be discussed later
+* Here, only the instructions, along with their bit pattern, are presented
+
+    * For the ESAP system, the instruction's bit pattern is somewhat arbitrary
+    * What matters is that each bit pattern uniquely identifies an instruction
+
+
+The 13 Instructions
+-------------------
+
+* Below is a table summarizing the instruction set
+* Following the table is a description of each instruction
+
+
+.. list-table:: An Instruction Set for the Current ESAP System
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - Bit Pattern
+      - Hex
+      - Label
+      - Description
+    * - ``0000``
+      - ``0``
+      - ``NOOP``
+      - No Operation
+    * - ``0001``
+      - ``1``
+      - ``LDAR``
+      - Load A From RAM
+    * - ``0010``
+      - ``2``
+      - ``LDAD``
+      - Load A Direct
+    * - ``0011``
+      - ``3``
+      - ``LDBR``
+      - Load B From RAM
+    * - ``0100``
+      - ``4``
+      - ``LDBD``
+      - Load B Direct
+    * - ``0101``
+      - ``5``
+      - ``SAVA``
+      - Save A to RAM
+    * - ``0110``
+      - ``6``
+      - ``SAVB``
+      - Save B to RAM
+    * - ``0111``
+      - ``7``
+      - ``ADAB``
+      - Add B to A --- ``A += B``
+    * - ``1000``
+      - ``8``
+      - ``SUAB``
+      - Subtract B from A --- ``A -= B``
+    * - ``1001``
+      - ``9``
+      - ``JMPA``
+      - Jump Always
+    * - ``1010``
+      - ``A``
+      - ``NOOP``
+      - No Operation
+    * - ``1011``
+      - ``B``
+      - ``NOOP``
+      - No Operation
+    * - ``1100``
+      - ``C``
+      - ``NOOP``
+      - No Operation
+    * - ``1101``
+      - ``D``
+      - ``OUTU``
+      - Output Unsigned Integer
+    * - ``1110``
+      - ``E``
+      - ``OUTS``
+      - Output Signed Integer
+    * - ``1111``
+      - ``F``
+      - ``HALT``
+      - Halt
+
+
+* ``0000`` --- ``NOOP``
+
+    * No Operation
+    * An instruction that takes a known number of clock cycles, but ultimately means *do nothing*
+    * This may seem silly, but there are practical reasons for this operation
+    * For the ESAP system, this operation can be used as a time delay
+
+
+* ``0001`` --- ``LDAR``
+
+    * Load data into register A from some specified RAM address
+    * The 4 bit operand for this instruction specifies some memory address to read the data from
+
+        * Consider the full 8 bit instruction ``0001 YYYY``
+        * ``0001``, the operator, specifies the ``LDAR`` instruction
+        * ``YYYY``, the operand, would be the memory address to read the data from
+
+
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Output the value from RAM and put it into register A
+
+
+* ``0010`` --- ``LDAD``
+
+    * Load the provided data directly into register A
+    * The 4 bit operand for this instruction is the data to be loaded into RAM
+
+        * Can only load 4 bit data into RAM through this instruction
+
+
+    * Reduces the amount of RAM needed for loading data into register A when working with small numbers
+
+        * Consider that ``LDAR`` requires 2 memory addresses
+
+            * One for the instruction
+            * Another for the memory address of the data to be loaded into A
+
+
+    * The high level microcode steps would be as follows
+
+        * Output the operand (data) from the instruction register and put it into register A
+
+
+* ``0011`` --- ``LDBR``
+
+    * Load data into register B from some specified RAM address
+    * Similar to ``LDAR``
+
+
+* ``0100`` --- ``LDBD``
+
+    * Load the provided data directly into register B
+    * Similar to ``LDAD``
+
+
+* ``0101`` --- ``SAVA``
+
+    * Save the data from register A to some specified RAM address
+    * The 4 bit operand for this instruction specifies some memory address to write the data to
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Output the value from the A register and put it into RAM
+
+
+* ``0110`` --- ``SAVB``
+
+    * Save the data from register B to some specified RAM address
+    * Similar to ``SAVA``
+
+
+* ``0111`` --- ``ADAB``
+
+    * Add the contents of register B to register A --- ``A += B``
+    * This overwrites the contents of register A
+    * This instruction has no operand
+    * The high level microcode steps would be as follows
+
+        * Output sum from the ALU and put it into register A
+
+
+* ``1000`` --- ``SUAB``
+
+    * Subtract the contents of register B from register A  --- ``A -= B``
+    * This overwrites the contents of register A
+    * This instruction has no operand
+    * The high level microcode steps would be as follows
+
+        * Set the subtraction signal high and output difference from the ALU and put it into register A
+
+
+* ``1001`` --- ``JMPA``
+
+    * Jump to the instruction at the specified memory address
+    * This sets the program counter to the specified address such that it stores the next instruction to be run
+    * The 4 bit operand for this instruction specifies the memory address to jump to
+
+        * The address of the instruction to run next
+
+
+    * The high level microcode steps would be as follows
+
+        * Output the operand (address to jump to) from the instruction register and put it into the program counter
+
+
+* ``1010``, ``1011``, and ``1100`` --- ``NOOP``
+
+    * No Operation
+    * Same as ``0000`` above
+    * Left open for potential additional instructions
+
+
+* ``1101`` --- ``OUTU``
+
+    * Output data as an unsigned integer from some specified RAM address
+    * The 4 bit operand for this instruction specifies some memory address of the data to be output
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Output the value from RAM and put it into the output register
+
+
+
+* ``1110`` --- ``OUTS``
+
+    * Output data as a signed integer from some specified RAM address
+    * Similar to ``OUTU``
+    * The high level microcode steps would be as follows
+
+        * Output the operand (memory address) from the instruction register and put it into the address register
+        * Set the sign signal high and output the value from RAM and put it into the output register
+
+
+* ``1111`` --- ``HALT``
+
+    * Stop the program
+    * This will effectively deactivate the clock
+    * The high level microcode steps would be as follows
+
+        * Send some control signal to turn deactivate the clock
+
+
+
+.. admonition:: Activity
+
+    Consider the ESAP system's current hardware.
+
+        #. What other instructions could be included?
+        #. What variations of the existing instructions could be included?
 
 
 

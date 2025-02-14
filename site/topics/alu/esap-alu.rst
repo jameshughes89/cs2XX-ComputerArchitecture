@@ -1,5 +1,5 @@
 **********************************
-Arithmetic logic Unit and the ESAP
+Arithmetic Logic Unit and the ESAP
 **********************************
 
 * The Arithmetic Logic Unit (ALU) is a combinational logic circuit for integer arithmetic and logical operations
