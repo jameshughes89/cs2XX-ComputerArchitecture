@@ -1,23 +1,6 @@
 import re
 import sys
 
-VALID_SYNTAX = {
-    r"NOOP",
-    r"LDAR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDAD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDBR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDBD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"SAVA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"SAVB\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"ADAB",
-    r"SUAB",
-    r"JMPA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"OUTU\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"OUTS\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"HALT",
-    r"\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-}
-
 OPERATORS = {
     "NOOP": 0b0000,
     "LDAR": 0b0001,
@@ -44,6 +27,22 @@ HAS_OPERAND = {
     "OUTU",
     "OUTS",
 }
+VALID_SYNTAX = {
+    r"NOOP",
+    r"LDAR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDAD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"SAVA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"SAVB\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"ADAB",
+    r"SUAB",
+    r"JMPA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"OUTU\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"OUTS\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"HALT",
+    r"\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+}
 
 def parse_number(number_string:str) -> int:
     """
@@ -58,6 +57,7 @@ def parse_number(number_string:str) -> int:
     except (ValueError, SyntaxError):
         raise ValueError(f"Cannot parse operand {number_string}")
     return number
+
 
 def verify_syntax_return_string(program_line):
     """
