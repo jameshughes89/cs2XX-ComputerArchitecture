@@ -29,13 +29,8 @@ HAS_OPERAND = {
 
 def parse_number(number_string:str) -> int:
     try:
-        if number_string[:2] == "0b":
-            number = int(number_string, 2)
-        elif number_string[:2] == "0x":
-            number = int(number_string, 16)
-        else:
-            number = int(number_string)
-    except ValueError:
+        number = int(eval(number_string))
+    except (ValueError, SyntaxError):
         raise ValueError(f"Cannot parse operand {number_string}")
     return number
 
