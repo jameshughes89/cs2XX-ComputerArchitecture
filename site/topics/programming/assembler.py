@@ -69,7 +69,7 @@ def verify_syntax_return_string(program_line):
     :return: Returns a valid program line
     """
     for syntax in VALID_SYNTAX:
-        syntax_match = re.match(syntax, program_line)
+        syntax_match = re.match(syntax, program_line.strip())
         if syntax_match:
             return syntax_match[0]
     raise ValueError(f"Invalid operator and/or operand {program_line}")
