@@ -42,6 +42,7 @@ VALID_SYNTAX = {
     r"OUTS\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"HALT",
     r"\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"^$"
 }
 
 def parse_number(number_string:str) -> int:
@@ -89,7 +90,9 @@ machine_code = [0x00] * 16
 for i, raw_program_line in enumerate(program_list):
     verified_program_line = verify_syntax_return_string(raw_program_line)
     line = verified_program_line.split()
-    if line[0].isalpha():
+    if line == []:
+        machine_code_line = 0
+    elif line[0].isalpha():
         operator = OPERATORS[line[0]]
         if line[0] not in HAS_OPERAND:
             operand = 0
