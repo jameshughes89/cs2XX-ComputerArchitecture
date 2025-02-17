@@ -81,7 +81,8 @@ if len(sys.argv) != 2:
 
 file_to_assemble = sys.argv[1]
 with open(file_to_assemble) as file:
-    program_list = [line.strip() for line in file.readlines()]
+    program_list = file.read().rstrip().split("\n")
+    program_list = [line.strip() for line in program_list]
 
 
 if len(program_list) > 16:
