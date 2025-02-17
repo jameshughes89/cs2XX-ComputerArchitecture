@@ -70,7 +70,7 @@ def verify_syntax_return_string(program_line):
     :return: Returns a valid program line
     """
     for syntax in VALID_SYNTAX:
-        syntax_match = re.match(syntax, program_line.strip())
+        syntax_match = re.match(syntax, program_line)
         if syntax_match:
             return syntax_match[0]
     raise ValueError(f"Invalid operator and/or operand {program_line}")
@@ -81,7 +81,8 @@ if len(sys.argv) != 2:
 
 file_to_assemble = sys.argv[1]
 with open(file_to_assemble) as file:
-    program_list = file.read().strip().split("\n")
+    program_list = [line.strip() for line in file.readlines()]
+
 
 if len(program_list) > 16:
     raise ValueError(f"Program length of {len(program_list)} exceeds maximum size of 16 bytes")
