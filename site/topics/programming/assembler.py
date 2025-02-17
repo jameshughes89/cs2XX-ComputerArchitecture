@@ -42,7 +42,6 @@ VALID_SYNTAX = {
     r"OUTS\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"HALT",
     r"\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"^$"
 }
 
 def parse_number(number_string:str) -> int:
@@ -81,9 +80,7 @@ if len(sys.argv) != 2:
 
 file_to_assemble = sys.argv[1]
 with open(file_to_assemble) as file:
-    program_list = file.read().rstrip().split("\n")
-    program_list = [line.strip() for line in program_list]
-
+    program_list = [line.strip() for line in file.readlines() if line.strip()]
 
 if len(program_list) > 16:
     raise ValueError(f"Program length of {len(program_list)} exceeds maximum size of 16 bytes")
