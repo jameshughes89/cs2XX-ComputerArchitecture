@@ -85,13 +85,11 @@ with open(file_to_assemble) as file:
 if len(program_list) > 16:
     raise ValueError(f"Program length of {len(program_list)} exceeds maximum size of 16 bytes")
 
-machine_code = [0x00] * 16
+machine_code = []
 for i, raw_program_line in enumerate(program_list):
     verified_program_line = verify_syntax_return_string(raw_program_line)
     line = verified_program_line.split()
-    if line == []:
-        machine_code_line = 0
-    elif line[0].isalpha():
+    if line[0].isalpha():
         operator = OPERATORS[line[0]]
         if line[0] not in HAS_OPERAND:
             operand = 0
@@ -105,7 +103,7 @@ for i, raw_program_line in enumerate(program_list):
         if number >= 256:
             raise ValueError(f"Data value {line[0]} too large")
         machine_code_line = number
-    machine_code[i] = machine_code[i] | machine_code_line
+    machine_code.append(machine_code_line)
 
 with open("a.hex", "w") as hex_file:
     hex_file.write("v2.0 raw\n")
