@@ -105,7 +105,7 @@ for i, raw_program_line in enumerate(program_list):
         if number < -128 or number >= 256:
             raise ValueError(f"Data value {line[0]} out of range")
         if number < 0:
-            operand = (0b11111111 ^ number * -1) + 1
+            number = (0b11111111 ^ number * -1) + 1
         machine_code_line = number
     machine_code.append(machine_code_line)
 
