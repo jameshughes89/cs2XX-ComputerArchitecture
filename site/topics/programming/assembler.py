@@ -29,19 +29,19 @@ HAS_OPERAND = {
 }
 VALID_SYNTAX = {
     r"NOOP",
-    r"LDAR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDAD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDBR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDBD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"SAVA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"SAVB\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDAR\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDAD\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBR\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBD\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"SAVA\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"SAVB\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"ADAB",
     r"SUAB",
-    r"JMPA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"OUTU\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"OUTS\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"JMPA\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"OUTU\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"OUTS\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"HALT",
-    r"\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"^-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
 }
 
 def parse_number(number_string:str) -> int:
@@ -95,13 +95,17 @@ for i, raw_program_line in enumerate(program_list):
             operand = 0
         else:
             operand = parse_number(line[1])
-            if operand >= 16:
-                raise ValueError(f"Operand value {line[1]} too large")
+            if operand < -8 or operand >= 16:
+                raise ValueError(f"Operand value {line[1]} out of range")
+            if operand < 0:
+                operand = (0b1111 ^ operand * -1) + 1
         machine_code_line = (operator << 4) | operand
     else:
         number = parse_number(line[0])
-        if number >= 256:
-            raise ValueError(f"Data value {line[0]} too large")
+        if number < -128 or number >= 256:
+            raise ValueError(f"Data value {line[0]} out of range")
+        if number < 0:
+            operand = (0b1111 ^ number * -1) + 1
         machine_code_line = number
     machine_code.append(machine_code_line)
 
