@@ -44,18 +44,24 @@ VALID_SYNTAX = {
     r"^-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
 }
 
-def parse_number(number_string:str) -> int:
+def parse_number(number_string:str, max_bits:int) -> int:
     """
-    Convert a string of a number to a decimal integer. This function will work with binary (0bXXXX), hex (0xXX),
-    decimal, etc.
+    Convert a string of a number to a decimal integer representable with the specified number of bits. This function
+    will work with binary (0bXXXX), hex (0xXX), decimal, etc. If th number is negative, this function converts it to the
+    2s complement bit pattern.
 
     :param number_string: String of a number to be converted.
+    :param max_bits: Maximum number of bits the number can be stored in.
     :return: Value of the string as a decimal integer.
     """
     try:
         number = int(eval(number_string))
     except (ValueError, SyntaxError):
         raise ValueError(f"Cannot parse operand {number_string}")
+    if number < -2**(max_bits - 1) or number >= 2**max_bits:
+        raise ValueError(f"Data value {number} cannot be represented with {max_bits} bits.")
+    if number < 0:
+        number = ((2**max_bits - 1 ) ^ number * -1) + 1
     return number
 
 
@@ -94,19 +100,10 @@ for i, raw_program_line in enumerate(program_list):
         if line[0] not in HAS_OPERAND:
             operand = 0
         else:
-            operand = parse_number(line[1])
-            if operand < -8 or operand >= 16:
-                raise ValueError(f"Operand value {line[1]} out of range")
-            if operand < 0:
-                operand = (0b1111 ^ operand * -1) + 1
+            operand = parse_number(line[1], 4)
         machine_code_line = (operator << 4) | operand
     else:
-        number = parse_number(line[0])
-        if number < -128 or number >= 256:
-            raise ValueError(f"Data value {line[0]} out of range")
-        if number < 0:
-            number = (0b11111111 ^ number * -1) + 1
-        machine_code_line = number
+        machine_code_line = parse_number(line[0], 8)
     machine_code.append(machine_code_line)
 
 with open("a.hex", "w") as hex_file:
