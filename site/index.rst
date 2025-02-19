@@ -85,6 +85,8 @@ Office Hours
     topics/control-logic/instructions-microcodes
     topics/control-logic/control-logic
     topics/programming/programming-machine-code
+    topics/conditions/conditions
+    topics/conditions/conditional-jump
 
 
 
