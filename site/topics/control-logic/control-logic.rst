@@ -33,6 +33,14 @@ Including the Control Logic Module in the System
 ================================================
 
 
+IMAGE
+
+connects each signal to each component
+Mind the HALT
+Data in is removed as we don't need it anymore
+
+IMAGE OF OVERVIEW
+
 
 For Next Time
 =============
