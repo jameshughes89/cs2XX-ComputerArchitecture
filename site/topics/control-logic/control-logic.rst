@@ -22,6 +22,33 @@ Control Logic
 Instruction and Microcode Steps
 ===============================
 
+Consider the instruction register
+
+IMAGE
+
+most sig bits are the instruction
+least sig bits are the operand, and as discussed, are important for many operations
+    consider LDAR
+    thus, it goes back to RAM
+
+
+But the operand means we need to do some series of steps
+    use LDAR again
+
+A look up table would be good, except we need several steps
+
+So, let's make a new counter
+
+    Show table example
+
+
+SHOW IMAGE
+
+Notice that table still follows binary count!
+
+
+A matter of compleeting the table for every instruction
+
 
 
 Look Up Table to Process Instruction
