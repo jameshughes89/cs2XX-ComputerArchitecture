@@ -44,20 +44,35 @@ VALID_SYNTAX = {
     r"^-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
 }
 
-def parse_number(number_string:str, max_bits:int) -> int:
+def parse_number(number_string:str) -> int:
     """
     Convert a string of a number to a decimal integer representable with the specified number of bits. This function
-    will work with binary (0bXXXX), hex (0xXX), decimal, etc. If th number is negative, this function converts it to the
-    2s complement bit pattern.
+    will work with binary (0bXXXX), hex (0xXX), decimal, etc.
 
     :param number_string: String of a number to be converted.
-    :param max_bits: Maximum number of bits the number can be stored in.
     :return: Value of the string as a decimal integer.
     """
     try:
         number = int(eval(number_string))
     except (ValueError, SyntaxError):
         raise ValueError(f"Cannot parse operand {number_string}")
+    return number
+
+
+def verify_number_and_fix_negative(number:int, max_bits:int) -> int:
+    """
+    Verify that the number fits in the specified number of bits and convert to a signed, 2s compliment binary pattern
+    where necessary.
+
+    If the number is negative, this function applies the 2s compliment conversion since Python does not store negative
+    integers in a 2s compliment format. For example, the number -10 should be converted to the 2s compliment binary
+    pattern 0b0110. Since Python treats all binary patterns are unsigned ints, this would mean this function returns the
+    integer 6 in this case.
+
+    :param number: Number to be verified and converted
+    :param max_bits: Maximum number of bits the number can be stored in.
+    :return: Decimal version of the number (may be signed int binary pattern's decimal value).
+    """
     if number < -2**(max_bits - 1) or number >= 2**max_bits:
         raise ValueError(f"Data value {number} cannot be represented with {max_bits} bits.")
     if number < 0:
@@ -100,10 +115,12 @@ for i, raw_program_line in enumerate(program_list):
         if line[0] not in HAS_OPERAND:
             operand = 0
         else:
-            operand = parse_number(line[1], 4)
+            operand = parse_number(line[1])
+            operand = verify_number_and_fix_negative(operand, 4)
         machine_code_line = (operator << 4) | operand
     else:
-        machine_code_line = parse_number(line[0], 8)
+        machine_code_line = parse_number(line[0])
+        machine_code_line = verify_number_and_fix_negative(machine_code_line, 8)
     machine_code.append(machine_code_line)
 
 with open("a.hex", "w") as hex_file:
