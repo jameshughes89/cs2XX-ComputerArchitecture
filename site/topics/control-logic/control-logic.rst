@@ -62,10 +62,21 @@ Microcode Counter
 -----------------
 
 * The operator can be used to specify the steps to be executed in order to perform the instruction
+
+    * The operator would manipulate the control signals for the system
+
+
 * Thus, a look up table can be used to find the steps required to perform the full instruction
+
+    * Input to the look up table is the operand, output is the control signals
+
+
 * However, there is a problem with this idea since instruction may require several sequential steps too complete
 
-    * Consider the below table of the 4 steps required for loading data from RAM to register A
+    * The microcodes
+
+
+* Consider the below table of the 4 microcode steps required for loading data from RAM to register A
 
 
 .. list-table:: Full control logic of ``LDAR``
@@ -115,24 +126,123 @@ Microcode Counter
       - ``0/0``
 
 
+* Not all instructions require 4 steps
+
+    * 1 instruction, ``NOOP``, takes 2 microcode steps (fetch only)
+    * Six instructions take 3 steps
+    * Six instructions take 4 steps
 
 
-But the operand means we need to do some series of steps
-    use LDAR again
+* For simplicity and consistency, consider each instruction as a group of 4 steps
 
-A look up table would be good, except we need several steps
+.. list-table:: Operator and steps for control logic
+    :widths: auto
+    :align: center
+    :header-rows: 1
 
-So, let's make a new counter
+    * - Operator
+      - Microcode Step
+      -
+      - Control Logic
+    * - ``0000``
+      - ``00``
+      -
+      - Program Counter -> Address Register
+    * - ``0000``
+      - ``01``
+      -
+      - RAM -> Instruction Register, Enable Program Counter
+    * - ``0000``
+      - ``10``
+      -
+      - Nothing
+    * - ``0000``
+      - ``11``
+      -
+      - Nothing
+    * -
+      -
+      -
+      -
+    * - ``0001``
+      - ``00``
+      -
+      - Program Counter -> Address Register
+    * - ``0001``
+      - ``01``
+      -
+      - RAM -> Instruction Register, Enable Program Counter
+    * - ``0001``
+      - ``10``
+      -
+      - Instruction Register -> Address Register
+    * - ``0001``
+      - ``11``
+      -
+      - RAM -> Register A
+    * -
+      -
+      -
+      -
+    * - ``0010``
+      - ``00``
+      -
+      - Program Counter -> Address Register
+    * - ``0010``
+      - ``01``
+      -
+      - RAM -> Instruction Register, Enable Program Counter
+    * - ``0010``
+      - ``10``
+      -
+      - Instruction Register -> Register A
+    * - ``0010``
+      - ``11``
+      -
+      - Nothing
+    * - ...
+      - ...
+      -
+      - ...
 
-    Show table example
+
+* Each operator specifies a grouping of microcodes
+* Each microcode can be identified by the microcode step count
+
+* Considering the operand and microcode step together, there is a unique identifier for each instruction's microcode
+
+    * A unique six bit identifier
+    * Four bits for the operator, two for the microcode step
 
 
-SHOW IMAGE
+* Therefore, a look up table may still be used given a mechanism to keep track of the microcode step
 
-Notice that table still follows binary count!
+    * Map the operand + microcode counter to the control logic for the specific microcode step
 
 
-A matter of compleeting the table for every instruction
+* Fortunately, there is a simple way to keep track of the microcode steps --- a counter
+
+    * Like the program counter
+
+
+* This counter will be referred to as the microcode counter
+
+
+IMAGE
+
+
+
+
+* Unlike the program counter, this microcode counter will count at every clock pulse
+
+    * The program counter only counted when enabled since each individual instruction may take several clock pulses
+    * The microcode counter keeps track of each microcode step, each taking one clock pulse
+
+
+.. note::
+
+    Since several instructions takes less than four clock cycles, one may have noticed that the system would be wasting
+    clock cycles; the system would be doing nothing for a clock pulse. What are some ways this could be addressed?
 
 
 
