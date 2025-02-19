@@ -27,7 +27,7 @@ Instruction and Microcode Steps
     :align: center
 
     The instruction register stores the operator and operand of the current instruction. The operand is output to the
-    bus for use during the execution of the instruction. The operator remains in the resister for processing.
+    bus for use during the execution of the instruction. The operator remains in the register for processing.
 
 
 * Consider what is stored in the instruction register and what is being output
@@ -52,10 +52,10 @@ Instruction and Microcode Steps
 
 * Additionally, before any processing of any instruction can occur, it must be fetched from RAM
 
-    * In other words, no matter what instruction is to be executed, it must be fetched from RAM
+    * No matter what instruction is to be executed, the two steps in the fetch cycle must happen
 
 
-* In other words, any one instruction requires several steps
+* In other words, instructions require several steps
 
 
 Microcode Counter
@@ -77,6 +77,9 @@ Microcode Counter
 
 
 * Consider the below table of the 4 microcode steps required for loading data from RAM to register A
+
+    * The first two steps are the fetch cycle
+    * The latter two steps move dara from the specified RAM address to register A
 
 
 .. list-table:: Full control logic of ``LDAR``
@@ -128,12 +131,18 @@ Microcode Counter
 
 * Not all instructions require 4 steps
 
-    * 1 instruction, ``NOOP``, takes 2 microcode steps (fetch only)
+    * 1 instruction (``NOOP``) takes 2 microcode steps (fetch only)
     * Six instructions take 3 steps
     * Six instructions take 4 steps
 
 
 * For simplicity and consistency, consider each instruction as a group of 4 steps
+* Below is a table of the microcode steps of the first 3 instructions in the instruction set
+
+    * ``NOOP``
+    * ``LDAR``
+    * ``LDAD``
+
 
 .. list-table:: Operator and steps for control logic
     :widths: auto
@@ -215,7 +224,7 @@ Microcode Counter
     * Four bits for the operator, two for the microcode step
 
 
-* Therefore, a look up table may still be used given a mechanism to keep track of the microcode step
+* Therefore, given a mechanism to keep track of the microcode step, a look up table may still be used
 
     * Map the operand + microcode counter to the control logic for the specific microcode step
 
@@ -227,10 +236,13 @@ Microcode Counter
 
 * This counter will be referred to as the microcode counter
 
+.. figure:: instruction_register_and_control_logic.png
+    :width: 666 px
+    :align: center
 
-IMAGE
-
-
+    Operator from the instruction register and microcode step count from the microcode counter used as input to a look
+    up table containing the control signals. The input to the look up table would map to the control signals for the
+    specific operator's current microcode step.
 
 
 * Unlike the program counter, this microcode counter will count at every clock pulse
