@@ -58,8 +58,12 @@ Including the Control Logic Module in the System
     * There will be no need to add data to these lines while the system is running
 
 
+.. figure:: esap_alu_ram_output_pc_instruction_control_vs_architecture_overview.png
+    :width: 666 px
+    :align: center
 
-IMAGE OF OVERVIEW
+    Comparison of the current system with the control logic and the ESAP architecture overview.
+
 
 
 For Next Time
