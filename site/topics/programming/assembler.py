@@ -73,7 +73,9 @@ def verify_number_and_fix_negative(number:int, max_bits:int) -> int:
     :param max_bits: Maximum number of bits the number can be stored in.
     :return: Decimal version of the number (may be signed int binary pattern's decimal value).
     """
-    # + 2 for 0b and an additional +1 for negative sign (-)
+    # max_bits + 2 to account for the 0b in the string
+    # negative numbers are representable in max_bits - 1, but require +1 for the negative sign
+    # len(bin(number + 1)) when negative to account for edge case of the min negative number needing 1 more bit 
     if (number < 0 and len(bin(number + 1)) > max_bits + 2 or
             number >= 0 and len(bin(number)) > max_bits + 2):
         raise ValueError(f"Data value {number} cannot be represented with {max_bits} bits.")
