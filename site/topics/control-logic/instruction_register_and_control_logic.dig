@@ -967,10 +967,10 @@
         </entry>
         <entry>
           <string>RectWidth</string>
-          <int>52</int>
+          <int>53</int>
         </entry>
       </elementAttributes>
-      <pos x="-260" y="-80"/>
+      <pos x="-280" y="-80"/>
     </visualElement>
     <visualElement>
       <elementName>Counter</elementName>
