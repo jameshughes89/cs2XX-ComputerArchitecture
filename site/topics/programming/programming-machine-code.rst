@@ -239,28 +239,93 @@ Subtraction, Outputting, and Halting
 Analysis
 ^^^^^^^^
 
-* How many clock cycles will this take?
+* Consider the resources this program uses
 
-    11 * 4 (though, halt actually stops after 3)
-    eliminate the loading 32 saves 4 clock cycles
-    THINK OF THE SPEED UP
-        %?
-
-* how much RAM does this take?
-
-    Can make less
-    Can over write result of addition
-    Can over write the 32 actually!
+    * Both in terms of time (clock cycles) and space (RAM)
 
 
-* What happens if we do not HALT?
+* How many clock cycles does the program take?
 
-    Address C has 63 in it (0x3F) Load contents of F into reg B? (lol)
-        oh my, we gotta be careful
+    * There are a total of 11 instructions
+    * Each instruction takes 4 microcode steps
+    * Therefore, a total of :math:`11 \times 4 = 44`` clock cycles
 
-    Address D has -1 in it (0xFF)
-    * 31 is 1F (load A contents F)
-    * 32 is 20 (Load A direct 0)
+        * Technically it's :math:`43`` as ``HALT`` will stop the whole system after its 3rd clock cycle
+        * ``HALT`` only requires 3 clock cycles, not the full 4
+
+
+* Can the program be adjusted to take fewer clock cycles?
+
+    * The instruction to re-load ``32`` into register B for subtraction was unnecessary
+    * This would save 4 clock cycles
+
+        * This may not feel like a lot, but that's roughly :math:`9.1\%` of the execution time of the whole program
+
+
+.. admonition:: Activity
+
+    Could something about the system be changed to reduce the total number of clock cycles?
+
+
+
+* Currently the program takes up 15 memory addresses
+
+    * 11 instructions
+    * 2 addresses with data
+    * 2 more addresses are used to store data at runtime
+
+
+* This can be reduced to 12 by
+
+    * Removing the instruction to re-load ``32`` into register B will save 1 RAM address for the instructions
+    * The result of subtraction could have been saved to the same address as addition, saving 1 runtime address
+    * The results of add/sub could have overwritten the value ``32`` in address ``0xF``, saving another address
+
+
+Halting
+^^^^^^^
+
+* Consider the program before improving the required clock cycles and RAM requirements
+* What would happen if the ``HALT`` instruction was not included in this program and had another ``NOOP`` instead?
+
+    * The system would process and execute the ``NOOP``\s in address ``0xA`` and ``0xB``
+    * Each ``NOOP`` would take 4 clock cycles before moving on to the following instruction
+
+
+* However, the remaining memory address have data stored in them
+
+    * ``0xC`` stores the result of addition calculated at runtime --- ``63``, which is ``0x3F``
+    * ``0xD`` stores the result of subtraction calculated at runtime --- ``-1``, which is ``0xFF``
+    * ``0xE`` stores a number --- ``31``, which is ``0x1F``
+    * ``0xF`` stores a number --- ``32``, which is ``0x20``
+
+
+* Although we know the contents of these memory addresses is data, the system does not know the difference
+* As far as the system is concerned, these are instructions to be processed
+
+    * Address ``0xC`` --- ``LDBR`` the contents of address ``0xF``
+    * Address ``0xD`` --- ``HALT``
+    * Address ``0xE`` --- ``LDAR`` the contents of address ``0xF``
+    * Address ``0xF`` --- ``LDAD`` the value ``0x0``
+
+
+* Therefore, the system would execute the data as if they were instructions
+
+    * The program would halt after hitting address ``0xD`` through pure luck
+    * However, it should be clear that this is something to be very mindful of
+
+
+.. warning::
+
+    When using the ``SAVA`` instruction, an effort was made to save to memory addresses away from instructions, keeping
+    a separation between instructions and data. However, this is not a requirement, and any memory address could have
+    been written to.
+
+    If one wanted, they could write data to an address that stores an instruction, thereby overwriting it. This means
+    that the program can modify its own code at runtime, changing the instructions to be executed by the system.
+
+    Is this something one should do? I this a good idea?
+
 
 
 Counting Program
