@@ -1,6 +1,6 @@
-**********
-Arithmetic
-**********
+*************
+Little Engine
+*************
 
 * Feel free to use your laptop
 * You are strongly encourage to work with others
@@ -21,21 +21,34 @@ Questions may have restrictions on the logic gates that may be used. When restri
 the gates; inputs, outputs, wires, etc. may be still be used.
 
 
+Full Adders
+===========
+
+#. Create a circuit to add two 8 bit numbers together and output the resulting 8 bit number
+
+    * Ignore overflows beyond 8 bits
+    * Use 8 input components and 8 output components to represent the inputs/outputs
+    * You may use an adder component
+
+
+
 Doubling and Halving
 ====================
 
-#. Using an adder, create a circuit to double some 8 bit number
+#. Using a adder, create a circuit to double some 8 bit number
 
     * Ignore overflows beyond 8 bits
-    * Use 8 input components and 8 output components
 
 
 #. Without using an adder, create a circuit to double some 8 bit number
 
     * **Hint:** This can be done with very few components
+    * Ignore overflows beyond 8 bits
 
 
 #. Create a circuit to half some 8 bit number
+
+    * Ignore *underflows*
 
 
 
@@ -72,3 +85,4 @@ Counting Signals
 
 Logic Engine
 ============
+
