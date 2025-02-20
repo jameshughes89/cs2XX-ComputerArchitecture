@@ -21,6 +21,7 @@ Questions may have restrictions on the logic gates that may be used. When restri
 the gates; inputs, outputs, wires, etc. may be still be used.
 
 
+
 Full Adders
 ===========
 
@@ -86,3 +87,24 @@ Counting Signals
 Logic Engine
 ============
 
+#. Create a circuit that can perform ``OR``, ``NAND``, ``NOR``, and ``AND`` on two 8 bit binary patterns
+
+    * This circuit will have a total of 18 inputs
+
+        * This circuit will have two sets of 8 bit inputs for the binary patterns (16 inputs)
+        * This circuit will also have two more input signals for specifying which operation to perform
+
+            * ``00`` --- ``OR``
+            * ``01`` --- ``NAND``
+            * ``10`` --- ``NOR``
+            * ``11`` --- ``AND``
+
+
+    * The output will be a single 8 bit pattern representing the result
+
+
+#. Create the same functionality as above, but only use
+
+    * 1 ``OR`` gate
+    * 3 ``NOT`` gates
+    * 3 multiplexers
