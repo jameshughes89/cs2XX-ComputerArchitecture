@@ -99,6 +99,7 @@ Office Hours
     labs/gates/basic-gates
     labs/logic/combinational-logic
     labs/logic/sequential-logic
+    labs/arithmetic-logic/arithmetic-logic
 
 
 
