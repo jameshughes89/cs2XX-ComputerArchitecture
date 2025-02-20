@@ -41,11 +41,33 @@ Doubling and Halving
 Counting Signals
 ================
 
-Givne 4 inputs, odd signals odd signals
+#. Create a circuit to determine if the number of high input signals is even or odd
 
-Givne 4 inputs, if more than 2 are high
+    * This circuit must have 4 inputs and 1 output
+    * Output ``0`` when an even number of the 4 input bits are high
+    * Output ``1`` when an odd number of the input bits are high
 
-Given 4 inputs, output the count of the number of signals high in binary
+
+#. Create a circuit to determine if 2 or more input signals are high
+
+    * This circuit must have 4 inputs and 1 output
+    * Output ``0`` when fewer than 2 input signals are high
+    * Output ``1`` when 2 or more input signals are high
+
+
+#. Create a circuit that determines the number of high input signals
+
+    * This circuit must have 4 inputs and 3 outputs
+    * The output will be the number of high input signals in binary
+    * Below are examples of ``inputs`` -> ``outputs``
+
+        * ``0000`` -> ``000``
+        * ``0100`` -> ``001``
+        * ``1001`` -> ``010``
+        * ``1101`` -> ``011``
+        * ``1111`` -> ``100``
+
+
 
 Logic Engine
 ============
