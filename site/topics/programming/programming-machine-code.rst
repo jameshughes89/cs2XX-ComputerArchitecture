@@ -16,6 +16,27 @@ Arithmetic Program
 Counting Program
 ================
 
+Explain program
+
+explain it in instructions
+
+can use direct loads
+
+jump to 2
+
+    B already has 1
+    A was overwritten by the incremented value (last addition)
+
+
+Analysis
+--------
+
+clock
+
+RAM
+
+
+
 
 
 For Next Time
