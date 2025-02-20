@@ -1,6 +1,6 @@
-*************
-Little Engine
-*************
+*********************************
+Arithmetic and Logical Operations
+*********************************
 
 * Feel free to use your laptop
 * You are strongly encourage to work with others
