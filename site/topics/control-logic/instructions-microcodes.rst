@@ -593,6 +593,9 @@ The 13 Instructions
 
         * Output the operand (address to jump to) from the instruction register and put it into the program counter
 
+    * Remember, the program counter stores the address of the *next* instruction to be run
+    * This way, the subsequent fetch will retrieve this value from the program counter
+
 
 * ``1010``, ``1011``, and ``1100`` --- ``NOOP``
 
