@@ -228,7 +228,7 @@ Subtraction, Outputting, and Halting
 * Since each line corresponds to one RAM address, each line should be filled
 * However, before runtime, the contents of addresses ``0xB``, ``0xC``, and ``0xD`` are not used
 
-    * Although, ``0xC`` and ``0xD`` are written to by the program at runtime 
+    * Although, ``0xC`` and ``0xD`` are written to by the program at runtime
 
 
 * Because a ``HALT`` exists in address ``0xA``, these unused addresses can never be executed by the system
@@ -236,14 +236,31 @@ Subtraction, Outputting, and Halting
 * However, to keep the code clean ``NOOP``/``0x0`` will be put in these addresses
 
 
+Analysis
+^^^^^^^^
 
+* How many clock cycles will this take?
 
+    11 * 4 (though, halt actually stops after 3)
+    eliminate the loading 32 saves 4 clock cycles
+    THINK OF THE SPEED UP
+        %?
 
 * how much RAM does this take?
-* How many clock cycles will this take?
+
+    Can make less
+    Can over write result of addition
+    Can over write the 32 actually!
+
+
 * What happens if we do not HALT?
 
-    * 31 and 32 are instructions...?
+    Address C has 63 in it (0x3F) Load contents of F into reg B? (lol)
+        oh my, we gotta be careful
+
+    Address D has -1 in it (0xFF)
+    * 31 is 1F (load A contents F)
+    * 32 is 20 (Load A direct 0)
 
 
 Counting Program
