@@ -84,8 +84,8 @@ Counting Signals
 
 
 
-Logic Engine
-============
+Selecting Logical Operations
+============================
 
 #. Create a circuit that can perform ``OR``, ``NAND``, ``NOR``, and ``AND`` on two 8 bit binary patterns
 
