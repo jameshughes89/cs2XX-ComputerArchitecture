@@ -27,6 +27,7 @@ Doubling and Halving
 #. Using an adder, create a circuit to double some 8 bit number
 
     * Ignore overflows beyond 8 bits
+    * Use 8 input components and 8 output components
 
 
 #. Without using an adder, create a circuit to double some 8 bit number
