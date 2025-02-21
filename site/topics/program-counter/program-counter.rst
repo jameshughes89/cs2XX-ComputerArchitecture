@@ -207,15 +207,76 @@ Including the Program Counter in the System
 Using the Program Counter in the System
 =======================================
 
-same problem as before, add 15 and 4 together and output
-but start with data in RAM
-will use PC value to address RAM to retrieve data
-no use of data input toggles
-BUT CAN STILL CONTROL CONTROL SIGNALS
-make hex file to load into ram
-note on how to do it to RAM
+* Like before, the numbers 15 and 4 will be added together, but this time
 
-    SHOW PROGRAM FILE
+    * All data will be stored in RAM
+
+        * Data will not be entered into the system via the data input toggles
+
+
+    * The program counter will be used to track of the memory address of the data needing to be retrieved
+
+
+* Although the data input toggles will not be used, the control logic toggles will still need to be controlled
+
+* A hex file containing the data for the numbers 15 and 4 will be created
+
+    .. code:: text
+
+        v2.0 raw
+        0x0F
+        0x04
+
+
+* This file can then be loaded into RAM
+
+.. note::
+
+    Loading data into RAM before runtime in Digital works a little different compared to the look up tables.
+
+    First, the RAM component needs to be marked as "Program Memory".
+
+        .. figure:: ram_program_memory.png
+            :width: 333 px
+            :align: center
+
+            "Program Memory" option selection under the Advanced tab for a RAM component.
+
+
+    Then, under Digital's main menu **Edit -> Circuit specific settings** window, within the Advanced tab, select the
+    "Preload program memory at startup" option and specify the "Program file" to be loaded.
+
+        .. figure:: circuit_specific_settings_preload_program_file.png
+            :width: 333 px
+            :align: center
+
+            "Preload program memory at startup" option under the Advanced tab of the circuit specific settings. Notice
+            the "Program file" is specified.
+
+
+
+* With the data in RAM, think about the steps required to perform the addition
+
+    * Get the address of the data to be retrieved from the program counter to the address register
+    * Increment the program counter
+
+        * Remember, the idea of the program counter is that is stores the address of the *next* thing to be dealt with
+
+
+    * Output the data from the specified address in RAM to register A
+    * Get the address of the next data to be retrieved from the program counter to the address register
+    * Increment the program counter
+    * Output the data from the specified address in RAM to register B
+    * Perform addition
+    * Put the result of addition into the output register
+
+
+
+
+
+
+
+
 
 program table
 
