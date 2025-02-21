@@ -493,7 +493,7 @@
       <elementAttributes>
         <entry>
           <string>Bits</string>
-          <int>17</int>
+          <int>18</int>
         </entry>
         <entry>
           <string>Data</string>
@@ -519,11 +519,11 @@
         </entry>
         <entry>
           <string>Input Splitting</string>
-          <string>17</string>
+          <string>18</string>
         </entry>
         <entry>
           <string>Output Splitting</string>
-          <string>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</string>
+          <string>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</string>
         </entry>
       </elementAttributes>
       <pos x="680" y="740"/>
@@ -742,7 +742,7 @@
           <string>HLT</string>
         </entry>
       </elementAttributes>
-      <pos x="360" y="780"/>
+      <pos x="340" y="780"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -760,7 +760,7 @@
           <string>ADR</string>
         </entry>
       </elementAttributes>
-      <pos x="380" y="780"/>
+      <pos x="360" y="780"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -778,7 +778,7 @@
           <string>RMI</string>
         </entry>
       </elementAttributes>
-      <pos x="400" y="780"/>
+      <pos x="380" y="780"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -796,7 +796,7 @@
           <string>RMO</string>
         </entry>
       </elementAttributes>
-      <pos x="420" y="780"/>
+      <pos x="400" y="780"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -1006,6 +1006,24 @@
       </elementAttributes>
       <pos x="-80" y="660"/>
     </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>FLG</string>
+        </entry>
+      </elementAttributes>
+      <pos x="420" y="780"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -1183,6 +1201,10 @@
     <wire>
       <p1 x="660" y="760"/>
       <p2 x="660" y="780"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="760"/>
+      <p2 x="340" y="780"/>
     </wire>
     <wire>
       <p1 x="600" y="760"/>
