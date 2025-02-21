@@ -207,6 +207,24 @@ Including the Program Counter in the System
 Using the Program Counter in the System
 =======================================
 
+same problem as before, add 15 and 4 together and output
+but start with data in RAM
+will use PC value to address RAM to retrieve data
+no use of data input toggles
+BUT CAN STILL CONTROL CONTROL SIGNALS
+make hex file to load into ram
+note on how to do it to RAM
+
+    SHOW PROGRAM FILE
+
+program table
+
+now subtract for fun
+need to re-load A value from RAM
+cam "jump" back to the start of RAM
+
+TABLE
+
 
 
 For Next Time
