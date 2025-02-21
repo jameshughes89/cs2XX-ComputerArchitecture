@@ -54,6 +54,14 @@ PCE = 0b00_00000000_00000010
 PCI = 0b00_00000000_00000001
 
 """
+Jump command binary patterns/indices in instruction list
+"""
+JMPA = 0b1001
+JMPZ = 0b1010
+JMPS = 0b1011
+JMPC = 0b1100
+
+"""
 Mirocodes for the 16 possible instructions. Each microcode could be up to 4 instructions long. 
 """
 INSTRUCTIONS = [
@@ -67,7 +75,7 @@ INSTRUCTIONS = [
   [PCO|ADR,   RMO|IRI|PCE, FLG,         ALU|ARI     ],  # 0b0111 --- 0x7 --- ADAB --- Add B to A
   [PCO|ADR,   RMO|IRI|PCE, SUB|FLG,     ALU|SUB|ARI ],  # 0b1000 --- 0x8 --- SUAB --- Subtract B from A
   [PCO|ADR,   RMO|IRI|PCE, IRO|PCI,     0           ],  # 0b1001 --- 0x9 --- JMPA --- Jump Always
-  [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1010 --- 0xA --- JMPZ --- Jump Zer0
+  [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1010 --- 0xA --- JMPZ --- Jump Zero
   [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1011 --- 0xB --- JMPS --- Jump Significant/sign
   [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1100 --- 0xC --- JMPC --- Jump Carry
   [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     RMO|ORI     ],  # 0b1101 --- 0xD --- OUTU --- Output Unsigned Integer
@@ -95,27 +103,12 @@ For example, consider LDAR (Load A from RAM)
 """
 with open("control_logic_with_flag_patterns_for_look_up_table.hex", "w") as hex_file:
   hex_file.write("v2.0 raw\n")
-  # Write flags 0 0 0
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
-  # Write flags 0 0 1
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
-  # Write flags 0 1 0
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
-  # Write flags 0 1 1
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
-  # Write flags 1 0 0
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
-  # Write flags 1 0 1
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
-  # Write flags 1 1 0
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
-  # Write flags 1 1 1
-  for instruction in INSTRUCTIONS:
-    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  for flags_state in range(8):
+    for i, instruction in enumerate(INSTRUCTIONS):
+      if (i == JMPZ and flags_state & 0b001 != 0 or
+              i == JMPS and flags_state & 0b010 != 0 or
+              i == JMPC and flags_state & 0b100 != 0):
+        # If special jump instruction and the flag is set, do jump instruction microcodes
+        hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in INSTRUCTIONS[JMPA])
+      else:
+        hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
