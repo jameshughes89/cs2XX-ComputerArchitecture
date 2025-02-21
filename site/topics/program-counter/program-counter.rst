@@ -209,7 +209,7 @@ Using the Program Counter in the System
 
 * Like before, the numbers 15 and 4 will be added together, but this time
 
-    * All data will be stored in RAM
+    * All data will be preloaded into RAM
 
         * Data will not be entered into the system via the data input toggles
 
@@ -260,7 +260,7 @@ Using the Program Counter in the System
     * Get the address of the data to be retrieved from the program counter to the address register
     * Increment the program counter
 
-        * Remember, the idea of the program counter is that is stores the address of the *next* thing to be dealt with
+        * Remember, the idea is that the program counter always stores the address of the *next* thing to be dealt with
 
 
     * Output the data from the specified address in RAM to register A
@@ -271,7 +271,14 @@ Using the Program Counter in the System
     * Put the result of addition into the output register
 
 
+* Below is a table showing how the control lines would be configured to perform the above steps
 
+    * Like before, each row corresponds to one clock cycle
+    * Due to space limitations, the data and clock columns are removed some control signals' columns are combined
+
+        * :math:`ALU_{o}` and :math:`sub` are combined (``alu/sub``)
+        * :math:`Out_{i}` and :math:`sign` are combined (``output/sign``)
+        * :math:`PC` and :math:`PC_{e}` are combined (``in/out/enable``)
 
 
 
