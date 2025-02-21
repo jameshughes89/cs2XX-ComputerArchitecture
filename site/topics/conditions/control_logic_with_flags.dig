@@ -772,7 +772,7 @@ end loop
         </entry>
         <entry>
           <string>Label</string>
-          <string>Instruction Register, Control Logic with Flag Input</string>
+          <string>Control Logic with Flag Input</string>
         </entry>
         <entry>
           <string>RectWidth</string>
