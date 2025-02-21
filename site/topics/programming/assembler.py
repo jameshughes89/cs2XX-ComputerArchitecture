@@ -30,9 +30,9 @@ HAS_OPERAND = {
 VALID_SYNTAX = {
     r"NOOP",
     r"LDAR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDAD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDAD\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"LDBR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDBD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBD\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"SAVA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"SAVB\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"ADAB",
@@ -41,13 +41,13 @@ VALID_SYNTAX = {
     r"OUTU\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"OUTS\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"HALT",
-    r"\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"^-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
 }
 
 def parse_number(number_string:str) -> int:
     """
-    Convert a string of a number to a decimal integer. This function will work with binary (0bXXXX), hex (0xXX),
-    decimal, etc.
+    Convert a string of a number to a decimal integer representable with the specified number of bits. This function
+    will work with binary (0bXXXX), hex (0xXX), decimal, etc.
 
     :param number_string: String of a number to be converted.
     :return: Value of the string as a decimal integer.
@@ -56,6 +56,31 @@ def parse_number(number_string:str) -> int:
         number = int(eval(number_string))
     except (ValueError, SyntaxError):
         raise ValueError(f"Cannot parse operand {number_string}")
+    return number
+
+
+def verify_number_and_fix_negative(number:int, max_bits:int) -> int:
+    """
+    Verify that the number fits in the specified number of bits and convert to a signed, 2s compliment binary pattern
+    where necessary.
+
+    If the number is negative, this function applies the 2s compliment conversion since Python does not store negative
+    integers in a 2s compliment format. For example, the number -10 should be converted to the 2s compliment binary
+    pattern 0b0110. Since Python treats all binary patterns are unsigned ints, this would mean this function returns the
+    integer 6 in this case.
+
+    :param number: Number to be verified and converted
+    :param max_bits: Maximum number of bits the number can be stored in.
+    :return: Decimal version of the number (may be signed int binary pattern's decimal value).
+    """
+    # max_bits + 2 to account for the 0b in the string
+    # negative numbers are representable in max_bits - 1, but require +1 for the negative sign
+    # len(bin(number + 1)) when negative to account for edge case of the min negative number needing 1 more bit 
+    if (number < 0 and len(bin(number + 1)) > max_bits + 2 or
+            number >= 0 and len(bin(number)) > max_bits + 2):
+        raise ValueError(f"Data value {number} cannot be represented with {max_bits} bits.")
+    if number < 0:
+        number = ((2**max_bits - 1 ) ^ number * -1) + 1
     return number
 
 
@@ -95,14 +120,11 @@ for i, raw_program_line in enumerate(program_list):
             operand = 0
         else:
             operand = parse_number(line[1])
-            if operand >= 16:
-                raise ValueError(f"Operand value {line[1]} too large")
+            operand = verify_number_and_fix_negative(operand, 4)
         machine_code_line = (operator << 4) | operand
     else:
-        number = parse_number(line[0])
-        if number >= 256:
-            raise ValueError(f"Data value {line[0]} too large")
-        machine_code_line = number
+        machine_code_line = parse_number(line[0])
+        machine_code_line = verify_number_and_fix_negative(machine_code_line, 8)
     machine_code.append(machine_code_line)
 
 with open("a.hex", "w") as hex_file:
