@@ -85,6 +85,8 @@ Office Hours
     topics/control-logic/instructions-microcodes
     topics/control-logic/control-logic
     topics/programming/programming-machine-code
+    topics/conditions/conditions
+    topics/conditions/conditional-jump
 
 
 
@@ -97,6 +99,7 @@ Office Hours
     labs/gates/basic-gates
     labs/logic/combinational-logic
     labs/logic/sequential-logic
+    labs/arithmetic-logic/arithmetic-logic
 
 
 
