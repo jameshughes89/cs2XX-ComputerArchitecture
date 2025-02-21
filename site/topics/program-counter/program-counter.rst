@@ -281,17 +281,90 @@ Using the Program Counter in the System
         * :math:`PC` and :math:`PC_{e}` are combined (``in/out/enable``)
 
 
+.. list-table:: Control logic for adding numbers stored in RAM
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU`
+      - :math:`out`
+      - :math:`PC`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+    * - ``0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+    * - ``0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+    * - ``0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``1/0``
+      - ``1/0``
+      - ``0/0/0``
 
 
 
+.. warning::
 
-program table
+    Within Digital it's possible to combine the steps of (a) program counter -> address register and (b) program counter
+    enable.
 
-now subtract for fun
-need to re-load A value from RAM
-cam "jump" back to the start of RAM
+    In practice, however, this may be problematic as physical limitations will impact how synchronized the system can
+    truly be. For example, what if the program counter enable causes the program counter to increment an instant before
+    the address register can latch? This would cause the wrong value to be latched into the address register.
 
-TABLE
+
+
+* What's interesting about what was just done is that no data needed to be input into the system at runtime
+
+    * This addition happened without needing to manipulate the data input toggles
+    * All the data the system needed was contained within the system
+
+
+* However, the control signals still needed to be manually manipulated with the toggles
+
+    * The system has no way to control itself
 
 
 
