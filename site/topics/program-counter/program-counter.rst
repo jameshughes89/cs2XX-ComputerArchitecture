@@ -356,7 +356,7 @@ Using the Program Counter in the System
 
 
 
-* What's interesting about what was just done is that no data needed to be input into the system at runtime
+* As previously mentioned, what's interesting is that no data needed to be input into the system at runtime
 
     * This addition happened without needing to manipulate the data input toggles
     * All the data the system needed was contained within the system
