@@ -95,5 +95,27 @@ For example, consider LDAR (Load A from RAM)
 """
 with open("control_logic_with_flag_patterns_for_look_up_table.hex", "w") as hex_file:
   hex_file.write("v2.0 raw\n")
+  # Write flags 0 0 0
+  for instruction in INSTRUCTIONS:
+    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  # Write flags 0 0 1
+  for instruction in INSTRUCTIONS:
+    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  # Write flags 0 1 0
+  for instruction in INSTRUCTIONS:
+    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  # Write flags 0 1 1
+  for instruction in INSTRUCTIONS:
+    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  # Write flags 1 0 0
+  for instruction in INSTRUCTIONS:
+    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  # Write flags 1 0 1
+  for instruction in INSTRUCTIONS:
+    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  # Write flags 1 1 0
+  for instruction in INSTRUCTIONS:
+    hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+  # Write flags 1 1 1
   for instruction in INSTRUCTIONS:
     hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
