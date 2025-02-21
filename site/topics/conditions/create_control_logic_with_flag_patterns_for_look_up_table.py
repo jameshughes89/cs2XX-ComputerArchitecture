@@ -86,20 +86,30 @@ INSTRUCTIONS = [
 """
 Write the microcode patterns for each instructions to a hex file. 
 
-Each row/individual microcode is accessed by some pattern inputted into the lookup table. The 4 most significant bits of
-the input pattern correspond to the specific instruction, and the last two bits corresponds to an individual microcode 
-for the corresponding instruction.
+Each row/individual microcode is accessed by some pattern inputted into the lookup table. The first 3 bits correspond to 
+the flags status, the 4 middle bits of the input pattern correspond to the specific instruction, and the last 2 bits 
+corresponds to an individual microcode for the corresponding instruction.
 
-  INSTRUCTION | MICROCODE
-      0 0 0 0 | 0 0 
+  FLAGS | INSTRCT | MICROCODE
+  0 0 0 | 0 0 0 0 | 0 0 
   
-For example, consider LDAR (Load A from RAM)
+Each group of 16 instructions are stacked for the 8 possible status flag states. 
+  0 0 0 --- No flags
+  0 0 1 --- Zero flag set
+  0 1 0 --- Significant/sign flag set
+  0 1 1 --- Significant/sign and zero flags set 
+  1 0 0 --- Carry flag set
+  1 0 1 --- Carry and zero flags set
+  1 0 1 --- Carry and significant/sign flags set
+  1 1 1 --- Carry, significant/sign, and zero flags set
+ 
+The special jump condition instructions are modified to act as a jump for their respective status flag groupings. This 
+way, if a status flag is set and being input into the control logic look up table, it will act as a jump. Otherwise, it
+acts as a NOOP. For example, consider the JMPZ instruction:
 
-      0 0 0 1 | 0 0 --- Program Counter Out + Address Register In 
-      0 0 0 1 | 0 1 --- RAM Out + Instruction Register In + Program Counter Enable
-      0 0 0 1 | 1 0 --- Instruction Register Out +  Address Register In 
-      0 0 0 1 | 1 1 --- RAM Out + A Register In 
-  
+  X X 0 | 1 0 1 0 | X X --- If the zero status flag is not set, do not jump/do NOOP
+  X X 1 | 1 0 1 0 | X X --- If the zero status flag is set, jump to specified address
+   
 """
 with open("control_logic_with_flag_patterns_for_look_up_table.hex", "w") as hex_file:
   hex_file.write("v2.0 raw\n")
