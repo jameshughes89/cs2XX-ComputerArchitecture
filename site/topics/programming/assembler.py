@@ -100,10 +100,12 @@ def verify_syntax_return_string(program_line):
     raise ValueError(f"Invalid operator and/or operand {program_line}")
 
 
-if len(sys.argv) != 2:
-    raise ValueError(f"Assembler requires exactly one argument specifying a file name, {len(sys.argv) - 1} given")
+if not (2 <= len(sys.argv) <= 3):
+    raise ValueError(f"Assembler takes 1 or 2 argument(s) specifying in/out file name(s), {len(sys.argv) - 1} given")
 
 file_to_assemble = sys.argv[1]
+file_to_output = sys.argv[2] if len(sys.argv) == 3 else "a.hex"
+
 with open(file_to_assemble) as file:
     program_list = [line.strip() for line in file.readlines() if line.strip()]
 
@@ -127,6 +129,6 @@ for i, raw_program_line in enumerate(program_list):
         machine_code_line = verify_number_and_fix_negative(machine_code_line, 8)
     machine_code.append(machine_code_line)
 
-with open("a.hex", "w") as hex_file:
+with open(file_to_output, "w") as hex_file:
     hex_file.write("v2.0 raw\n")
     hex_file.writelines([f"0x{code:02x}\n" for code in machine_code])
