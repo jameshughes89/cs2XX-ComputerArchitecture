@@ -101,7 +101,10 @@ def verify_syntax_return_string(program_line):
 
 
 if len(sys.argv) < 2 or len(sys.argv) > 3:
-    raise ValueError(f"Assembler takes 1 or 2 argument(s) specifying in/out file name(s), {len(sys.argv) - 1} given")
+    raise ValueError(f"Assembler takes 1 or 2 argument(s), {len(sys.argv) - 1} given\n"
+                     f"\tUsage: assembler.py input.as [out.hex]\n"
+                     f"\t\tinput.as: the source assembly file to assemble\n"
+                     f"\t\tout.hex: the output hex dig file, defaults to `a.hex` (optional)\n")
 
 file_to_assemble = sys.argv[1]
 file_to_output = sys.argv[2] if len(sys.argv) == 3 else "a.hex"
