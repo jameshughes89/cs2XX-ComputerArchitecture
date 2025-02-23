@@ -53,8 +53,8 @@ PCI = 0b0_00000000_00000001
 # [end-control_signal_pattern_constants]
 
 """
-Mirocodes for the 16 possible instructions. Each microcode could be up to 8 instructions long, but currently the max is 
-5, thus, there is some "wasted" space in the lookup table. Not all 16 operations are implemented here. 
+Mirocodes for the 16 possible instructions. Each microcode could be up to 4 instructions long. Not all 16 operations are 
+implemented here; three additional NOOPs are included. 
 """
 # [begin-instruction_microcodes]
 INSTRUCTIONS = [
