@@ -100,7 +100,7 @@ def verify_syntax_return_string(program_line):
     raise ValueError(f"Invalid operator and/or operand {program_line}")
 
 
-if len(sys.argv) != 2 and len(sys.argv) != 3:
+if len(sys.argv) < 2 or len(sys.argv) > 3:
     raise ValueError(f"Assembler takes 1 or 2 argument(s) specifying in/out file name(s), {len(sys.argv) - 1} given")
 
 file_to_assemble = sys.argv[1]
