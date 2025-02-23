@@ -855,7 +855,7 @@
           </testData>
         </entry>
       </elementAttributes>
-      <pos x="-140" y="-40"/>
+      <pos x="-180" y="-40"/>
     </visualElement>
     <visualElement>
       <elementName>Testcase</elementName>
@@ -903,17 +903,17 @@
 0		0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	C
 0		0	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	C
 0		0	0	0	0	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	C
-# ADDB																							
+# ADAB																							
 1		0	1	1	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	C
 0		0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	C
 0		0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	1	0	0	0	C
 0		0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	C
-# SUBB																							
+# SUAB																							
 1		1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	C
 0		0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	C
 0		0	0	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	1	0	0	0	C
 0		0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	C
-# JUMP																							
+# JMPA																							
 1		1	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	C
 0		0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0	0	0	0	1	0	C
 0		0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	C
@@ -952,7 +952,7 @@
           </testData>
         </entry>
       </elementAttributes>
-      <pos x="-140" y="40"/>
+      <pos x="-180" y="40"/>
     </visualElement>
     <visualElement>
       <elementName>Rectangle</elementName>
@@ -967,10 +967,10 @@
         </entry>
         <entry>
           <string>RectWidth</string>
-          <int>52</int>
+          <int>53</int>
         </entry>
       </elementAttributes>
-      <pos x="-260" y="-80"/>
+      <pos x="-280" y="-80"/>
     </visualElement>
     <visualElement>
       <elementName>Counter</elementName>
