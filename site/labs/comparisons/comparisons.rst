@@ -74,4 +74,17 @@ Specifying Operators
 Comparing Numbers
 =================
 
-Two numbers
+#. Modify the circuit to compare two 8 bit signed integers, as opposed to comparing a single value to zero
+
+    * Given two 8 bit signed integers labelled ``a`` and ``b``
+
+        * ``000`` --- Always output ``1``
+        * ``001`` --- ``a == b``
+        * ``010`` --- ``a > b``
+        * ``011`` --- ``a >= b``
+        * ``100`` --- Always output ``0``
+        * ``101`` --- ``a != b``
+        * ``110`` --- ``a <= b``
+        * ``111`` --- ``a < b``
+
+
