@@ -21,12 +21,30 @@ Questions may have restrictions on the logic gates that may be used. When restri
 the gates; inputs, outputs, wires, etc. may be still be used.
 
 
-Cases
-=====
 
-== 0
-> 0
->= 0
+Conditions
+==========
+
+#. Create a circuit to check if a given 8 bit signed integer is zero
+
+    * In other words, check if some value ``== 0``
+    * This circuit must take 8 inputs representing the 8 bit signed integer
+    * This circuit will have one output
+
+        * Output ``0`` when the value does not equal zero
+        * Output ``1`` when the value is zero
+
+
+#. Create a circuit to check if a given 8 bit signed integer greater than zero
+
+    * Check if some value ``> 0``
+
+
+#. Create a circuit to check if a given 8 bit signed integer greater than or equal to zero
+
+    * Check if some value ``>= 0``
+
+
 
 Specifying Operators
 ====================
