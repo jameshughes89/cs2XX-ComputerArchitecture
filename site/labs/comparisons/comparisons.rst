@@ -35,12 +35,12 @@ Conditions
         * Output ``1`` when the value is zero
 
 
-#. Create a circuit to check if a given 8 bit signed integer greater than zero
+#. Create a circuit to check if a given 8 bit signed integer is greater than zero
 
     * Check if some value ``> 0``
 
 
-#. Create a circuit to check if a given 8 bit signed integer greater than or equal to zero
+#. Create a circuit to check if a given 8 bit signed integer is greater than or equal to zero
 
     * Check if some value ``>= 0``
 
@@ -49,7 +49,7 @@ Conditions
 Specifying Operators
 ====================
 
-#. Create a circuit that can perform a specific comparison of an 8 bit signed integer based on some input pattern
+#. Create a circuit that can perform a specific comparison based on some input pattern
 
     * This circuit must take 8 inputs representing the 8 bit signed integer
     * This circuit must also take 3 additional inputs specifying the comparison to perform
@@ -66,8 +66,8 @@ Specifying Operators
 
     * **Hints:**
 
-        * Pay special attention to the order of the operators with respect to their 3 bit pattern
-        * Mind the affect of the most significant bit on the operators
+        * Pay special attention to the order of the comparisons with respect to their 3 bit pattern
+        * Mind the impact of the most significant bit on the operators
 
 
 
