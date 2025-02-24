@@ -49,7 +49,25 @@ Conditions
 Specifying Operators
 ====================
 
-Specifying
+#. Create a circuit that can perform a specific comparison of an 8 bit signed integer based on some input pattern
+
+    * This circuit must take 8 inputs representing the 8 bit signed integer
+    * This circuit must also take 3 additional inputs specifying the comparison to perform
+
+        * ``000`` --- Always output ``1``
+        * ``001`` --- ``== 0``
+        * ``010`` --- ``> 0``
+        * ``011`` --- ``>= 0``
+        * ``100`` --- Always output ``0``
+        * ``101`` --- ``!= 0``
+        * ``110`` --- ``<= 0``
+        * ``111`` --- ``< 0``
+
+
+    * **Hints:**
+
+        * Pay special attention to the order of the operators with respect to their 3 bit pattern
+        * Mind the affect of the most significant bit on the operators
 
 
 
