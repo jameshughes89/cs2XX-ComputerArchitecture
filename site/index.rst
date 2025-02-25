@@ -100,6 +100,7 @@ Office Hours
     labs/logic/combinational-logic
     labs/logic/sequential-logic
     labs/arithmetic-logic/arithmetic-logic
+    labs/comparisons/comparisons
 
 
 
