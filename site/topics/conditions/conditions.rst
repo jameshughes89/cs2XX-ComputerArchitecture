@@ -17,11 +17,62 @@ Conditions
 Conditional Jump Command
 ========================
 
-need a way to branch based on a condition
+* Consider the general idea of the program
 
-    think of what the code would be for the 10 example above
-    have code example?
+    * Load value into register A
+    * If register A's value is ``< 10``
 
+        * Output ``1``
+        * Halt
+
+
+    * Otherwise
+
+        * Output ``0``
+        * ``Halt``
+
+
+* Currently there is no way to have a program branch based on a condition
+
+    * There is no ``if`` style instruction
+
+
+* However, the current instruction set does include a jump instruction, which does provide some way to move around RAM
+* Therefore, using the idea of a jump, the program can be reframed
+
+    * Load value into register A
+    * If register A's value is ``< 10``, jump to a part of RAM containing the following instruction
+
+        * Output ``1``
+        * Halt
+
+
+    * Otherwise
+
+        * Output ``0``
+        * ``Halt``
+
+
+    .. code-block:: text
+        :linenos:
+
+        v2.0 raw
+        0x1F (load data from address 0xF into A)
+        0x?4 (Jump to address 0x4 if < 10)
+        0xDD (Output 0)
+        0xF0 (Halt)
+        0xDE (Output 1)
+        0xF0 (Halt)
+        0x00
+        0x00
+        0x00
+        0x00
+        0x00
+        0x00
+        0x00
+        0x00 (0 to output if not < 10)
+        0x01 (1 to output if < 10)
+        0x?? (some number to check)
 
 
 idea of a jump, but only under certain conditions
