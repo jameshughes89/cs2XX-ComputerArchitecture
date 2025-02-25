@@ -75,6 +75,31 @@ Conditional Jump Command
         0x?? (some number to check)
 
 
+* Unfortunately, the jump instruction available in the current instruction set *always* jumps
+
+    * There is no condition
+
+
+* However, there is room to add to the instruction set
+* Therefore, consider how this conditional jump idea *could* be done
+
+    * What should the condition be?
+    * How should the system handle it?
+
+
+* Having a jump for a specific condition and value like ``< 10`` is not particularly general
+* Instead, one could checks for ``== 0`` or ``< 0`` as they are far more general and useful
+
+    * For example, if one wants to check if some value is ``< 10``, simply check the difference
+
+        * If ``(value - 10) < 0``, then ``value < 10``
+
+
+TURNS OUT WE REALLY ONLY NEED 1 CONDITION 
+
+
+
+
 idea of a jump, but only under certain conditions
 so, behaviors of the jump needs to change depending on the state of the sytem
 for example, if things are equal
