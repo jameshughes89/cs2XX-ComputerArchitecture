@@ -155,11 +155,38 @@ Conditional Jump Command
 Status Flags
 ------------
 
-zero is easy --- are all bits in a number 8?
-what about sign?
-what about carry?
+* Checking if a value is zero is a matter of checking if all the bits are ``0``
 
-SHOW IMAGE OF DESIGN
+    * This can be done in several ways, but perhaps the easiest is with ``NOR``
+    * Think of the ``NOR`` operator's truth table --- only ``1`` when all inputs are ``0``
+
+
+
+* Checking if a number is negative is a little tricky because it requires one to know if the integer is signed or not
+
+    * If it's a signed integer, and the most significant bit is a ``1``, then the number is negative
+    * If it's an unsigned integer, then the value cannot be negative
+
+
+* It would be the responsibility of the programmer to know if the data is signed as the system itself does not know
+
+    * Remember, the bits are an encoding of some data
+    * The meaning of data depends on what is being encoded/how it should be decoded
+
+
+* Therefore, all the system can do is check the signal on the most significant bit
+* Then the programmer, knowing the context in which they are using the system, can use this information
+
+* Finally, knowing if an operation resulted in an overflow/carry is a matter of checking the carry signal from the adder
+
+.. figure:: state_flag_signals.png
+    :width: 500 px
+    :align: center
+
+    Logic to check the various states. The :math:`Z_{flag}` is a signal indicating if some value is zero,
+    :math:`S_{flag}` indicates if the most significant bit is high (which can be used to check if a value is negative),
+    and :math:`C_{flag}` indicates if the carry bit is high. This :math:`C_{flag}` signal would be connected to the
+    adder's carry out signal.
 
 
 
