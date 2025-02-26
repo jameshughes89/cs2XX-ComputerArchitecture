@@ -17,7 +17,7 @@ Conditions
 Conditional Jump Command
 ========================
 
-* Consider the general idea of the program
+* Consider the general idea of a program to check if a value is less than ``10``
 
     * Load value into register A
     * If register A's value is ``< 10``
@@ -87,7 +87,7 @@ Conditional Jump Command
     * How should the system handle it?
 
 
-* Having a jump for a specific condition and value like ``< 10`` is not particularly general
+* Having a jump for a specific condition and value like ``< 10`` will work in this case, but it is not general
 * Instead, one could checks for ``== 0`` or ``< 0`` as they are far more general and useful
 
     * For example, if one wants to check if some value is ``< 10``, simply check the difference
@@ -95,29 +95,61 @@ Conditional Jump Command
         * If ``(value - 10) < 0``, then ``value < 10``
 
 
-TURNS OUT WE REALLY ONLY NEED 1 CONDITION 
+.. note::
+
+    Technically, the system only needs the ability to check 1 condition to be functionally complete. For example, only
+    having the ability to check if a value is 0 would be enough for a system like this to compute anything computable.
+
+    However, consider the number of steps required to check if a number is less than 10 with only the ability to check
+    if some value is ``== 0`` versus the ability to check more conditional cases, like ``< 0``.
+
+    Therefore, to increase flexibility and ease of programming, several conditions will be included in the ESAP system.
 
 
+* Since the ESAP system is only 8 bits and overflows may be common, a check for an overflow may also be helpful
+* Therefore, three conditions are to be included
+
+    * If some value is 0
+    * If some value is less than zero (negative)
+    * If an overflow happened
 
 
-idea of a jump, but only under certain conditions
-so, behaviors of the jump needs to change depending on the state of the sytem
-for example, if things are equal
-    result of operation was 0
+* Checking an overflow is a little trickier than the other conditions
 
-We could check if a given value is something
-    or after some operation
+    * To check if a value is ``== 0`` or ``< 0``, look at the value
+    * However, one cannot look at an 8 bit value and know if an overflow happened
 
 
-remembering back the ALU, there were status out
+* Instead, an overflow would have had to happen as the result of some arithmetic
 
-Technically we only need 1 type of condition, but to make things more flexible, it's good to have a few
-    zero
-    carry
-    sign
+    * Check the carry out of the adder
 
 
-But.... how do we know? How to check
+* In fact, all three conditions can be checked when some arithmetic
+
+    * Is the result of the arithmetic ``== 0``?
+    * Is the result ``< 0``?
+    * Did it cause an overflow?
+
+
+* Looking back at the ALU designs discussed, notice that they have more than one output signal
+
+.. figure:: ../alu/alu_symbol.png
+    :width: 500 px
+    :align: center
+    :target: https://en.wikipedia.org/wiki/Arithmetic_logic_unit
+
+    Generic symbol for an ALU. Notice "Status" out.
+
+
+.. figure:: ../alu/alu_digital_symbol.png
+    :width: 150 px
+    :align: center
+
+    Digital's importable ALU. Notice the three output signals labelled "Zero", "Neg", and "Carry".
+
+
+* It is now a matter of building the hardware for the system to check these conditions
 
 
 Status Flags
