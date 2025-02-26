@@ -35,7 +35,14 @@ Use a register like before
 
 When should the register be enabled? Only when doing an arithmatic operation
 
-IMAGE
+
+.. figure:: adder_flags_register.png
+    :width: 666 px
+    :align: center
+
+    Configuration of an adder component with a status flag register. This design contains the logic to determine if any
+    of the three status signals should be high based on the output of the adder. The value of the status signals can be
+    latched into the flags register for later use.
 
 
 
