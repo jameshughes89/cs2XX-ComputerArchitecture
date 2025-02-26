@@ -26,6 +26,16 @@ Status Flags
 Flags Register
 ==============
 
+Values from ALU always changing
+    consider the fact that adding puts a value back into A, so the ALU's output even changes
+    like 5 - 5 (- 5)
+
+Need a way to preserve the flags
+Use a register like before
+
+When should the register be enabled? Only when doing an arithmatic operation
+
+IMAGE
 
 
 
