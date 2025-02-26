@@ -28,7 +28,7 @@ Full Adders
 #. Create a circuit to add two 8 bit numbers together and output the resulting 8 bit number
 
     * Ignore overflows beyond 8 bits
-    * Use 8 input components and 8 output components to represent the inputs/outputs
+    * Use 16 input components (8 for each number) and 8 output components to represent the inputs/outputs
     * You may use an adder component
 
 
