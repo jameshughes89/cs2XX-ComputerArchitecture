@@ -37,17 +37,18 @@ Flags Register
 * The goal is to know if the last arithmatic operation performed caused any of the status signals to change
 * However, the adder is always outputting a value based on the contents of registers A and B
 
-    * This is true, even when addition/subtraction is not being performed
+    * This is true, even when addition/subtraction is not intentionally being performed
 
 
-* For example, consider the steps the system performs when performing ``5 - 5``
+* For example, consider the steps the system performs when calculating ``5 - 5``
 
-    * Load data into A
-    * Load data into B
+    * Load ``5``` into A
+    * Load ``-5`` into B
+    * Set the subtraction signal
 
         * At this instant, the status flag signal for ``0`` should be high
 
-            * The overflow will also be high too, as a consequence of 2s compliment
+            * The overflow will also be high too, as a consequence of 2s compliment arithmetic
 
 
     * Put value from ALU into A
@@ -93,7 +94,7 @@ Flags Register
 
 * With this, all condition checks are based on the last arithmatic operation performed
 
-    * The  zero, significant/sign, and carry conditions
+    * The zero, significant/sign, and carry conditions
 
 
 * Below is an example of an adder with logic for the status flag signals being fed into a flag register
