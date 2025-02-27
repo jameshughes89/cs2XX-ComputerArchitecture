@@ -55,6 +55,7 @@ Flags Register
         * At this instant, the status flag for ``0`` will be high
         * This is because the adder always calculates the sum/difference of the values in registers A and B
         * Therefore, since the ALU is outputting ``-5``, the zero flag is low, but the significant/sign flag is high
+        * This second calculation was unintended and a consequence of the design of the system
 
 
 .. figure:: status_flags_5_minus_5_before_data_to_a.png
@@ -70,18 +71,29 @@ Flags Register
     :align: center
 
     Status flag signal after the result of ``5 - 5`` (``0``) is placed into register A. Since the ALU is always
-    calculating the difference of the current values in registers A and B, the value being output by the adder component
-    will be ``(5 - 5) - 5``, or ``-5``. Because of this, the zero flag is no longer high, even though the last operation
-    that was intended did in fact result in a zero.
+    calculating the difference of the current values in registers A (now ``0``) and B (``5``), the value being output by
+    the adder component will be ``(5 - 5) - 5``, or ``-5``. Because of this, the zero flag is no longer high, even
+    though the last subtraction operation did result in a ``0``.
 
 
+* The status signals are always changing, but these status signals are to be known at very specific times
 
-This is a problem since we need to know the status flag after the last thing we actually cared about D:
+    * As a result of the last operation
+    * For example, when the intended ``5 - 5`` was computed, not the subsequent unintended operation
 
-Need a way to preserve the flags
-Use a register like before
 
-When should the register be enabled? Only when doing an arithmatic operation
+* In other words, there needs to be a way to preserve the status flag values when specific operations are done
+* Like before, this can be achieved with a register --- a flag register
+
+* The key is to carefully control when the register's inputs, the status flag signals, are actually stored
+
+    * Only enable the flag resister to store the signals when performing addition or subtraction
+    * In all other cases, the value being output by the adder component does not matter
+
+
+* With this, all condition checks are based on the last arithmatic operation performed
+
+    * The  zero, significant/sign, and carry conditions
 
 
 * Below is an example of an adder with logic for the status flag signals being fed into a flag register
