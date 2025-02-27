@@ -87,6 +87,7 @@ Office Hours
     topics/programming/programming-machine-code
     topics/conditions/conditions
     topics/conditions/conditional-jump
+    topics/programming/assembler
 
 
 
