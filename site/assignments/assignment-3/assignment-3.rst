@@ -24,6 +24,7 @@ Part 1 --- Registers
 
 #. Create a circuit to swap data between several registers
 
+    * Use the provided file titled "1-register_swap.dig"
     * Data can be moved between 8 different sources/destinations
 
         * Seven 8 bit registers
@@ -66,6 +67,7 @@ Part 2 --- ALU
 
 #. Create an alu capable of performing 8 unique operations
 
+    * Use the provided file titled "2-alu.dig"
     * This circuit has a total of 5 inputs
 
         * One 8 bit input specifying operand A for the ALU
