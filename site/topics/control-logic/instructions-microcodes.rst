@@ -345,6 +345,13 @@ Fetch and Instruction Register
       - ``0/0``
 
 
+.. figure:: esap_alu_ram_output_pc_instruction_vs_architecture_overview.png
+    :width: 666 px
+    :align: center
+
+    Comparison of the current system with the instruction register and the ESAP architecture overview.
+
+
 
 Instruction Set
 ===============
