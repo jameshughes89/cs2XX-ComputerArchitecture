@@ -68,6 +68,7 @@ Part 2 --- ALU
 #. Create an alu capable of performing 8 unique operations
 
     * Use the provided file titled "2-alu.dig"
+    * This circuit has one eight bit output
     * This circuit has a total of 5 inputs
 
         * One 8 bit input specifying operand A for the ALU
@@ -92,7 +93,7 @@ Part 2 --- ALU
         * Subtraction --- :math:`f(A, B) = A - B`
 
 
-    * The three 1 bit inputs specifying the operator in the above order
+    * The three 1 bit inputs specify the operator in the above order
     * **Note:** The first three operators ignore the B input
 
 
@@ -100,7 +101,53 @@ Part 2 --- ALU
 Part 3 --- Comparator
 =====================
 
+#. Create a circuit that can perform a specific comparison of two inputs
 
+    * Use the provided file titled "3-comparator.dig"
+    * This circuit must use an 8 input/3 selector bit multiplexer
+    * This circuit has one 1 bit output
+
+        * Output should be ``1`` when the comparison condition is true, ``0`` when false
+
+
+    * This circuit has a total of 5 inputs
+
+        * One 8 bit input specifying A
+        * Another 8 bit input specifying B
+        * Three 1 bit inputs specifying a comparison operator
+
+
+    * The eight comparison operations are as follows
+
+        * ``000`` --- Always output ``0``
+        * ``001`` --- ``a == b``
+        * ``010`` --- ``a > b``
+        * ``011`` --- ``a >= b``
+        * ``100`` --- Always output ``1``
+        * ``101`` --- ``a != b``
+        * ``110`` --- ``a <= b``
+        * ``111`` --- ``a < b``
+
+
+    * The three 1 bit inputs specify the operator in the above order
+    * **Note:** ``000`` and ``100`` ignore the inputs
+
+
+#. Create another circuit that can perform a specific comparison of two inputs
+
+    * Use the provided file titled "4-comparator.dig"
+    * This question is the same as above, but with a constraint
+    * This circuit may not use an 8 input/3 selector bit multiplexer
+
+        * This circuit may use one 2 input/1 selector bit multiplexer
+        * **Hint:** Consider using ``AND`` gates as a way to activate/deactivate signals
+
+
+
+Part 4 --- ALU from Registers
+=============================
+
+    Consider combining parts 1 and 2 from above
 
 
 
