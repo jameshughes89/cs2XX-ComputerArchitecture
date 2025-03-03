@@ -61,6 +61,44 @@ Part 1 --- Registers
 
 
 
+Part 2 --- ALU
+==============
+
+#. Create an alu capable of performing 8 unique operations
+
+    * This circuit has a total of 5 inputs
+
+        * One 8 bit input specifying operand A for the ALU
+        * Another 8 bit input specifying operand B
+        * Three 1 bit inputs specifying an operator to apply to the operands
+        * **Note:** This circuit will likely require a constant value input, which is not counted here
+
+
+    * The eight operations are as follows
+
+        * Return A unchanged --- :math:`f(A, B) = A`
+        * 2s compliment negation --- :math:`f(A, B) = -A`
+
+            * Use the built in Digital component under the Arithmetic components
+
+
+        * ``NOT`` A --- :math:`f(A, B) = \lnot A`
+        * Or --- :math:`f(A, B) = A \lor B`
+        * And --- :math:`f(A, B) = A \land B`
+        * Exclusive or --- :math:`f(A, B) = A \oplus B`
+        * Addition --- :math:`f(A, B) = A + B`
+        * Subtraction --- :math:`f(A, B) = A - B`
+
+
+    * The three 1 bit inputs specifying the operator in the above order
+    * **Note:** The first three operators ignore the B input
+
+
+
+Part 3 --- Comparator
+=====================
+
+
 
 
 
