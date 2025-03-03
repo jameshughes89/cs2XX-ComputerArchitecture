@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>alu registers_test</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>o_2	o_1	o_0	a_2	a_1	a_0	b_2	b_1	b_0	d_2	d_1	d_0	I	O	C
+# Put A and C into reg 0 and 1														
+0	0	0	1	1	1	X	X	X	0	0	0	0xC	Z	C
+0	0	0	1	1	1	X	X	X	0	0	1	0xA	Z	C
+# Apply first 4 operators														
+0	0	0	0	0	0	X	X	X	1	1	0	Z	Z	C
+0	0	1	0	0	1	X	X	X	1	0	1	Z	Z	C
+0	1	0	1	1	0	X	X	X	1	0	0	Z	Z	C
+0	1	1	0	0	0	0	0	1	0	1	1	Z	Z	C
+# Verify first 4 operators														
+0	0	0	1	1	0	X	X	X	1	1	1	Z	0xC	C
+0	0	0	1	0	1	X	X	X	1	1	1	Z	0xF6	C
+0	0	0	1	0	0	X	X	X	1	1	1	Z	0xF3	C
+0	0	0	0	1	1	X	X	X	1	1	1	Z	0xE	C
+# Apply last 4 operators														
+1	0	0	0	0	1	0	0	0	0	1	0	Z	Z	C
+1	0	1	0	0	0	0	0	1	0	1	1	Z	Z	C
+1	1	0	0	0	1	0	0	0	1	0	0	Z	Z	C
+1	1	1	0	0	0	0	0	1	1	0	1	Z	Z	C
+# Verify first 4 operators														
+0	0	0	0	1	0	X	X	X	1	1	1	Z	0x8	C
+0	0	0	0	1	1	X	X	X	1	1	1	Z	0x6	C
+0	0	0	1	0	0	X	X	X	1	1	1	Z	0x16	C
+0	0	0	1	0	1	X	X	X	1	1	1	Z	0x2	C</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="-900" y="-740"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>RectHeight</string>
+          <int>127</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>ALU Registers</string>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>91</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-980" y="-780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>O</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="1520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a_0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>d_0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>d_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>d_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Clock</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>C</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-860" y="-660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>I</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>isHighZ</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="1360"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b_0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>o_0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>o_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>small</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>o_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-880" y="-540"/>
+    </visualElement>
+  </visualElements>
+  <wires/>
+  <measurementOrdering/>
+</circuit>
