@@ -19,308 +19,47 @@ Uncompress this folder and open the files within Digital. Each question specifie
 
 
 
-Part 1 --- Selectors
+Part 1 --- Registers
 ====================
 
-#. Create a circuit where the output of some input can be inverted with some other signal
+#. Create a circuit to swap data between several registers
 
-    * Use the provided file titled "1-bit_inverter.dig"
-    * Below is a truth table describing the desired functionality
+    * Data can be moved between 8 different sources/destinations
 
-    .. list-table:: Bit Inverter Truth Table
-        :widths: auto
-        :align: center
-        :header-rows: 1
+        * Seven 8 bit registers
+        * The circuit will also have the ability to read/write from input/output
 
-        * - Input
-          -
-          - Invert
-          -
-          - Output
-        * - ``0``
-          -
-          - ``0``
-          -
-          - ``0``
-        * - ``0``
-          -
-          - ``1``
-          -
-          - ``1``
-        * - ``1``
-          -
-          - ``0``
-          -
-          - ``1``
-        * - ``1``
-          -
-          - ``1``
-          -
-          - ``0``
+            * The source may be data in, or the destination may be data out
 
 
+    * This circuit will have one 8 bit output
+    * This circuit will have a total of 7 inputs
 
-#. Create a 1 bit selector circuit such that one of two inputs is mapped to the output with the following constraints
+        * One 8 bit input serving as the data input
+        * Three bits specifying the source
 
-    * A multiplexer may not be used
-    * Only drivers and not gates may be used
-    * Use the provided file titled "2-input_selector.dig"
-    * Below is a truth table describing the desired functionality
+            * Registers 0 -- 6 are referred to by their corresponding bit patterns
 
-        * Here, ``A`` and ``B`` are variable inputs that can take on either ``0``/``1``
+                * For example, ``011`` refers to register 3
 
 
-    .. list-table:: 1 Bit Selector Truth Table
-        :widths: auto
-        :align: center
-        :header-rows: 1
+            * Data in is referred to by the bit pattern ``111``
 
-        * - :math:`i_{0}`
-          - :math:`i_{1}`
-          -
-          - :math:`s`
-          -
-          - :math:`o`
-        * - ``A``
-          - ``B``
-          -
-          - ``0``
-          -
-          - ``A``
-        * - ``A``
-          - ``B``
-          -
-          - ``1``
-          -
-          - ``B``
+
+        * Three bits specifying the destination
+
+            * Registers 0 -- 6 are referred to by their corresponding bit patterns
+            * Data out is referred to by the bit pattern ``111``
+
+
+    * For example, consider the following source and destination bit patterns
+
+        * ``111`` ``000`` --- move the contents from data in into register 0
+        * ``000`` ``001`` --- move the contents from register 0 into register 1
+        * ``001`` ``111`` --- move the contents from register 1 to data out
 
 
 
-#. Create a circuit that can map one of two inputs to one of two outputs with the following constraints
-
-    * A multiplexer may not be used
-    * Only drivers and not gates may be used
-    * **Hint:** Use the general bit selector design from the previous question
-    * Use the provided file titled "3-input_output_selector.dig"
-    * Below is a truth table describing the desired functionality
-
-        * Note that ``Z`` denotes the high impedance state and does not represent some variable input
-
-    .. list-table:: 1 Bit Input/Output Selector Truth Table
-        :widths: auto
-        :align: center
-        :header-rows: 1
-
-        * - :math:`i_{0}`
-          - :math:`i_{1}`
-          -
-          - :math:`s_{i}`
-          - :math:`s_{o}`
-          -
-          - :math:`o_{0}`
-          - :math:`o_{1}`
-        * - ``A``
-          - ``B``
-          -
-          - ``0``
-          - ``0``
-          -
-          - ``A``
-          - ``Z``
-        * - ``A``
-          - ``B``
-          -
-          - ``0``
-          - ``1``
-          -
-          - ``Z``
-          - ``A``
-        * - ``A``
-          - ``B``
-          -
-          - ``1``
-          - ``0``
-          -
-          - ``B``
-          - ``Z``
-        * - ``A``
-          - ``B``
-          -
-          - ``1``
-          - ``1``
-          -
-          - ``Z``
-          - ``B``
-
-
-#. Create a circuit that can map one of four inputs to one of four outputs with the following constraints
-
-    * Multiplexers and demultiplexer may be used
-    * Use the provided file titled "4-plex_input_output_selector.dig"
-
-
-
-Part 2 --- JK Flip-Flops
-========================
-
-An SR flip-flop is similar to an SR latch except that the flip-flop only changes state on a clock pulse, similar to that
-of a D flip-flop.
-
-A JK Flip Flop is similar to an SR flip-flop, except that when both inputs (called :math:`J` and :math:`K`, for
-:math:`S` and :math:`R` respectively) are ``1``, the outputs :math:`Q` and :math:`\lnot Q` toggle/oscillate.
-
-    .. list-table:: JK Flip-Flop Truth Table
-        :widths: auto
-        :align: center
-        :header-rows: 1
-
-        * - :math:`C`
-          -
-          - :math:`J`
-          - :math:`K`
-          -
-          - :math:`Q`
-          - :math:`\lnot Q`
-          -
-          - :math:`Q`
-          - :math:`\lnot Q`
-        * - ``C``
-          -
-          - ``0``
-          - ``0``
-          -
-          - ``0``
-          - ``1``
-          -
-          - ``0``
-          - ``1``
-        * - ``C``
-          -
-          - ``0``
-          - ``0``
-          -
-          - ``1``
-          - ``0``
-          -
-          - ``1``
-          - ``0``
-        * - ``C``
-          -
-          - ``0``
-          - ``1``
-          -
-          - ``0``
-          - ``1``
-          -
-          - ``0``
-          - ``1``
-        * - ``C``
-          -
-          - ``0``
-          - ``1``
-          -
-          - ``1``
-          - ``0``
-          -
-          - ``0``
-          - ``1``
-        * - ``C``
-          -
-          - ``1``
-          - ``0``
-          -
-          - ``0``
-          - ``1``
-          -
-          - ``1``
-          - ``0``
-        * - ``C``
-          -
-          - ``1``
-          - ``0``
-          -
-          - ``1``
-          - ``0``
-          -
-          - ``1``
-          - ``0``
-        * - ``C``
-          -
-          - ``1``
-          - ``1``
-          -
-          - ``0``
-          - ``1``
-          -
-          - ``1``
-          - ``0``
-        * - ``C``
-          -
-          - ``1``
-          - ``1``
-          -
-          - ``1``
-          - ``0``
-          -
-          - ``0``
-          - ``1``
-
-
-This toggle feature has an interesting property that the :math:`Q` output toggles at half the frequency of the clock
-input. In other words, it takes two clock cycles for :math:`Q` to cycle once.
-
-
-
-#. Create a JK flip-flop
-
-    * Use the provided file titled "5-JK_flipflop.dig"
-    * Feel free to research designs of a JK flop-flop
-
-        * **WARNING:** Most designs available will fail due to race conditions
-
-
-    * **HINT:** Use the idea of the D flip-flop design for the JK flop-flop to resolve the race condition problem
-
-        * **WARNING:** Unlike the the D flip-flop, have the final :math:`Q` value latch when the clock goes low
-
-
-
-#. Create a 4 bit counting circuit that increments 1 every clock pulse with 4 JK flip-flops
-
-    * For example, each arrow corresponds to one clock pulse
-
-        * ``0000`` -> ``0001`` -> ``0010`` -> ``0011`` -> ``0100`` -> ``0101`` -> ... -> ``1111`` -> ``0000`` -> ...
-
-
-    * Use the provided file titled "6-counter.dig"
-    * Use the JK flip-flop design from the above question and not the built in component
-
-        * Using Digital's built in JK flip-flop will not produce the desired result
-
-
-    * **HINT:** Chain JK flip-flops together
-    * **HINT:** Set each JK flip-flop's :math:`J` and :math:`K` inputs to ``1`` with a constant
-
-        * This puts the JK flip-flops into their toggle/oscillate state
-
-
-    * Ignore the :math:`\lnot Q`\s for this circuit
-    * Note that one should expect the outputs to start on some arbitrary value when running the circuit
-
-        * Do not expect the outputs to start at ``0000``
-
-
-
-Part 3 --- RAM
-==============
-
-#. Create a 4 byte RAM design with four 8 bit register components, a multiplexer, demultiplexer, and a driver
-
-    * Use the provided file titled "7-4_byte_ram.dig"
-    * This file already contains the components needed in the workspace
-
-        * The design must use these components
-        * No other components may be added to the design
 
 
 
