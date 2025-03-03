@@ -147,7 +147,27 @@ Part 3 --- Comparator
 Part 4 --- ALU from Registers
 =============================
 
-    Consider combining parts 1 and 2 from above
+#. Create a circuit capable of applying ALU operators to data from specific registers, and save the result to a register
+
+    * Use the provided file titled "5-alu_reg.dig"
+    * This circuit combines the core ideas from Parts 1 and 2 (not part 3)
+    * This circuit will have one 8 bit output serving as data out
+    * This circuit will have a total of 14 inputs
+
+        * A clock input
+        * One 8 bit input serving as the data in
+        * Three 1 bit inputs specifying the ALU operator to perform
+        * Three 1 bit inputs specifying the source register (or data in) for operand A
+        * Three 1 bit inputs specifying the source register (or data in) for operand B
+        * Three 1 bit inputs specifying the destination register (or data out) to send the result of the operation
+
+
+    * For example, consider the following operator, A, B, and destination bit patterns
+
+        * ``000`` ``111`` ``000`` ``000`` --- Data in as A, store A in register 0
+        * ``000`` ``111`` ``000`` ``001`` --- Data in as A, store A in register 1
+        * ``110`` ``000`` ``001`` ``110`` --- Register 0 as A, register 1 as B, store A + B in register 6
+        * ``000`` ``110`` ``000`` ``111`` --- Register 6 as A, put result in data out
 
 
 
