@@ -27,15 +27,16 @@ Part 1 --- Registers
     * Data can be moved between 8 different sources/destinations
 
         * Seven 8 bit registers
-        * The circuit will also have the ability to read/write from input/output
+        * The circuit will also have the ability to read/write from data in/out
 
             * The source may be data in, or the destination may be data out
 
 
-    * This circuit will have one 8 bit output
-    * This circuit will have a total of 7 inputs
+    * This circuit will have one 8 bit output serving as data out
+    * This circuit will have a total of 8 inputs
 
-        * One 8 bit input serving as the data input
+        * A clock input
+        * One 8 bit input serving as the data in
         * Three bits specifying the source
 
             * Registers 0 -- 6 are referred to by their corresponding bit patterns
