@@ -54,11 +54,11 @@ Specifying Operators
     * This circuit must take 8 inputs representing the 8 bit signed integer
     * This circuit must also take 3 additional inputs specifying the comparison to perform
 
-        * ``000`` --- Always output ``1``
+        * ``000`` --- Always output ``0``
         * ``001`` --- ``== 0``
         * ``010`` --- ``> 0``
         * ``011`` --- ``>= 0``
-        * ``100`` --- Always output ``0``
+        * ``100`` --- Always output ``1``
         * ``101`` --- ``!= 0``
         * ``110`` --- ``<= 0``
         * ``111`` --- ``< 0``
@@ -78,11 +78,11 @@ Comparing Numbers
 
     * Given two 8 bit signed integers labelled ``a`` and ``b``
 
-        * ``000`` --- Always output ``1``
+        * ``000`` --- Always output ``0``
         * ``001`` --- ``a == b``
         * ``010`` --- ``a > b``
         * ``011`` --- ``a >= b``
-        * ``100`` --- Always output ``0``
+        * ``100`` --- Always output ``1``
         * ``101`` --- ``a != b``
         * ``110`` --- ``a <= b``
         * ``111`` --- ``a < b``
