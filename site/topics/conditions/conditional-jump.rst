@@ -43,6 +43,10 @@ Discussed in more details below, but it really is the same idea as the output re
 Ok, so we also need to control the status flags
 
 
+Enabling Flag Register
+======================
+
+
 
 Including the Flag Register in the System
 =========================================
