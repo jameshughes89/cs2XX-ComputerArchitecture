@@ -49,23 +49,46 @@ Conditional Jump Control Logic
     * The jump, or the ``NOOP`` version
 
 
+Controlling the Cases
+---------------------
+
+* If the status flags store their respective conditions, they indicate which version of the conditional jumps to perform
+
+    * For example, if the :math:`Z_{flag}` signal is high, perform the jump version, if it's low, perform ``NOOP``
 
 
+* The same idea used for the output register's unsigned/signed
+
+    * Multiple look up tables with a multiplexer could be used
+    * Or, a single, larger, look up table with additional input signals can be used
 
 
-How can it know?
-Use the same idea as the signed control signal
-    when the flag is off, do NOOP
-    when the flag is on, do jump
+* With this idea, the status flags can be input into the control logic's look up table
+
+    * This results in a total of 9 inputs
 
 
-Discussed in more details below, but it really is the same idea as the output register
-    could have a multiplexer and multiple LUTs
-    or we could have additional inputs to the LUT specifying chunks of the LUT for the various cases
-    this means we will have 8x the size of the LUT though
+* Like before, different segments of the input to the look up table have different meaning
+
+    * The lest significant 2 bits correspond to the microcode counter
+    * The next 4 bits correspond to the specific instruction
+    * The additional 3 bits, the most significant bits, correspond to the status flags
 
 
-Ok, so we also need to control the status flags
+* Since there are an additional 3 input bits, the size of the look up table grows by eight times
+
+    * Eight segments of 16 instructions
+
+
+* Each of the eight segments of the look up table corresponds to how the instructions should work given the status flags
+* However, of the 16 instructions, only the 3 conditional jumps will be different, depending on the status flags
+
+    * With this design, it means that there will be a lot of redundant, duplicate control logic
+    * But it will make the implementation simple
+
+
+* With this design in mind, there still needs to be control over when the flags register is enabled
+
 
 
 Enabling Flag Register
