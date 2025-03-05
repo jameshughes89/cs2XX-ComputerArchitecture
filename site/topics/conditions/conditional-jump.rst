@@ -13,19 +13,44 @@ Conditional Jump Instructions
 Conditional Jump Control Logic
 ==============================
 
-clear up what they are
-jump when the respective status flag is high, otherwise, ignore and carry on
-    for example...
+* The conditional jumps allow the program to to different parts of the program based on some condition
+* More specifically, when some status flag is high, the conditional jump updates the program counter's value
 
-So, what should that logic look like?
-turns out, the logic already mostly exists, it's the jump
+    * The program counter is updated to contain a new memory address --- the address of the new next instruction
+    * In the same way as the jump always instruction
 
-    SHOW LOGIC?
 
-BUT, we still need a way to ignore
+* For example, consider a jump zero command --- ``JMPZ``
 
-    SHOW LOGIC (NOOP)
-    It's a NOOP
+    * If the zero status flag is high, update the program counter with some specified memory address
+    * If the status flag is low, ignore and carry on
+
+
+* Notice that this instruction has two cases
+
+    * Two versions of the instruction that can be performed
+
+
+* The control logic for the two versions of the instruction effectively already exists
+
+    * The jump version control logic is the same as the ``JMPA`` instruction
+
+        * Fetch cycle
+        * Move operand (memory address to jump to) out from the instruction register into the program counter
+
+    * The ignore version is a ``NOOP``
+
+        * Fetch cycle
+        * Nothing
+
+
+* What does not exist is a way to select which version of the instruction to perform
+
+    * The jump, or the ``NOOP`` version
+
+
+
+
 
 
 How can it know?
