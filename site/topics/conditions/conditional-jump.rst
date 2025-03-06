@@ -13,7 +13,7 @@ Conditional Jump Instructions
 Conditional Jump Control Logic
 ==============================
 
-* The conditional jumps allow the program to to different parts of the program based on some condition
+* The conditional jumps allow the program to jump to different parts of the program based on some condition
 * More specifically, when some status flag is high, the conditional jump updates the program counter's value
 
     * The program counter is updated to contain a new memory address --- the address of the new next instruction
@@ -57,9 +57,9 @@ Controlling the Cases
     * For example, if the :math:`Z_{flag}` signal is high, perform the jump version, if it's low, perform ``NOOP``
 
 
-* The same idea used for the output register's unsigned/signed
+* The same idea used for dealing with the output register's unsigned/signed cases can be used
 
-    * Multiple look up tables with a multiplexer could be used
+    * Multiple look up tables with a multiplexer *could* be used
     * Or, a single, larger, look up table with additional input signals can be used
 
 
