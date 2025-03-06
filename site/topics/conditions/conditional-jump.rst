@@ -85,14 +85,14 @@ Controlling the Cases
     * The additional 3 bits, the most significant bits, correspond to the status flags
 
 
-.. figure:: control_logic_9_bit_input.png
+.. figure:: control_logic_with_flags.png
     :width: 500 px
     :align: center
 
-    The 9 bit input to the look up table broken down into the three parts --- flags, operator, and microcode counter.
-    The most significant 3 bits, ``CSZ`` correspond to the status flags (carry, significant/sign, zero), the next 4 bits
-    specify an instruction's operator ``XXXX``, and the final 2 bits ``YY`` are the microcode step, from the microcode
-    counter.
+    Design of the look up table with the status flag signals included as inputs. This design has a total of 9 signals
+    serving as inputs to the look up table --- 3 for the status signals, 4 for the instruction's operator, and 2 for
+    the microcode step. Notice the ``FLG`` control signal on the output from the look up table --- this controls when
+    the flags register is enabled.
 
 
 * Since there are an additional 3 input bits, the size of the look up table grows by eight times
