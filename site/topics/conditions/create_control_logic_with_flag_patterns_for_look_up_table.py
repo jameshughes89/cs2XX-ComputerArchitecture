@@ -65,22 +65,22 @@ JMPC = 0b1100
 Mirocodes for the 16 possible instructions. Each microcode could be up to 4 instructions long. 
 """
 INSTRUCTIONS = [
-  [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b0000 --- 0x0 --- NOOP --- No Operation
-  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     RMO|ARI     ],  # 0b0001 --- 0x1 --- LDAR --- Load A From RAM
-  [PCO|ADR,   RMO|IRI|PCE, IRO|ARI,     0           ],  # 0b0010 --- 0x2 --- LDAD --- Load A Direct
-  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     RMO|BRI     ],  # 0b0011 --- 0x3 --- LDBR --- Load B From RAM
-  [PCO|ADR,   RMO|IRI|PCE, IRO|BRI,     0           ],  # 0b0100 --- 0x4 --- LDBD --- Load B Direct
-  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     ARO|RMI     ],  # 0b0101 --- 0x5 --- SAVA --- Save A to RAM
-  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     BRO|RMI     ],  # 0b0110 --- 0x6 --- SAVB --- Save B to RAM
-  [PCO|ADR,   RMO|IRI|PCE, FLG,         ALU|ARI     ],  # 0b0111 --- 0x7 --- ADAB --- Add B to A
-  [PCO|ADR,   RMO|IRI|PCE, SUB|FLG,     ALU|SUB|ARI ],  # 0b1000 --- 0x8 --- SUAB --- Subtract B from A
-  [PCO|ADR,   RMO|IRI|PCE, IRO|PCI,     0           ],  # 0b1001 --- 0x9 --- JMPA --- Jump Always
-  [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1010 --- 0xA --- JMPZ --- Jump Zero
-  [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1011 --- 0xB --- JMPS --- Jump Significant/sign
-  [PCO|ADR,   RMO|IRI|PCE, 0,           0           ],  # 0b1100 --- 0xC --- JMPC --- Jump Carry
-  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     RMO|ORI     ],  # 0b1101 --- 0xD --- OUTU --- Output Unsigned Integer
-  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,     RMO|ORI|SGN ],  # 0b1110 --- 0xE --- OUTS --- Output Signed Integer
-  [PCO|ADR,   RMO|IRI|PCE, HLT,         0           ],  # 0b1111 --- 0xF --- HALT --- Halt
+  [PCO|ADR,   RMO|IRI|PCE, 0,               0           ],  # 0b0000 --- 0x0 --- NOOP --- No Operation
+  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|ARI     ],  # 0b0001 --- 0x1 --- LDAR --- Load A From RAM
+  [PCO|ADR,   RMO|IRI|PCE, IRO|ARI,         0           ],  # 0b0010 --- 0x2 --- LDAD --- Load A Direct
+  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|BRI     ],  # 0b0011 --- 0x3 --- LDBR --- Load B From RAM
+  [PCO|ADR,   RMO|IRI|PCE, IRO|BRI,         0           ],  # 0b0100 --- 0x4 --- LDBD --- Load B Direct
+  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         ARO|RMI     ],  # 0b0101 --- 0x5 --- SAVA --- Save A to RAM
+  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         BRO|RMI     ],  # 0b0110 --- 0x6 --- SAVB --- Save B to RAM
+  [PCO|ADR,   RMO|IRI|PCE, ALU|ARI|FLG,     0           ],  # 0b0111 --- 0x7 --- ADAB --- Add B to A
+  [PCO|ADR,   RMO|IRI|PCE, ALU|SUB|ARI|FLG, 0           ],  # 0b1000 --- 0x8 --- SUAB --- Subtract B from A
+  [PCO|ADR,   RMO|IRI|PCE, IRO|PCI,         0           ],  # 0b1001 --- 0x9 --- JMPA --- Jump Always
+  [PCO|ADR,   RMO|IRI|PCE, 0,               0           ],  # 0b1010 --- 0xA --- JMPZ --- Jump Zero
+  [PCO|ADR,   RMO|IRI|PCE, 0,               0           ],  # 0b1011 --- 0xB --- JMPS --- Jump Significant/sign
+  [PCO|ADR,   RMO|IRI|PCE, 0,               0           ],  # 0b1100 --- 0xC --- JMPC --- Jump Carry
+  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|ORI     ],  # 0b1101 --- 0xD --- OUTU --- Output Unsigned Integer
+  [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|ORI|SGN ],  # 0b1110 --- 0xE --- OUTS --- Output Signed Integer
+  [PCO|ADR,   RMO|IRI|PCE, HLT,             0           ],  # 0b1111 --- 0xF --- HALT --- Halt
 ]
 
 """
