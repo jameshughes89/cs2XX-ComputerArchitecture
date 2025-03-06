@@ -43,7 +43,7 @@ Flags Register
 * For example, consider the steps the system performs when calculating ``5 - 5``
 
     * Load ``5``` into A
-    * Load ``-5`` into B
+    * Load ``5`` into B
     * Set the subtraction signal
 
         * At this instant, the status flag signal for ``0`` should be high
