@@ -68,6 +68,16 @@ Controlling the Cases
     * This results in a total of 9 inputs
 
 
+.. figure:: control_logic_9_bit_input.png
+    :width: 500 px
+    :align: center
+
+    The 9 bit input to the look up table broken down into the three parts --- flags, operator, and microcode counter.
+    The most significant 3 bits, ``CSZ`` correspond to the status flags (carry, significant/sign, zero), the next 4 bits
+    specify an instruction's operator ``XXXX``, and the final 2 bits ``YY`` are the microcode step, from the microcode
+    counter.
+
+
 * Like before, different segments of the input to the look up table have different meaning
 
     * The lest significant 2 bits correspond to the microcode counter
