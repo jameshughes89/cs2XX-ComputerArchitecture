@@ -126,12 +126,7 @@ Microcodes
 
 * Below is a table showing how the control lines would be configured for the two steps
 
-    * Like before, each row corresponds to one clock cycle
-    * Due to space limitations, the data and clock columns are removed some control signals' columns are combined
-
-        * :math:`ALU_{o}` and :math:`sub` are combined (``alu/sub``)
-        * :math:`Out_{i}` and :math:`sign` are combined (``output/sign``)
-        * :math:`PC` and :math:`PC_{e}` are combined (``in/out/enable``)
+    * Like before, due to space limitations, the clock column has been removed and several columns have been combined
 
 
 .. list-table:: Control logic for loading data from some memory address to register A

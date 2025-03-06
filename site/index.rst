@@ -111,6 +111,7 @@ Office Hours
 
     assignments/assignment-1/assignment-1
     assignments/assignment-2/assignment-2
+    assignments/assignment-3/assignment-3
 
 
 
