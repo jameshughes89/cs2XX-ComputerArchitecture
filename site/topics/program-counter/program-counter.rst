@@ -207,6 +207,165 @@ Including the Program Counter in the System
 Using the Program Counter in the System
 =======================================
 
+* Like before, the numbers 15 and 4 will be added together, but this time
+
+    * All data will be preloaded into RAM
+
+        * Data will not be entered into the system via the data input toggles
+
+
+    * The program counter will be used to track of the memory address of the data needing to be retrieved
+
+
+* Although the data input toggles will not be used, the control logic toggles will still need to be controlled
+
+* A hex file containing the data for the numbers 15 and 4 will be created
+
+    .. code:: text
+
+        v2.0 raw
+        0x0F
+        0x04
+
+
+* This file can then be loaded into RAM
+
+.. note::
+
+    Loading data into RAM before runtime in Digital works a little different compared to the look up tables.
+
+    First, the RAM component needs to be marked as "Program Memory".
+
+        .. figure:: ram_program_memory.png
+            :width: 333 px
+            :align: center
+
+            "Program Memory" option selection under the Advanced tab for a RAM component.
+
+
+    Then, under Digital's main menu **Edit -> Circuit specific settings** window, within the Advanced tab, select the
+    "Preload program memory at startup" option and specify the "Program file" to be loaded.
+
+        .. figure:: circuit_specific_settings_preload_program_file.png
+            :width: 333 px
+            :align: center
+
+            "Preload program memory at startup" option under the Advanced tab of the circuit specific settings. Notice
+            the "Program file" is specified.
+
+
+
+* With the data in RAM, think about the steps required to perform the addition
+
+    * Get the address of the data to be retrieved from the program counter to the address register
+    * Increment the program counter
+
+        * Remember, the idea is that the program counter always stores the address of the *next* thing to be dealt with
+
+
+    * Output the data from the specified address in RAM to register A
+    * Get the address of the next data to be retrieved from the program counter to the address register
+    * Increment the program counter
+    * Output the data from the specified address in RAM to register B
+    * Perform addition
+    * Put the result of addition into the output register
+
+
+* Below is a table showing how the control lines would be configured to perform the above steps
+
+    * Like before, each row corresponds to one clock cycle
+    * Due to space limitations, the data and clock columns are removed some control signals' columns are combined
+
+        * :math:`ALU_{o}` and :math:`sub` are combined (``alu/sub``)
+        * :math:`Out_{i}` and :math:`sign` are combined (``output/sign``)
+        * :math:`PC` and :math:`PC_{e}` are combined (``in/out/enable``)
+
+
+.. list-table:: Control logic for adding numbers stored in RAM
+    :widths: auto
+    :align: center
+    :header-rows: 1
+
+    * - :math:`Address`
+      - :math:`RAM`
+      - :math:`A`
+      - :math:`B`
+      - :math:`ALU`
+      - :math:`out`
+      - :math:`PC`
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+    * - ``0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+    * - ``0``
+      - ``0/1``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+    * - ``1``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/1/0``
+    * - ``0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/1``
+    * - ``0``
+      - ``0/1``
+      - ``0/0``
+      - ``1/0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0/0``
+    * - ``0``
+      - ``0/0``
+      - ``0/0``
+      - ``0/0``
+      - ``1/0``
+      - ``1/0``
+      - ``0/0/0``
+
+
+
+.. warning::
+
+    Within Digital it's possible to combine the steps of (a) program counter -> address register and (b) program counter
+    enable.
+
+    In practice, however, this may be problematic as physical limitations will impact how synchronized the system can
+    truly be. For example, what if the program counter enable causes the program counter to increment an instant before
+    the address register can latch? This would cause the wrong value to be latched into the address register.
+
+
+
+* As previously mentioned, what's interesting is that no data needed to be input into the system at runtime
+
+    * This addition happened without needing to manipulate the data input toggles
+    * All the data the system needed was contained within the system
+
+
+* However, the control signals still needed to be manually manipulated with the toggles
+
+    * The system has no way to control itself
+
 
 
 For Next Time
