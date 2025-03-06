@@ -97,7 +97,7 @@ Address Register
     :width: 500 px
     :align: center
 
-    A not particularly useful configuration of A RAM component with a shared address and data bus.
+    A not particularly useful configuration of a RAM component with a shared address and data bus.
 
 
 * Consider the above configuration of RAM in a system with a shard address and data bus
