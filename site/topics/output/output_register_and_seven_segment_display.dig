@@ -720,7 +720,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>output_e</string>
+          <string>output_i</string>
         </entry>
       </elementAttributes>
       <pos x="-1320" y="20"/>
