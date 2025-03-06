@@ -21,7 +21,7 @@ Enabling Flag Register
 * As discussed, the status flag register needs to be enabled at specific times to work
 
     * Only enable when performing addition or subtraction
-    * Be disabled at all other times
+    * Disabled at all other times
 
 
 * However, both addition and subtraction take several clock cycles
