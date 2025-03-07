@@ -25,8 +25,9 @@ Including the Flag Register in the System
 
     * The 3 output from the flags register are connected to the inputs to the look up table
     * The 1 new output from the look up table connects to the status flag register's enable
-    * Notice the cycle --- the flags register controls the control logic, which controls the flags register
 
+
+* Notice the cycle --- the flags register controls the control logic, which controls the flags register
 
 .. figure:: esap_alu_ram_output_pc_instruction_control_flag.png
     :width: 666 px
@@ -46,9 +47,9 @@ Updating the Look Up Table Contents
     * An additional output signal from the look up table
 
 
-* A modified version of the script used before to generate the hex file for the look up table will be used
+* A modified version of the script used before to generate the hex file for the look up table is used
 
-* Like before, constants will be used to specify the position of the control signal's bit
+* Like before, below are constants specifying the position of the control signal's bit
 
     * Here, there are a total of 18 bits, which is one more than before
     * This corresponds to the control signal for the status flag register enable
@@ -71,7 +72,7 @@ Updating the Look Up Table Contents
     :end-before: # [end-conditional_jump_opcodes]
 
 
-* Similar to before, the microcode instructions will be stored in a list
+* Similar to before, the microcode instructions are stored in a list
 * The specific microcodes for each instruction are created with bitwise OR on the control signal constants
 
 * The difference here versus before is
@@ -80,7 +81,7 @@ Updating the Look Up Table Contents
     * The labelling of ``JMPZ``, ``JMPS``, and ``JMPC`` instructions
 
         * Notice that they are still effectively ``NOOP`` instructions here
-        * This will be their *standard* behaviors
+        * This will be their *default* behaviors
         * Only under the special conditions do they act like jump instructions
 
 
@@ -96,10 +97,10 @@ Updating the Look Up Table Contents
 * However, the conditional jumps need to work differently depending on the status flag signals
 
 * As discussed, each row/individual microcode is accessed by some input patter in the look up table
-* Here, the 3 most significant bits correspond to the status flag signals
+* With this new design, the 3 most significant bits correspond to the status flag signals
 
     * ``CSZ|XXXX|YY``
-    * `Flags|Instruction|Step``
+    * ``Flags|Instruction|Step``
 
 
 * The above list of 16 instructions and microcodes correspond to the first set of 16, when no status signals are high
@@ -133,13 +134,17 @@ Updating the Look Up Table Contents
     :end-before: # [end-save_to_file]
 
 
-* The if statement checks if the current instruction is a conditional jump and if the corresponding status flag is high
+* This checks if the current instruction is a conditional jump and if the corresponding status flag is high
 
     * When this is the case, act as a jump instruction
     * Otherwise, use the default behaviour
 
 
 * This script would generate the new contents for the control logic's look up table
+
+    * This hex file is to be loaded into the system's new look up table
+
+
 * With this updated control logic, the system now has the ability to branch on conditions
 
 
