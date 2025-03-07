@@ -59,6 +59,36 @@ Including the Flag Register in the System
     :end-before: # [end-control_signal_pattern_constants]
 
 
+* Since the conditional jump instructions are special, their operator bit patterns will be made constants
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-conditional_jump_opcodes]
+    :end-before: # [end-conditional_jump_opcodes]
+
+
+* Similar to before, the microcode instructions will be stored in a list
+* The specific microcodes for each instruction are created with bitwise OR on the control signal constants
+
+* The difference here versus before is
+
+    * The inclusion of the ``FLG`` signal on the addition and subtraction instructions
+    * The labelling of ``JMPZ``, ``JMPS``, and ``JMPC`` instructions
+
+        * Notice that they are still effectively ``NOOP`` instructions here
+        * This will be their *standard* behaviors
+        * Only under the special conditions do they act like jump instructions
+
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :emphasize-lines: 9-10, 12-14
+    :start-after: # [begin-instruction_microcodes]
+    :end-before: # [end-instruction_microcodes]
+
+
 
 SHOW CODE EXAMPLES
 

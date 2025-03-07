@@ -58,14 +58,17 @@ PCI = 0b00_00000000_00000001
 """
 Jump command binary patterns/indices in instruction list
 """
+# [begin-conditional_jump_opcodes]
 JMPA = 0b1001
 JMPZ = 0b1010
 JMPS = 0b1011
 JMPC = 0b1100
+# [end-conditional_jump_opcodes]
 
 """
 Mirocodes for the 16 possible instructions. Each microcode could be up to 4 instructions long. 
 """
+# [begin-instruction_microcodes]
 INSTRUCTIONS = [
     [PCO|ADR,   RMO|IRI|PCE, 0,               0           ],  # 0b0000 --- 0x0 --- NOOP --- No Operation
     [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|ARI     ],  # 0b0001 --- 0x1 --- LDAR --- Load A From RAM
@@ -84,6 +87,7 @@ INSTRUCTIONS = [
     [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|ORI|SGN ],  # 0b1110 --- 0xE --- OUTS --- Output Signed Integer
     [PCO|ADR,   RMO|IRI|PCE, HLT,             0           ],  # 0b1111 --- 0xF --- HALT --- Halt
 ]
+# [end-instruction_microcodes]
 
 """
 Write the microcode patterns for each instructions to a hex file. 
