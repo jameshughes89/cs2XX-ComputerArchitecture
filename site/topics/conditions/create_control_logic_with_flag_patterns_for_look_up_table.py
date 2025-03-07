@@ -34,6 +34,7 @@ Note: The order of the operands does not matter, however, a pattern of FROM -> T
 
 Underscore are included in the constants below for visual clarity
 """
+# [begin-control_signal_pattern_constants]
 HLT = 0b10_00000000_00000000
 ADR = 0b01_00000000_00000000
 RMI = 0b00_10000000_00000000
@@ -52,18 +53,22 @@ ARI = 0b00_00000000_00001000
 PCO = 0b00_00000000_00000100
 PCE = 0b00_00000000_00000010
 PCI = 0b00_00000000_00000001
+# [end-control_signal_pattern_constants]
 
 """
 Jump command binary patterns/indices in instruction list
 """
+# [begin-conditional_jump_opcodes]
 JMPA = 0b1001
 JMPZ = 0b1010
 JMPS = 0b1011
 JMPC = 0b1100
+# [end-conditional_jump_opcodes]
 
 """
 Mirocodes for the 16 possible instructions. Each microcode could be up to 4 instructions long. 
 """
+# [begin-instruction_microcodes]
 INSTRUCTIONS = [
     [PCO|ADR,   RMO|IRI|PCE, 0,               0           ],  # 0b0000 --- 0x0 --- NOOP --- No Operation
     [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|ARI     ],  # 0b0001 --- 0x1 --- LDAR --- Load A From RAM
@@ -82,6 +87,7 @@ INSTRUCTIONS = [
     [PCO|ADR,   RMO|IRI|PCE, IRO|ADR,         RMO|ORI|SGN ],  # 0b1110 --- 0xE --- OUTS --- Output Signed Integer
     [PCO|ADR,   RMO|IRI|PCE, HLT,             0           ],  # 0b1111 --- 0xF --- HALT --- Halt
 ]
+# [end-instruction_microcodes]
 
 """
 Write the microcode patterns for each instructions to a hex file. 
@@ -111,6 +117,7 @@ acts as a NOOP. For example, consider the JMPZ instruction:
     X X 1 | 1 0 1 0 | X X --- If the zero status flag is set, jump to specified address
    
 """
+# [begin-save_to_file]
 with open("control_logic_with_flag_patterns_for_look_up_table.hex", "w") as hex_file:
     hex_file.write("v2.0 raw\n")
     for flags_state in range(8):
@@ -122,3 +129,4 @@ with open("control_logic_with_flag_patterns_for_look_up_table.hex", "w") as hex_
                 hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in INSTRUCTIONS[JMPA])
             else:
                 hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+# [end-save_to_file]
