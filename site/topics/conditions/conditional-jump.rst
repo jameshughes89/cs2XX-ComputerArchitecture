@@ -139,6 +139,10 @@ Updating the Look Up Table Contents
     * Otherwise, use the default behaviour
 
 
+* This script would generate the new contents for the control logic's look up table
+* With this updated control logic, the system now has the ability to branch on conditions
+
+
 
 Programming with Conditional Jumps
 ==================================
