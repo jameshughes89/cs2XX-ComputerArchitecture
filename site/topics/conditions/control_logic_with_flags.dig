@@ -551,7 +551,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>control logic with flag_Test</string>
+          <string>control logic with flag_test</string>
         </entry>
         <entry>
           <string>Testdata</string>
