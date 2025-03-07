@@ -43,8 +43,23 @@ Including the Flag Register in the System
     * An additional output signal from the look up table
 
 
+* A modified version of the script used before to generate the hex file for the look up table will be used
 
-new script for this
+* Like before, constants will be used to specify the position of the control signal's bit
+
+    * Here, there are a total of 18 bits, which is one more than before
+    * This corresponds to the control signal for the status flag register enable
+
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :emphasize-lines: 5
+    :start-after: # [begin-control_signal_pattern_constants]
+    :end-before: # [end-control_signal_pattern_constants]
+
+
+
 SHOW CODE EXAMPLES
 
 

@@ -34,6 +34,7 @@ Note: The order of the operands does not matter, however, a pattern of FROM -> T
 
 Underscore are included in the constants below for visual clarity
 """
+# [begin-control_signal_pattern_constants]
 HLT = 0b10_00000000_00000000
 ADR = 0b01_00000000_00000000
 RMI = 0b00_10000000_00000000
@@ -52,6 +53,7 @@ ARI = 0b00_00000000_00001000
 PCO = 0b00_00000000_00000100
 PCE = 0b00_00000000_00000010
 PCI = 0b00_00000000_00000001
+# [end-control_signal_pattern_constants]
 
 """
 Jump command binary patterns/indices in instruction list
