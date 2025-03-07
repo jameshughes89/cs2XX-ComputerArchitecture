@@ -36,6 +36,9 @@ Including the Flag Register in the System
     now computationally complete.
 
 
+Updating the Look Up Table Contents
+-----------------------------------
+
 * The contents of the look up table needs to be updated to account for the changes
 
     * Three new commands for the three different conditional jumps
