@@ -47,8 +47,74 @@ ALU
         * Subtraction
 
 
+    * The three 1 bit inputs specify the operator in the above order
+
 
 Comparator
 ==========
 
+#. Create a circuit capable of performing 8 unique comparison operations
+
+    * This question is *similar* to one on assignment 3
+    * Here, use Digital's built in comparator component
+    * This circuit has one 1 bit output
+
+        * Output should be ``1`` when the comparison condition is true, ``0`` when false
+
+
+    * This circuit has a total of 5 inputs
+
+        * One 8 bit input specifying A
+        * Another 8 bit input specifying B
+        * Three 1 bit inputs specifying a comparison operator
+
+
+    * The eight comparison operations are as follows
+
+        * ``000`` --- Always output ``0``
+        * ``001`` --- ``a == b``
+        * ``010`` --- ``a < b``
+        * ``011`` --- ``a <= b``
+        * ``100`` --- Always output ``1``
+        * ``101`` --- ``a != b``
+        * ``110`` --- ``a >= b``
+        * ``111`` --- ``a > b``
+
+
+    * The three 1 bit inputs specify the operator in the above order
+
+
+
+Decoding an Instruction
+=======================
+
+#. Create a circuit capable of performing some ALU operation or some comparison operation
+
+    * This circuit will combine the two above designs
+    * This circuit will take 20 input signals
+
+        * One 1 bit signal specifying if the operation to be performed is from the ALU or the comparator
+
+            * ``0`` specifies the operation is from the ALU, ``1`` for the comparator
+
+
+        * Three 1 bit signals specifying the specific operation to perform from the corresponding component
+
+            * The operator depends on if the ALU or the comparator is used
+
+
+        * One set of eight 1 bit inputs specifying some data A
+        * Another set of 8 1 bit inputs specifying B
+
+
+    * This circuit will have eight 1 bit output signal
+
+        * The full 8 bits will be used when performing some ALU operation
+        * Only the least significant bit will be used when performing some comparator operation
+
+
+    * For example
+
+        * ``0 010 01010101 00000000`` --- Perform ``NOT`` on ``01010101``
+        * ``1 010 01010101 00000000`` --- Check if ``01010101 < 00000000``
 
