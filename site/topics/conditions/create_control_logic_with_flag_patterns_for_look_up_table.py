@@ -117,6 +117,7 @@ acts as a NOOP. For example, consider the JMPZ instruction:
     X X 1 | 1 0 1 0 | X X --- If the zero status flag is set, jump to specified address
    
 """
+# [begin-save_to_file]
 with open("control_logic_with_flag_patterns_for_look_up_table.hex", "w") as hex_file:
     hex_file.write("v2.0 raw\n")
     for flags_state in range(8):
@@ -128,3 +129,4 @@ with open("control_logic_with_flag_patterns_for_look_up_table.hex", "w") as hex_
                 hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in INSTRUCTIONS[JMPA])
             else:
                 hex_file.writelines(f"{hex(microcode_pattern)}\n" for microcode_pattern in instruction)
+# [end-save_to_file]

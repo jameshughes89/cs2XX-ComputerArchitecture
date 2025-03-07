@@ -62,7 +62,7 @@ Updating the Look Up Table Contents
     :end-before: # [end-control_signal_pattern_constants]
 
 
-* Since the conditional jump instructions are special, their operator bit patterns will be made constants
+* Since the jump instructions are special, their operator bit patterns will be made constants
 
 .. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
     :language: python
@@ -92,11 +92,51 @@ Updating the Look Up Table Contents
     :end-before: # [end-instruction_microcodes]
 
 
+* The above 16 instructions are how the instructions should work when none of the status flags are high
+* However, the conditional jumps need to work differently depending on the status flag signals
 
-CASES WHERE WE NEED TO DEAL WITH CONDITIONAL JUMPS
+* As discussed, each row/individual microcode is accessed by some input patter in the look up table
+* Here, the 3 most significant bits correspond to the status flag signals
 
-Show saving
+    * ``CSZ|XXXX|YY``
+    * `Flags|Instruction|Step``
 
+
+* The above list of 16 instructions and microcodes correspond to the first set of 16, when no status signals are high
+
+    * ``000|XXXX|YY``
+
+
+* The pattern of 16 instructions and microcodes will be repeated 8 times
+
+    * Once for each combination of the status signals being high
+    * ``000`` --- No flags
+    * ``001`` --- Zero flag set
+    * ``010`` --- Significant/sign flag set
+    * ``011`` --- Significant/sign and zero flags set
+    * ``100`` --- Carry flag set
+    * ``101`` --- Carry and zero flags set
+    * ``101`` --- Carry and significant/sign flags set
+    * ``111`` --- Carry, significant/sign, and zero flags set
+
+
+* For each of the 8 groupings, the conditional jumps will act as a jump when the respective status signal is high
+
+    * Otherwise, it acts as a ``NOOP``
+
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :emphasize-lines: 5-7
+    :start-after: # [begin-save_to_file]
+    :end-before: # [end-save_to_file]
+
+
+* The if statement checks if the current instruction is a conditional jump and if the corresponding status flag is high
+
+    * When this is the case, act as a jump instruction
+    * Otherwise, use the default behaviour
 
 
 
