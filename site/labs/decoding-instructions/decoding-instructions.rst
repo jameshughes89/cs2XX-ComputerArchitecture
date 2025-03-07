@@ -28,10 +28,10 @@ ALU
 
     * This is the same idea as assignment 3
     * This circuit has one eight bit output
-    * This circuit has a total of 5 inputs
+    * This circuit has a total of 19 inputs
 
-        * One 8 bit input specifying operand A for the ALU
-        * Another 8 bit input specifying operand B
+        * Eight 1 bit input specifying operand A for the ALU
+        * Eight 1 bit input specifying operand B
         * Three 1 bit inputs specifying an operator to apply to the operands
 
 
@@ -62,10 +62,10 @@ Comparator
         * Output should be ``1`` when the comparison condition is true, ``0`` when false
 
 
-    * This circuit has a total of 5 inputs
+    * This circuit has a total of 19 inputs
 
-        * One 8 bit input specifying A
-        * Another 8 bit input specifying B
+        * Eight 1 bit input specifying A
+        * Eight 1 bit input specifying B
         * Three 1 bit inputs specifying a comparison operator
 
 
