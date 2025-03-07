@@ -1,6 +1,6 @@
-*************************************
-Decoding Bit Patterns as Instructions
-*************************************
+****************************
+Bit Patterns as Instructions
+****************************
 
 * Feel free to use your laptop
 * You are strongly encourage to work with others
