@@ -26,9 +26,15 @@ replace the old LUT design with the new
     * 3 new inputs
     * 1 new output controlling the flag reg enable
 
+
 connect the signal from the LUT to the status flag enable
 
-IMAGE OF WHOLE SYSTEM
+.. figure:: esap_alu_ram_output_pc_instruction_control_flag.png
+    :width: 666 px
+    :align: center
+
+    Configuration of the ESAP system with the status condition logic and the flags register included. The ESAP system is
+    now computationally complete.
 
 
 Still need to update the control logic
