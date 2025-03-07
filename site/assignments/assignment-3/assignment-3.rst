@@ -65,7 +65,7 @@ Part 1 --- Registers
 Part 2 --- ALU
 ==============
 
-#. Create an alu capable of performing 8 unique operations
+#. Create an ALU capable of performing 8 unique operations
 
     * Use the provided file titled "2-alu.dig"
     * This circuit has one eight bit output
@@ -86,9 +86,9 @@ Part 2 --- ALU
 
 
         * ``NOT`` A --- :math:`f(A, B) = \lnot A`
-        * Or --- :math:`f(A, B) = A \lor B`
-        * And --- :math:`f(A, B) = A \land B`
-        * Exclusive or --- :math:`f(A, B) = A \oplus B`
+        * ``OR`` --- :math:`f(A, B) = A \lor B`
+        * ``AND`` --- :math:`f(A, B) = A \land B`
+        * ``XOR`` --- :math:`f(A, B) = A \oplus B`
         * Addition --- :math:`f(A, B) = A + B`
         * Subtraction --- :math:`f(A, B) = A - B`
 
