@@ -18,16 +18,15 @@ Conditional Jump Control Logic
 Including the Flag Register in the System
 =========================================
 
-Physically, Hook it up
+* Physically including the status logic and the flags register is a matter of connecting it to the existing system
 
-Connect the ALU output to the input of the status flag logic
-replace the old LUT design with the new
+* Connect the output of the ALU to the input of the condition status logic
+* Replace the old control logic look up table design with the new one
 
-    * 3 new inputs
-    * 1 new output controlling the flag reg enable
+    * The 3 output from the flags register are connected to the inputs to the look up table
+    * The 1 new output from the look up table connects to the status flag register's enable
+    * Notice the cycle --- the flags register controls the control logic, which controls the flags register
 
-
-connect the signal from the LUT to the status flag enable
 
 .. figure:: esap_alu_ram_output_pc_instruction_control_flag.png
     :width: 666 px
@@ -37,7 +36,14 @@ connect the signal from the LUT to the status flag enable
     now computationally complete.
 
 
-Still need to update the control logic
+* The contents of the look up table needs to be updated to account for the changes
+
+    * Three new commands for the three different conditional jumps
+    * Three new status signals serving as inputs to the look up table
+    * An additional output signal from the look up table
+
+
+
 new script for this
 SHOW CODE EXAMPLES
 
