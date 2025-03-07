@@ -18,6 +18,23 @@ Conditional Jump Control Logic
 Including the Flag Register in the System
 =========================================
 
+Physically, Hook it up
+
+Connect the ALU output to the input of the status flag logic
+replace the old LUT design with the new
+
+    * 3 new inputs
+    * 1 new output controlling the flag reg enable
+
+connect the signal from the LUT to the status flag enable
+
+IMAGE OF WHOLE SYSTEM
+
+
+Still need to update the control logic
+new script for this
+SHOW CODE EXAMPLES
+
 
 
 Programming with Conditional Jumps
