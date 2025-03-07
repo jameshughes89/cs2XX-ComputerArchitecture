@@ -266,7 +266,7 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>output_e	signed	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	-	100s	10s	1s	C
+            <dataString>output_i	signed	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	-	100s	10s	1s	C
 # Load 0b110110110  (219 unsigned)
 1		0	1	1	0	1	1	0	1	1	0	0x35B	0x06	0x6F	C
 # No output enable makes no change 
@@ -720,7 +720,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>output_e</string>
+          <string>output_i</string>
         </entry>
       </elementAttributes>
       <pos x="-1320" y="20"/>
