@@ -22,12 +22,18 @@ Assembly Language
 Assembler
 =========
 
+* An assembler is a tool to convert assembly language to machine code
 * An assembly language is a very low level programming language
 
     * Often referred to as *assembly*
+    * Assembly is strongly tied to a specific system design, the underlying hardware, and its machine language
 
 
 * When compared to machine code, it enables a more human centric way of programming the system
+
+    * Assembly is effectively programming in machine code, but with a few nice features
+
+
 * Assembly languages have many benefits over programming in machine code, but two key important features are
 
     * Mnemonics for referring to specific instructions
@@ -46,10 +52,23 @@ Assembler
         * Also removes the need to constantly update addresses when lines are added/removed to RAM
 
 
+* An assembler would take the assembly language and translate it, or *assemble* it to the corresponding machine code
+
+    * It would replace the mnemonics with their opcode bit patterns and translate literals to their binary/hex values
+    * It would replace all labels within the assembly with their corresponding memory addresses
 
 
-* However, it is strongly tied to a specific system design, the underlying hardware, and its machine language
 * Typically, each statement in assembly has a 1-to-1 mapping to a statement in machine code
+
+
+
+* Despite its simplicity, it improves the programming experience and allows for a small amount of abstraction
+
+
+
+
+
+
 
 
 
