@@ -23,10 +23,35 @@ Including the Flag Register in the System
 Programming with Conditional Jumps
 ==================================
 
-Go back to example before
-    from previous topic
+* With this new functionality, conditional jumps, branching can now be achieved
 
-Check if a value is less than 10
+
+* Consider the problem discussed before
+
+    * Given some number, output ``1`` if it is less than ``10``, otherwise, output ``0``
+
+
+* This problem can be solved with the following general program idea
+
+    * Load value into register A
+    * Subtract ``10`` from the value
+
+        * If the result is negative (the most significant bit is high), the value must be ``< 10``
+
+
+    * If the result is negative, jump to a a part of RAM that outputs ``1``
+
+        * ``JMPS``
+
+
+    * If the result is not negative, output ``0``
+
+
+
+
+
+
+
 show program
 this is more of a branch idea
 
