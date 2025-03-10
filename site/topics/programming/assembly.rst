@@ -46,42 +46,25 @@ Assembler
 
     * Labels/symbolic representation for memory addresses
 
-        * For example, memory addresses could be labelled
+        * For example, memory addresses could be labelled and referenced by their label
         * This would make referencing memory addresses for jumps and loading from RAM easier
         * Removes the need to remember specific memory addresses
         * Also removes the need to constantly update addresses when lines are added/removed to RAM
 
 
-* An assembler would take the assembly language and translate it, or *assemble* it to the corresponding machine code
+* An assembler would take the assembly language and translate it, or *assemble* it, to the corresponding machine code
 
     * It would replace the mnemonics with their opcode bit patterns and translate literals to their binary/hex values
     * It would replace all labels within the assembly with their corresponding memory addresses
 
 
 * Typically, each statement in assembly has a 1-to-1 mapping to a statement in machine code
-
-
-
 * Despite its simplicity, it improves the programming experience and allows for a small amount of abstraction
 
 
 
 
 
-
-
-
-
-Many features, but 2 big ones are
-    nmonics
-    labels
-
-
-Still limted though
-
-
-* An assembler is a tool used to translate, or *assemble* assembly language to machine code
-* Kinda like compilers for high level programming languages
 
 
 The ESAP Assembler
