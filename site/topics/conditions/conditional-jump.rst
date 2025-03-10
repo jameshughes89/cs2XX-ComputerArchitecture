@@ -39,7 +39,7 @@ Programming with Conditional Jumps
         * If the result is negative (the most significant bit is high), the value must be ``< 10``
 
 
-    * If the result is negative, jump to a a part of RAM that outputs ``1``
+    * If the result is negative, jump to a part of RAM that outputs ``1``
 
         * ``JMPS``
 
