@@ -23,6 +23,19 @@ Including the Flag Register in the System
 Programming with Conditional Jumps
 ==================================
 
+Go back to example before
+    from previous topic
+
+Check if a value is less than 10
+show program
+this is more of a branch idea
+
+
+now we can do like a while loop
+Count to 10
+
+
+
 
 
 For Next Time
