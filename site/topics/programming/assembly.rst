@@ -28,6 +28,28 @@ Assembler
 The ESAP Assembler
 ==================
 
+what we do
+    only labels
+
+
+we will use the labels already discussed
+    SHOW THEM
+
+Will also nicely handel literals to read as hex, decimal, binary, and negative numbers
+simple error checking too
+
+
+It relaly is a simple program
+
+show program in bits
+
+    constants
+    functions?
+
+    error checking
+    loading and error checking 
+    while thing
+
 
 
 For Next Time
