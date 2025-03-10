@@ -58,7 +58,8 @@ Programming with Conditional Jumps
     :emphasize-lines: 5
 
 
-* To make this more human readable, the program is
+* Unfortunately, the machine code in hex format is hard to interpret
+* To make this more human readable, the program can be explained as follows
 
     0. Load the value from address 15 to register A
     1. Load the value 10 to register B
@@ -76,15 +77,6 @@ Programming with Conditional Jumps
     13. 0
     14. 1
     15. Number to check
-
-
-
-
-
-now we can do like a while loop
-Count to 10
-
-
 
 
 
