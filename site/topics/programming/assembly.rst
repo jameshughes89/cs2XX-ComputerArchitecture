@@ -61,9 +61,14 @@ Assembler
 * Typically, each statement in assembly has a 1-to-1 mapping to a statement in machine code
 * Despite its simplicity, it improves the programming experience and allows for a small amount of abstraction
 
+.. figure:: assembly_to_machine_code.png
+    :width: 500 px
+    :align: center
 
-
-
+    An assembler is a tool used to translate assembly language to machine code. The left hand side shows an example of
+    some assembly language making use of mnemonics. The right hand side shows the hex representation of corresponding
+    machine code. The assembler takes the assembly language and "assembles" it to the machine code. Here, each
+    instruction has a 1-to-1 mapping between assembly and machine code.
 
 
 
