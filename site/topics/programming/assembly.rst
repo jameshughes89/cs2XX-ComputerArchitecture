@@ -122,9 +122,9 @@ The ESAP Assembler
       - Halt
 
 
-* The assembler will abel be able to translate literal from various bases
+* The assembler will translate literal values from various bases
 
-    * For example, the programmer could write ```0b1010``, ``10``, or ``0xA`` to mean ten
+    * For example, the programmer could write ``0b1010``, ``10``, or ``0xA`` to mean ten
     * Although they all mean the same thing, one encoding may make more sense for the programmer in some context
 
         * Remember, code is for humans, machine code is for machines
@@ -153,10 +153,11 @@ The ESAP Assembler
 * A series of constants are used to simplify the code
 
     * A constant dictionary will be used for the mnemonic translation
-    * Another constant set will keep track of which instruction requires an operand
+    * Another constant will keep track of which instruction requires an operand
     * Instruction syntax will be checked with a constant containing regex expressions
 
         * One expression for each instruction
+        * The assembler will check if a given assembly language line matches any of the valid syntax
 
 
 .. literalinclude:: assembler.py
@@ -175,7 +176,9 @@ The ESAP Assembler
     :pyobject: parse_number
 
 
-* The function ``parse_number`` interprets a string representing something can evaluates to a number to the number
+* The function ``parse_number`` interprets a string representing something that can evaluate to a number
+
+    * The function returns an integer representation of the string
 
 
 .. literalinclude:: assembler.py
@@ -251,7 +254,7 @@ The ESAP Assembler
         * This will be discussed in more detail in the next topic
 
 
-* The main loop of the assembler processes one instruction at a time from the ``program_list`` variable
+* The main loop of the assembler processes one instruction at a time
 
 .. literalinclude:: assembler.py
     :language: python
