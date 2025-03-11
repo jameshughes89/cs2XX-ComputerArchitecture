@@ -99,15 +99,15 @@ The ESAP Assembler
     * - ``1010``
       - ``A``
       - ``JMPZ``
-      - Jump Zero
+      - Jump if Zero Flag Set
     * - ``1011``
       - ``B``
       - ``JMPS``
-      - Jump Significant/Sign
+      - Jump if Significant/Sign Flag Set
     * - ``1100``
       - ``C``
       - ``JMPC``
-      - Jump Carry
+      - Jump if Carry Flag Set
     * - ``1101``
       - ``D``
       - ``OUTU``
@@ -219,13 +219,66 @@ The ESAP Assembler
     * It checks that it matches one of the regular expressions defining each instruction's valid syntax
 
 
+* The main part of the script uses the above constants and functions
+
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-command_line_args]
+    :end-before: # [end-command_line_args]
 
 
+* The assembler takes one or two command line arguments
+
+    * One argument specifies the name of the file containing the assembly code to assemble
+    * The second argument, which is optional, specifies the name of the file to write the machine code to
+    * This portion of the script verifies the a correct number of arguments are provided to the script
 
 
-error checking
-loading and error checking
-while thing
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-read_assembly_file]
+    :end-before: # [end-read_assembly_file]
+
+
+* The assembler reads the assembly language code and verifies that it fits within RAM
+
+    * It verifies that it is no more than 16 lines long
+    * The assembler ignores blank lines
+
+        * This means one must be careful not to assume that line number is the same as RAM address
+        * This will be discussed in more detail in the next topic
+
+
+* The main loop of the assembler processes one instruction at a time from the ``program_list`` variable
+
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-process_each_instruction]
+    :end-before: # [end-process_each_instruction]
+
+
+* The main loop verifies the line and processes it as an instruction or data accordingly
+
+    * If it's an instruction, it processes the operand if necessary too
+
+
+* Finally, the assembler saves the assembled code to a file
+
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-save_to_file]
+    :end-before: # [end-save_to_file]
+
+
+* Using the assembler is then a matter of running the script with the proper command line arguments
+
+    * For example, ``python assembler.py to_assemble.esap assembled.hex``
+    * The file extension ``.esap`` is not necessary for the assembly language file
+    * If the second argument is not set, the file is saved to ``a.hex`` by default
 
 
 
