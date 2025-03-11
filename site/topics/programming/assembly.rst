@@ -144,17 +144,88 @@ The ESAP Assembler
     * Values within range
 
 
+* Since an assembler is a program, a Python script can serve as the ESAP assembler
+* Below, a script created for the ESAP system's assembler is discussed
 
-It relaly is a simple program
+    * This script is by no means the only way one could write an assembler
 
-show program in bits
 
-    constants
-    functions?
+* A series of constants are used to simplify the code
 
-    error checking
-    loading and error checking 
-    while thing
+    * A constant dictionary will be used for the mnemonic translation
+    * Another constant set will keep track of which instruction requires an operand
+    * Instruction syntax will be checked with a constant containing regex expressions
+
+        * One expression for each instruction
+
+
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-constants]
+    :end-before: # [end-constants]
+
+
+* Helper functions are also included that will make the assembly loop easier to implement
+
+
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :pyobject: parse_number
+
+
+* The function ``parse_number`` interprets a string representing something can evaluates to a number to the number
+
+
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :pyobject: verify_number_and_fix_negative
+
+
+* ``verify_number_and_fix_negative`` does two things
+
+    * It verifies that a number can be represented with some specific number of bits
+
+        * For example, if the number is data, it must fit in 8 bits
+        * If the number is an operand, it must fit in 4 bits
+
+
+    * This function also converts negative numbers to the integer representing the signed two's complement number
+
+        * This is necessary as Python has a peculiarity when it comes to signed integers
+        * Python stores signed integers as unsigned integers with a sign flag
+
+            * It does not store the signed integers as two's complement numbers
+
+
+        * For example ``-7`` would be stored as ``0b0111`` with a sign flag
+        * However, the two's complement number for ``-7`` is ``0b1001``, which is what the ESAP system expects
+        * This function would convert ``-7`` to the number representing the correct two's complement bit pattern
+        * In this case, it would return the integer ``9``, which corresponds to the bit pattern ``0b1001``
+        * Here, the value ``9`` is not important, but the underlying bit pattern for ``9`` is important
+
+
+
+.. literalinclude:: assembler.py
+    :language: python
+    :lineno-match:
+    :pyobject: verify_syntax_return_string
+
+
+* The function ``verify_syntax_return_string`` checks that a given instruction is valid syntax
+
+    * It checks that it matches one of the regular expressions defining each instruction's valid syntax
+
+
+
+
+
+
+error checking
+loading and error checking
+while thing
 
 
 
