@@ -101,6 +101,8 @@ Part 2 --- ALU
 Part 3 --- Comparator
 =====================
 
+For these questions, do not use the built in comparator component.
+
 #. Create a circuit that can perform a specific comparison of two inputs
 
     * Use the provided file titled "3-comparator.dig"
@@ -121,12 +123,12 @@ Part 3 --- Comparator
 
         * ``000`` --- Always output ``0``
         * ``001`` --- ``a == b``
-        * ``010`` --- ``a > b``
-        * ``011`` --- ``a >= b``
+        * ``010`` --- ``a < b``
+        * ``011`` --- ``a <= b``
         * ``100`` --- Always output ``1``
         * ``101`` --- ``a != b``
-        * ``110`` --- ``a <= b``
-        * ``111`` --- ``a < b``
+        * ``110`` --- ``a >= b``
+        * ``111`` --- ``a > b``
 
 
     * The three 1 bit inputs specify the operator in the above order
