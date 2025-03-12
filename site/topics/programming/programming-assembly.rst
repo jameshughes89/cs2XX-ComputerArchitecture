@@ -10,9 +10,26 @@ Programming with Assembly
 Revisiting Problems
 ===================
 
+* Consider the problems already solved with machine code hex files
+* Instead of writing machine code, the assembler allows one to write in the assembly language
+
+    * The mnemonics can be used, making programming easier and making the program much easier to understand
+
+
+* The assembly language is then assembled, with the assembler, to the machine code
+* This machine code can then be loaded into the ESAP system for execution
+
 
 Arithmetic
 ----------
+
+* Consider the problem of outputting the result of the calculations ``31 + 32`` and ``31 - 32``
+
+    * This problem was already discussed in the machine code topic
+
+
+
+
 
 
 Counting
