@@ -87,9 +87,66 @@ Arithmetic
 Counting
 --------
 
+* Below is the program to count by ones forever
+
+    * Like the above arithmetic problem, this was already discussed in the machine code topic
+
+
+    .. list-table:: Counting Forever Program
+        :header-rows: 1
+        :align: center
+
+        * - Assembly
+          - Machine Code
+
+        * - .. literalinclude:: counting_forever.esap
+                :language: text
+                :lineno-match:
+
+          - .. literalinclude:: counting_forever.hex
+                :language: text
+                :lineno-match:
+
+
 
 Check 10
 --------
+
+* Below is the program to check if a number is ``< 10``
+
+    * This was discussed in the conditions and conditional jump topics
+
+
+    .. list-table:: Check ``< 10`` Program
+        :header-rows: 1
+        :align: center
+
+        * - Assembly
+          - Machine Code
+
+        * - .. literalinclude:: check_10.esap
+                :language: text
+                :lineno-match:
+
+          - .. literalinclude:: check_10.hex
+                :language: text
+                :lineno-match:
+
+
+* In the above program, like before, the value to check is stored in address ``0xF``
+
+    * To check if a different value is less than 10, one would have to alter the code
+
+
+* Here, addresses ``0xD`` and ``0xE`` store the value to be output based on if the value is less than 10 or not
+
+    * Storing the value ``0`` is not strictly necessary here for several reasons, but it does help with intentionality
+
+        * It's not needed because the ESAP system in Digital starts with a ``0`` in the output register
+        * Further, the ``NOOP``\s are ``0``, so any of those addresses could be used
+
+
+* Again, ``NOOP``\s are included to allow separation of the instructions and data
 
 
 
