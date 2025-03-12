@@ -33,12 +33,27 @@ loop, but branching
 
 Below is the code
 
-CODE
+    .. list-table:: Count to 10
+        :header-rows: 1
+        :align: center
+
+        * - Assembly
+          - Machine Code
+
+        * - .. literalinclude:: counting_10.esap
+                :language: text
+                :lineno-match:
+
+          - .. literalinclude:: counting_10.hex
+                :language: text
+                :lineno-match:
+
+
 
 here, the jump S is used to loop
 notice the storing of the value before doing sub 10
 
-When running, it will appear that it counts 0 -- 10, but only because output reg starts at 0 
+When running, it will appear that it counts 0 -- 10, but only because output reg starts at 0
 
 
 
