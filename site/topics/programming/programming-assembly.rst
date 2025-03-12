@@ -62,11 +62,21 @@ Count to 10
                 :lineno-match:
 
 
+* Notice how the count value must be preserved before the subtraction can happen
+* Here, the ``JMPS`` instruction is used like a kind of while loop
 
-here, the jump S is used to loop
-notice the storing of the value before doing sub 10
+    * While the count is less than 10, jump
 
-When running, it will appear that it counts 0 -- 10, but only because output reg starts at 0
+
+* Note that, when running the program, it will appear to count ``0`` -- ``10``
+
+    * This is due to the simulator and how the output register starts with a ``0``
+
+
+* Additionally, the starting instructions of ``LDAD 0`` and ``SAVA 0xF`` could have been excluded
+
+    * The simulator initializes RAM with ``0``\s
+    * However, having clear and intentional code is preferred
 
 
 
