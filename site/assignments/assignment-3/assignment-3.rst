@@ -65,7 +65,7 @@ Part 1 --- Registers
 Part 2 --- ALU
 ==============
 
-#. Create an alu capable of performing 8 unique operations
+#. Create an ALU capable of performing 8 unique operations
 
     * Use the provided file titled "2-alu.dig"
     * This circuit has one eight bit output
@@ -86,9 +86,9 @@ Part 2 --- ALU
 
 
         * ``NOT`` A --- :math:`f(A, B) = \lnot A`
-        * Or --- :math:`f(A, B) = A \lor B`
-        * And --- :math:`f(A, B) = A \land B`
-        * Exclusive or --- :math:`f(A, B) = A \oplus B`
+        * ``OR`` --- :math:`f(A, B) = A \lor B`
+        * ``AND`` --- :math:`f(A, B) = A \land B`
+        * ``XOR`` --- :math:`f(A, B) = A \oplus B`
         * Addition --- :math:`f(A, B) = A + B`
         * Subtraction --- :math:`f(A, B) = A - B`
 
@@ -100,6 +100,8 @@ Part 2 --- ALU
 
 Part 3 --- Comparator
 =====================
+
+For these questions, do not use the built in comparator component.
 
 #. Create a circuit that can perform a specific comparison of two inputs
 
@@ -121,12 +123,12 @@ Part 3 --- Comparator
 
         * ``000`` --- Always output ``0``
         * ``001`` --- ``a == b``
-        * ``010`` --- ``a > b``
-        * ``011`` --- ``a >= b``
+        * ``010`` --- ``a < b``
+        * ``011`` --- ``a <= b``
         * ``100`` --- Always output ``1``
         * ``101`` --- ``a != b``
-        * ``110`` --- ``a <= b``
-        * ``111`` --- ``a < b``
+        * ``110`` --- ``a >= b``
+        * ``111`` --- ``a > b``
 
 
     * The three 1 bit inputs specify the operator in the above order
