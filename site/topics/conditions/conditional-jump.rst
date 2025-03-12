@@ -185,6 +185,135 @@ Enabling Flag Register
 Including the Flag Register in the System
 =========================================
 
+* Physically including the status logic and the flags register is a matter of connecting it to the existing system
+
+* Connect the output of the ALU to the input of the condition status logic
+* Replace the old control logic look up table design with the new one
+
+    * The 3 output from the flags register are connected to the inputs to the look up table
+    * The 1 new output from the look up table connects to the status flag register's enable
+
+
+* Notice the cycle --- the flags register controls the control logic, which controls the flags register
+
+.. figure:: esap_alu_ram_output_pc_instruction_control_flag.png
+    :width: 666 px
+    :align: center
+
+    Configuration of the ESAP system with the status condition logic and the flags register included. The ESAP system is
+    now computationally complete.
+
+
+Updating the Look Up Table Contents
+-----------------------------------
+
+* The contents of the look up table needs to be updated to account for the changes
+
+    * Three new commands for the three different conditional jumps
+    * Three new status signals serving as inputs to the look up table
+    * An additional output signal from the look up table
+
+
+* A modified version of the script used before to generate the hex file for the look up table is used
+
+* Like before, below are constants specifying the position of the control signal's bit
+
+    * Here, there are a total of 18 bits, which is one more than before
+    * This corresponds to the control signal for the status flag register enable
+
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :emphasize-lines: 5
+    :start-after: # [begin-control_signal_pattern_constants]
+    :end-before: # [end-control_signal_pattern_constants]
+
+
+* Since the jump instructions are special, their operator bit patterns will be made constants
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :start-after: # [begin-conditional_jump_opcodes]
+    :end-before: # [end-conditional_jump_opcodes]
+
+
+* Similar to before, the microcode instructions are stored in a list
+* The specific microcodes for each instruction are created with bitwise OR on the control signal constants
+
+* The difference here versus before is
+
+    * The inclusion of the ``FLG`` signal on the addition and subtraction instructions
+    * The labelling of ``JMPZ``, ``JMPS``, and ``JMPC`` instructions
+
+        * Notice that they are still effectively ``NOOP`` instructions here
+        * This will be their *default* behaviors
+        * Only under the special conditions do they act like jump instructions
+
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :emphasize-lines: 9-10, 12-14
+    :start-after: # [begin-instruction_microcodes]
+    :end-before: # [end-instruction_microcodes]
+
+
+* The above 16 instructions are how the instructions should work when none of the status flags are high
+* However, the conditional jumps need to work differently depending on the status flag signals
+
+* As discussed, each row/individual microcode is accessed by some input patter in the look up table
+* With this new design, the 3 most significant bits correspond to the status flag signals
+
+    * ``CSZ|XXXX|YY``
+    * ``Flags|Instruction|Step``
+
+
+* The above list of 16 instructions and microcodes correspond to the first set of 16, when no status signals are high
+
+    * ``000|XXXX|YY``
+
+
+* The pattern of 16 instructions and microcodes will be repeated 8 times
+
+    * Once for each combination of the status signals being high
+    * ``000`` --- No flags
+    * ``001`` --- Zero flag set
+    * ``010`` --- Significant/sign flag set
+    * ``011`` --- Significant/sign and zero flags set
+    * ``100`` --- Carry flag set
+    * ``101`` --- Carry and zero flags set
+    * ``101`` --- Carry and significant/sign flags set
+    * ``111`` --- Carry, significant/sign, and zero flags set
+
+
+* For each of the 8 groupings, the conditional jumps will act as a jump when the respective status signal is high
+
+    * Otherwise, it acts as a ``NOOP``
+
+
+.. literalinclude:: create_control_logic_with_flag_patterns_for_look_up_table.py
+    :language: python
+    :lineno-match:
+    :emphasize-lines: 5-7
+    :start-after: # [begin-save_to_file]
+    :end-before: # [end-save_to_file]
+
+
+* This checks if the current instruction is a conditional jump and if the corresponding status flag is high
+
+    * When this is the case, act as a jump instruction
+    * Otherwise, use the default behaviour
+
+
+* This script would generate the new contents for the control logic's look up table
+
+    * This hex file is to be loaded into the system's new look up table
+
+
+* With this updated control logic, the system now has the ability to branch on conditions
+
 
 
 Programming with Conditional Jumps
