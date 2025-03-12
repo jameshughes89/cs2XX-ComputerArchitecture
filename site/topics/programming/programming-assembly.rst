@@ -26,7 +26,7 @@ Count to 10
     * The tedium of machine code only makes solving complex problems that much more difficult
 
 
-* Since an assembler exists for the ESAP system, consider the more complex problem of counting to 10
+* Consider the more complex problem of counting to 10
 
     * Output the numbers ``1`` to ``10``
     * This may sound simple, but it is challenging when programming at such a low level
@@ -36,12 +36,12 @@ Count to 10
 
     * Counting forever
 
-        * Required looping
+        * requires looping
 
 
     * Checking if a value is less than 10
 
-        * Required branching
+        * requires branching
 
 
 * Below is the assembly and corresponding machine code for a solution to this problem
