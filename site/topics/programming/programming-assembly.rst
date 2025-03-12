@@ -20,18 +20,31 @@ Counting Program
 Count to 10
 ===========
 
-cleary assembler makes it easier
-juggling the complexity of machine code and complex problems is hard
-with the assembler, now it's much easier
-consider a more vomplex problem combining some of the above ideas
-count to 10, then stop
+* With the use of the assembler, the programs are easier to write and understand
+* This is important as solving complex problems is challenging enough as is
 
-    1 -- 10
+    * The tedium of machine code only makes solving complex problems that much more difficult
 
 
-loop, but branching
+* Since an assembler exists for the ESAP system, consider the more complex problem of counting to 10
 
-Below is the code
+    * Output the numbers ``1`` to ``10``
+    * This may sound simple, but it is challenging when programming at such a low level
+
+
+* This problem combines two of the previous problems
+
+    * Counting forever
+
+        * Required looping
+
+
+    * Checking if a value is less than 10
+
+        * Required branching
+
+
+* Below is the assembly and corresponding machine code for a solution to this problem
 
     .. list-table:: Count to 10
         :header-rows: 1
