@@ -357,22 +357,25 @@ Programming with Conditional Jumps
 * Unfortunately, the machine code in hex format is hard to interpret
 * To make this more human readable, the program can be explained as follows
 
-    0. Load the value from address 15 to register A
-    1. Load the value 10 to register B
-    2. Calculate the difference
-    3. Jump to address 6 if the significant bit/sign flag is high
-    4. Output the contents of register 13
-    5. Halt
-    6. Output the contents of register 14
-    7. Halt
-    8. ``NOOP``
-    9. ``NOOP``
-    10. ``NOOP``
-    11. ``NOOP``
-    12. ``NOOP``
-    13. 0
-    14. 1
-    15. Number to check
+    .. code-block:: text
+        :linenos:
+
+        Load the value from address 15 to register A
+        Load the value 10 to register B
+        Calculate the difference
+        Jump to address 6 if the significant bit/sign flag is high
+        Output the contents of register 13
+        Halt
+        Output the contents of register 14
+        Halt
+        NOOP
+        NOOP
+        NOOP
+        NOOP
+        NOOP
+        0
+        1
+        Number to check
 
 
 
