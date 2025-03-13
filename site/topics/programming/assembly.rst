@@ -26,6 +26,7 @@ Assembler
 
     * Often referred to as *assembly*
     * Assembly is strongly tied to a specific system design, the underlying hardware, and its machine language
+    * For example, consider the `instruction set for ARM processors <https://azeria-labs.com/arm-instruction-set-part-3/>`_
 
 
 * An assembler is a tool to convert assembly language to machine code
