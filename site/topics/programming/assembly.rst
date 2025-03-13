@@ -22,12 +22,13 @@ Assembly Language
 Assembler
 =========
 
-* An assembler is a tool to convert assembly language to machine code
 * An assembly language is a very low level programming language
 
     * Often referred to as *assembly*
     * Assembly is strongly tied to a specific system design, the underlying hardware, and its machine language
 
+
+* An assembler is a tool to convert assembly language to machine code
 
 * When compared to machine code, it enables a more human centric way of programming the system
 
