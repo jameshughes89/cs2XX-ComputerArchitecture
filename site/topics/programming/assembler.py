@@ -36,9 +36,9 @@ HAS_OPERAND = {
 VALID_SYNTAX = {
     r"NOOP",
     r"LDAR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDAD\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDAD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"LDBR\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
-    r"LDBD\s+-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
+    r"LDBD\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"SAVA\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"SAVB\s+\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
     r"ADAB",
