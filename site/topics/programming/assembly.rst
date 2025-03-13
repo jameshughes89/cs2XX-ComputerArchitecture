@@ -149,7 +149,7 @@ The ESAP Assembler
 
     * This script is by no means the only way one could write an assembler
     * Its presentation serves to show the simplicity of such an assembler
-
+    * It facilitates the additional layer of abstraction 
 
 
 * A series of constants are used to simplify the code
