@@ -148,17 +148,11 @@ The ESAP Assembler
 * Below, a script created for the ESAP system's assembler is discussed
 
     * This script is by no means the only way one could write an assembler
+    * Its presentation serves to show the simplicity of such an assembler
+
 
 
 * A series of constants are used to simplify the code
-
-    * A constant dictionary will be used for the mnemonic translation
-    * Another constant will keep track of which instruction requires an operand
-    * Instruction syntax will be checked with a constant containing regex expressions
-
-        * One expression for each instruction
-        * The assembler will check if a given assembly language line matches any of the valid syntax
-
 
 .. literalinclude:: assembler.py
     :language: python
@@ -174,11 +168,6 @@ The ESAP Assembler
     :language: python
     :lineno-match:
     :pyobject: parse_number
-
-
-* The function ``parse_number`` interprets a string representing something that can evaluate to a number
-
-    * The function returns an integer representation of the string
 
 
 .. literalinclude:: assembler.py
@@ -217,10 +206,6 @@ The ESAP Assembler
     :pyobject: verify_syntax_return_string
 
 
-* The function ``verify_syntax_return_string`` checks that a given instruction is valid syntax
-
-    * It checks that it matches one of the regular expressions defining each instruction's valid syntax
-
 
 * The main part of the script uses the above constants and functions
 
@@ -246,13 +231,6 @@ The ESAP Assembler
 
 
 * The assembler reads the assembly language code and verifies that it fits within RAM
-
-    * It verifies that it is no more than 16 lines long
-    * The assembler ignores blank lines
-
-        * This means one must be careful not to assume that line number is the same as RAM address
-        * This will be discussed in more detail in the next topic
-
 
 * The main loop of the assembler processes one instruction at a time
 
