@@ -153,11 +153,6 @@ Check 10
 Count to 10
 ===========
 
-
-
-Count to 10
-===========
-
 * With the use of the assembler, the programs are easier to write and understand
 * This is important as solving complex problems is challenging enough as is
 
