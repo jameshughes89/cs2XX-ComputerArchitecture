@@ -61,7 +61,11 @@ Currently there is no way to actually load data into the system.
 
 #. Add a new mode/instruction such that data can be loaded into a specific register
 
-    * Currently 1 bit is used to specify ALU or comparator operations, or *modes*
+    * Currently 1 bit is used to specify ALU or comparator operations
+
+        * These can be thought of as *modes*
+
+
     * Add an additional bit to allow for selecting between up to 4 modes
 
         * 2 mode bits
