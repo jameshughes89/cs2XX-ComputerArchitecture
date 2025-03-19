@@ -319,6 +319,64 @@ Updating the Look Up Table Contents
 Programming with Conditional Jumps
 ==================================
 
+* With this new functionality, conditional jumps, branching can now be achieved
+
+
+* Consider the problem discussed before
+
+    * Given some number, output ``1`` if it is less than ``10``, otherwise, output ``0``
+
+
+* This problem can be solved with the following general idea
+
+    * Load value into register A
+    * Subtract ``10`` from the value
+
+        * If the result is negative (the most significant bit is high), the value must be ``< 10``
+
+
+    * If the result is negative, jump to a part of RAM that outputs ``1``
+
+        * ``JMPS``
+
+
+    * If the result is not negative, output ``0``
+
+
+* Below is the ESAP system's machine code for the above idea
+
+    * The emphasized line contains the conditional jump for the significant bit/sign flag
+    * Here, the value in RAM address 15 is the number to check
+
+.. literalinclude:: check_10.hex
+    :language: text
+    :lineno-match:
+    :emphasize-lines: 5
+
+
+* Unfortunately, the machine code in hex format is hard to interpret
+* To make this more human readable, the program can be explained as follows
+
+.. code-block:: text
+    :linenos:
+
+    Load the value from address 15 to register A
+    Load the value 10 to register B
+    Calculate the difference
+    Jump to address 6 if the significant bit/sign flag is high
+    Output the contents of register 13
+    Halt
+    Output the contents of register 14
+    Halt
+    NOOP
+    NOOP
+    NOOP
+    NOOP
+    NOOP
+    0
+    1
+    Number to check
+
 
 
 For Next Time

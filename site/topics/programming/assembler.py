@@ -1,6 +1,7 @@
 import re
 import sys
 
+# [begin-constants]
 OPERATORS = {
     "NOOP": 0b0000,
     "LDAR": 0b0001,
@@ -52,6 +53,7 @@ VALID_SYNTAX = {
     r"HALT",
     r"^-?\b(0x[0-9a-fA-F]+|0b[0-1]+|[0-9]+)\b",
 }
+# [end-constants]
 
 def parse_number(number_string:str) -> int:
     """
@@ -108,7 +110,7 @@ def verify_syntax_return_string(program_line):
             return syntax_match[0]
     raise ValueError(f"Invalid operator and/or operand {program_line}")
 
-
+# [begin-command_line_args]
 if len(sys.argv) < 2 or len(sys.argv) > 3:
     raise ValueError(f"Assembler takes 1 or 2 argument(s), {len(sys.argv) - 1} given\n"
                      f"\tUsage: assembler.py input.as [out.hex]\n"
@@ -117,13 +119,17 @@ if len(sys.argv) < 2 or len(sys.argv) > 3:
 
 file_to_assemble = sys.argv[1]
 file_to_output = sys.argv[2] if len(sys.argv) == 3 else "a.hex"
+# [end-command_line_args]
 
+# [begin-read_assembly_file]
 with open(file_to_assemble) as file:
     program_list = [line.strip() for line in file.readlines() if line.strip()]
 
 if len(program_list) > 16:
     raise ValueError(f"Program length of {len(program_list)} exceeds maximum size of 16 bytes")
+# [end-read_assembly_file]
 
+# [begin-process_each_instruction]
 machine_code = []
 for i, raw_program_line in enumerate(program_list):
     verified_program_line = verify_syntax_return_string(raw_program_line)
@@ -140,7 +146,10 @@ for i, raw_program_line in enumerate(program_list):
         machine_code_line = parse_number(line[0])
         machine_code_line = verify_number_and_fix_negative(machine_code_line, 8)
     machine_code.append(machine_code_line)
+# [end-process_each_instruction]
 
+# [begin-save_to_file]
 with open(file_to_output, "w") as hex_file:
     hex_file.write("v2.0 raw\n")
     hex_file.writelines([f"0x{code:02x}\n" for code in machine_code])
+# [end-save_to_file]

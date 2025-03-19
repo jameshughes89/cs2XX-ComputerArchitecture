@@ -158,7 +158,7 @@ Microcodes
 
 
 * These two steps put together achieve the instruction of loading data from a specific RAM address into register A
-* The steps individual steps are called *microcodes*
+* The individual steps are called *microcodes*
 * Each of these microcodes took one clock cycle
 
 * Most instructions are made up of several microcodes
