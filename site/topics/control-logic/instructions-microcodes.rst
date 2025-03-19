@@ -534,6 +534,34 @@ The 13 Instructions
         * Output the operand (data) from the instruction register and put it into register A
 
 
+    .. warning::
+
+        This load *direct* instruction has a limitation caused by the underlying hardware --- only positive integers can
+        be loaded directly to the register.
+
+        .. figure:: instruction_register_operand_padded_zeros.png
+            :width: 333 px
+            :align: center
+
+            Since each operand is only 4 bits wide, but the data bus is expecting 8 bits, the 4 most significant bits
+            are padded with zeros.
+
+
+        Consider the 8 bit number ``0b11111111``. Although this number may be ``255`` or ``-1``, depending on if it is
+        a signed integer, adding ``0b00000001`` to this number results in ``0b1_00000000`` regardless. This number is
+        ``256``, but because only 8 bits can be represented and the overflow carry bit is ignored, the number is
+        ultimately truncated to ``0``.
+
+        However, consider the 4 bit number ``0b1111``, which may be ``15`` or ``-1``. The programmer may intend for this
+        bit pattern to mean ``-1``, but the operand for the load direct instructions are only four bits wide and are
+        padded with zeros, thus this bit pattern would become ``0b00001111`` when it is added to the register. This 8
+        bit number, signed or not, is ``15`` and adding ``1`` to this number results in ``0b00010000``.
+
+        One may try to address this issue with hardware and additional logic, but one must ask --- is this additional
+        complexity worth it? 
+
+
+
 * ``0011`` --- ``LDBR``
 
     * Load data into register B from some specified RAM address
