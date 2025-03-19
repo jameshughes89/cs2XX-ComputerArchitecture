@@ -65,13 +65,12 @@ Currently there is no way to actually load data into the system.
     * Add an additional bit to allow for selecting between up to 4 modes
 
         * 2 mode bits
-
         * 3 bits that served as selecting a specific operation
         * Two sets of 3 bits for specifying 2 source registers
         * 3 bits for a destination register
 
 
-    * Design the system such that one of these 4 modes allows for loading data directly to a register
+    * Update the system such that one of these 4 modes allows for loading data directly to a register
 
         * The 3 destination register bits specify where the data is to be stored
         * 8 bits of the 9 available for the operator and 3 source registers specify the 8 bit data
@@ -82,3 +81,10 @@ Currently there is no way to actually load data into the system.
         * ``00 110 101 010 111`` --- ``add`` on registers 5 and 2 and store in 7
         * ``01 110 101 010 111`` --- ``>=`` on registers 5 and 2 and store in 7
         * ``10 1 10101010 111`` --- Store ``0b10101010`` (``170``) in register 7
+
+
+
+#. Add a new mode such that data can be moved between registers
+
+    * Here, only one set of 3 bits specifying the source register is required
+    * ``11 110 101 010 111`` --- Move contests of register 2 to register 7
