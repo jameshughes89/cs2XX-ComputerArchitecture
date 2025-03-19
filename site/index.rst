@@ -104,6 +104,7 @@ Office Hours
     labs/arithmetic-logic/arithmetic-logic
     labs/comparisons/comparisons
     labs/decoding-instructions/decoding-instructions
+    labs/decoding-instructions/decoding-instructions-registers
 
 
 
