@@ -88,7 +88,7 @@ Currently there is no way to actually load data into the system.
 
 
 
-#. Add a new forth mode such that data can be moved between registers
+#. Add a new forth mode such that data can be copy between registers
 
     * Here, only one set of 3 bits specifying the source register is required
-    * ``11 110 101 010 111`` --- Move contests of register 2 to register 7
+    * ``11 110 101 010 111`` --- Copy contests of register 2 to register 7
