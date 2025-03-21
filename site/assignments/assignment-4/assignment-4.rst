@@ -10,12 +10,11 @@ Assignment 4
 Provided Files
 ==============
 
-Incomplete Digital files are provided for the questions. These files contain tests, a resizable designated space for
-building circuits, and labelled inputs, outputs, and other components.
+Incomplete Digital, hex and esap files are provided for the questions.
 
 :download:`These files can be downloaded from here. <assignment_4-dig_files.zip>`
 
-Uncompress this folder and open the files within Digital. Each question specifies which of the file to work in.
+Uncompress this folder and open the files as necessary. Each question specifies which of the file to work in.
 
 
 
@@ -75,6 +74,7 @@ effectively takes up 2 RAM addresses. This may become problematic as the system 
 
 #. Using the new instructions, calculate and output the result of ``55 + 66``,  ``55 - 50``, and ``66 - 55``
 
+    * This must be done in a single program
     * Use the modified "4-ESAP.dig" file from the previous question for running the program
     * Write the machine code program in the provided "5-arithmetic_big.hex" file
 
@@ -112,14 +112,10 @@ When solving more complex problems, eliminating unnecessary difficulty helps imp
 
         * The numbers are evenly divisible (no remainder)
         * Only positive integers
-        * The answer will always be at least ``1`` (one would not ask ``0/5, for example``)
+        * The answer will always be at least ``1`` (one would not ask ``0/5``, for example)
 
 
     * Have the dividend and divisor be in addresses 14 and 15 respectively
-
-        * For example, for ``6/2``, ``6`` would be in address 14 and ``2`` would be in ``15``
-
-
     * For this question, use the provided "7-ESAP_conditions.dig" system for running the program
 
         * This solution will not make use of the modified ESAP systems from the previous questions
