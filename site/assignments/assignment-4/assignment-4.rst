@@ -64,83 +64,27 @@ Part 2 --- New Instructions
 Because outputting requires saving it to RAM before it can be displayed (``SAVA`` + ``OUTU``, for example), it
 effectively takes up 2 RAM addresses. This may become problematic as the system only has 16 Bytes of RAM.
 
-#. 
+#.
 
 
 
 
-Part 3 --- Comparator
-=====================
+Part 3 --- Eliminating Clock Cycles
+===================================
 
-For these questions, do not use the built in comparator component.
-
-#. Create a circuit that can perform a specific comparison of two inputs
-
-    * Use the provided file titled "3-comparator.dig"
-    * This circuit must use an 8 input/3 selector bit multiplexer
-    * This circuit has one 1 bit output
-
-        * Output should be ``1`` when the comparison condition is true, ``0`` when false
-
-
-    * This circuit has a total of 5 inputs
-
-        * One 8 bit input specifying A
-        * Another 8 bit input specifying B
-        * Three 1 bit inputs specifying a comparison operator
-
-
-    * The eight comparison operations are as follows
-
-        * ``000`` --- Always output ``0``
-        * ``001`` --- ``a == b``
-        * ``010`` --- ``a < b``
-        * ``011`` --- ``a <= b``
-        * ``100`` --- Always output ``1``
-        * ``101`` --- ``a != b``
-        * ``110`` --- ``a >= b``
-        * ``111`` --- ``a > b``
-
-
-    * The three 1 bit inputs specify the operator in the above order
-    * **Note:** ``000`` and ``100`` ignore the inputs
-
-
-#. Create another circuit that can perform a specific comparison of two inputs
-
-    * Use the provided file titled "4-comparator.dig"
-    * This question is the same as above, but with a constraint
-    * This circuit may not use an 8 input/3 selector bit multiplexer
-
-        * This circuit may use one 2 input/1 selector bit multiplexer
-        * **Hint:** Consider using ``AND`` gates as a way to activate/deactivate signals
+Currently, each instruction within the system always takes 4 microcode steps (clock cycles), even if the instruction
+only really needs 3. For example, consider that the ``LDAD`` instruction only needs the 2 fetch steps + 1 more step to
+output from the instruction register and input into the A register.
 
 
 
-Part 4 --- ALU from Registers
-=============================
 
-#. Create a circuit capable of applying ALU operators to data from specific registers, and save the result to a register
+Part 4 --- Assembly
+===================
 
-    * Use the provided file titled "5-alu_reg.dig"
-    * This circuit combines the core ideas from Parts 1 and 2 (not part 3)
-    * This circuit will have one 8 bit output serving as data out
-    * This circuit will have a total of 14 inputs
+Writing simple programs in machine code is arguably not too difficult, but remembering machine code is a tedious task.
+When solving more complex problems, eliminating unnecessary difficulty helps improve the progrmaming experience.
 
-        * A clock input
-        * One 8 bit input serving as the data in
-        * Three 1 bit inputs specifying the ALU operator to perform
-        * Three 1 bit inputs specifying the source register (or data in) for operand A
-        * Three 1 bit inputs specifying the source register (or data in) for operand B
-        * Three 1 bit inputs specifying the destination register (or data out) to send the result of the operation
-
-
-    * For example, consider the following operator, A, B, and destination bit patterns
-
-        * ``000`` ``111`` ``000`` ``000`` --- Data in as A, store A in register 0
-        * ``000`` ``111`` ``000`` ``001`` --- Data in as A, store A in register 1
-        * ``110`` ``000`` ``001`` ``110`` --- Register 0 as A, register 1 as B, store A + B in register 6
-        * ``000`` ``110`` ``000`` ``111`` --- Register 6 as A, put result in data out
 
 
 
