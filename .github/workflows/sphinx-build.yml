@@ -34,11 +34,13 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install .
-    - name: Compress Assignment Files
+    - name: Collect and Compress Assignment Files
       run: |
         zip -jr site/assignments/assignment-1/assignment_1-dig_files.zip site/assignments/assignment-1/assignment_1-dig_files
         zip -jr site/assignments/assignment-2/assignment_2-dig_files.zip site/assignments/assignment-2/assignment_2-dig_files
         zip -jr site/assignments/assignment-3/assignment_3-dig_files.zip site/assignments/assignment-3/assignment_3-dig_files
+        cp site/topics/programming/assembler.py site/assignments/assignment-4/assignment_4-dig_files/
+        zip -jr site/assignments/assignment-4/assignment_4-dig_files.zip site/assignments/assignment-4/assignment_4-dig_files
     - name: Sphinx Build
       run: |
         sphinx-build -b html site/ out/
