@@ -61,11 +61,21 @@ Part 1 --- Machine Code
 Part 2 --- New Instructions
 ===========================
 
-Because outputting requires saving it to RAM before it can be displayed (``SAVA`` + ``OUTU``, for example), it
-effectively takes up 2 RAM addresses. This may become problematic as the system only has 16 Bytes of RAM.
+Because outputting a value requires saving it to RAM before it can be displayed (``SAVA`` + ``OUTU``, for example), it
+effectively takes up 2 RAM addresses. This may become problematic as the system only has 16 bytes of RAM.
 
-#.
+#. Create two new instructions to output an unsigned or signed integer directly from the A register
 
+    * Have ``0b1011`` and ``0x1100`` be the instructions for an unsigned and signed integer respectively
+    * These instructions take no operand
+    * Modify the provided "4-patterns_new_output.py" file to generate the hex values for the control logic look up table
+    * Modify the contents of the look up table in the provided "4-ESAP.dig" file to add the new instructions
+
+
+#. Using the new instructions, calculate and output the result of ``55 + 66``,  ``55 - 50``, and ``66 - 55``
+
+    * Use the modified "4-ESAP.dig" file from the previous question for running the program
+    * Write the machine code program in the provided "5-arithmetic_big.hex" file
 
 
 
@@ -128,6 +138,8 @@ What to Submit to Moodle
 ========================
 
 * Submit your completed Digital (*.dig*) files to Moodle
+* Submit your completed hex files for the programs
+* Submit the hex files for modifying look up tables
 * Do **not** compress the files before uploading to Moodle
 
 
