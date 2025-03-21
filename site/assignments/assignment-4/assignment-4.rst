@@ -68,8 +68,9 @@ effectively takes up 2 RAM addresses. This may become problematic as the system 
 
     * Have ``0b1011`` and ``0x1100`` be the instructions for an unsigned and signed integer respectively
     * These instructions take no operand
-    * Modify the provided "4-patterns_new_output.py" file to generate the hex values for the control logic look up table
     * Modify the contents of the look up table in the provided "4-ESAP.dig" file to add the new instructions
+
+        * **Hint:** Use a script to generate the hex values for the control logic look up table
 
 
 #. Using the new instructions, calculate and output the result of ``55 + 66``,  ``55 - 50``, and ``66 - 55``
@@ -91,7 +92,10 @@ output from the instruction register and input into the A register.
     * For this question, do not include the new output instructions from the previous part
     * This question requires modifying the hardware of the ESAP system and the control logic look up table
     * Use and modify the provided "6-ESAP.dig" file
-    * Modify the provided "6-patterns_reset.py" file to generate the hex values for the control logic look up table
+
+        * Use a script to generate the hex values for the control logic look up table
+
+
     * Although there is an argument for leaving ``NOOP`` 4 clock cycles, make it take 3 here
 
 
