@@ -86,6 +86,13 @@ Currently, each instruction within the system always takes 4 microcode steps (cl
 only really needs 3. For example, consider that the ``LDAD`` instruction only needs the 2 fetch steps + 1 more step to
 output from the instruction register and input into the A register.
 
+#. Modify the ESAP design and instruction set such that instructions complete in 3 clock cycles, where possible
+
+    * For this question, do not include the new output instructions from the previous part
+    * This question requires modifying the hardware of the ESAP system and the control logic look up table
+    * Use and modify the provided "6-ESAP.dig" file
+    * Modify the provided "6-patterns_reset.py" file to generate the hex values for the control logic look up table
+    * Although there is an argument for leaving ``NOOP`` 4 clock cycles, make it take 3 here
 
 
 
@@ -139,6 +146,7 @@ What to Submit to Moodle
 
 * Submit your completed Digital (*.dig*) files to Moodle
 * Submit your completed hex files for the programs
+* Submit your completed esap file for the divide program
 * Submit the hex files for modifying look up tables
 * Do **not** compress the files before uploading to Moodle
 
