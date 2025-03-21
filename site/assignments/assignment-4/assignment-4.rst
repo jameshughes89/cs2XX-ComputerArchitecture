@@ -100,8 +100,30 @@ Part 4 --- Assembly
 ===================
 
 Writing simple programs in machine code is arguably not too difficult, but remembering machine code is a tedious task.
-When solving more complex problems, eliminating unnecessary difficulty helps improve the progrmaming experience.
+When solving more complex problems, eliminating unnecessary difficulty helps improve the programming experience.
 
+#. Write a program in the ESAP assembly language that can divide 2 numbers and output the result
+
+    * To simplify things, assume
+
+        * The numbers are evenly divisible (no remainder)
+        * Only positive integers
+        * The answer will always be at least ``1`` (one would not ask ``0/5, for example``)
+
+
+    * Have the dividend and divisor be in addresses 14 and 15 respectively
+
+        * For example, for ``6/2``, ``6`` would be in address 14 and ``2`` would be in ``15``
+
+
+    * For this question, use the provided "7-ESAP_conditions.dig" system for running the program
+
+        * This solution will not make use of the modified ESAP systems from the previous questions
+        * No new instructions or 3 microcode step instructions
+
+
+    * Write the assembly code program in the provided "7-divide.esap" file
+    * Use the provided "assembler.py" to assemble to machine code
 
 
 
@@ -144,10 +166,10 @@ Below is a list of both *quantitative* and *qualitative* things we will look for
 What to Submit to Moodle
 ========================
 
-* Submit your completed Digital (*.dig*) files to Moodle
-* Submit your completed hex files for the programs
-* Submit your completed esap file for the divide program
-* Submit the hex files for modifying look up tables
+* Submit your modified ESAP Digital (*.dig*) files to Moodle
+* Submit your completed hex files for the machine code programs
+* Submit your completed esap file for the divide assembly program
+* Submit the hex files for modifying the look up tables
 * Do **not** compress the files before uploading to Moodle
 
 
