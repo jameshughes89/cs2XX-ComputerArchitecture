@@ -105,7 +105,7 @@ Office Hours
     labs/comparisons/comparisons
     labs/decoding-instructions/decoding-instructions
     labs/decoding-instructions/decoding-instructions-registers
-    labs/esap/esap-and-or-not
+    labs/system-design/enhancing-designs
 
 
 
