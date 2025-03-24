@@ -18,7 +18,7 @@ Further, use the assembler
 
 
 
-Counting up and Down
+Counting Up and Down
 ====================
 
 #. Write an assembly program to count from 0 to 255, then from 255 to 0, on repeat
