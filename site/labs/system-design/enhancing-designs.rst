@@ -85,12 +85,3 @@ Enhancing the Previous Lab
 
     * Not all of the 16 bits will be needed when interfacing with the previous design
     * The program counter enable will likely need to be controlled carefully
-
-
-
-
-
-
-
-
-
