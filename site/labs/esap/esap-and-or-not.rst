@@ -66,9 +66,35 @@ For this part of the lab, use the script for generating the control logic patter
 
 
 
+Enhancing the Previous Lab
+==========================
+
+#. If not already completed, finish the design from the previous lab
 
 
+16 Bit Bus
+----------
 
+#. In a separate circuit, create a design for a 16 bit bus using
+
+    * RAM with an 8 bit address space and 8 bit addressability (:math:`265 \times 8` bits)
+    * A counter
+    * Two 8 bit instruction registers
+
+        * Even counter values retrieve data from even RAM addresses, and odd values retrieve from odd memory addresses
+        * Fetching from RAM takes 2 clock cycles
+        * One of the two 8 bit registers will always store bit patterns from the even or odd memory addresses
+        * The output from these two 8 bit registers make up the 16 bit bus
+
+
+#. Add this design to the larger design from the previous labs
+
+    * Include it in the design such that bit patterns can be written to RAM and executed automatically
+
+        * The bit patterns as discussed in previous labs
+
+
+    * Not all of the 16 bits will be needed when interfacing with the previous design
 
 
 
