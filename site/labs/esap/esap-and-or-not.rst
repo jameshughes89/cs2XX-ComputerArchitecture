@@ -1,6 +1,6 @@
-**************
-Enhancing ESAP
-**************
+*****************
+Enhancing Designs
+*****************
 
 * Feel free to use your laptop
 * You are strongly encourage to work with others
@@ -31,9 +31,9 @@ For this part of the lab, use the ESAP digital file
 
 #. Include the hardware for ``AND``, ``OR``, and ``NOT`` operations to the ESAP system
 
-    * These operators will work similar to addition to subtraction in how they work
-    * Apply the operator to the contents of the A and B registers, and store the result in the A register
+    * These operators will work similar to addition to subtraction in the existing design
 
+        * Apply the operator to the contents of the A and B registers, and store the result in the A register
         * ``NOT`` only works on the contents of the A register
 
 
@@ -87,7 +87,7 @@ Enhancing the Previous Lab
         * The output from these two 8 bit registers make up the 16 bit bus
 
 
-#. Add this design to the larger design from the previous labs
+#. Add this 16 bit bus to the design from the previous labs
 
     * Include it in the design such that bit patterns can be written to RAM and executed automatically
 
@@ -95,6 +95,7 @@ Enhancing the Previous Lab
 
 
     * Not all of the 16 bits will be needed when interfacing with the previous design
+    * The program counter enable will likely need to be controlled carefully
 
 
 
