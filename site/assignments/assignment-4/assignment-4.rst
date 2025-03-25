@@ -65,7 +65,7 @@ effectively takes up 2 RAM addresses. This may become problematic as the system 
 
 #. Create two new instructions to output an unsigned or signed integer directly from the A register
 
-    * Have ``0b1011`` and ``0x1100`` be the instructions for an unsigned and signed integer respectively
+    * Have ``0b1011`` and ``0b1100`` be the instructions for an unsigned and signed integer respectively
     * These instructions take no operand
     * Modify the contents of the look up table in the provided "4-ESAP.dig" file to add the new instructions
 
