@@ -213,14 +213,14 @@ Flags Register
     * Load ``5`` into B
     * Set the subtraction signal
 
-        * At this instant, the status flag signal for ``0`` should be high
+        * At this instant, the status flag signal :math:`Z_{flag}` should be ``1``
 
             * The overflow will also be high too, as a consequence of 2s compliment arithmetic
 
 
     * Put value from ALU into A
 
-        * At this instant, the status flag for ``0`` will be high
+        * At this instant, the status flag signal :math:`Z_{flag}` would change to ``0``
         * This is because the adder always calculates the sum/difference of the values in registers A and B
         * Therefore, since the ALU is outputting ``-5``, the zero flag is low, but the significant/sign flag is high
         * This second calculation was unintended and a consequence of the design of the system
