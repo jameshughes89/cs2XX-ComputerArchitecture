@@ -209,18 +209,18 @@ Flags Register
 
 * For example, consider the steps the system performs when calculating ``5 - 5``
 
-    * Load ``5``` into A
+    * Load ``5`` into A
     * Load ``5`` into B
     * Set the subtraction signal
 
-        * At this instant, the status flag signal for ``0`` should be high
+        * At this instant, the status flag signal :math:`Z_{flag}` should be ``1``
 
             * The overflow will also be high too, as a consequence of 2s compliment arithmetic
 
 
     * Put value from ALU into A
 
-        * At this instant, the status flag for ``0`` will be high
+        * At this instant, the status flag signal :math:`Z_{flag}` would change to ``0``
         * This is because the adder always calculates the sum/difference of the values in registers A and B
         * Therefore, since the ALU is outputting ``-5``, the zero flag is low, but the significant/sign flag is high
         * This second calculation was unintended and a consequence of the design of the system
@@ -231,7 +231,7 @@ Flags Register
     :align: center
 
     Status flag signals after the ALU calculates ``5 - 5``, but before the output of the ALU is sent back into register
-    A. Notice that the zerp flag is high, since ``5 - 5 = 0``.
+    A. Notice that the zero flag is high, since ``5 - 5 = 0``.
 
 
 .. figure:: status_flags_5_minus_5_after_data_to_a.png
