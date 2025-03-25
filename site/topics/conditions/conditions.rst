@@ -231,7 +231,7 @@ Flags Register
     :align: center
 
     Status flag signals after the ALU calculates ``5 - 5``, but before the output of the ALU is sent back into register
-    A. Notice that the zerp flag is high, since ``5 - 5 = 0``.
+    A. Notice that the zero flag is high, since ``5 - 5 = 0``.
 
 
 .. figure:: status_flags_5_minus_5_after_data_to_a.png
