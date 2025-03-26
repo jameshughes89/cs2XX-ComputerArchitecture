@@ -114,11 +114,6 @@ Controlling the Cases
 Enabling Flag Register
 ======================
 
-
-
-Enabling Flag Register
-======================
-
 * As discussed, the status flag register needs to be enabled at specific times to work
 
     * Only enable when performing addition or subtraction
