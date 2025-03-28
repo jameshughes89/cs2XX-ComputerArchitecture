@@ -279,7 +279,7 @@ Updating the Look Up Table Contents
     * ``011`` --- Significant/sign and zero flags set
     * ``100`` --- Carry flag set
     * ``101`` --- Carry and zero flags set
-    * ``101`` --- Carry and significant/sign flags set
+    * ``110`` --- Carry and significant/sign flags set
     * ``111`` --- Carry, significant/sign, and zero flags set
 
 
