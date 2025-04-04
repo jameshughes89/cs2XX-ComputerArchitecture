@@ -359,9 +359,9 @@ Programming with Conditional Jumps
     Load the value 10 to register B
     Calculate the difference
     Jump to address 6 if the significant bit/sign flag is high
-    Output the contents of register 13
+    Output the contents of RAM address 13
     Halt
-    Output the contents of register 14
+    Output the contents of RAM address 14
     Halt
     NOOP
     NOOP
