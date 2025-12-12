@@ -3,7 +3,7 @@ Computer Science 263 --- Computer Organization
 ==============================================
 
 
-Winter 2025
+Winter 2026
 ===========
 
 
