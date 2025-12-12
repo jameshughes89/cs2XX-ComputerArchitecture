@@ -1,5 +1,5 @@
 ************************
-CSCI 263 --- Winter 2025
+CSCI 263 --- Winter 2026
 ************************
 
 This course covers basic computer arithmetic, architectures, and instruction sets; in-depth study of the central 
