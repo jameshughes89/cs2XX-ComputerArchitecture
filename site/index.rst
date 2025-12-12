@@ -1,5 +1,5 @@
 ************************
-CSCI 263 --- Winter 2025
+CSCI 263 --- Winter 2026
 ************************
 
 This course covers basic computer arithmetic, architectures, and instruction sets; in-depth study of the central 
@@ -13,7 +13,6 @@ Professor
 * Dr. James Hughes
 * jhughes at stfx.ca
 * Annex 20B
-* `YouTube <https://www.youtube.com/channel/UCIruexBZJaawh_9WF_vjTPg>`_
 
 
 
@@ -35,8 +34,8 @@ GitHub Repo
 Class Times
 ===========
 
-* Tue 9:30 -- 10:20 (L1), MULH 4024
-* Thr 8:30 -- 9:20 (L2), MULH 4024
+* Tue 09:30 -- 10:20 (L1), MULH 4024
+* Thr 08:30 -- 09:20 (L2), MULH 4024
 * Fri 10:30 -- 11:20 (L3), MULH 4024
 
 
@@ -51,12 +50,10 @@ Labs
 Office Hours
 ============
 
-`Office Hours Etiquette --- Don't Do This. <https://www.youtube.com/watch?v=lOTyUfOHgas>`_
-
-* Tue 12:30 -- 13:20, Annex 20B
-* Wed 12:30 -- 13:20, Annex 20B
-* Thu 13:30 -- 14:20, Annex 20B
-* Fri 13:30 -- 14:20, Annex 20B
+* Tue 10:30 -- 11:30, Annex 20B
+* Wed 10:30 -- 11:30, Annex 20B
+* Thr 10:30 -- 11:30, Annex 20B
+* Fri 11:30 -- 12:30, Annex 20B
 
 
 
@@ -115,10 +112,10 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
-    assignments/assignment-1/assignment-1
-    assignments/assignment-2/assignment-2
-    assignments/assignment-3/assignment-3
-    assignments/assignment-4/assignment-4
+    .. assignments/assignment-1/assignment-1
+    .. assignments/assignment-2/assignment-2
+    .. assignments/assignment-3/assignment-3
+    .. assignments/assignment-4/assignment-4
 
 
 

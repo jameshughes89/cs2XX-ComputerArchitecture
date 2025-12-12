@@ -3,7 +3,7 @@ Assignment 1
 ************
 
 * **Worth**: 5%
-* **DUE**: Monday January 27, 11:55pm; submitted on MOODLE.
+* **DUE**: Monday TBD, 11:55pm; submitted on MOODLE.
 
 
 
