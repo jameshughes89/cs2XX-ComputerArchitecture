@@ -2,6 +2,7 @@
 Number Bases
 ************
 
+* At a low level, it is common to interface with computers in unfamiliar number systems
 
 
 Decimal (Base Ten)
@@ -70,7 +71,7 @@ Counting in Base Ten
 Position
 ^^^^^^^^
 
-* First, consider that each number has an infinite number of zeros in front of it
+* Note that each number has an infinite number of zeros in front of it
 
     * Why this is will be discussed shortly
 
