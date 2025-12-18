@@ -32,7 +32,7 @@ What Will I Learn?
     * Registers
     * Memory
     * Adders
-    * Arithmatic Logic Units (ALUs)
+    * Arithmetic Logic Units (ALUs)
     * Combinatorial and Sequential Logic
     * Control Logic
     * CPUs
@@ -73,7 +73,7 @@ Resources
     :align: center
 
     Screenshot of a small portion of a modified version of the 8-bit computer designed by Ben Eater. The larger circuit
-    is a simulated fully functional and programmable turing complete computer.
+    is a simulated fully functional and programmable Turing complete computer.
 
 
 
@@ -99,7 +99,7 @@ Supplementary Resources
     * Not *required*, but for those that like textbooks, it is great
 
 
-* `Ben Eater has an amazing YouTube playlist where they build a turing complete computer on breadboards <https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU>`_
+* `Ben Eater has an amazing YouTube playlist where they build a Turing complete computer on breadboards <https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU>`_
 
     * These videos are fantastic and provide more details on components than will be covered in this course
 
@@ -113,7 +113,7 @@ Supplementary Resources
 
 * The game `Turing Complete <https://store.steampowered.com/app/1444480/Turing_Complete/>`_
 
-    * Players incrementally construct and program a turing complete computer
+    * Players incrementally construct and program a Turing complete computer
 
 
 .. figure:: turing_complete_screenshot.png
