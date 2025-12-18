@@ -4,8 +4,8 @@ Introduction
 
 * Before anything
 
-    * :doc:`Read the outline </outline/outline>`
-    * :doc:`Get set for the course </getting-set/getting-set>`
+    * :doc:`Read the course outline </outline/outline>`
+    * :doc:`Get your software and environment set up </getting-set/getting-set>`
 
 
 
