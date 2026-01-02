@@ -3,7 +3,7 @@ Computer Science 263 --- Computer Organization
 ==============================================
 
 
-Winter 2025
+Winter 2026
 ===========
 
 
@@ -34,8 +34,8 @@ Instructor
 Class Times
 ===========
 
-* Tue 9:30 -- 10:20 (L1), MULH 4024
-* Thr 8:30 -- 9:20 (L2), MULH 4024
+* Tue 09:30 -- 10:20 (L1), MULH 4024
+* Thr 08:30 -- 09:20 (L2), MULH 4024
 * Fri 10:30 -- 11:20 (L3), MULH 4024
 
 
@@ -50,10 +50,10 @@ Lab
 Office Hours
 ============
 
-* Tue 12:30 -- 13:20, Annex 20B
-* Wed 12:30 -- 13:20, Annex 20B
-* Thu 13:30 -- 14:20, Annex 20B
-* Fri 13:30 -- 14:20, Annex 20B
+* Tue 10:30 -- 11:30, Annex 20B
+* Wed 10:30 -- 11:30, Annex 20B
+* Thr 10:30 -- 11:30, Annex 20B
+* Fri 11:30 -- 12:30, Annex 20B
 
 
 
@@ -123,14 +123,11 @@ Student Evaluation (Tentative Dates)
     * - Assignment 4
       - 5%
       - Late March-ish
-    * - Lecture & Lab Activities
-      - 10%
-      - Ongoing, in class
     * - Midterm
       - 30%
-      - Wednesday February 12, 2025, in lab
+      - Wednesday mid-february, in lab
     * - Final Exam
-      - 40%
+      - 50%
       - TBD
 
 
@@ -198,7 +195,7 @@ Unless you have medical accommodations that require you to do so, or explicit pe
 course, you may not use electronic devices during any of the tests, midterms, examinations, or
 other in-class evaluations, including, but not limited to: cellphones, smart phones, smart watches, smart glasses, audio
 players or recorders of any sort, video cameras, video games, DVD players, televisions, laptop/notebook/netbook
-computers, flashlights or laser pointers.
+computers, flashlights, or laser pointers.
 
 
 Missed Tests
@@ -215,42 +212,6 @@ Labs
 The purpose of the weekly labs is to give students hands-on experience.
 
 Labs begin on the 1st week of class.
-
-
-
-Lecture & Lab Activities
-========================
-
-A total of 10 lecture & lab activities will take during certain lectures and labs. Each completed activity is worth 1%
-of the final grade.
-
-* The date and time of each activity will be determined *ad hoc*
-* These activities may take place during lecture or lab
-* Questions will be related to important concepts covered in their respective lecture or lab
-* Answers must be written legibly by hand, on a clean letter/A4 size blank paper
-
-    * Paper will not be provided
-    * Students must have their own paper
-
-
-* All submissions must include the student's name, student number, stfx email address, and date
-* All submissions must be made by the student completing the task
-
-    * You may not submit an activity on behalf of another student
-    * Similarly, you may not have another student submit an activity on your behalf
-    * Violations are considered academic misconduct and a grade of 0 will be applied to all lecture & lab activities
-
-* Activities are to be submitted to the lecturer within the allowed time
-
-If any of the requirements are violated, a mark of 0 will be applied to the specific activity. The only exception to
-this is if academic misconduct is detected, in which case a grade of 0 will be applied to the entire lecture and lab
-activity portion of the final grade.
-
-These activities are open book, students are strongly encouraged to collaborate and share ideas, and students may check
-the course content and internet; however, all submitted work must ultimately be done individually.
-
-There are no make-up activities. If a student misses an activity and obtains an approved accommodation, the weight of
-the missed activity will be shifted to the final exam.
 
 
 
@@ -284,12 +245,14 @@ Students must understand that the professors and TAs are not there to provide th
 students solving their problems.
 
 
+
 Attendance
 ==========
 
 Students missing three classes without reasonable cause will be reported to the Assistant Vice-President Academic
 Affairs. See section 3.7 of the academic calendar for more details. You will be reported if you are repeatedly
 delinquent in assignments or attendance at classes or laboratories.
+
 
 
 Copyright Policy
@@ -302,12 +265,14 @@ law and is strictly prohibited.
 The course copyright policy will be aggressively enforced.
 
 
+
 Class Recording Policy
 ======================
 
 Students may not create audio and/or video recordings of classes. Students creating unauthorized recording of lectures
 violate an instructor's intellectual property rights and the Canadian Copyright Act. Students violating this policy will
 be subject to disciplinary actions.
+
 
 
 Statement of Academic Offenses and Academic Integrity
@@ -443,7 +408,7 @@ out the Department of Music web page
 `Music | St. Francis Xavier University (stfx.ca) <https://www.stfx.ca/programs-courses/programs/music>`_,
 the StFX Art Gallery (https://www.stfx.ca/art-gallery) or
 Theatre Antigonish
-`(Theatre Antigonish | St. Francis Xavier University) (stfx.ca) <https://www.stfx.ca/about/theater-antigonish>`_
+`Theatre Antigonish | St. Francis Xavier University (stfx.ca) <https://www.stfx.ca/about/theater-antigonish>`_
 for various events.
 
 Further information regarding health and wellness-related services available to students may be found at
