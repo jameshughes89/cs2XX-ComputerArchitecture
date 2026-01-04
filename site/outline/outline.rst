@@ -125,7 +125,7 @@ Student Evaluation (Tentative Dates)
       - Late March-ish
     * - Midterm
       - 30%
-      - Wednesday mid-february, in lab
+      - Wednesday mid-February, in lab
     * - Final Exam
       - 50%
       - TBD
