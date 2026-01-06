@@ -111,7 +111,7 @@ This portion of the assignment will make use of the Digital simulation software.
 
 #. Create :math:`not`, :math:`or`, and :math:`and` gates with N-channel transistors.
 
-    * Use the provided file titled "1-not_or_and.dig"
+    * Use the provided file titled "2_1-not_or_and.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
@@ -119,7 +119,7 @@ This portion of the assignment will make use of the Digital simulation software.
 
 #. Create :math:`nor` and :math:`nand` with three N-channel transistors each.
 
-    * Use the provided file titled "2-nor_nand_three.dig"
+    * Use the provided file titled "2_2-nor_nand_three.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
@@ -127,7 +127,7 @@ This portion of the assignment will make use of the Digital simulation software.
 
 #. Create :math:`nor` and :math:`nand` with two N-channel transistors each.
 
-    * Use the provided file titled "3-nor_nand_two.dig"
+    * Use the provided file titled "2_3-nor_nand_two.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
@@ -136,7 +136,7 @@ This portion of the assignment will make use of the Digital simulation software.
 
 #. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nand` transistor configurations
 
-    * Use the provided file titled "4-nand_universal.dig"
+    * Use the provided file titled "2_4-nand_universal.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
@@ -144,7 +144,7 @@ This portion of the assignment will make use of the Digital simulation software.
 
 #. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nor` transistor configurations
 
-    * Use the provided file titled "5-nor_universal.dig"
+    * Use the provided file titled "2_5-nor_universal.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
@@ -152,7 +152,7 @@ This portion of the assignment will make use of the Digital simulation software.
 
 #. Create :math:`xor` (exclusive or) with N-channel transistors
 
-    * Use the provided file titled "6-xor.dig"
+    * Use the provided file titled "2_6-xor.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
