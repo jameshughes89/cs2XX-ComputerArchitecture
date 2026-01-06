@@ -156,6 +156,7 @@ This portion of the assignment will make use of the Digital simulation software.
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
+    * **Hint:** Think about the solution in terms of the logic gates
 
 
 
