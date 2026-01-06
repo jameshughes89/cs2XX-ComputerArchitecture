@@ -58,6 +58,20 @@ needed.
 
 
 
+Drivers
+=======
+
+#. Understand the driver component
+
+    * **Components -> Wires -> Driver**
+    * Read the documentation for the component
+    * Attach inputs and an output to the component
+    * Play with the component to understand how it works
+    * Understand what the ``Z`` state is
+    * Write tests for this component
+
+
+
 From Truth Tables
 =================
 
