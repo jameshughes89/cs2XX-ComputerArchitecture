@@ -10,8 +10,8 @@ Assignment 1
 Provided Files
 ==============
 
-Incomplete Digital files are provided for the questions for Part 2. These files contain tests, designated space for
-building circuits, and labelled inputs and outputs.
+Incomplete Digital files are provided for the questions for Parts 2 and 3. These files contain tests, designated space
+for building circuits, and labelled inputs and outputs.
 
 :download:`These files can be downloaded from here. <assignment_1-dig_files.zip>`
 
