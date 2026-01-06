@@ -160,6 +160,148 @@ This portion of the assignment will make use of the Digital simulation software.
 
 
 
+Part 3 --- Selectors
+====================
+
+#. Create a circuit where the output of some input can be inverted with some other signal
+
+    * Use the provided file titled "3_1-bit_inverter.dig"
+    * Logic gates may be used
+    * Below is a truth table describing the desired functionality
+
+    .. list-table:: Bit Inverter Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - Input
+          -
+          - Invert
+          -
+          - Output
+        * - ``0``
+          -
+          - ``0``
+          -
+          - ``0``
+        * - ``0``
+          -
+          - ``1``
+          -
+          - ``1``
+        * - ``1``
+          -
+          - ``0``
+          -
+          - ``1``
+        * - ``1``
+          -
+          - ``1``
+          -
+          - ``0``
+
+
+
+#. Create a 1 bit selector circuit such that one of two inputs is mapped to the output with the following constraints
+
+    * A multiplexer may not be used
+    * Only drivers and not gates may be used
+    * Use the provided file titled "3_2-input_selector.dig"
+    * Below is a truth table describing the desired functionality
+
+        * Here, ``A`` and ``B`` are variable inputs that can take on either ``0``/``1``
+
+
+    .. list-table:: 1 Bit Selector Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - :math:`i_{0}`
+          - :math:`i_{1}`
+          -
+          - :math:`s`
+          -
+          - :math:`o`
+        * - ``A``
+          - ``B``
+          -
+          - ``0``
+          -
+          - ``A``
+        * - ``A``
+          - ``B``
+          -
+          - ``1``
+          -
+          - ``B``
+
+
+
+#. Create a circuit that can map one of two inputs to one of two outputs with the following constraints
+
+    * A multiplexer may not be used
+    * Only drivers and not gates may be used
+    * **Hint:** Use the general bit selector design from the previous question
+    * Use the provided file titled "3_3-input_output_selector.dig"
+    * Below is a truth table describing the desired functionality
+
+        * Note that ``Z`` denotes the high impedance state and does not represent some variable input
+
+    .. list-table:: 1 Bit Input/Output Selector Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - :math:`i_{0}`
+          - :math:`i_{1}`
+          -
+          - :math:`s_{i}`
+          - :math:`s_{o}`
+          -
+          - :math:`o_{0}`
+          - :math:`o_{1}`
+        * - ``A``
+          - ``B``
+          -
+          - ``0``
+          - ``0``
+          -
+          - ``A``
+          - ``Z``
+        * - ``A``
+          - ``B``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``Z``
+          - ``A``
+        * - ``A``
+          - ``B``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``B``
+          - ``Z``
+        * - ``A``
+          - ``B``
+          -
+          - ``1``
+          - ``1``
+          -
+          - ``Z``
+          - ``B``
+
+
+#. Create a circuit that can map one of four inputs to one of four outputs with the following constraints
+
+    * Multiplexers and demultiplexer may be used
+    * Use the provided file titled "3_4-plex_input_output_selector.dig"
+
+
+
 Some Hints
 ==========
 
