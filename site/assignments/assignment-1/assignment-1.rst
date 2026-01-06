@@ -10,8 +10,8 @@ Assignment 1
 Provided Files
 ==============
 
-Incomplete Digital files are provided for the questions for Part 2. These files contain tests, designated space for
-building circuits, and labelled inputs and outputs.
+Incomplete Digital files are provided for the questions for Parts 2 and 3. These files contain tests, designated space
+for building circuits, and labelled inputs and outputs.
 
 :download:`These files can be downloaded from here. <assignment_1-dig_files.zip>`
 
@@ -109,53 +109,196 @@ Part 2 --- Digital
 
 This portion of the assignment will make use of the Digital simulation software.
 
-#. Create :math:`not`, :math:`or`, and :math:`and` gates with N-channel transistors.
+#. Create ``NOT``, ``OR``, and ``AND`` gates with N-channel transistors.
 
-    * Use the provided file titled "1-not_or_and.dig"
+    * Use the provided file titled "2_1-not_or_and.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`nor` and :math:`nand` with three N-channel transistors each.
+#. Create ``NOR`` and ``NAND`` with three N-channel transistors each.
 
-    * Use the provided file titled "2-nor_nand_three.dig"
+    * Use the provided file titled "2_2-nor_nand_three.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`nor` and :math:`nand` with two N-channel transistors each.
+#. Create ``NOR`` and ``NAND`` with two N-channel transistors each.
 
-    * Use the provided file titled "3-nor_nand_two.dig"
+    * Use the provided file titled "2_3-nor_nand_two.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
-    * **Hint** Take special note of the design of the :math:`not` gate built with a transistor
+    * **Hint** Take special note of the design of the ``NOT`` gate built with a transistor
 
 
-#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nand` transistor configurations
+#. Create ``NOT``, ``OR``, and ``AND`` using only ``NAND`` transistor configurations
 
-    * Use the provided file titled "4-nand_universal.dig"
-    * Use the corresponding space within the provided file
-    * You may move the inputs and outputs if necessary and resize the labelled boxes
-    * Run tests to ensure functional correctness
-
-
-#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nor` transistor configurations
-
-    * Use the provided file titled "5-nor_universal.dig"
+    * Use the provided file titled "2_4-nand_universal.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`xor` (exclusive or) with N-channel transistors
+#. Create ``NOT``, ``OR``, and ``AND`` using only ``NOR`` transistor configurations
 
-    * Use the provided file titled "6-xor.dig"
+    * Use the provided file titled "2_5-nor_universal.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
+
+
+#. Create ``XOR`` (exclusive or) with N-channel transistors
+
+    * Use the provided file titled "2_6-xor.dig"
+    * Use the corresponding space within the provided file
+    * You may move the inputs and outputs if necessary and resize the labelled boxes
+    * Run tests to ensure functional correctness
+    * **Hint:** Think about the solution in terms of the logic gates
+
+
+
+Part 3 --- Selectors
+====================
+
+#. Create a circuit where the output of some input can be inverted with some other signal
+
+    * Use the provided file titled "3_1-bit_inverter.dig"
+    * Logic gates may be used
+    * Below is a truth table describing the desired functionality
+
+    .. list-table:: Bit Inverter Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - Input
+          -
+          - Invert
+          -
+          - Output
+        * - ``0``
+          -
+          - ``0``
+          -
+          - ``0``
+        * - ``0``
+          -
+          - ``1``
+          -
+          - ``1``
+        * - ``1``
+          -
+          - ``0``
+          -
+          - ``1``
+        * - ``1``
+          -
+          - ``1``
+          -
+          - ``0``
+
+
+
+#. Create a 1 bit selector circuit such that one of two inputs is mapped to the output with the following constraints
+
+    * A multiplexer may not be used
+    * Only drivers and ``NOT`` may be used
+    * Use the provided file titled "3_2-input_selector.dig"
+    * Below is a truth table describing the desired functionality
+
+        * Here, ``A`` and ``B`` are variable inputs that can take on either ``0``/``1``
+
+
+    .. list-table:: 1 Bit Selector Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - :math:`i_{0}`
+          - :math:`i_{1}`
+          -
+          - :math:`s`
+          -
+          - :math:`o`
+        * - ``A``
+          - ``B``
+          -
+          - ``0``
+          -
+          - ``A``
+        * - ``A``
+          - ``B``
+          -
+          - ``1``
+          -
+          - ``B``
+
+
+
+#. Create a circuit that can map one of two inputs to one of two outputs with the following constraints
+
+    * A multiplexer may not be used
+    * Only drivers and ``NOT`` may be used
+    * **Hint:** Use the general bit selector design from the previous question
+    * Use the provided file titled "3_3-input_output_selector.dig"
+    * Below is a truth table describing the desired functionality
+
+        * Note that ``Z`` denotes the high impedance state and does not represent some variable input
+
+    .. list-table:: 1 Bit Input/Output Selector Truth Table
+        :widths: auto
+        :align: center
+        :header-rows: 1
+
+        * - :math:`i_{0}`
+          - :math:`i_{1}`
+          -
+          - :math:`s_{i}`
+          - :math:`s_{o}`
+          -
+          - :math:`o_{0}`
+          - :math:`o_{1}`
+        * - ``A``
+          - ``B``
+          -
+          - ``0``
+          - ``0``
+          -
+          - ``A``
+          - ``Z``
+        * - ``A``
+          - ``B``
+          -
+          - ``0``
+          - ``1``
+          -
+          - ``Z``
+          - ``A``
+        * - ``A``
+          - ``B``
+          -
+          - ``1``
+          - ``0``
+          -
+          - ``B``
+          - ``Z``
+        * - ``A``
+          - ``B``
+          -
+          - ``1``
+          - ``1``
+          -
+          - ``Z``
+          - ``B``
+
+
+#. Create a circuit that can map one of four inputs to one of four outputs with the following constraints
+
+    * Multiplexers and demultiplexer may be used
+    * Use the provided file titled "3_4-plex_input_output_selector.dig"
 
 
 
