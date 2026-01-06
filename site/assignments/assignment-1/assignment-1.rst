@@ -109,7 +109,7 @@ Part 2 --- Digital
 
 This portion of the assignment will make use of the Digital simulation software.
 
-#. Create :math:`not`, :math:`or`, and :math:`and` gates with N-channel transistors.
+#. Create ``NOT``, ``OR``, and ``AND`` gates with N-channel transistors.
 
     * Use the provided file titled "2_1-not_or_and.dig"
     * Use the corresponding space within the provided file
@@ -117,7 +117,7 @@ This portion of the assignment will make use of the Digital simulation software.
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`nor` and :math:`nand` with three N-channel transistors each.
+#. Create ``NOR`` and ``NAND`` with three N-channel transistors each.
 
     * Use the provided file titled "2_2-nor_nand_three.dig"
     * Use the corresponding space within the provided file
@@ -125,16 +125,16 @@ This portion of the assignment will make use of the Digital simulation software.
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`nor` and :math:`nand` with two N-channel transistors each.
+#. Create ``NOR`` and ``NAND`` with two N-channel transistors each.
 
     * Use the provided file titled "2_3-nor_nand_two.dig"
     * Use the corresponding space within the provided file
     * You may move the inputs and outputs if necessary and resize the labelled boxes
     * Run tests to ensure functional correctness
-    * **Hint** Take special note of the design of the :math:`not` gate built with a transistor
+    * **Hint** Take special note of the design of the ``NOT`` gate built with a transistor
 
 
-#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nand` transistor configurations
+#. Create ``NOT``, ``OR``, and ``AND`` using only ``NAND`` transistor configurations
 
     * Use the provided file titled "2_4-nand_universal.dig"
     * Use the corresponding space within the provided file
@@ -142,7 +142,7 @@ This portion of the assignment will make use of the Digital simulation software.
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`not`, :math:`or`, and :math:`and` using only :math:`nor` transistor configurations
+#. Create ``NOT``, ``OR``, and ``AND`` using only ``NOR`` transistor configurations
 
     * Use the provided file titled "2_5-nor_universal.dig"
     * Use the corresponding space within the provided file
@@ -150,7 +150,7 @@ This portion of the assignment will make use of the Digital simulation software.
     * Run tests to ensure functional correctness
 
 
-#. Create :math:`xor` (exclusive or) with N-channel transistors
+#. Create ``XOR`` (exclusive or) with N-channel transistors
 
     * Use the provided file titled "2_6-xor.dig"
     * Use the corresponding space within the provided file
@@ -205,7 +205,7 @@ Part 3 --- Selectors
 #. Create a 1 bit selector circuit such that one of two inputs is mapped to the output with the following constraints
 
     * A multiplexer may not be used
-    * Only drivers and not gates may be used
+    * Only drivers and ``NOT`` may be used
     * Use the provided file titled "3_2-input_selector.dig"
     * Below is a truth table describing the desired functionality
 
@@ -241,7 +241,7 @@ Part 3 --- Selectors
 #. Create a circuit that can map one of two inputs to one of two outputs with the following constraints
 
     * A multiplexer may not be used
-    * Only drivers and not gates may be used
+    * Only drivers and ``NOT`` may be used
     * **Hint:** Use the general bit selector design from the previous question
     * Use the provided file titled "3_3-input_output_selector.dig"
     * Below is a truth table describing the desired functionality
