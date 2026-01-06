@@ -112,7 +112,7 @@ Office Hours
     :maxdepth: 1
     :numbered:
 
-    .. assignments/assignment-1/assignment-1
+    assignments/assignment-1/assignment-1
     .. assignments/assignment-2/assignment-2
     .. assignments/assignment-3/assignment-3
     .. assignments/assignment-4/assignment-4
