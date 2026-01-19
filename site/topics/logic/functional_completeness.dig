@@ -683,10 +683,10 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>in_k	in_l	out_g
+            <dataString>in_m	in_n	out_h
 0	0	0
-0	1	0
-1	0	0
+0	1	1
+1	0	1
 1	1	1</dataString>
           </testData>
         </entry>
