@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <circuit>
-  <version>1</version>
+  <version>2</version>
   <attributes/>
   <visualElements>
     <visualElement>
@@ -187,12 +187,12 @@
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>AND with OR and NOT Gates</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>14</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>AND with OR and NOT Gates</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -626,36 +626,6 @@
       <pos x="1040" y="620"/>
     </visualElement>
     <visualElement>
-      <elementName>NOr</elementName>
-      <elementAttributes>
-        <entry>
-          <string>wideShape</string>
-          <boolean>true</boolean>
-        </entry>
-      </elementAttributes>
-      <pos x="1860" y="700"/>
-    </visualElement>
-    <visualElement>
-      <elementName>NOr</elementName>
-      <elementAttributes>
-        <entry>
-          <string>wideShape</string>
-          <boolean>true</boolean>
-        </entry>
-      </elementAttributes>
-      <pos x="1860" y="780"/>
-    </visualElement>
-    <visualElement>
-      <elementName>NOr</elementName>
-      <elementAttributes>
-        <entry>
-          <string>wideShape</string>
-          <boolean>true</boolean>
-        </entry>
-      </elementAttributes>
-      <pos x="2040" y="740"/>
-    </visualElement>
-    <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
@@ -713,15 +683,45 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>in_k	in_l	out_g
+            <dataString>in_m	in_n	out_h
 0	0	0
-0	1	0
-1	0	0
+0	1	1
+1	0	1
 1	1	1</dataString>
           </testData>
         </entry>
       </elementAttributes>
       <pos x="1740" y="620"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NAnd</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1860" y="780"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NAnd</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="1860" y="700"/>
+    </visualElement>
+    <visualElement>
+      <elementName>NAnd</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="2040" y="740"/>
     </visualElement>
   </visualElements>
   <wires>
