@@ -36,7 +36,7 @@ Part 1 --- Counting With Adders
     * Use the provided file titled "1_2-counter_load.dig"
     * An arbitrary 4 bit number may be loaded into the counter
     * Out from the counter may be controlled
-    * **HINT:** In & EN would not be high at the same time, but both would enable the register
+    * **HINT:** In & EN would typically not be high at the same time, but both enable the register
     * This file already contains the components needed in the workspace
 
         * The design must use these components
