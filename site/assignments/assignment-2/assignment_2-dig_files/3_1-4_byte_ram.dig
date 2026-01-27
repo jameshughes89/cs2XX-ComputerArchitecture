@@ -512,7 +512,23 @@
           <string>Testdata</string>
           <testData>
             <dataString>W	R	A_1	A_0	D_7	D_6	D_5	D_4	D_3	D_2	D_1	D_0	O_7	O_6	O_5	O_4	O_3	O_2	O_1	O_0	C
-0	0	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	C</dataString>
+# No Read/Write does nothing
+0	0	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	X	C
+# Read registers before write
+0	1	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	0	0	0	C
+0	1	0	1	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	0	0	0	C
+0	1	1	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	0	0	0	C
+0	1	1	1	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	0	0	0	0	0	C
+# Write to registers
+1	0	0	0	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	C
+1	0	0	1	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	C
+1	0	1	0	0	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	C
+1	0	1	1	1	0	0	0	1	0	0	0	1	0	0	0	1	0	0	0	C
+# Read registers after write
+0	1	0	0	Z	Z	Z	Z	Z	Z	Z	Z	0	0	0	1	0	0	0	1	C
+0	1	0	1	Z	Z	Z	Z	Z	Z	Z	Z	0	0	1	0	0	0	1	0	C
+0	1	1	0	Z	Z	Z	Z	Z	Z	Z	Z	0	1	0	0	0	1	0	0	C
+0	1	1	1	Z	Z	Z	Z	Z	Z	Z	Z	1	0	0	0	1	0	0	0	C</dataString>
           </testData>
         </entry>
       </elementAttributes>
