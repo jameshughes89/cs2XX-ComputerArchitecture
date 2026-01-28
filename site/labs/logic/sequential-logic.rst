@@ -90,7 +90,7 @@ Registers
         * **Component -> Wires -> Driver**
 
 
-    * Refer to the Test component's help to lean how to handle high impedance state
+    * Refer to the Test component's help to learn how to handle high impedance state
 
 
 #. Modify the above design to have the register's input and final output on the same signal lines
