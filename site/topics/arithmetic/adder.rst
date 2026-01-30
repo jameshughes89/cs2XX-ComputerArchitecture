@@ -269,6 +269,10 @@ For Next Time
 =============
 
 * `Watch Ben Eater's video on 2s compliment <https://www.youtube.com/watch?v=4qH4unVtJkE>`_   
+* Check out the :download:`Half Adder with PLA <half_adder_with_pla.dig>` schematic for Digital
+* Check out the :download:`Half Adder <half_adder.dig>` schematic for Digital
+* Check out the :download:`Full Adder <full_adder.dig>` schematic for Digital
+* Check out the :download:`4 Bit Full Adder <full_adder_4_bit.dig>` schematic for Digital
 * Read Chapter 2 Section 3 of your text
 
     * 2 pages
