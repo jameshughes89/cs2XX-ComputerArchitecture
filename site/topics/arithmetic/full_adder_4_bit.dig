@@ -24,8 +24,8 @@
           <string>Testdata</string>
           <testData>
             <dataString>		C_in	A_3	A_2	A_1	A_0	B_3	B_2	B_1	B_0	C_out	S_3	S_2	S_1	S_0
-loop(a,15)
-	loop(b,15)
+loop(a,16)
+	loop(b,16)
 		0	bits(4,a)			bits(4,b)			bits(5,a+b)	
 		1	bits(4,a)			bits(4,b)			bits(5,a+b+1)
 	end loop
