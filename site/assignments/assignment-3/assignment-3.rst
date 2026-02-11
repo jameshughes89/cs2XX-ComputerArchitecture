@@ -80,7 +80,7 @@ Part 2 --- ALU
     * The eight operations are as follows
 
         * Return A unchanged --- :math:`f(A, B) = A`
-        * 2s compliment negation --- :math:`f(A, B) = -A`
+        * 2s complement negation --- :math:`f(A, B) = -A`
 
             * Use the built in Digital component under the Arithmetic components
 
