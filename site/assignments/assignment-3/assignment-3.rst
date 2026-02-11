@@ -3,7 +3,7 @@ Assignment 3
 ************
 
 * **Worth**: 5%
-* **DUE**: Monday TBD, 11:55pm; submitted on MOODLE.
+* **DUE**: Monday March 2, 11:55pm; submitted on MOODLE.
 
 
 
@@ -24,7 +24,7 @@ Part 1 --- Registers
 
 #. Create a circuit to swap data between several registers
 
-    * Use the provided file titled "1-register_swap.dig"
+    * Use the provided file titled "1_1-register_swap.dig"
     * Data can be moved between 8 different sources/destinations
 
         * Seven 8 bit registers
@@ -67,7 +67,7 @@ Part 2 --- ALU
 
 #. Create an ALU capable of performing 8 unique operations
 
-    * Use the provided file titled "2-alu.dig"
+    * Use the provided file titled "2_1-alu.dig"
     * This circuit has one eight bit output
     * This circuit has a total of 5 inputs
 
@@ -105,7 +105,7 @@ For these questions, do not use the built in comparator component.
 
 #. Create a circuit that can perform a specific comparison of two inputs
 
-    * Use the provided file titled "3-comparator.dig"
+    * Use the provided file titled "3_1-comparator.dig"
     * This circuit must use an 8 input/3 selector bit multiplexer
     * This circuit has one 1 bit output
 
@@ -137,7 +137,7 @@ For these questions, do not use the built in comparator component.
 
 #. Create another circuit that can perform a specific comparison of two inputs
 
-    * Use the provided file titled "4-comparator.dig"
+    * Use the provided file titled "3_2-comparator.dig"
     * This question is the same as above, but with a constraint
     * This circuit may not use an 8 input/3 selector bit multiplexer
 
@@ -151,7 +151,7 @@ Part 4 --- ALU from Registers
 
 #. Create a circuit capable of applying ALU operators to data from specific registers, and save the result to a register
 
-    * Use the provided file titled "5-alu_reg.dig"
+    * Use the provided file titled "4_1-alu_reg.dig"
     * This circuit combines the core ideas from Parts 1 and 2 (not part 3)
     * This circuit will have one 8 bit output serving as data out
     * This circuit will have a total of 14 inputs
