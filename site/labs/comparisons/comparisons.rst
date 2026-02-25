@@ -37,12 +37,12 @@ Conditions
 
 #. Create a circuit to check if a given 8 bit signed integer is greater than zero
 
-    * Check if some value ``> 0``
+    * Check if some value ``< 0``
 
 
 #. Create a circuit to check if a given 8 bit signed integer is greater than or equal to zero
 
-    * Check if some value ``>= 0``
+    * Check if some value ``<= 0``
 
 
 
@@ -56,12 +56,12 @@ Specifying Operators
 
         * ``000`` --- Always output ``0``
         * ``001`` --- ``== 0``
-        * ``010`` --- ``> 0``
-        * ``011`` --- ``>= 0``
+        * ``010`` --- ``< 0``
+        * ``011`` --- ``<= 0``
         * ``100`` --- Always output ``1``
         * ``101`` --- ``!= 0``
-        * ``110`` --- ``<= 0``
-        * ``111`` --- ``< 0``
+        * ``110`` --- ``>= 0``
+        * ``111`` --- ``> 0``
 
 
     * **Hints:**
