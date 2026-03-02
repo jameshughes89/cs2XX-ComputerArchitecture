@@ -37,12 +37,12 @@ Conditions
 
 #. Create a circuit to check if a given 8 bit signed integer is greater than zero
 
-    * Check if some value ``> 0``
+    * Check if some value ``< 0``
 
 
 #. Create a circuit to check if a given 8 bit signed integer is greater than or equal to zero
 
-    * Check if some value ``>= 0``
+    * Check if some value ``<= 0``
 
 
 
