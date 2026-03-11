@@ -37,14 +37,14 @@ ALU
 
     * The eight operations are as follows
 
-        * Return A unchanged
-        * 2s compliment negation
-        * ``NOT`` A
-        * ``Or``
-        * ``AND``
-        * ``XOR``
-        * Addition
-        * Subtraction
+        * ``000`` --- Return A unchanged
+        * ``001`` --- 2s compliment negation
+        * ``010`` --- ``NOT`` A
+        * ``011`` --- ``Or``
+        * ``100`` --- ``AND``
+        * ``101`` --- ``XOR``
+        * ``110`` --- Addition
+        * ``111`` --- Subtraction
 
 
     * The three 1 bit inputs specify the operator in the above order

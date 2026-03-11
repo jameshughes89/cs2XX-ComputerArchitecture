@@ -3,7 +3,7 @@ Assignment 4
 ************
 
 * **Worth**: 5%
-* **DUE**: Friday TBD, 11:55pm; submitted on MOODLE.
+* **DUE**: Monday April 6, 11:55pm; submitted on MOODLE.
 
 
 
