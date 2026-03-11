@@ -77,7 +77,7 @@ Currently there is no way to actually load data into the system.
     * Update the system such that one of these 4 modes allows for loading data directly to a register
 
         * The 3 destination register bits specify where the data is to be stored
-        * 8 bits of the 9 available for the operator and 3 source registers specify the 8 bit data
+        * 8 bits of the 9 available for the operator and 2 source registers specify the 8 bit data
 
 
     * For example, consider the below bit patterns and their meanings
