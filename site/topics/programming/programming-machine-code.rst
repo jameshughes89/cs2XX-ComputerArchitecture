@@ -248,9 +248,9 @@ Analysis
 
     * There are a total of 11 instructions
     * Each instruction takes 4 microcode steps
-    * Therefore, a total of :math:`11 \times 4 = 44`` clock cycles
+    * Therefore, a total of :math:`11 \times 4 = 44` clock cycles
 
-        * Technically it's :math:`43`` as ``HALT`` will stop the whole system after its 3rd clock cycle
+        * Technically it's :math:`43` as ``HALT`` will stop the whole system after its 3rd clock cycle
         * ``HALT`` only requires 3 clock cycles, not the full 4
 
 
