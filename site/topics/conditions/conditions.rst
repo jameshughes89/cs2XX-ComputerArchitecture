@@ -44,7 +44,7 @@ Conditional Jump Command
     * If register A's value is ``< 10``, jump to a part of RAM containing the following instruction
 
         * Output ``1``
-        * Halt
+        * ``Halt``
 
 
     * Otherwise
