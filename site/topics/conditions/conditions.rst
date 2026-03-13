@@ -23,7 +23,7 @@ Conditional Jump Command
     * If register A's value is ``< 10``
 
         * Output ``1``
-        * Halt
+        * ``Halt``
 
 
     * Otherwise
