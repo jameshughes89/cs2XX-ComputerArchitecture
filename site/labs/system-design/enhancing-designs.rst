@@ -28,7 +28,7 @@ For this part of the lab, use the ESAP digital file
 
 #. These new operators require control signals
 
-    * Connect these new control signals to the control logic loop up table
+    * Connect these new control signals to the control logic look up table
 
 
 
